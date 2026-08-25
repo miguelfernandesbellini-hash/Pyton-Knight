@@ -1,0 +1,752 @@
+GABARITO FINAL — PYTON KNIGHT — 20 ATIVIDADES
+Versão consolidada em 24 de agosto de 2026
+
+As soluções oficiais abaixo foram executadas pelo mesmo parser, interpretador e mundo físico do jogo. Soluções alternativas são aceitas quando cumprem conceitos, orçamento, interações contextuais e objetivos.
+
+ATIVIDADE 01 — Primeiros Passos
+Unidade: 1
+Conceito: Atribuição de variável e movimento orientado
+Orientação inicial: LESTE
+Mecânicas: M31, M32, M33, M35, M36
+Estruturas obrigatórias/empregadas: variables, andar_frente(), virar_direita(), virar_esquerda()
+Orçamento: não aplicável
+Objetivos:
+  1. Chegue ao cristal
+  2. Use pelo menos uma variável
+Solução oficial:
+    direita = 2
+    baixo = 2
+    final = 3
+    andar_frente(direita)
+    virar_direita()
+    andar_frente(baixo)
+    virar_esquerda()
+    andar_frente(final)
+Explicação: Guto avança para Leste, gira para Sul e volta a olhar para Leste.
+Casos executados: padrão: SUCCESS.
+Observações de teste: SUCCESS em 1 cenário(s)/variante(s); matriz funcional de 15 verificações aprovada; segunda execução com reset e código preservado; replay sem duplicação de XP/moedas; tutorial validado etapa por etapa.
+
+ATIVIDADE 02 — O Caminho Mutável
+Unidade: 1
+Conceito: Reatribuição
+Orientação inicial: LESTE
+Mecânicas: M31, M32, M33, M35, M36
+Estruturas obrigatórias/empregadas: variables, andar_frente(), virar_direita(), virar_esquerda()
+Orçamento: não aplicável
+Objetivos:
+  1. Chegue ao cristal
+  2. Reutilize uma variável
+Solução oficial:
+    passos = 3
+    andar_frente(passos)
+    virar_direita()
+    passos = 2
+    andar_frente(passos)
+    virar_esquerda()
+    andar_frente(passos)
+Explicação: A variável passos vale 3 no primeiro trecho e 2 nos demais.
+Casos executados: padrão: SUCCESS.
+Observações de teste: SUCCESS em 1 cenário(s)/variante(s); matriz funcional de 15 verificações aprovada; segunda execução com reset e código preservado; replay sem duplicação de XP/moedas.
+
+ATIVIDADE 03 — As Grades da Masmorra
+Unidade: 1
+Conceito: Operações entre variáveis
+Orientação inicial: LESTE
+Mecânicas: M31, M32, M33, M35, M36
+Estruturas obrigatórias/empregadas: arithmetic, variables, andar_frente(), virar_direita(), virar_esquerda()
+Orçamento: não aplicável
+Objetivos:
+  1. Contorne as grades e chegue ao cristal
+  2. Use uma operação entre valores
+Solução oficial:
+    base = 2
+    dobro = base * 2
+    final = base + 1
+    andar_frente(dobro)
+    virar_direita()
+    andar_frente(base)
+    virar_direita()
+    andar_frente(base)
+    virar_esquerda()
+    andar_frente(1)
+    virar_esquerda()
+    andar_frente(final)
+Explicação: A rota usa operações para calcular cinco trechos.
+Casos executados: padrão: SUCCESS.
+Observações de teste: SUCCESS em 1 cenário(s)/variante(s); matriz funcional de 15 verificações aprovada; segunda execução com reset e código preservado; replay sem duplicação de XP/moedas.
+
+ATIVIDADE 04 — O Corredor de Lava
+Unidade: 1
+Conceito: Operadores +, - e *
+Orientação inicial: LESTE
+Mecânicas: M31, M32, M33, M35, M36, M37
+Estruturas obrigatórias/empregadas: arithmetic, variables, andar_frente(), virar_direita(), virar_esquerda()
+Orçamento: 15 instruções semânticas
+Objetivos:
+  1. Atravesse o corredor e chegue ao cristal
+  2. Use operações aritméticas
+  3. Respeite o orçamento de 15 instruções
+Solução oficial:
+    valor = 4
+    direita = valor - 1
+    baixo = direita
+    voltar = baixo - 2
+    final = voltar + 1
+    andar_frente(direita)
+    virar_direita()
+    andar_frente(baixo)
+    virar_direita()
+    andar_frente(voltar)
+    virar_esquerda()
+    andar_frente(1)
+    virar_esquerda()
+    andar_frente(final)
+Explicação: Os cálculos produzem a rota segura ao redor da lava.
+Casos executados: padrão: SUCCESS.
+Observações de teste: SUCCESS em 1 cenário(s)/variante(s); matriz funcional de 15 verificações aprovada; segunda execução com reset e código preservado; replay sem duplicação de XP/moedas.
+
+ATIVIDADE 05 — O Labirinto das Variáveis
+Unidade: 1
+Conceito: Integração da Unidade 1
+Orientação inicial: LESTE
+Mecânicas: M31, M32, M33, M35, M36, M37
+Estruturas obrigatórias/empregadas: arithmetic, variables, andar_frente(), virar_direita(), virar_esquerda()
+Orçamento: 17 instruções semânticas
+Objetivos:
+  1. Conclua todos os trechos do labirinto
+  2. Use atribuição e reatribuição
+  3. Use operações entre valores
+  4. Respeite o orçamento de 17 instruções
+Solução oficial:
+    base = 2
+    direita = base + 1
+    baixo = base
+    andar_frente(direita)
+    virar_direita()
+    andar_frente(baixo)
+    virar_esquerda()
+    andar_frente(base)
+    direita = baixo
+    virar_direita()
+    andar_frente(direita)
+    final = direita + 3
+    virar_direita()
+    andar_frente(final)
+Explicação: A rota integra cálculo, reatribuição e cinco subtrechos.
+Casos executados: padrão: SUCCESS.
+Observações de teste: SUCCESS em 1 cenário(s)/variante(s); matriz funcional de 15 verificações aprovada; segunda execução com reset e código preservado; replay sem duplicação de XP/moedas.
+
+ATIVIDADE 06 — O Pedestal da Palavra
+Unidade: 2
+Conceito: print() e saída de dados
+Orientação inicial: LESTE
+Mecânicas: M31, M32, M33, M35, M36, M18
+Estruturas obrigatórias/empregadas: print, strings, variables, andar_frente(), print(), virar_direita(), virar_esquerda()
+Orçamento: não aplicável
+Mapa reelaborado: 10 x 7; sala inicial, galeria com duas curvas e câmara final; 3 áreas e aproximadamente 4 curvas.
+Objetivos:
+  1. Produza a saída AURORA junto à runa
+  2. Use print()
+  3. Atravesse a grade e alcance o cristal
+Solução oficial:
+    andar_frente(3)
+    virar_direita()
+    andar_frente(2)
+    virar_esquerda()
+    andar_frente(3)
+    palavra = "AURORA"
+    print(palavra)
+    virar_direita()
+    andar_frente(2)
+    virar_esquerda()
+    andar_frente()
+Explicação: Guto percorre duas curvas, imprime a palavra diante da runa, cruza a grade e entra na câmara final.
+Casos executados: padrão: SUCCESS.
+Observações de teste: SUCCESS em 1 cenário(s)/variante(s); matriz funcional de 15 verificações aprovada; segunda execução com reset e código preservado; replay sem duplicação de XP/moedas; matriz de mapa com 14 verificações aprovada; tutorial validado etapa por etapa.
+
+ATIVIDADE 07 — O Guardião da Resposta
+Unidade: 2
+Conceito: input(), variável e print()
+Orientação inicial: LESTE
+Mecânicas: M31, M32, M33, M35, M36, M17, M18, M20, M05
+Estruturas obrigatórias/empregadas: input, print, strings, variables, abrir_porta(), andar_frente(), input(), print(), virar_direita(), virar_esquerda()
+Orçamento: não aplicável
+Mapa reelaborado: 11 x 8; sala inicial, desvio de entrada, galeria do Guardião e porta final; 4 áreas e aproximadamente 4 curvas.
+Objetivos:
+  1. Receba a palavra no pedestal com input()
+  2. Use print() para ecoar a resposta
+  3. Reutilize a resposta com print()
+  4. Libere o Guardião presencialmente
+  5. Abra a porta final
+  6. Alcance o cristal
+Solução oficial:
+    andar_frente(2)
+    virar_direita()
+    andar_frente(2)
+    resposta = input("Palavra: ")
+    print(resposta)
+    virar_esquerda()
+    andar_frente(4)
+    abrir_porta("guardian")
+    andar_frente(2)
+    virar_direita()
+    andar_frente()
+    abrir_porta("door")
+    andar_frente(2)
+Explicação: A rota obriga Guto a visitar o pedestal, enfrentar o Guardião e se reposicionar diante da porta.
+Casos executados: padrão; entradas CORAGEM: SUCCESS.
+Observações de teste: SUCCESS em 1 cenário(s)/variante(s); matriz funcional de 15 verificações aprovada; segunda execução com reset e código preservado; replay sem duplicação de XP/moedas; matriz de mapa com 14 verificações aprovada.
+
+ATIVIDADE 08 — A Ponte dos Construtores
+Unidade: 2
+Conceito: int(input()) e processamento numérico
+Orientação inicial: LESTE
+Mecânicas: M31, M32, M33, M35, M36, M03, M07, M17, M18
+Estruturas obrigatórias/empregadas: arithmetic, input, int, print, strings, variables, andar_frente(), ativar_alavanca(), input(), int(), print(), virar_direita(), virar_esquerda()
+Orçamento: não aplicável
+Mapa reelaborado: 13 x 9; duas margens, dois desvios obrigatórios e ponte física de três segmentos; 5 áreas e aproximadamente 7 curvas.
+Objetivos:
+  1. Visite e ative a alavanca
+  2. Leia os dois valores no pedestal
+  3. Converta as duas entradas com int()
+  4. Calcule grupos × segmentos
+  5. Envie o total correto para a runa
+  6. Complete a ponte retrátil
+  7. Atravesse até o cristal
+Solução oficial:
+    andar_frente(3)
+    virar_direita()
+    andar_frente(3)
+    ativar_alavanca()
+    virar_direita()
+    virar_direita()
+    andar_frente(3)
+    virar_direita()
+    andar_frente(2)
+    grupos = int(input("Grupos: "))
+    segmentos = int(input("Segmentos: "))
+    total = grupos * segmentos
+    virar_direita()
+    print(total)
+    andar_frente(3)
+    virar_esquerda()
+    andar_frente(5)
+    virar_direita()
+    andar_frente(2)
+Explicação: O desvio ativa a alavanca; o produto 2 × 3 energiza a runa e torna os três tiles da ponte transitáveis.
+Casos executados: padrão; entradas 2, 3: SUCCESS.
+Observações de teste: SUCCESS em 1 cenário(s)/variante(s); matriz funcional de 15 verificações aprovada; segunda execução com reset e código preservado; replay sem duplicação de XP/moedas; matriz de mapa com 14 verificações aprovada.
+
+ATIVIDADE 09 — O Salão dos Espelhos Rúnicos
+Unidade: 2
+Conceito: Múltiplas entradas e processamento
+Orientação inicial: LESTE
+Mecânicas: M31, M32, M33, M35, M36, M14, M17, M18, M19, M37
+Estruturas obrigatórias/empregadas: arithmetic, input, int, print, strings, variables, abrir_porta(), andar_frente(), entrar_espelho(), input(), int(), print(), virar_direita(), virar_esquerda()
+Orçamento: 14 instruções semânticas
+Mapa reelaborado: 15 x 10; salão seletor com três espelhos e três alas de destino; 4 áreas e aproximadamente 4 curvas.
+Objetivos:
+  1. Obtenha os dois valores rúnicos
+  2. Converta os valores para números
+  3. Some as runas para determinar a distância
+  4. Energize o espelho correto
+  5. Entre fisicamente no espelho 5
+  6. Abra o Cofre Rúnico
+  7. Alcance o cristal da ala correta
+  8. Respeite o orçamento de 14 instruções
+Solução oficial:
+    runa1 = int(input("Primeira runa: "))
+    runa2 = int(input("Segunda runa: "))
+    portal = runa1 + runa2
+    print(portal)
+    andar_frente(portal)
+    entrar_espelho(portal)
+    andar_frente(2)
+    virar_esquerda()
+    abrir_porta("cofre")
+    andar_frente()
+    virar_direita()
+    andar_frente()
+Explicação: O resultado 5 também é a distância até o espelho correto; na ala correta Guto contorna o cofre antes do cristal.
+Casos executados: padrão; entradas 2, 3: SUCCESS.
+Observações de teste: SUCCESS em 1 cenário(s)/variante(s); matriz funcional de 15 verificações aprovada; segunda execução com reset e código preservado; replay sem duplicação de XP/moedas; matriz de mapa com 14 verificações aprovada.
+
+ATIVIDADE 10 — O Cofre das Três Runas
+Unidade: 2
+Conceito: Integração de entrada, processamento e saída
+Orientação inicial: LESTE
+Mecânicas: M31, M32, M33, M35, M36, M03, M07, M14, M17, M18, M19, M37
+Estruturas obrigatórias/empregadas: arithmetic, input, int, print, strings, variables, abrir_porta(), andar_frente(), ativar_alavanca(), entrar_espelho(), input(), int(), print(), virar_direita(), virar_esquerda()
+Orçamento: 45 instruções semânticas
+Mapa reelaborado: 17 x 12; seis regiões conectadas por desvio, ponte, espelho e retorno ao eixo final; 6 áreas e aproximadamente 12 curvas.
+Objetivos:
+  1. Leia A, B e C nos pedestais correspondentes
+  2. Converta as três runas para números
+  3. Combine produto e soma
+  4. Materialize os resultados nas runas de saída
+  5. Resolva a câmara da alavanca
+  6. Calcule o produto e construa a ponte
+  7. Calcule (A × B) + C
+  8. Entre no espelho ativado
+  9. Abra o Cofre das Três Runas
+  10. Alcance o cristal da câmara final
+  11. Respeite o orçamento de 45 instruções
+Solução oficial:
+    andar_frente(2)
+    a = int(input("Runa A: "))
+    virar_direita()
+    andar_frente(3)
+    ativar_alavanca()
+    virar_esquerda()
+    andar_frente()
+    b = int(input("Runa B: "))
+    parcial = a * b
+    print(parcial)
+    virar_direita()
+    virar_direita()
+    andar_frente()
+    virar_direita()
+    andar_frente(3)
+    virar_direita()
+    andar_frente(5)
+    virar_direita()
+    andar_frente(3)
+    virar_esquerda()
+    andar_frente(4)
+    virar_direita()
+    andar_frente(3)
+    c = int(input("Runa C: "))
+    codigo = parcial + c
+    print(codigo)
+    virar_direita()
+    andar_frente(2)
+    entrar_espelho(codigo)
+    abrir_porta("cofre")
+    andar_frente(4)
+    virar_esquerda()
+    andar_frente(2)
+    virar_direita()
+    andar_frente(6)
+    virar_direita()
+    andar_frente(2)
+Explicação: A Boss distribui A, B e C em câmaras diferentes; o produto abre a ponte e o código final ativa o espelho que leva ao cofre.
+Casos executados: padrão; entradas 1, 2, 3: SUCCESS.
+Observações de teste: SUCCESS em 1 cenário(s)/variante(s); matriz funcional de 15 verificações aprovada; segunda execução com reset e código preservado; replay sem duplicação de XP/moedas; matriz de mapa com 14 verificações aprovada.
+
+ATIVIDADE 11 — A Porta do Guardião
+Unidade: 3
+Conceito: if e condição booleana
+Orientação inicial: LESTE
+Mecânicas: M31, M32, M33, M35, M36, M05, M20, M21, M30
+Estruturas obrigatórias/empregadas: if, strings, abrir_porta(), andar_frente(), tem_chave(), virar_direita(), virar_esquerda()
+Orçamento: não aplicável
+Mapa reelaborado: 11 x 8; desvio de chave, retorno ao eixo e dois bloqueios em sequência; 4 áreas e aproximadamente 7 curvas.
+Objetivos:
+  1. Colete a chave no desvio
+  2. Use if com tem_chave()
+  3. Abra a porta principal
+  4. Libere o Guardião
+  5. Alcance o cristal
+Solução oficial:
+    andar_frente(2)
+    virar_direita()
+    andar_frente(2)
+    virar_direita()
+    virar_direita()
+    andar_frente(2)
+    virar_direita()
+    andar_frente(4)
+    virar_direita()
+    andar_frente(2)
+    if tem_chave():
+        abrir_porta("door")
+    andar_frente(2)
+    virar_esquerda()
+    if tem_chave():
+        abrir_porta("guardian")
+    andar_frente(2)
+Explicação: A chave está fora da rota principal; Guto volta ao eixo, abre a porta e depois enfrenta o Guardião.
+Casos executados: padrão: SUCCESS.
+Observações de teste: SUCCESS em 1 cenário(s)/variante(s); matriz funcional de 15 verificações aprovada; segunda execução com reset e código preservado; replay sem duplicação de XP/moedas; matriz de mapa com 14 verificações aprovada; tutorial validado etapa por etapa.
+
+ATIVIDADE 12 — Os Dois Caminhos
+Unidade: 3
+Conceito: if / else
+Orientação inicial: LESTE
+Mecânicas: M31, M32, M33, M35, M36, M01, M09, M30
+Estruturas obrigatórias/empregadas: else, if, andar_frente(), placa_ativa(), virar_direita(), virar_esquerda()
+Orçamento: não aplicável
+Mapa reelaborado: 13 x 9; bifurcação verdadeira com rota superior e inferior simétricas; 4 áreas e aproximadamente 6 curvas.
+Objetivos:
+  1. Use if para avaliar o estado
+  2. Use else para a rota alternativa
+  3. Escolha a rota segura e alcance o cristal
+Solução oficial:
+    andar_frente(2)
+    if placa_ativa():
+        virar_esquerda()
+        andar_frente(2)
+        virar_direita()
+        andar_frente(6)
+        virar_direita()
+        andar_frente(2)
+        virar_esquerda()
+    else:
+        virar_direita()
+        andar_frente(2)
+        virar_esquerda()
+        andar_frente(6)
+        virar_esquerda()
+        andar_frente(2)
+        virar_direita()
+    andar_frente(2)
+Explicação: Cada variante ativa os espinhos de uma ala; if/else conduz por rotas distintas e convergentes.
+Casos executados: variante 1: SUCCESS | variante 2: SUCCESS.
+Observações de teste: SUCCESS em 2 cenário(s)/variante(s); matriz funcional de 15 verificações aprovada; segunda execução com reset e código preservado; replay sem duplicação de XP/moedas; matriz de mapa com 14 verificações aprovada.
+
+ATIVIDADE 13 — A Câmara das Comparações
+Unidade: 3
+Conceito: Operadores relacionais
+Orientação inicial: LESTE
+Mecânicas: M31, M32, M33, M35, M36, M06, M17, M20, M30
+Estruturas obrigatórias/empregadas: comparison, if, input, int, strings, variables, abrir_porta(), andar_frente(), input(), int(), virar_direita(), virar_esquerda()
+Orçamento: não aplicável
+Mapa reelaborado: 14 x 10; pedestal, salão com três escolhas e duas validações na rota correta; 4 áreas e aproximadamente 6 curvas.
+Objetivos:
+  1. Use operadores relacionais
+  2. Use if para controlar as validações
+  3. Abra a porta de energia mínima
+  4. Conclua a segunda comparação
+  5. Alcance o cristal
+Solução oficial:
+    andar_frente(3)
+    energia = int(input("Energia da runa: "))
+    virar_esquerda()
+    andar_frente(3)
+    virar_direita()
+    andar_frente(3)
+    virar_esquerda()
+    andar_frente()
+    if energia >= 10:
+        abrir_porta("guardian_high")
+    andar_frente(2)
+    virar_direita()
+    andar_frente()
+    if energia != 0:
+        abrir_porta("guardian_second")
+    andar_frente(3)
+    virar_esquerda()
+    andar_frente()
+Explicação: A energia 12 conduz à ala ≥ 10 e ainda precisa satisfazer uma segunda comparação antes do cristal.
+Casos executados: padrão; entradas 12: SUCCESS.
+Observações de teste: SUCCESS em 1 cenário(s)/variante(s); matriz funcional de 15 verificações aprovada; segunda execução com reset e código preservado; replay sem duplicação de XP/moedas; matriz de mapa com 14 verificações aprovada.
+
+ATIVIDADE 14 — O Selo das Duas Alavancas
+Unidade: 3
+Conceito: and / or
+Orientação inicial: NORTE
+Mecânicas: M31, M32, M33, M35, M36, M02, M03, M06, M09, M30, M37
+Estruturas obrigatórias/empregadas: and, if, or, strings, abrir_porta(), alavanca_azul_ativa(), alavanca_verde_ativa(), andar_frente(), ativar_alavanca(), virar_direita(), virar_esquerda()
+Orçamento: 30 instruções semânticas
+Mapa reelaborado: 16 x 11; salão central, duas alas opostas, retorno obrigatório e dois selos; 5 áreas e aproximadamente 9 curvas.
+Objetivos:
+  1. Visite e ative a alavanca azul
+  2. Visite e ative a alavanca verde
+  3. Use and no selo principal
+  4. Use or na passagem secundária
+  5. Abra o portão principal
+  6. Abra a passagem associada a OR
+  7. Alcance o cristal
+  8. Respeite o orçamento de 30 instruções
+Solução oficial:
+    andar_frente(4)
+    virar_esquerda()
+    andar_frente(5)
+    ativar_alavanca("lever_blue")
+    virar_direita()
+    virar_direita()
+    andar_frente(11)
+    ativar_alavanca("lever_green")
+    virar_direita()
+    virar_direita()
+    andar_frente(6)
+    virar_direita()
+    if alavanca_azul_ativa() and alavanca_verde_ativa():
+        abrir_porta("gate_main")
+    andar_frente(2)
+    virar_direita()
+    andar_frente()
+    if alavanca_azul_ativa() or alavanca_verde_ativa():
+        abrir_porta("gate_side")
+    andar_frente(2)
+Explicação: Guto percorre as duas alas, usa a placa para neutralizar os espinhos e retorna aos selos AND/OR.
+Casos executados: padrão: SUCCESS.
+Observações de teste: SUCCESS em 1 cenário(s)/variante(s); matriz funcional de 15 verificações aprovada; segunda execução com reset e código preservado; replay sem duplicação de XP/moedas; matriz de mapa com 14 verificações aprovada.
+
+ATIVIDADE 15 — O Julgamento dos Três Portões
+Unidade: 3
+Conceito: if / elif / else e integração
+Orientação inicial: LESTE
+Mecânicas: M31, M32, M33, M35, M36, M01, M02, M03, M06, M14, M20, M21, M30, M37
+Estruturas obrigatórias/empregadas: comparison, elif, else, if, input, int, strings, variables, abrir_porta(), andar_frente(), ativar_alavanca(), entrar_portao(), input(), int(), virar_direita(), virar_esquerda()
+Orçamento: 45 instruções semânticas
+Mapa reelaborado: 18 x 12; região inicial, salão central e três rotas teleportadas que convergem na câmara final; 6 áreas e aproximadamente 14 curvas.
+Objetivos:
+  1. Resolva o desvio da chave
+  2. Ative a alavanca da região inicial
+  3. Inicie a classificação com if
+  4. Classifique com if/elif/else
+  5. Mantenha uma rota alternativa com else
+  6. Compare o poder com os dois limiares
+  7. Entre no portão escolhido pela classificação
+  8. Abra o portão da câmara final
+  9. Alcance o cristal da unidade
+  10. Respeite o orçamento de 45 instruções
+Solução oficial:
+    andar_frente(2)
+    virar_esquerda()
+    andar_frente(2)
+    virar_direita()
+    virar_direita()
+    andar_frente(2)
+    virar_esquerda()
+    andar_frente(3)
+    ativar_alavanca()
+    virar_esquerda()
+    andar_frente(4)
+    poder = int(input("Poder da runa: "))
+    if poder >= 20:
+        virar_direita()
+        andar_frente(4)
+        entrar_portao(3)
+        andar_frente(3)
+        virar_esquerda()
+        andar_frente()
+        virar_direita()
+    elif poder >= 10:
+        andar_frente(3)
+        entrar_portao(2)
+        andar_frente(4)
+        virar_direita()
+    else:
+        virar_esquerda()
+        andar_frente(3)
+        entrar_portao(1)
+        andar_frente(4)
+        virar_esquerda()
+        andar_frente(6)
+        virar_direita()
+    abrir_porta("gate")
+    andar_frente(2)
+Explicação: Os três ramos levam a regiões distintas e convergem diante do mesmo portão final.
+Casos executados: Sol; entradas 25: SUCCESS | Lua; entradas 15: SUCCESS | Sombra; entradas 5: SUCCESS.
+Observações de teste: SUCCESS em 3 cenário(s)/variante(s); matriz funcional de 15 verificações aprovada; segunda execução com reset e código preservado; replay sem duplicação de XP/moedas; matriz de mapa com 14 verificações aprovada.
+
+ATIVIDADE 16 — A Ponte dos Ecos
+Unidade: 4
+Conceito: for + range()
+Orientação inicial: LESTE
+Mecânicas: M31, M32, M33, M35, M36, M08, M26
+Estruturas obrigatórias/empregadas: for, range, andar_frente(), ativar_runa(), range(), virar_direita(), virar_esquerda()
+Orçamento: não aplicável
+Mapa reelaborado: 12 x 8; entrada em L, galeria visual de cinco totens, ponte em curva e margem final; 4 áreas e aproximadamente 4 curvas.
+Objetivos:
+  1. Use for com range()
+  2. Ative os cinco totens em sequência
+  3. Complete visualmente a ponte segmentada
+  4. Contorne a ponte e alcance o cristal
+Solução oficial:
+    andar_frente(3)
+    virar_direita()
+    andar_frente(2)
+    virar_esquerda()
+    for i in range(5):
+        ativar_runa()
+        andar_frente()
+    virar_direita()
+    andar_frente(3)
+    virar_direita()
+    andar_frente(3)
+Explicação: Cada iteração ativa um totem diferente e um segmento correspondente; a rota então dobra duas vezes sobre a ponte.
+Casos executados: padrão: SUCCESS.
+Observações de teste: SUCCESS em 1 cenário(s)/variante(s); matriz funcional de 15 verificações aprovada; segunda execução com reset e código preservado; replay sem duplicação de XP/moedas; matriz de mapa com 14 verificações aprovada; tutorial validado etapa por etapa.
+
+ATIVIDADE 17 — A Câmara dos Rubis
+Unidade: 4
+Conceito: for + acumulador
+Orientação inicial: LESTE
+Mecânicas: M31, M32, M33, M35, M36, M06, M24, M30, M34
+Estruturas obrigatórias/empregadas: arithmetic, comparison, for, if, range, strings, variables, abrir_porta(), andar_frente(), coletar_rubi(), range(), virar_direita(), virar_esquerda()
+Orçamento: não aplicável
+Mapa reelaborado: 14 x 10; entrada, circuito crescente por cinco posições e corredor final selado; 5 áreas e aproximadamente 7 curvas.
+Objetivos:
+  1. Percorra o padrão usando for
+  2. Colete fisicamente os 5 rubis
+  3. Mantenha o acumulador total igual a 5
+  4. Use o acumulador para abrir a porta
+  5. Alcance o cristal
+Solução oficial:
+    andar_frente(3)
+    virar_direita()
+    andar_frente(5)
+    virar_esquerda()
+    total = 0
+    for i in range(5):
+        coletar_rubi()
+        total += 1
+        andar_frente(i + 1)
+        virar_direita()
+    if total == 5:
+        abrir_porta("door")
+    andar_frente(4)
+Explicação: As distâncias 1, 2, 3, 4 e 5 formam um circuito espacial; o acumulador libera a porta ao final.
+Casos executados: padrão: SUCCESS.
+Observações de teste: SUCCESS em 1 cenário(s)/variante(s); matriz funcional de 15 verificações aprovada; segunda execução com reset e código preservado; replay sem duplicação de XP/moedas; matriz de mapa com 14 verificações aprovada.
+
+ATIVIDADE 18 — O Corredor das Placas
+Unidade: 4
+Conceito: while e condição de continuidade
+Orientação inicial: LESTE
+Mecânicas: M31, M32, M33, M35, M36, M02, M09, M12, M30
+Estruturas obrigatórias/empregadas: while, andar_frente(), corredor_continua(), desativar_armadilha(), virar_direita(), virar_esquerda()
+Orçamento: não aplicável
+Mapa reelaborado: 16 x 11; quatro pequenas câmaras diagonais, placas alternadoras, riscos laterais e saída reta curta; 5 áreas e aproximadamente 8 curvas.
+Objetivos:
+  1. Use while com o sensor orientado
+  2. Desative as quatro armadilhas do eixo
+  3. Alcance todas as zonas seguras
+  4. Conclua o zigue-zague e alcance o cristal
+Solução oficial:
+    while corredor_continua():
+        desativar_armadilha()
+        andar_frente(2)
+        virar_direita()
+        andar_frente(2)
+        virar_esquerda()
+    andar_frente(4)
+Explicação: Cada iteração remove o perigo frontal e desloca Guto até a próxima placa, formando o zigue-zague.
+Casos executados: padrão: SUCCESS.
+Observações de teste: SUCCESS em 1 cenário(s)/variante(s); matriz funcional de 15 verificações aprovada; segunda execução com reset e código preservado; replay sem duplicação de XP/moedas; matriz de mapa com 14 verificações aprovada.
+
+ATIVIDADE 19 — A Chave Perdida
+Unidade: 4
+Conceito: while + break
+Orientação inicial: LESTE
+Mecânicas: M31, M32, M33, M35, M36, M21, M22, M23, M30, M37
+Estruturas obrigatórias/empregadas: break, comparison, elif, else, if, strings, variables, while, abrir_bau(), abrir_porta(), andar_frente(), encontrou_chave(), tem_bau_a_frente(), virar_direita(), virar_esquerda()
+Orçamento: 45 instruções semânticas
+Mapa reelaborado: 18 x 12; grande área de busca com três câmaras, eixos de retorno distintos e porta distante; 6 áreas e aproximadamente 12 curvas.
+Objetivos:
+  1. Continue a busca usando while
+  2. Interrompa a busca com break
+  3. Encontre a chave sem conhecer sua posição
+  4. Retorne e abra a porta distante
+  5. Alcance o cristal
+  6. Respeite o orçamento de 45 instruções
+Solução oficial:
+    andar_frente(2)
+    tentativa = 0
+    while tem_bau_a_frente():
+        abrir_bau()
+        if encontrou_chave():
+            break
+        tentativa += 1
+        if tentativa == 1:
+            virar_esquerda()
+            andar_frente(4)
+            virar_direita()
+            andar_frente(3)
+            virar_direita()
+        else:
+            andar_frente(4)
+            virar_esquerda()
+            andar_frente(5)
+            virar_esquerda()
+    if tentativa == 0:
+        virar_esquerda()
+        andar_frente(9)
+        virar_direita()
+        andar_frente(11)
+    elif tentativa == 1:
+        virar_direita()
+        virar_direita()
+        andar_frente(5)
+        virar_direita()
+        andar_frente(8)
+    else:
+        andar_frente(9)
+        virar_direita()
+        andar_frente(3)
+    abrir_porta("door")
+    andar_frente(2)
+Explicação: A busca percorre até três câmaras; break preserva a posição encontrada e cada caso usa um eixo de retorno até a porta.
+Casos executados: variante 1: SUCCESS | variante 2: SUCCESS | variante 3: SUCCESS.
+Observações de teste: SUCCESS em 3 cenário(s)/variante(s); matriz funcional de 15 verificações aprovada; segunda execução com reset e código preservado; replay sem duplicação de XP/moedas; matriz de mapa com 14 verificações aprovada.
+
+ATIVIDADE 20 — O Santuário do Basilisco
+Unidade: 4
+Conceito: Integração final das quatro unidades
+Orientação inicial: LESTE
+Mecânicas: M31, M32, M33, M35, M36, M02, M03, M06, M08, M09, M12, M21, M23, M24, M26, M30, M34, M37
+Estruturas obrigatórias/empregadas: and, arithmetic, break, comparison, for, if, range, strings, variables, while, abrir_bau(), abrir_porta(), andar_frente(), ativar_runa(), coletar_rubi(), corredor_continua(), desativar_armadilha(), encontrou_chave(), range(), rubis_coletados(), tem_bau_a_frente(), tem_chave(), virar_direita(), virar_esquerda()
+Orçamento: 50 instruções semânticas
+Mapa reelaborado: 20 x 14; cinco regiões conectadas: totens, armadilhas, baús, rubis e santuário final; 5 áreas e aproximadamente 14 curvas.
+Objetivos:
+  1. Prova 1: complete os totens com for
+  2. Prova 2: atravesse as armadilhas com while
+  3. Prova 3: encontre a chave e use break
+  4. Prova 4: acumule 3 rubis
+  5. Prova 5: desative as proteções do Basilisco
+  6. Aplique for
+  7. Aplique while
+  8. Aplique break
+  9. Combine as condições finais com and
+  10. Alcance o cristal final
+  11. Respeite o orçamento de 50 instruções
+Solução oficial:
+    for i in range(3):
+        ativar_runa()
+        andar_frente(2)
+        virar_direita()
+    virar_direita()
+    andar_frente(5)
+    virar_direita()
+    andar_frente()
+    while corredor_continua():
+        desativar_armadilha()
+        andar_frente(2)
+        virar_esquerda()
+        andar_frente(2)
+        virar_direita()
+    virar_esquerda()
+    andar_frente(2)
+    tentativa = 0
+    while tem_bau_a_frente():
+        abrir_bau()
+        if encontrou_chave():
+            break
+        tentativa += 1
+        virar_direita()
+        andar_frente(2)
+        virar_esquerda()
+    andar_frente(4)
+    virar_direita()
+    andar_frente(4 - tentativa * 2)
+    virar_direita()
+    for i in range(3):
+        coletar_rubi()
+        andar_frente()
+        virar_direita()
+    if tem_chave() and rubis_coletados() == 3:
+        andar_frente()
+        virar_esquerda()
+        andar_frente(2)
+        virar_esquerda()
+        abrir_porta("basilisk")
+        andar_frente(3)
+Explicação: As cinco provas ocupam regiões próprias; o código controla a passagem física entre elas e só libera o santuário após chave e três rubis.
+Casos executados: variante 1: SUCCESS | variante 2: SUCCESS | variante 3: SUCCESS.
+Observações de teste: SUCCESS em 3 cenário(s)/variante(s); matriz funcional de 15 verificações aprovada; segunda execução com reset e código preservado; replay sem duplicação de XP/moedas; matriz de mapa com 14 verificações aprovada.
+
+BALANCEAMENTO PROVISÓRIO
+XP, multiplicadores, moedas e guardas ficam em systems/GameConstants.js; orçamentos ficam em activities.js. Reavaliar após playtests.
