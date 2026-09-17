@@ -379,7 +379,7 @@
             ],
             mapDesign: { dimensions: '13 x 9', structure: 'bifurcação verdadeira com rota superior e inferior simétricas', areas: 4, curves: 6 },
             entities: [
-                { id: 'plate', type: 'toggle_plate', row: 3, column: 2 },
+                { id: 'plate', type: 'toggle_plate', row: 3, column: 2, connections: [{ targetId: 'spikes_upper', activeState: 'inactive', inactiveState: 'active' }, { targetId: 'spikes_lower', activeState: 'active', inactiveState: 'inactive' }] },
                 { id: 'spikes_upper', type: 'hazard', row: 2, column: 6 },
                 { id: 'spikes_lower', type: 'hazard', row: 6, column: 6 }
             ],

@@ -18,9 +18,10 @@
     function prepareLines (source) {
         const lines = [];
         source.replace(/\r\n?/g, '\n').split('\n').forEach((raw, index) => {
+            // Empty/comment-only lines do not participate in Python indentation.
+            if (!raw.trim() || raw.trimStart().startsWith('#')) return;
             if (/^\s*\t/.test(raw)) throw new ParseError('Use espaços, não tabulações, para indentar.', index + 1);
             const leading = raw.match(/^ */)[0].length;
-            if (leading % 4 !== 0 && raw.trim()) throw new ParseError('A indentação deve usar múltiplos de 4 espaços.', index + 1);
             splitStatements(raw.slice(leading)).forEach((text) => lines.push({ text, indent: leading, lineNumber: index + 1 }));
         });
         return lines;
@@ -51,11 +52,12 @@
         take (value) { const token = this.tokens[this.index]; if (value !== undefined && token.value !== value) throw new ParseError(`Esperado '${value}'.`, this.lineNumber); this.index++; return token; }
         parse () { const result = this.parseOr(); if (this.peek().type !== 'eof') throw new ParseError('Expressão inválida.', this.lineNumber); return result; }
         parseOr () { let left = this.parseAnd(); while (this.peek('or')) { this.take(); left = { type: 'binary', operator: 'or', left, right: this.parseAnd() }; } return left; }
-        parseAnd () { let left = this.parseComparison(); while (this.peek('and')) { this.take(); left = { type: 'binary', operator: 'and', left, right: this.parseComparison() }; } return left; }
-        parseComparison () { let left = this.parseAddition(); while (['==', '!=', '>', '<', '>=', '<='].includes(this.peek().value)) { const operator = this.take().value; left = { type: 'binary', operator, left, right: this.parseAddition() }; } return left; }
+        parseAnd () { let left = this.parseNot(); while (this.peek('and')) { this.take(); left = { type: 'binary', operator: 'and', left, right: this.parseNot() }; } return left; }
+        parseNot () { if (this.peek('not')) { this.take(); return { type: 'unary', operator: 'not', argument: this.parseNot() }; } return this.parseComparison(); }
+        parseComparison () { const operands = [this.parseAddition()]; const operators = []; while (['==', '!=', '>', '<', '>=', '<='].includes(this.peek().value)) { operators.push(this.take().value); operands.push(this.parseAddition()); } return operators.length ? { type: 'comparison', operands, operators } : operands[0]; }
         parseAddition () { let left = this.parseMultiplication(); while (['+', '-'].includes(this.peek().value)) { const operator = this.take().value; left = { type: 'binary', operator, left, right: this.parseMultiplication() }; } return left; }
         parseMultiplication () { let left = this.parseUnary(); while (['*', '/'].includes(this.peek().value)) { const operator = this.take().value; left = { type: 'binary', operator, left, right: this.parseUnary() }; } return left; }
-        parseUnary () { if (['+', '-', 'not'].includes(this.peek().value)) return { type: 'unary', operator: this.take().value, argument: this.parseUnary() }; return this.parsePrimary(); }
+        parseUnary () { if (['+', '-'].includes(this.peek().value)) return { type: 'unary', operator: this.take().value, argument: this.parseUnary() }; return this.parsePrimary(); }
         parsePrimary () {
             const token = this.peek();
             if (token.type === 'number' || token.type === 'string') { this.take(); return { type: 'literal', value: token.value }; }
@@ -72,6 +74,11 @@
     function parseExpression (text, lineNumber) { return new ExpressionParser(text, lineNumber).parse(); }
     function parseProgram (source) {
         const lines = prepareLines(source);
+        function childBlock (index, parentIndent, header) {
+            const next = lines[index];
+            if (!next || next.indent <= parentIndent) throw new ParseError('Esperado um bloco indentado após os dois-pontos.', next ? next.lineNumber : header.lineNumber);
+            return block(index, next.indent);
+        }
         function block (index, indent) {
             const body = [];
             while (index < lines.length) {
@@ -84,21 +91,21 @@
                     const branches = []; let current = line;
                     while (true) {
                         const match = current.text.match(/^(?:if|elif)\s+(.+):$/); if (!match) break;
-                        const child = block(index + 1, indent + 4); if (!child.body.length) throw new ParseError('Bloco condicional vazio.', current.lineNumber);
-                        branches.push({ condition: parseExpression(match[1], current.lineNumber), body: child.body }); index = child.index;
+                        const child = childBlock(index + 1, indent, current); if (!child.body.length) throw new ParseError('Bloco condicional vazio.', current.lineNumber);
+                        branches.push({ condition: parseExpression(match[1], current.lineNumber), body: child.body, lineNumber: current.lineNumber }); index = child.index;
                         if (index < lines.length && lines[index].indent === indent && /^elif\s+.+:$/.test(lines[index].text)) { current = lines[index]; continue; }
                         break;
                     }
                     let elseBody = null;
-                    if (index < lines.length && lines[index].indent === indent && lines[index].text === 'else:') { const child = block(index + 1, indent + 4); if (!child.body.length) throw new ParseError('Bloco else vazio.', lines[index].lineNumber); elseBody = child.body; index = child.index; }
+                    if (index < lines.length && lines[index].indent === indent && lines[index].text === 'else:') { const child = childBlock(index + 1, indent, lines[index]); if (!child.body.length) throw new ParseError('Bloco else vazio.', lines[index].lineNumber); elseBody = child.body; index = child.index; }
                     body.push({ type: 'if', branches, elseBody, lineNumber: line.lineNumber }); continue;
                 }
                 const forMatch = text.match(/^for\s+([A-Za-z_]\w*)\s+in\s+(.+):$/);
-                if (forMatch) { const child = block(index + 1, indent + 4); if (!child.body.length) throw new ParseError('Bloco for vazio.', line.lineNumber); body.push({ type: 'for', variable: forMatch[1], iterable: parseExpression(forMatch[2], line.lineNumber), body: child.body, lineNumber: line.lineNumber }); index = child.index; continue; }
+                if (forMatch) { const child = childBlock(index + 1, indent, line); if (!child.body.length) throw new ParseError('Bloco for vazio.', line.lineNumber); body.push({ type: 'for', variable: forMatch[1], iterable: parseExpression(forMatch[2], line.lineNumber), body: child.body, lineNumber: line.lineNumber }); index = child.index; continue; }
                 const whileMatch = text.match(/^while\s+(.+):$/);
-                if (whileMatch) { const child = block(index + 1, indent + 4); if (!child.body.length) throw new ParseError('Bloco while vazio.', line.lineNumber); body.push({ type: 'while', condition: parseExpression(whileMatch[1], line.lineNumber), body: child.body, lineNumber: line.lineNumber }); index = child.index; continue; }
+                if (whileMatch) { const child = childBlock(index + 1, indent, line); if (!child.body.length) throw new ParseError('Bloco while vazio.', line.lineNumber); body.push({ type: 'while', condition: parseExpression(whileMatch[1], line.lineNumber), body: child.body, lineNumber: line.lineNumber }); index = child.index; continue; }
                 if (text === 'break') { body.push({ type: 'break', lineNumber: line.lineNumber }); index++; continue; }
-                const assignment = text.match(/^([A-Za-z_]\w*)\s*(\+=|-=|\*=|\/=|=)\s*(.+)$/);
+                const assignment = text.match(/^([A-Za-z_]\w*)\s*(\+=|-=|\*=|\/=|=(?!=))\s*(.+)$/);
                 if (assignment) body.push({ type: 'assignment', name: assignment[1], operator: assignment[2], expression: parseExpression(assignment[3], line.lineNumber), lineNumber: line.lineNumber });
                 else body.push({ type: 'expression', expression: parseExpression(text, line.lineNumber), lineNumber: line.lineNumber });
                 index++;
@@ -114,6 +121,7 @@
             if (node.type === 'variable') concepts.add('variables');
             if (node.type === 'literal') { if (typeof node.value === 'string') concepts.add('strings'); if (typeof node.value === 'boolean') concepts.add('booleans'); }
             if (node.type === 'unary') { if (node.operator === 'not') concepts.add('not'); expression(node.argument); }
+            if (node.type === 'comparison') { concepts.add('comparison'); node.operands.forEach(expression); }
             if (node.type === 'binary') { if (['+', '-', '*', '/'].includes(node.operator)) concepts.add('arithmetic'); if (['==', '!=', '>', '<', '>=', '<='].includes(node.operator)) concepts.add('comparison'); if (node.operator === 'and' || node.operator === 'or') concepts.add(node.operator); expression(node.left); expression(node.right); }
             if (node.type === 'call') { commands.add(node.name); if (['print', 'input', 'int', 'range'].includes(node.name)) concepts.add(node.name); node.args.forEach(expression); }
         }

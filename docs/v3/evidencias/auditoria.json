@@ -1,0 +1,2492 @@
+{
+  "generatedAt": "2026-09-16T12:23:54.198Z",
+  "activities": 20,
+  "scenarios": 29,
+  "isolatedMutations": 69,
+  "limits": "Auditoria de geometria e casos adversariais; não é prova formal de todos os programas possíveis e não substitui homologação no navegador.",
+  "report": [
+    {
+      "activity": 1,
+      "name": "Primeiros Passos",
+      "initialExitReachable": false,
+      "doorCuts": [
+        {
+          "id": "selo",
+          "blocksExit": true
+        }
+      ],
+      "scenarios": [
+        {
+          "variant": 0,
+          "result": "SUCCESS",
+          "visitedTiles": 14,
+          "regions": [
+            "entrada",
+            "nexo",
+            "camara",
+            "final"
+          ],
+          "clues": [],
+          "lights": [
+            "camara",
+            "final"
+          ],
+          "budget": {
+            "valid": true,
+            "limit": null,
+            "used": 11
+          }
+        }
+      ],
+      "omissions": [],
+      "missingRequirements": [
+        "selo/flag:light_final"
+      ],
+      "regions": [
+        {
+          "id": "entrada",
+          "label": "Vestíbulo",
+          "area": 9,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "camara",
+          "label": "Câmara da luz",
+          "area": 9,
+          "objects": [
+            "luz"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "nexo",
+          "label": "Passagem central",
+          "area": 9,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "final",
+          "label": "Câmara do cristal",
+          "area": 12,
+          "objects": [],
+          "visitedInOfficial": true
+        }
+      ]
+    },
+    {
+      "activity": 2,
+      "name": "O Caminho Mutável",
+      "initialExitReachable": false,
+      "doorCuts": [
+        {
+          "id": "porta",
+          "blocksExit": true
+        }
+      ],
+      "scenarios": [
+        {
+          "variant": 0,
+          "result": "SUCCESS",
+          "visitedTiles": 16,
+          "regions": [
+            "entrada",
+            "hub",
+            "alavanca",
+            "final"
+          ],
+          "clues": [],
+          "lights": [
+            "alavanca",
+            "final"
+          ],
+          "budget": {
+            "valid": true,
+            "limit": null,
+            "used": 12
+          }
+        }
+      ],
+      "omissions": [],
+      "missingRequirements": [
+        "porta/flag:leverDone"
+      ],
+      "regions": [
+        {
+          "id": "entrada",
+          "label": "Vestíbulo",
+          "area": 9,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "hub",
+          "label": "Salão de retorno",
+          "area": 9,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "alavanca",
+          "label": "Ala da alavanca",
+          "area": 12,
+          "objects": [
+            "luz",
+            "lever"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "tesouro",
+          "label": "Nicho do viajante",
+          "area": 9,
+          "objects": [
+            "moeda"
+          ],
+          "visitedInOfficial": false
+        },
+        {
+          "id": "final",
+          "label": "Porta do retorno",
+          "area": 12,
+          "objects": [],
+          "visitedInOfficial": true
+        }
+      ]
+    },
+    {
+      "activity": 3,
+      "name": "As Grades da Masmorra",
+      "initialExitReachable": false,
+      "doorCuts": [
+        {
+          "id": "grade",
+          "blocksExit": true
+        }
+      ],
+      "scenarios": [
+        {
+          "variant": 0,
+          "result": "SUCCESS",
+          "visitedTiles": 25,
+          "regions": [
+            "entrada",
+            "arquivo_a",
+            "central",
+            "arquivo_b",
+            "final"
+          ],
+          "clues": [
+            "base",
+            "fator"
+          ],
+          "lights": [
+            "arquivo_a",
+            "arquivo_b",
+            "final"
+          ],
+          "budget": {
+            "valid": true,
+            "limit": null,
+            "used": 24
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "clue": "base",
+          "result": "CLOSED_DOOR_BLOCK"
+        },
+        {
+          "clue": "fator",
+          "result": "CLOSED_DOOR_BLOCK"
+        }
+      ],
+      "missingRequirements": [
+        "grade/flag:read_base",
+        "grade/flag:read_fator"
+      ],
+      "regions": [
+        {
+          "id": "entrada",
+          "label": "Pórtico",
+          "area": 9,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "arquivo_a",
+          "label": "Arquivo do mestre",
+          "area": 9,
+          "objects": [
+            "luz_a",
+            "base"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "central",
+          "label": "Galeria das grades",
+          "area": 15,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "arquivo_b",
+          "label": "Arquivo do aprendiz",
+          "area": 9,
+          "objects": [
+            "fator"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "final",
+          "label": "Saída selada",
+          "area": 12,
+          "objects": [],
+          "visitedInOfficial": true
+        }
+      ]
+    },
+    {
+      "activity": 4,
+      "name": "O Corredor da Forja",
+      "initialExitReachable": false,
+      "doorCuts": [
+        {
+          "id": "selo",
+          "blocksExit": true
+        }
+      ],
+      "scenarios": [
+        {
+          "variant": 0,
+          "result": "SUCCESS",
+          "visitedTiles": 26,
+          "regions": [
+            "entrada",
+            "luz",
+            "mecanismo",
+            "traps",
+            "final"
+          ],
+          "clues": [],
+          "lights": [
+            "traps",
+            "final"
+          ],
+          "budget": {
+            "valid": true,
+            "limit": 28,
+            "used": 16
+          }
+        }
+      ],
+      "omissions": [],
+      "missingRequirements": [
+        "selo/flag:light_traps",
+        "selo/OR:todos"
+      ],
+      "regions": [
+        {
+          "id": "entrada",
+          "label": "Entrada das forjas",
+          "area": 9,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "luz",
+          "label": "Sala da lâmpada",
+          "area": 9,
+          "objects": [
+            "luz"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "mecanismo",
+          "label": "Oficina de segurança",
+          "area": 9,
+          "objects": [
+            "seguranca"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "traps",
+          "label": "Piso suspeito",
+          "area": 18,
+          "objects": [
+            "espinhos"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "detour",
+          "label": "Passarela de inspeção",
+          "area": 5,
+          "objects": [],
+          "visitedInOfficial": false
+        },
+        {
+          "id": "final",
+          "label": "Saída da forja",
+          "area": 12,
+          "objects": [],
+          "visitedInOfficial": true
+        }
+      ]
+    },
+    {
+      "activity": 5,
+      "name": "O Labirinto das Variáveis",
+      "initialExitReachable": false,
+      "doorCuts": [
+        {
+          "id": "porta_final",
+          "blocksExit": true
+        }
+      ],
+      "scenarios": [
+        {
+          "variant": 0,
+          "result": "SUCCESS",
+          "visitedTiles": 36,
+          "regions": [
+            "entrada",
+            "hub",
+            "luz",
+            "alavanca",
+            "calculo",
+            "final"
+          ],
+          "clues": [
+            "sigilo"
+          ],
+          "lights": [
+            "calculo",
+            "final"
+          ],
+          "budget": {
+            "valid": true,
+            "limit": 38,
+            "used": 24
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "clue": "sigilo",
+          "result": "CLOSED_DOOR_BLOCK"
+        }
+      ],
+      "missingRequirements": [
+        "porta_final/flag:light_final",
+        "porta_final/flag:seal_change",
+        "porta_final/flag:read_sigilo"
+      ],
+      "regions": [
+        {
+          "id": "entrada",
+          "label": "Pórtico do labirinto",
+          "area": 9,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "hub",
+          "label": "Salão dos três selos",
+          "area": 25,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "luz",
+          "label": "Ala da orientação",
+          "area": 9,
+          "objects": [
+            "luz"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "calculo",
+          "label": "Ala do cálculo",
+          "area": 9,
+          "objects": [
+            "sigilo"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "alavanca",
+          "label": "Ala da mudança",
+          "area": 9,
+          "objects": [
+            "mudanca"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "reliquia",
+          "label": "Nicho de memória",
+          "area": 9,
+          "objects": [
+            "moeda"
+          ],
+          "visitedInOfficial": false
+        },
+        {
+          "id": "final",
+          "label": "Cristal da unidade",
+          "area": 12,
+          "objects": [],
+          "visitedInOfficial": true
+        }
+      ]
+    },
+    {
+      "activity": 6,
+      "name": "O Pedestal da Palavra",
+      "initialExitReachable": false,
+      "doorCuts": [
+        {
+          "id": "grade",
+          "blocksExit": true
+        }
+      ],
+      "scenarios": [
+        {
+          "variant": 0,
+          "result": "SUCCESS",
+          "visitedTiles": 19,
+          "regions": [
+            "entrada",
+            "arquivo",
+            "runa",
+            "final"
+          ],
+          "clues": [
+            "juramento"
+          ],
+          "lights": [
+            "arquivo",
+            "final"
+          ],
+          "budget": {
+            "valid": true,
+            "limit": null,
+            "used": 14
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "clue": "juramento",
+          "result": "CLOSED_DOOR_BLOCK"
+        }
+      ],
+      "missingRequirements": [
+        "grade/flag:read_juramento",
+        "grade/flag:wordPrinted"
+      ],
+      "regions": [
+        {
+          "id": "entrada",
+          "label": "Vestíbulo da palavra",
+          "area": 9,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "arquivo",
+          "label": "Arquivo antigo",
+          "area": 9,
+          "objects": [
+            "luz",
+            "juramento"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "runa",
+          "label": "Galeria da voz",
+          "area": 12,
+          "objects": [
+            "runa"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "final",
+          "label": "Câmara iluminada",
+          "area": 12,
+          "objects": [],
+          "visitedInOfficial": true
+        }
+      ]
+    },
+    {
+      "activity": 7,
+      "name": "O Guardião da Resposta",
+      "initialExitReachable": false,
+      "doorCuts": [
+        {
+          "id": "guardian",
+          "blocksExit": true
+        },
+        {
+          "id": "door",
+          "blocksExit": true
+        }
+      ],
+      "scenarios": [
+        {
+          "variant": 0,
+          "result": "SUCCESS",
+          "visitedTiles": 22,
+          "regions": [
+            "entrada",
+            "sombra",
+            "biblioteca",
+            "pedestal",
+            "guardiao",
+            "final"
+          ],
+          "clues": [
+            "memoria"
+          ],
+          "lights": [
+            "sombra",
+            "biblioteca",
+            "final"
+          ],
+          "budget": {
+            "valid": true,
+            "limit": null,
+            "used": 18
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "clue": "memoria",
+          "result": "SEMANTIC_ERROR"
+        }
+      ],
+      "missingRequirements": [
+        "guardian/flag:answerEchoed",
+        "guardian/pista:memoria",
+        "door/flag:answerEchoed",
+        "door/pista:memoria"
+      ],
+      "regions": [
+        {
+          "id": "entrada",
+          "label": "Pórtico do guardião",
+          "area": 9,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "biblioteca",
+          "label": "Biblioteca do juramento",
+          "area": 15,
+          "objects": [
+            "memoria"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "sombra",
+          "label": "Corredor sem luz",
+          "area": 3,
+          "objects": [
+            "luz"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "pedestal",
+          "label": "Salão de resposta",
+          "area": 12,
+          "objects": [
+            "pedestal",
+            "runa"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "guardiao",
+          "label": "Pórtico protegido",
+          "area": 6,
+          "objects": [
+            "guardian"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "final",
+          "label": "Porta do juramento",
+          "area": 12,
+          "objects": [],
+          "visitedInOfficial": true
+        }
+      ]
+    },
+    {
+      "activity": 8,
+      "name": "A Ponte dos Construtores",
+      "initialExitReachable": false,
+      "doorCuts": [],
+      "scenarios": [
+        {
+          "variant": 0,
+          "result": "SUCCESS",
+          "visitedTiles": 30,
+          "regions": [
+            "entrada",
+            "oficina_a",
+            "hub",
+            "oficina_b",
+            "travessia",
+            "final"
+          ],
+          "clues": [
+            "grupos",
+            "segmentos"
+          ],
+          "lights": [
+            "oficina_a",
+            "oficina_b",
+            "travessia",
+            "final"
+          ],
+          "budget": {
+            "valid": true,
+            "limit": null,
+            "used": 26
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "clue": "grupos",
+          "result": "SEMANTIC_ERROR"
+        },
+        {
+          "clue": "segmentos",
+          "result": "SEMANTIC_ERROR"
+        }
+      ],
+      "missingRequirements": [],
+      "regions": [
+        {
+          "id": "entrada",
+          "label": "Margem oeste",
+          "area": 9,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "oficina_a",
+          "label": "Oficina dos grupos",
+          "area": 9,
+          "objects": [
+            "luz_a",
+            "grupos",
+            "pedestal_a"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "hub",
+          "label": "Pátio dos construtores",
+          "area": 18,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "oficina_b",
+          "label": "Oficina dos segmentos",
+          "area": 12,
+          "objects": [
+            "luz_b",
+            "segmentos",
+            "pedestal_b",
+            "lever",
+            "runa"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "travessia",
+          "label": "Ponte retrátil",
+          "area": 3,
+          "objects": [
+            "bridge1",
+            "bridge2",
+            "bridge3"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "final",
+          "label": "Margem leste",
+          "area": 15,
+          "objects": [],
+          "visitedInOfficial": true
+        }
+      ]
+    },
+    {
+      "activity": 9,
+      "name": "O Salão dos Espelhos Rúnicos",
+      "initialExitReachable": false,
+      "doorCuts": [
+        {
+          "id": "cofre",
+          "blocksExit": true
+        }
+      ],
+      "scenarios": [
+        {
+          "variant": 0,
+          "result": "SUCCESS",
+          "visitedTiles": 28,
+          "regions": [
+            "entrada",
+            "runa_a",
+            "calculo",
+            "runa_b",
+            "espelhos",
+            "final"
+          ],
+          "clues": [
+            "primeira",
+            "segunda"
+          ],
+          "lights": [
+            "runa_a",
+            "runa_b",
+            "final"
+          ],
+          "budget": {
+            "valid": true,
+            "limit": 38,
+            "used": 30
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "clue": "primeira",
+          "result": "SEMANTIC_ERROR"
+        },
+        {
+          "clue": "segunda",
+          "result": "SEMANTIC_ERROR"
+        }
+      ],
+      "missingRequirements": [
+        "cofre/flag:correctMirror"
+      ],
+      "regions": [
+        {
+          "id": "entrada",
+          "label": "Salão oeste",
+          "area": 9,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "runa_a",
+          "label": "Arquivo da primeira runa",
+          "area": 9,
+          "objects": [
+            "luz_a",
+            "primeira"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "runa_b",
+          "label": "Arquivo da segunda runa",
+          "area": 9,
+          "objects": [
+            "luz_b",
+            "segunda"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "calculo",
+          "label": "Mesa dos espelhos",
+          "area": 9,
+          "objects": [
+            "pedestal",
+            "runa"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "espelhos",
+          "label": "Galeria dos destinos",
+          "area": 9,
+          "objects": [
+            "mirror5"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "falso_a",
+          "label": "Espelho da névoa",
+          "area": 9,
+          "objects": [
+            "mirror3"
+          ],
+          "visitedInOfficial": false
+        },
+        {
+          "id": "falso_b",
+          "label": "Espelho do eco",
+          "area": 9,
+          "objects": [
+            "mirror7"
+          ],
+          "visitedInOfficial": false
+        },
+        {
+          "id": "final",
+          "label": "Cofre além do espelho",
+          "area": 18,
+          "objects": [
+            "cofre"
+          ],
+          "visitedInOfficial": true
+        }
+      ]
+    },
+    {
+      "activity": 10,
+      "name": "O Cofre das Três Runas",
+      "initialExitReachable": false,
+      "doorCuts": [
+        {
+          "id": "cofre",
+          "blocksExit": true
+        }
+      ],
+      "scenarios": [
+        {
+          "variant": 0,
+          "result": "SUCCESS",
+          "visitedTiles": 47,
+          "regions": [
+            "entrada",
+            "hub",
+            "halo_a",
+            "ala_a",
+            "ala_b",
+            "halo_c",
+            "ala_c",
+            "final"
+          ],
+          "clues": [
+            "a",
+            "b",
+            "c"
+          ],
+          "lights": [
+            "ala_a",
+            "halo_a",
+            "ala_b",
+            "halo_b",
+            "ala_c",
+            "halo_c",
+            "final"
+          ],
+          "budget": {
+            "valid": true,
+            "limit": 56,
+            "used": 40
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "clue": "a",
+          "result": "SEMANTIC_ERROR"
+        },
+        {
+          "clue": "b",
+          "result": "SEMANTIC_ERROR"
+        },
+        {
+          "clue": "c",
+          "result": "SEMANTIC_ERROR"
+        }
+      ],
+      "missingRequirements": [
+        "cofre/flag:leverDone",
+        "cofre/flag:bridgeReady",
+        "cofre/flag:runesPrinted",
+        "cofre/flag:mirrorDone",
+        "cofre/flag:light_halo_a",
+        "cofre/flag:light_halo_b",
+        "cofre/flag:light_halo_c",
+        "cofre/pista:a",
+        "cofre/pista:b",
+        "cofre/pista:c"
+      ],
+      "regions": [
+        {
+          "id": "entrada",
+          "label": "Pórtico das três runas",
+          "area": 9,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "halo_a",
+          "label": "Selo da aurora",
+          "area": 10,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "hub",
+          "label": "Salão do cofre",
+          "area": 5,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "halo_b",
+          "label": "Selo da forja",
+          "area": 4,
+          "objects": [],
+          "visitedInOfficial": false
+        },
+        {
+          "id": "halo_c",
+          "label": "Selo da memória",
+          "area": 6,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "ala_a",
+          "label": "Arquivo da aurora",
+          "area": 9,
+          "objects": [
+            "luz_a",
+            "a",
+            "pedestal_a"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "ala_b",
+          "label": "Oficina da forja",
+          "area": 12,
+          "objects": [
+            "luz_b",
+            "b",
+            "pedestal_b",
+            "lever",
+            "rune_b"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "ala_c",
+          "label": "Arquivo da memória",
+          "area": 12,
+          "objects": [
+            "bridge3",
+            "luz_c",
+            "c",
+            "pedestal_c",
+            "rune_c",
+            "mirror5"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "final",
+          "label": "Tesouro das três runas",
+          "area": 21,
+          "objects": [],
+          "visitedInOfficial": true
+        }
+      ]
+    },
+    {
+      "activity": 11,
+      "name": "A Porta do Guardião",
+      "initialExitReachable": false,
+      "doorCuts": [
+        {
+          "id": "door",
+          "blocksExit": true
+        },
+        {
+          "id": "guardian",
+          "blocksExit": true
+        }
+      ],
+      "scenarios": [
+        {
+          "variant": 0,
+          "result": "SUCCESS",
+          "visitedTiles": 23,
+          "regions": [
+            "entrada",
+            "corredor",
+            "chave",
+            "guarda",
+            "final"
+          ],
+          "clues": [],
+          "lights": [
+            "chave",
+            "final"
+          ],
+          "budget": {
+            "valid": true,
+            "limit": null,
+            "used": 16
+          }
+        }
+      ],
+      "omissions": [],
+      "missingRequirements": [
+        "door/chave",
+        "guardian/chave"
+      ],
+      "regions": [
+        {
+          "id": "entrada",
+          "label": "Pórtico do guardião",
+          "area": 9,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "chave",
+          "label": "Ala da chave",
+          "area": 9,
+          "objects": [
+            "key"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "corredor",
+          "label": "Galeria de retorno",
+          "area": 12,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "guarda",
+          "label": "Sala da guarda",
+          "area": 9,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "final",
+          "label": "Cristal protegido",
+          "area": 12,
+          "objects": [],
+          "visitedInOfficial": true
+        }
+      ]
+    },
+    {
+      "activity": 12,
+      "name": "Os Dois Caminhos",
+      "initialExitReachable": false,
+      "doorCuts": [
+        {
+          "id": "selo",
+          "blocksExit": true
+        }
+      ],
+      "scenarios": [
+        {
+          "variant": 0,
+          "result": "SUCCESS",
+          "visitedTiles": 28,
+          "regions": [
+            "entrada",
+            "sensor",
+            "upper",
+            "uniao",
+            "final"
+          ],
+          "clues": [],
+          "lights": [
+            "upper",
+            "lower",
+            "final"
+          ],
+          "budget": {
+            "valid": true,
+            "limit": null,
+            "used": 18
+          }
+        },
+        {
+          "variant": 1,
+          "result": "SUCCESS",
+          "visitedTiles": 28,
+          "regions": [
+            "entrada",
+            "sensor",
+            "lower",
+            "uniao",
+            "final"
+          ],
+          "clues": [],
+          "lights": [
+            "upper",
+            "lower",
+            "final"
+          ],
+          "budget": {
+            "valid": true,
+            "limit": null,
+            "used": 18
+          }
+        }
+      ],
+      "omissions": [],
+      "missingRequirements": [
+        "selo/OR:todos"
+      ],
+      "regions": [
+        {
+          "id": "entrada",
+          "label": "Vestíbulo dos caminhos",
+          "area": 9,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "sensor",
+          "label": "Bifurcação da placa",
+          "area": 9,
+          "objects": [
+            "plate",
+            "luz"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "upper",
+          "label": "Galeria superior",
+          "area": 9,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "lower",
+          "label": "Galeria inferior",
+          "area": 9,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "uniao",
+          "label": "Salão de reencontro",
+          "area": 9,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "final",
+          "label": "Saída das rotas",
+          "area": 12,
+          "objects": [],
+          "visitedInOfficial": true
+        }
+      ]
+    },
+    {
+      "activity": 13,
+      "name": "A Câmara das Comparações",
+      "initialExitReachable": false,
+      "doorCuts": [
+        {
+          "id": "guardian_high",
+          "blocksExit": true
+        },
+        {
+          "id": "guardian_second",
+          "blocksExit": true
+        }
+      ],
+      "scenarios": [
+        {
+          "variant": 0,
+          "result": "SUCCESS",
+          "visitedTiles": 31,
+          "regions": [
+            "entrada",
+            "energia",
+            "pedestal",
+            "limiar",
+            "guardas",
+            "final"
+          ],
+          "clues": [
+            "energia",
+            "limiar"
+          ],
+          "lights": [
+            "energia",
+            "limiar",
+            "final"
+          ],
+          "budget": {
+            "valid": true,
+            "limit": null,
+            "used": 30
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "clue": "energia",
+          "result": "SEMANTIC_ERROR"
+        },
+        {
+          "clue": "limiar",
+          "result": "SEMANTIC_ERROR"
+        }
+      ],
+      "missingRequirements": [
+        "guardian_high/pista:energia",
+        "guardian_high/pista:limiar",
+        "guardian_high/entrada",
+        "guardian_second/flag:guardian_highOpen",
+        "guardian_second/entrada"
+      ],
+      "regions": [
+        {
+          "id": "entrada",
+          "label": "Pórtico da energia",
+          "area": 9,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "energia",
+          "label": "Arquivo da energia",
+          "area": 9,
+          "objects": [
+            "luz_a",
+            "energia"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "limiar",
+          "label": "Arquivo da medida",
+          "area": 9,
+          "objects": [
+            "luz_b",
+            "limiar"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "pedestal",
+          "label": "Sala de comparação",
+          "area": 12,
+          "objects": [
+            "pedestal"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "guardas",
+          "label": "Galeria dos validadores",
+          "area": 3,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "final",
+          "label": "Câmara da energia",
+          "area": 12,
+          "objects": [],
+          "visitedInOfficial": true
+        }
+      ]
+    },
+    {
+      "activity": 14,
+      "name": "O Selo das Duas Alavancas",
+      "initialExitReachable": false,
+      "doorCuts": [
+        {
+          "id": "gate_side",
+          "blocksExit": true
+        },
+        {
+          "id": "gate_main",
+          "blocksExit": true
+        }
+      ],
+      "scenarios": [
+        {
+          "variant": 0,
+          "result": "SUCCESS",
+          "visitedTiles": 33,
+          "regions": [
+            "entrada",
+            "hub",
+            "azul",
+            "verde",
+            "or",
+            "and",
+            "final"
+          ],
+          "clues": [],
+          "lights": [
+            "azul",
+            "verde",
+            "final"
+          ],
+          "budget": {
+            "valid": true,
+            "limit": 40,
+            "used": 26
+          }
+        }
+      ],
+      "omissions": [],
+      "missingRequirements": [
+        "gate_side/OR:todos",
+        "gate_main/flag:lever_blue",
+        "gate_main/flag:lever_green"
+      ],
+      "regions": [
+        {
+          "id": "entrada",
+          "label": "Vestíbulo dos selos",
+          "area": 9,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "hub",
+          "label": "Salão das alavancas",
+          "area": 9,
+          "objects": [
+            "luz"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "azul",
+          "label": "Ala azul",
+          "area": 9,
+          "objects": [
+            "lever_blue"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "verde",
+          "label": "Ala verde",
+          "area": 9,
+          "objects": [
+            "lever_green"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "or",
+          "label": "Galeria do OU",
+          "area": 9,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "and",
+          "label": "Pórtico do E",
+          "area": 6,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "final",
+          "label": "Cristal dos selos",
+          "area": 12,
+          "objects": [],
+          "visitedInOfficial": true
+        }
+      ]
+    },
+    {
+      "activity": 15,
+      "name": "O Julgamento dos Três Portões",
+      "initialExitReachable": false,
+      "doorCuts": [
+        {
+          "id": "gate",
+          "blocksExit": true
+        }
+      ],
+      "scenarios": [
+        {
+          "variant": 0,
+          "result": "SUCCESS",
+          "visitedTiles": 53,
+          "regions": [
+            "entrada",
+            "sol",
+            "lua",
+            "hub",
+            "sombra",
+            "destino_sol",
+            "uniao",
+            "final"
+          ],
+          "clues": [
+            "sol",
+            "lua",
+            "sombra"
+          ],
+          "lights": [
+            "sol",
+            "destino_sol",
+            "lua",
+            "destino_lua",
+            "sombra",
+            "destino_sombra",
+            "final"
+          ],
+          "budget": {
+            "valid": true,
+            "limit": 65,
+            "used": 48
+          }
+        },
+        {
+          "variant": 1,
+          "result": "SUCCESS",
+          "visitedTiles": 41,
+          "regions": [
+            "entrada",
+            "sol",
+            "lua",
+            "hub",
+            "sombra",
+            "destino_lua",
+            "uniao",
+            "final"
+          ],
+          "clues": [
+            "sol",
+            "lua",
+            "sombra"
+          ],
+          "lights": [
+            "sol",
+            "destino_sol",
+            "lua",
+            "destino_lua",
+            "sombra",
+            "destino_sombra",
+            "final"
+          ],
+          "budget": {
+            "valid": true,
+            "limit": 65,
+            "used": 48
+          }
+        },
+        {
+          "variant": 2,
+          "result": "SUCCESS",
+          "visitedTiles": 49,
+          "regions": [
+            "entrada",
+            "sol",
+            "lua",
+            "hub",
+            "sombra",
+            "destino_sombra",
+            "uniao",
+            "final"
+          ],
+          "clues": [
+            "sol",
+            "lua",
+            "sombra"
+          ],
+          "lights": [
+            "sol",
+            "destino_sol",
+            "lua",
+            "destino_lua",
+            "sombra",
+            "destino_sombra",
+            "final"
+          ],
+          "budget": {
+            "valid": true,
+            "limit": 65,
+            "used": 48
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "clue": "sol",
+          "result": "SEMANTIC_ERROR"
+        },
+        {
+          "clue": "lua",
+          "result": "SEMANTIC_ERROR"
+        },
+        {
+          "clue": "sombra",
+          "result": "SEMANTIC_ERROR"
+        }
+      ],
+      "missingRequirements": [
+        "gate/flag:leverDone",
+        "gate/flag:correctPortal",
+        "gate/flag:read_sol",
+        "gate/flag:read_lua",
+        "gate/flag:read_sombra",
+        "gate/chave"
+      ],
+      "regions": [
+        {
+          "id": "entrada",
+          "label": "Pórtico do julgamento",
+          "area": 9,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "sol",
+          "label": "Arquivo do Sol",
+          "area": 9,
+          "objects": [
+            "luz_sol",
+            "sol",
+            "key"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "lua",
+          "label": "Arquivo da Lua",
+          "area": 9,
+          "objects": [
+            "luz_lua",
+            "lua",
+            "lever"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "sombra",
+          "label": "Arquivo da Sombra",
+          "area": 9,
+          "objects": [
+            "luz_sombra",
+            "sombra"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "hub",
+          "label": "Salão dos três portões",
+          "area": 50,
+          "objects": [
+            "power_pedestal",
+            "portal3",
+            "portal1"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "destino_sol",
+          "label": "Caminho do Sol",
+          "area": 9,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "destino_lua",
+          "label": "Caminho da Lua",
+          "area": 9,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "destino_sombra",
+          "label": "Caminho da Sombra",
+          "area": 9,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "uniao",
+          "label": "Pórtico da decisão",
+          "area": 9,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "final",
+          "label": "Cristal do julgamento",
+          "area": 9,
+          "objects": [],
+          "visitedInOfficial": true
+        }
+      ]
+    },
+    {
+      "activity": 16,
+      "name": "A Ponte dos Ecos",
+      "initialExitReachable": false,
+      "doorCuts": [],
+      "scenarios": [
+        {
+          "variant": 0,
+          "result": "SUCCESS",
+          "visitedTiles": 31,
+          "regions": [
+            "entrada",
+            "galeria",
+            "ponte",
+            "final"
+          ],
+          "clues": [],
+          "lights": [
+            "galeria",
+            "inscricao",
+            "ponte",
+            "final"
+          ],
+          "budget": {
+            "valid": true,
+            "limit": null,
+            "used": 13
+          }
+        }
+      ],
+      "omissions": [],
+      "missingRequirements": [],
+      "regions": [
+        {
+          "id": "entrada",
+          "label": "Margem dos ecos",
+          "area": 9,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "galeria",
+          "label": "Galeria dos totens",
+          "area": 24,
+          "objects": [
+            "t1",
+            "t2",
+            "t3",
+            "t4",
+            "t5"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "inscricao",
+          "label": "Nicho da memória",
+          "area": 6,
+          "objects": [
+            "ecos"
+          ],
+          "visitedInOfficial": false
+        },
+        {
+          "id": "ponte",
+          "label": "Ponte dos ecos",
+          "area": 5,
+          "objects": [
+            "bridge1",
+            "bridge2",
+            "bridge3",
+            "bridge4",
+            "bridge5"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "final",
+          "label": "Margem revelada",
+          "area": 15,
+          "objects": [],
+          "visitedInOfficial": true
+        }
+      ]
+    },
+    {
+      "activity": 17,
+      "name": "A Câmara dos Rubis",
+      "initialExitReachable": false,
+      "doorCuts": [
+        {
+          "id": "door",
+          "blocksExit": true
+        }
+      ],
+      "scenarios": [
+        {
+          "variant": 0,
+          "result": "SUCCESS",
+          "visitedTiles": 46,
+          "regions": [
+            "entrada",
+            "galeria",
+            "nicho1",
+            "nicho2",
+            "nicho3",
+            "nicho4",
+            "nicho5",
+            "final"
+          ],
+          "clues": [],
+          "lights": [
+            "nicho1",
+            "nicho2",
+            "nicho3",
+            "nicho4",
+            "nicho5",
+            "final"
+          ],
+          "budget": {
+            "valid": true,
+            "limit": null,
+            "used": 17
+          }
+        }
+      ],
+      "omissions": [],
+      "missingRequirements": [
+        "door/minRubies"
+      ],
+      "regions": [
+        {
+          "id": "entrada",
+          "label": "Pátio dos rubis",
+          "area": 9,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "galeria",
+          "label": "Galeria de retorno",
+          "area": 21,
+          "objects": [
+            "luz"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "final",
+          "label": "Câmara do contador",
+          "area": 12,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "nicho1",
+          "label": "Nicho 1",
+          "area": 9,
+          "objects": [
+            "r1",
+            "lore"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "nicho2",
+          "label": "Nicho 2",
+          "area": 9,
+          "objects": [
+            "r2"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "nicho3",
+          "label": "Nicho 3",
+          "area": 9,
+          "objects": [
+            "r3"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "nicho4",
+          "label": "Nicho 4",
+          "area": 9,
+          "objects": [
+            "r4"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "nicho5",
+          "label": "Nicho 5",
+          "area": 9,
+          "objects": [
+            "r5",
+            "bonus"
+          ],
+          "visitedInOfficial": true
+        }
+      ]
+    },
+    {
+      "activity": 18,
+      "name": "O Corredor das Placas",
+      "initialExitReachable": false,
+      "doorCuts": [
+        {
+          "id": "gate",
+          "blocksExit": true
+        }
+      ],
+      "scenarios": [
+        {
+          "variant": 0,
+          "result": "SUCCESS",
+          "visitedTiles": 38,
+          "regions": [
+            "entrada",
+            "modulo1",
+            "modulo2",
+            "modulo3",
+            "modulo4",
+            "final"
+          ],
+          "clues": [],
+          "lights": [
+            "modulo1",
+            "final",
+            "modulo2",
+            "modulo3"
+          ],
+          "budget": {
+            "valid": true,
+            "limit": null,
+            "used": 12
+          }
+        },
+        {
+          "variant": 1,
+          "result": "SUCCESS",
+          "visitedTiles": 38,
+          "regions": [
+            "entrada",
+            "modulo1",
+            "modulo2",
+            "modulo3",
+            "modulo4",
+            "modulo5",
+            "final"
+          ],
+          "clues": [],
+          "lights": [
+            "modulo1",
+            "final",
+            "modulo2",
+            "modulo3",
+            "modulo4"
+          ],
+          "budget": {
+            "valid": true,
+            "limit": null,
+            "used": 12
+          }
+        },
+        {
+          "variant": 2,
+          "result": "SUCCESS",
+          "visitedTiles": 38,
+          "regions": [
+            "entrada",
+            "modulo1",
+            "modulo2",
+            "modulo3",
+            "modulo4",
+            "modulo5",
+            "final"
+          ],
+          "clues": [],
+          "lights": [
+            "modulo1",
+            "final",
+            "modulo2",
+            "modulo3",
+            "modulo4",
+            "modulo5"
+          ],
+          "budget": {
+            "valid": true,
+            "limit": null,
+            "used": 12
+          }
+        }
+      ],
+      "omissions": [],
+      "missingRequirements": [
+        "gate/minTraps"
+      ],
+      "regions": [
+        {
+          "id": "entrada",
+          "label": "Entrada dos módulos",
+          "area": 4,
+          "objects": [
+            "luz1"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "final",
+          "label": "Saída dos módulos",
+          "area": 9,
+          "objects": [
+            "gate"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "modulo1",
+          "label": "Módulo 1",
+          "area": 16,
+          "objects": [
+            "luz1",
+            "h1",
+            "p1",
+            "luz2"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "modulo2",
+          "label": "Módulo 2",
+          "area": 16,
+          "objects": [
+            "p1",
+            "luz2",
+            "h2",
+            "p2",
+            "luz3"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "modulo3",
+          "label": "Módulo 3",
+          "area": 16,
+          "objects": [
+            "p2",
+            "luz3",
+            "h3",
+            "p3",
+            "luz4"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "modulo4",
+          "label": "Módulo 4",
+          "area": 16,
+          "objects": [
+            "p3",
+            "luz4",
+            "h4",
+            "p4",
+            "luz5"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "modulo5",
+          "label": "Módulo 5",
+          "area": 16,
+          "objects": [
+            "p4",
+            "luz5",
+            "h5",
+            "p5"
+          ],
+          "visitedInOfficial": true
+        }
+      ]
+    },
+    {
+      "activity": 19,
+      "name": "A Chave Perdida",
+      "initialExitReachable": false,
+      "doorCuts": [
+        {
+          "id": "door",
+          "blocksExit": true
+        }
+      ],
+      "scenarios": [
+        {
+          "variant": 0,
+          "result": "SUCCESS",
+          "visitedTiles": 24,
+          "regions": [
+            "entrada",
+            "retorno",
+            "cripta1",
+            "final"
+          ],
+          "clues": [
+            "chest1"
+          ],
+          "lights": [
+            "cripta1",
+            "final"
+          ],
+          "budget": {
+            "valid": true,
+            "limit": 30,
+            "used": 20
+          }
+        },
+        {
+          "variant": 1,
+          "result": "SUCCESS",
+          "visitedTiles": 28,
+          "regions": [
+            "entrada",
+            "retorno",
+            "cripta1",
+            "hub",
+            "cripta2",
+            "final"
+          ],
+          "clues": [
+            "chest1",
+            "chest2"
+          ],
+          "lights": [
+            "cripta1",
+            "final",
+            "cripta2"
+          ],
+          "budget": {
+            "valid": true,
+            "limit": 30,
+            "used": 20
+          }
+        },
+        {
+          "variant": 2,
+          "result": "SUCCESS",
+          "visitedTiles": 28,
+          "regions": [
+            "entrada",
+            "retorno",
+            "cripta1",
+            "hub",
+            "cripta2",
+            "cripta3",
+            "final"
+          ],
+          "clues": [
+            "chest1",
+            "chest2",
+            "chest3"
+          ],
+          "lights": [
+            "cripta1",
+            "final",
+            "cripta2",
+            "cripta3"
+          ],
+          "budget": {
+            "valid": true,
+            "limit": 30,
+            "used": 20
+          }
+        }
+      ],
+      "omissions": [],
+      "missingRequirements": [
+        "door/chave"
+      ],
+      "regions": [
+        {
+          "id": "entrada",
+          "label": "Pórtico da cripta",
+          "area": 9,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "hub",
+          "label": "Galeria da busca",
+          "area": 11,
+          "objects": [
+            "luz1",
+            "luz2",
+            "luz3"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "retorno",
+          "label": "Corredor de retorno",
+          "area": 15,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "final",
+          "label": "Porta da cripta",
+          "area": 9,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "cripta1",
+          "label": "Cripta 1",
+          "area": 9,
+          "objects": [
+            "chest1",
+            "luz1"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "cripta2",
+          "label": "Cripta 2",
+          "area": 9,
+          "objects": [
+            "chest2",
+            "luz2"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "cripta3",
+          "label": "Cripta 3",
+          "area": 9,
+          "objects": [
+            "chest3",
+            "luz3"
+          ],
+          "visitedInOfficial": true
+        }
+      ]
+    },
+    {
+      "activity": 20,
+      "name": "O Santuário do Basilisco",
+      "initialExitReachable": false,
+      "doorCuts": [
+        {
+          "id": "basilisk",
+          "blocksExit": true
+        }
+      ],
+      "scenarios": [
+        {
+          "variant": 0,
+          "result": "SUCCESS",
+          "visitedTiles": 82,
+          "regions": [
+            "entrada",
+            "runas",
+            "ponte",
+            "hub",
+            "traps1",
+            "traps2",
+            "cripta1",
+            "rubi1",
+            "rubi2",
+            "rubi3",
+            "julgamento",
+            "final"
+          ],
+          "clues": [
+            "lei"
+          ],
+          "lights": [
+            "runas",
+            "ponte",
+            "hub",
+            "traps1",
+            "traps2",
+            "cripta1",
+            "rubi1",
+            "rubi2",
+            "rubi3",
+            "julgamento",
+            "final"
+          ],
+          "budget": {
+            "valid": true,
+            "limit": 72,
+            "used": 61
+          }
+        },
+        {
+          "variant": 1,
+          "result": "SUCCESS",
+          "visitedTiles": 84,
+          "regions": [
+            "entrada",
+            "runas",
+            "ponte",
+            "hub",
+            "traps1",
+            "traps2",
+            "cripta1",
+            "cripta2",
+            "rubi1",
+            "rubi2",
+            "rubi3",
+            "julgamento",
+            "final"
+          ],
+          "clues": [
+            "lei"
+          ],
+          "lights": [
+            "runas",
+            "ponte",
+            "hub",
+            "traps1",
+            "traps2",
+            "cripta1",
+            "cripta2",
+            "rubi1",
+            "rubi2",
+            "rubi3",
+            "julgamento",
+            "final"
+          ],
+          "budget": {
+            "valid": true,
+            "limit": 72,
+            "used": 61
+          }
+        },
+        {
+          "variant": 2,
+          "result": "SUCCESS",
+          "visitedTiles": 86,
+          "regions": [
+            "entrada",
+            "runas",
+            "ponte",
+            "hub",
+            "traps1",
+            "traps2",
+            "cripta1",
+            "cripta2",
+            "cripta3",
+            "rubi1",
+            "rubi2",
+            "rubi3",
+            "julgamento",
+            "final"
+          ],
+          "clues": [
+            "lei"
+          ],
+          "lights": [
+            "runas",
+            "ponte",
+            "hub",
+            "traps1",
+            "traps2",
+            "cripta1",
+            "cripta2",
+            "cripta3",
+            "rubi1",
+            "rubi2",
+            "rubi3",
+            "julgamento",
+            "final"
+          ],
+          "budget": {
+            "valid": true,
+            "limit": 72,
+            "used": 61
+          }
+        }
+      ],
+      "omissions": [
+        {
+          "clue": "lei",
+          "result": "CLOSED_DOOR_BLOCK"
+        }
+      ],
+      "missingRequirements": [
+        "basilisk/pista:lei",
+        "basilisk/chave",
+        "basilisk/minRubies",
+        "basilisk/minRunes",
+        "basilisk/minTraps"
+      ],
+      "regions": [
+        {
+          "id": "entrada",
+          "label": "Pórtico do santuário",
+          "area": 9,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "hub",
+          "label": "Salão dos selos",
+          "area": 35,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "runas",
+          "label": "Galeria das runas",
+          "area": 24,
+          "objects": [
+            "t1",
+            "t2",
+            "t3"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "ponte",
+          "label": "Escada da ponte",
+          "area": 3,
+          "objects": [
+            "bridge1",
+            "bridge2",
+            "bridge3"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "final",
+          "label": "Santuário do cristal",
+          "area": 9,
+          "objects": [],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "julgamento",
+          "label": "Pórtico do Basilisco",
+          "area": 9,
+          "objects": [
+            "lei"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "traps1",
+          "label": "Ala dos espinhos 1",
+          "area": 9,
+          "objects": [
+            "luz_traps1",
+            "h1",
+            "luz_traps2"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "traps2",
+          "label": "Ala dos espinhos 2",
+          "area": 9,
+          "objects": [
+            "luz_traps2",
+            "h2"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "cripta1",
+          "label": "Cripta do selo 1",
+          "area": 6,
+          "objects": [
+            "chest1",
+            "luz_busca1"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "cripta2",
+          "label": "Cripta do selo 2",
+          "area": 6,
+          "objects": [
+            "chest2",
+            "luz_busca2"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "cripta3",
+          "label": "Cripta do selo 3",
+          "area": 6,
+          "objects": [
+            "chest3",
+            "luz_busca3"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "rubi1",
+          "label": "Nicho do rubi 1",
+          "area": 3,
+          "objects": [
+            "r1",
+            "luz_rubis"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "rubi2",
+          "label": "Nicho do rubi 2",
+          "area": 3,
+          "objects": [
+            "r2"
+          ],
+          "visitedInOfficial": true
+        },
+        {
+          "id": "rubi3",
+          "label": "Nicho do rubi 3",
+          "area": 3,
+          "objects": [
+            "r3"
+          ],
+          "visitedInOfficial": true
+        }
+      ]
+    }
+  ]
+}

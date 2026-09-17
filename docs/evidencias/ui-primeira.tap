@@ -1,0 +1,460 @@
+✔ Enter após dois pontos (1.081282ms)
+✔ Enter mantém bloco (0.212811ms)
+✔ Enter após comentário (0.0928ms)
+✔ Enter ignora # em string (0.081233ms)
+✔ Tab acrescenta quatro espaços (0.078669ms)
+✔ Shift Tab recua (0.195315ms)
+✔ Shift Tab recua parcial (0.961261ms)
+✔ Shift Tab no nível zero (0.097888ms)
+✔ Tab e Shift Tab em seleção multilinha preservam linhas externas (0.236587ms)
+✔ Enter substitui seleção sem apagar o restante (0.251119ms)
+✔ else retorna ao nível do if (0.349428ms)
+✔ elif em bloco aninhado alinha com if interno (0.193712ms)
+✔ Editor: eventos reais do componente, numeração, erro, scroll e limpeza (0.490851ms)
+✔ Zoom inicial, mínimo e máximo (0.201094ms)
+✔ Zoom mantém ponto sob cursor fora dos limites (0.17222ms)
+✔ Pan considera zoom e limita os quatro lados (0.243878ms)
+✔ Mapa menor que viewport permanece centralizado (0.098007ms)
+✔ Acompanhamento aproxima suavemente e converge (0.39768ms)
+✔ Câmera integra eventos, recenter, viewport Phaser e remoção de listeners (1.417819ms)
+✔ Todos os spritesheets têm quadros compatíveis com as dimensões PNG (1.850553ms)
+✔ Contrato CSS: livro limitado, áreas roláveis e rodapé não encolhe (análise estática) (0.378732ms)
+✖ UI/renderer real com adaptadores: atividade 1, solução, replay e limpeza (27.229535ms)
+✖ UI/renderer real com adaptadores: atividade 2, solução, replay e limpeza (9.159243ms)
+✖ UI/renderer real com adaptadores: atividade 3, solução, replay e limpeza (9.705528ms)
+✖ UI/renderer real com adaptadores: atividade 4, solução, replay e limpeza (8.789204ms)
+✖ UI/renderer real com adaptadores: atividade 5, solução, replay e limpeza (9.205623ms)
+✖ UI/renderer real com adaptadores: atividade 6, solução, replay e limpeza (10.394347ms)
+✖ UI/renderer real com adaptadores: atividade 7, solução, replay e limpeza (10.582131ms)
+✖ UI/renderer real com adaptadores: atividade 8, solução, replay e limpeza (13.714307ms)
+✖ UI/renderer real com adaptadores: atividade 9, solução, replay e limpeza (13.990705ms)
+✖ UI/renderer real com adaptadores: atividade 10, solução, replay e limpeza (28.398429ms)
+✖ UI/renderer real com adaptadores: atividade 11, solução, replay e limpeza (5.033997ms)
+✖ UI/renderer real com adaptadores: atividade 12, solução, replay e limpeza (10.134795ms)
+✖ UI/renderer real com adaptadores: atividade 13, solução, replay e limpeza (13.380635ms)
+✖ UI/renderer real com adaptadores: atividade 14, solução, replay e limpeza (17.719162ms)
+✖ UI/renderer real com adaptadores: atividade 15, solução, replay e limpeza (23.516987ms)
+✖ UI/renderer real com adaptadores: atividade 16, solução, replay e limpeza (5.9562ms)
+✖ UI/renderer real com adaptadores: atividade 17, solução, replay e limpeza (16.366119ms)
+✖ UI/renderer real com adaptadores: atividade 18, solução, replay e limpeza (14.922671ms)
+✖ UI/renderer real com adaptadores: atividade 19, solução, replay e limpeza (14.566384ms)
+✖ UI/renderer real com adaptadores: atividade 20, solução, replay e limpeza (31.873664ms)
+✔ Feedback extenso preserva controles e conteúdo como texto (sem medição CSS) (6.443103ms)
+✔ input mostra pergunta, recebe texto exato, fecha e permite nova entrada (8.150801ms)
+✖ Restaurar durante input cancela execução sem perder vidas (30.205557ms)
+✔ Anterior/próxima preservam rascunho e usam fade; fase bloqueada não navega (6.547491ms)
+ℹ tests 45
+ℹ suites 0
+ℹ pass 24
+ℹ fail 21
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 426.511843
+
+✖ failing tests:
+
+test at tests/ui-integration.test.cjs:2:34
+✖ UI/renderer real com adaptadores: atividade 1, solução, replay e limpeza (27.229535ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":85,"completedActivities":[1],"unlockedMax":2,"rewardedActivities":{"1":{"xp":85,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.493Z"}},"updatedAt":"2026-09-15T08:50:57.497Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":85,"completedActivities":[1],"unlockedMax":2,"rewardedActivities":{"1":{"xp":85,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.493Z"}},"updatedAt":"2026-09-15T08:50:57.493Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/85223566b38f/trabalho/TCC_Pyton_Knight_Limpo/01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/tests/ui-integration.test.cjs:5:282)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":85,"completedActivities":[1],"unlockedMax":2,"rewardedActivities":{"1":{"xp":85,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.493Z"}},"updatedAt":"2026-09-15T08:50:57.497Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":85,"completedActivities":[1],"unlockedMax":2,"rewardedActivities":{"1":{"xp":85,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.493Z"}},"updatedAt":"2026-09-15T08:50:57.493Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/ui-integration.test.cjs:2:34
+✖ UI/renderer real com adaptadores: atividade 2, solução, replay e limpeza (9.159243ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":90,"completedActivities":[2],"unlockedMax":3,"rewardedActivities":{"2":{"xp":90,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.505Z"}},"updatedAt":"2026-09-15T08:50:57.507Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":90,"completedActivities":[2],"unlockedMax":3,"rewardedActivities":{"2":{"xp":90,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.505Z"}},"updatedAt":"2026-09-15T08:50:57.505Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/85223566b38f/trabalho/TCC_Pyton_Knight_Limpo/01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/tests/ui-integration.test.cjs:5:282)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":90,"completedActivities":[2],"unlockedMax":3,"rewardedActivities":{"2":{"xp":90,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.505Z"}},"updatedAt":"2026-09-15T08:50:57.507Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":90,"completedActivities":[2],"unlockedMax":3,"rewardedActivities":{"2":{"xp":90,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.505Z"}},"updatedAt":"2026-09-15T08:50:57.505Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/ui-integration.test.cjs:2:34
+✖ UI/renderer real com adaptadores: atividade 3, solução, replay e limpeza (9.705528ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":95,"completedActivities":[3],"unlockedMax":4,"rewardedActivities":{"3":{"xp":95,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.516Z"}},"updatedAt":"2026-09-15T08:50:57.518Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":95,"completedActivities":[3],"unlockedMax":4,"rewardedActivities":{"3":{"xp":95,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.516Z"}},"updatedAt":"2026-09-15T08:50:57.516Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/85223566b38f/trabalho/TCC_Pyton_Knight_Limpo/01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/tests/ui-integration.test.cjs:5:282)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":95,"completedActivities":[3],"unlockedMax":4,"rewardedActivities":{"3":{"xp":95,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.516Z"}},"updatedAt":"2026-09-15T08:50:57.518Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":95,"completedActivities":[3],"unlockedMax":4,"rewardedActivities":{"3":{"xp":95,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.516Z"}},"updatedAt":"2026-09-15T08:50:57.516Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/ui-integration.test.cjs:2:34
+✖ UI/renderer real com adaptadores: atividade 4, solução, replay e limpeza (8.789204ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":100,"completedActivities":[4],"unlockedMax":5,"rewardedActivities":{"4":{"xp":100,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.525Z"}},"updatedAt":"2026-09-15T08:50:57.526Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":100,"completedActivities":[4],"unlockedMax":5,"rewardedActivities":{"4":{"xp":100,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.525Z"}},"updatedAt":"2026-09-15T08:50:57.525Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/85223566b38f/trabalho/TCC_Pyton_Knight_Limpo/01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/tests/ui-integration.test.cjs:5:282)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":100,"completedActivities":[4],"unlockedMax":5,"rewardedActivities":{"4":{"xp":100,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.525Z"}},"updatedAt":"2026-09-15T08:50:57.526Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":100,"completedActivities":[4],"unlockedMax":5,"rewardedActivities":{"4":{"xp":100,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.525Z"}},"updatedAt":"2026-09-15T08:50:57.525Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/ui-integration.test.cjs:2:34
+✖ UI/renderer real com adaptadores: atividade 5, solução, replay e limpeza (9.205623ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[5],"unlockedMax":6,"rewardedActivities":{"5":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.534Z"}},"updatedAt":"2026-09-15T08:50:57.536Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[5],"unlockedMax":6,"rewardedActivities":{"5":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.534Z"}},"updatedAt":"2026-09-15T08:50:57.534Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/85223566b38f/trabalho/TCC_Pyton_Knight_Limpo/01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/tests/ui-integration.test.cjs:5:282)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[5],"unlockedMax":6,"rewardedActivities":{"5":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.534Z"}},"updatedAt":"2026-09-15T08:50:57.536Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[5],"unlockedMax":6,"rewardedActivities":{"5":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.534Z"}},"updatedAt":"2026-09-15T08:50:57.534Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/ui-integration.test.cjs:2:34
+✖ UI/renderer real com adaptadores: atividade 6, solução, replay e limpeza (10.394347ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":110,"completedActivities":[6],"unlockedMax":7,"rewardedActivities":{"6":{"xp":110,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.544Z"}},"updatedAt":"2026-09-15T08:50:57.546Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":110,"completedActivities":[6],"unlockedMax":7,"rewardedActivities":{"6":{"xp":110,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.544Z"}},"updatedAt":"2026-09-15T08:50:57.544Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/85223566b38f/trabalho/TCC_Pyton_Knight_Limpo/01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/tests/ui-integration.test.cjs:5:282)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":110,"completedActivities":[6],"unlockedMax":7,"rewardedActivities":{"6":{"xp":110,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.544Z"}},"updatedAt":"2026-09-15T08:50:57.546Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":110,"completedActivities":[6],"unlockedMax":7,"rewardedActivities":{"6":{"xp":110,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.544Z"}},"updatedAt":"2026-09-15T08:50:57.544Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/ui-integration.test.cjs:2:34
+✖ UI/renderer real com adaptadores: atividade 7, solução, replay e limpeza (10.582131ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":115,"completedActivities":[7],"unlockedMax":8,"rewardedActivities":{"7":{"xp":115,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.554Z"}},"updatedAt":"2026-09-15T08:50:57.557Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":115,"completedActivities":[7],"unlockedMax":8,"rewardedActivities":{"7":{"xp":115,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.554Z"}},"updatedAt":"2026-09-15T08:50:57.554Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/85223566b38f/trabalho/TCC_Pyton_Knight_Limpo/01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/tests/ui-integration.test.cjs:5:282)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":115,"completedActivities":[7],"unlockedMax":8,"rewardedActivities":{"7":{"xp":115,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.554Z"}},"updatedAt":"2026-09-15T08:50:57.557Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":115,"completedActivities":[7],"unlockedMax":8,"rewardedActivities":{"7":{"xp":115,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.554Z"}},"updatedAt":"2026-09-15T08:50:57.554Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/ui-integration.test.cjs:2:34
+✖ UI/renderer real com adaptadores: atividade 8, solução, replay e limpeza (13.714307ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":120,"completedActivities":[8],"unlockedMax":9,"rewardedActivities":{"8":{"xp":120,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.566Z"}},"updatedAt":"2026-09-15T08:50:57.570Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":120,"completedActivities":[8],"unlockedMax":9,"rewardedActivities":{"8":{"xp":120,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.566Z"}},"updatedAt":"2026-09-15T08:50:57.566Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/85223566b38f/trabalho/TCC_Pyton_Knight_Limpo/01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/tests/ui-integration.test.cjs:5:282)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":120,"completedActivities":[8],"unlockedMax":9,"rewardedActivities":{"8":{"xp":120,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.566Z"}},"updatedAt":"2026-09-15T08:50:57.570Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":120,"completedActivities":[8],"unlockedMax":9,"rewardedActivities":{"8":{"xp":120,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.566Z"}},"updatedAt":"2026-09-15T08:50:57.566Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/ui-integration.test.cjs:2:34
+✖ UI/renderer real com adaptadores: atividade 9, solução, replay e limpeza (13.990705ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":125,"completedActivities":[9],"unlockedMax":10,"rewardedActivities":{"9":{"xp":125,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.580Z"}},"updatedAt":"2026-09-15T08:50:57.584Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":125,"completedActivities":[9],"unlockedMax":10,"rewardedActivities":{"9":{"xp":125,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.580Z"}},"updatedAt":"2026-09-15T08:50:57.580Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/85223566b38f/trabalho/TCC_Pyton_Knight_Limpo/01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/tests/ui-integration.test.cjs:5:282)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":125,"completedActivities":[9],"unlockedMax":10,"rewardedActivities":{"9":{"xp":125,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.580Z"}},"updatedAt":"2026-09-15T08:50:57.584Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":125,"completedActivities":[9],"unlockedMax":10,"rewardedActivities":{"9":{"xp":125,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.580Z"}},"updatedAt":"2026-09-15T08:50:57.580Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/ui-integration.test.cjs:2:34
+✖ UI/renderer real com adaptadores: atividade 10, solução, replay e limpeza (28.398429ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[10],"unlockedMax":11,"rewardedActivities":{"10":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.601Z"}},"updatedAt":"2026-09-15T08:50:57.613Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[10],"unlockedMax":11,"rewardedActivities":{"10":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.601Z"}},"updatedAt":"2026-09-15T08:50:57.601Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/85223566b38f/trabalho/TCC_Pyton_Knight_Limpo/01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/tests/ui-integration.test.cjs:5:282)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[10],"unlockedMax":11,"rewardedActivities":{"10":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.601Z"}},"updatedAt":"2026-09-15T08:50:57.613Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[10],"unlockedMax":11,"rewardedActivities":{"10":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.601Z"}},"updatedAt":"2026-09-15T08:50:57.601Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/ui-integration.test.cjs:2:34
+✖ UI/renderer real com adaptadores: atividade 11, solução, replay e limpeza (5.033997ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'andar_frente(2)\nvirar_direita()\nandar_frente(2)\nprint(tem_chave())'
+  - 'andar_frente(2)\n# procure a chave antes de testar tem_chave()'
+  
+      at TestContext.<anonymous> (/workspace/scratch/85223566b38f/trabalho/TCC_Pyton_Knight_Limpo/01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/tests/ui-integration.test.cjs:3:67)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'andar_frente(2)\nvirar_direita()\nandar_frente(2)\nprint(tem_chave())',
+    expected: 'andar_frente(2)\n# procure a chave antes de testar tem_chave()',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/ui-integration.test.cjs:2:34
+✖ UI/renderer real com adaptadores: atividade 12, solução, replay e limpeza (10.134795ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":140,"completedActivities":[12],"unlockedMax":13,"rewardedActivities":{"12":{"xp":140,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.626Z"}},"updatedAt":"2026-09-15T08:50:57.628Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":140,"completedActivities":[12],"unlockedMax":13,"rewardedActivities":{"12":{"xp":140,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.626Z"}},"updatedAt":"2026-09-15T08:50:57.626Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/85223566b38f/trabalho/TCC_Pyton_Knight_Limpo/01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/tests/ui-integration.test.cjs:5:282)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":140,"completedActivities":[12],"unlockedMax":13,"rewardedActivities":{"12":{"xp":140,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.626Z"}},"updatedAt":"2026-09-15T08:50:57.628Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":140,"completedActivities":[12],"unlockedMax":13,"rewardedActivities":{"12":{"xp":140,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.626Z"}},"updatedAt":"2026-09-15T08:50:57.626Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/ui-integration.test.cjs:2:34
+✖ UI/renderer real com adaptadores: atividade 13, solução, replay e limpeza (13.380635ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":145,"completedActivities":[13],"unlockedMax":14,"rewardedActivities":{"13":{"xp":145,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.638Z"}},"updatedAt":"2026-09-15T08:50:57.642Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":145,"completedActivities":[13],"unlockedMax":14,"rewardedActivities":{"13":{"xp":145,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.638Z"}},"updatedAt":"2026-09-15T08:50:57.638Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/85223566b38f/trabalho/TCC_Pyton_Knight_Limpo/01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/tests/ui-integration.test.cjs:5:282)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":145,"completedActivities":[13],"unlockedMax":14,"rewardedActivities":{"13":{"xp":145,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.638Z"}},"updatedAt":"2026-09-15T08:50:57.642Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":145,"completedActivities":[13],"unlockedMax":14,"rewardedActivities":{"13":{"xp":145,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.638Z"}},"updatedAt":"2026-09-15T08:50:57.638Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/ui-integration.test.cjs:2:34
+✖ UI/renderer real com adaptadores: atividade 14, solução, replay e limpeza (17.719162ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":150,"completedActivities":[14],"unlockedMax":15,"rewardedActivities":{"14":{"xp":150,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.653Z"}},"updatedAt":"2026-09-15T08:50:57.659Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":150,"completedActivities":[14],"unlockedMax":15,"rewardedActivities":{"14":{"xp":150,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.653Z"}},"updatedAt":"2026-09-15T08:50:57.653Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/85223566b38f/trabalho/TCC_Pyton_Knight_Limpo/01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/tests/ui-integration.test.cjs:5:282)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":150,"completedActivities":[14],"unlockedMax":15,"rewardedActivities":{"14":{"xp":150,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.653Z"}},"updatedAt":"2026-09-15T08:50:57.659Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":150,"completedActivities":[14],"unlockedMax":15,"rewardedActivities":{"14":{"xp":150,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.653Z"}},"updatedAt":"2026-09-15T08:50:57.653Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/ui-integration.test.cjs:2:34
+✖ UI/renderer real com adaptadores: atividade 15, solução, replay e limpeza (23.516987ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[15],"unlockedMax":16,"rewardedActivities":{"15":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.678Z"}},"updatedAt":"2026-09-15T08:50:57.683Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[15],"unlockedMax":16,"rewardedActivities":{"15":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.678Z"}},"updatedAt":"2026-09-15T08:50:57.678Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/85223566b38f/trabalho/TCC_Pyton_Knight_Limpo/01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/tests/ui-integration.test.cjs:5:282)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[15],"unlockedMax":16,"rewardedActivities":{"15":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.678Z"}},"updatedAt":"2026-09-15T08:50:57.683Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[15],"unlockedMax":16,"rewardedActivities":{"15":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.678Z"}},"updatedAt":"2026-09-15T08:50:57.678Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/ui-integration.test.cjs:2:34
+✖ UI/renderer real com adaptadores: atividade 16, solução, replay e limpeza (5.9562ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'andar_frente(3)\nvirar_direita()\nandar_frente(2)\nvirar_esquerda()'
+  - 'andar_frente(3)\n# encontre a galeria dos ecos'
+  
+      at TestContext.<anonymous> (/workspace/scratch/85223566b38f/trabalho/TCC_Pyton_Knight_Limpo/01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/tests/ui-integration.test.cjs:3:67)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'andar_frente(3)\nvirar_direita()\nandar_frente(2)\nvirar_esquerda()',
+    expected: 'andar_frente(3)\n# encontre a galeria dos ecos',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/ui-integration.test.cjs:2:34
+✖ UI/renderer real com adaptadores: atividade 17, solução, replay e limpeza (16.366119ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":5,"totalXp":165,"completedActivities":[17],"unlockedMax":18,"rewardedActivities":{"17":{"xp":165,"coins":5,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.699Z"}},"updatedAt":"2026-09-15T08:50:57.705Z"}'
+  - '{"schemaVersion":2,"walletCoins":5,"totalXp":165,"completedActivities":[17],"unlockedMax":18,"rewardedActivities":{"17":{"xp":165,"coins":5,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.699Z"}},"updatedAt":"2026-09-15T08:50:57.699Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/85223566b38f/trabalho/TCC_Pyton_Knight_Limpo/01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/tests/ui-integration.test.cjs:5:282)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":5,"totalXp":165,"completedActivities":[17],"unlockedMax":18,"rewardedActivities":{"17":{"xp":165,"coins":5,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.699Z"}},"updatedAt":"2026-09-15T08:50:57.705Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":5,"totalXp":165,"completedActivities":[17],"unlockedMax":18,"rewardedActivities":{"17":{"xp":165,"coins":5,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.699Z"}},"updatedAt":"2026-09-15T08:50:57.699Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/ui-integration.test.cjs:2:34
+✖ UI/renderer real com adaptadores: atividade 18, solução, replay e limpeza (14.922671ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":170,"completedActivities":[18],"unlockedMax":19,"rewardedActivities":{"18":{"xp":170,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.715Z"}},"updatedAt":"2026-09-15T08:50:57.720Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":170,"completedActivities":[18],"unlockedMax":19,"rewardedActivities":{"18":{"xp":170,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.715Z"}},"updatedAt":"2026-09-15T08:50:57.715Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/85223566b38f/trabalho/TCC_Pyton_Knight_Limpo/01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/tests/ui-integration.test.cjs:5:282)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":170,"completedActivities":[18],"unlockedMax":19,"rewardedActivities":{"18":{"xp":170,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.715Z"}},"updatedAt":"2026-09-15T08:50:57.720Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":170,"completedActivities":[18],"unlockedMax":19,"rewardedActivities":{"18":{"xp":170,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.715Z"}},"updatedAt":"2026-09-15T08:50:57.715Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/ui-integration.test.cjs:2:34
+✖ UI/renderer real com adaptadores: atividade 19, solução, replay e limpeza (14.566384ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":175,"completedActivities":[19],"unlockedMax":20,"rewardedActivities":{"19":{"xp":175,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.731Z"}},"updatedAt":"2026-09-15T08:50:57.735Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":175,"completedActivities":[19],"unlockedMax":20,"rewardedActivities":{"19":{"xp":175,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.731Z"}},"updatedAt":"2026-09-15T08:50:57.731Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/85223566b38f/trabalho/TCC_Pyton_Knight_Limpo/01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/tests/ui-integration.test.cjs:5:282)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":175,"completedActivities":[19],"unlockedMax":20,"rewardedActivities":{"19":{"xp":175,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.731Z"}},"updatedAt":"2026-09-15T08:50:57.735Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":175,"completedActivities":[19],"unlockedMax":20,"rewardedActivities":{"19":{"xp":175,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.731Z"}},"updatedAt":"2026-09-15T08:50:57.731Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/ui-integration.test.cjs:2:34
+✖ UI/renderer real com adaptadores: atividade 20, solução, replay e limpeza (31.873664ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":3,"totalXp":160,"completedActivities":[20],"unlockedMax":20,"rewardedActivities":{"20":{"xp":160,"coins":3,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.752Z"}},"updatedAt":"2026-09-15T08:50:57.767Z"}'
+  - '{"schemaVersion":2,"walletCoins":3,"totalXp":160,"completedActivities":[20],"unlockedMax":20,"rewardedActivities":{"20":{"xp":160,"coins":3,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.752Z"}},"updatedAt":"2026-09-15T08:50:57.752Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/85223566b38f/trabalho/TCC_Pyton_Knight_Limpo/01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/tests/ui-integration.test.cjs:5:282)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":3,"totalXp":160,"completedActivities":[20],"unlockedMax":20,"rewardedActivities":{"20":{"xp":160,"coins":3,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.752Z"}},"updatedAt":"2026-09-15T08:50:57.767Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":3,"totalXp":160,"completedActivities":[20],"unlockedMax":20,"rewardedActivities":{"20":{"xp":160,"coins":3,"livesRemaining":3,"rewardedAt":"2026-09-15T08:50:57.752Z"}},"updatedAt":"2026-09-15T08:50:57.752Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/ui-integration.test.cjs:9:1
+✖ Restaurar durante input cancela execução sem perder vidas (30.205557ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(s.cancelInput)
+  
+      at TestContext.<anonymous> (/workspace/scratch/85223566b38f/trabalho/TCC_Pyton_Knight_Limpo/01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/tests/ui-integration.test.cjs:9:330)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

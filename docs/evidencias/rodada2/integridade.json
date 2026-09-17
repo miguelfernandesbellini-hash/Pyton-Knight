@@ -1,0 +1,8 @@
+{
+  "activities_js_identico": true,
+  "activities_sha256": "84768f7a477641820d8e5356034bfd323a6a2f899a1421e4f2284f97eb5ad71e",
+  "118_testes_anteriores_preservados": true,
+  "planilha_identica": true,
+  "planilha_sha256": "8ace2b65a8e2cd5494cdec666dae8d1342aa5cad0cfe922adaab48dc6be87249",
+  "suite_legada_alteracao": "Apenas prepareRequirements: fornecer input válido para isolar a proximidade do portal. Snapshot anterior preservado."
+}

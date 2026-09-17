@@ -4,50 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pyton Knight — 20 Atividades</title>
-    <style>
-        :root { color-scheme: dark; font-family: Arial, sans-serif; }
-        * { box-sizing: border-box; }
-        html, body { margin: 0; height: 100%; overflow: hidden; background: radial-gradient(circle at top, #211c42, #070711 72%); }
-        #game-container { width: 100%; height: 100%; }
-        .magic-book { width: 565px; min-height: 720px; padding: 22px; color: #302417; background: linear-gradient(90deg, #ead9ad, #fff2c7 49%, #e8d3a2 51%, #f8e9bb); border: 8px solid #62441f; border-radius: 18px; box-shadow: 0 18px 55px #000a, inset 0 0 28px #7a4b2444; }
-        .magic-book header { display: flex; justify-content: space-between; gap: 12px; padding-bottom: 12px; border-bottom: 2px solid #8a673c; }
-        .magic-book small { color: #765a35; font-weight: 800; letter-spacing: .08em; }
-        .magic-book h1 { margin: 4px 0; color: #214f86; font: bold 24px Georgia, serif; }
-        .magic-book h2 { margin: 9px 0 6px; color: #214f86; font: bold 15px Georgia, serif; }
-        .description { margin: 0; max-width: 335px; font-size: 13px; }
-        .hud { display: grid; gap: 4px; text-align: right; font: bold 11px monospace; color: #5d3d1f; }
-        .book-grid { display: grid; grid-template-columns: 205px 1fr; gap: 17px; padding-top: 12px; }
-        .objectives { margin: 0; padding: 0; list-style: none; font-size: 12px; line-height: 1.35; }
-        .objectives li { margin: 4px 0; }
-        .objectives .done { color: #2d6e39; text-decoration: line-through; }
-        .tutor { margin-top: 10px; padding: 9px; background: #d9ebfa; border-left: 4px solid #3976ad; border-radius: 5px; font-size: 12px; }
-        .tutor p { margin: 4px 0 0; }
-        .console { height: 115px; margin: 0; padding: 9px; overflow: auto; white-space: pre-wrap; color: #bde6ff; background: #111528; border-radius: 5px; font: 11px/1.35 monospace; }
-        main label { display: block; margin-bottom: 5px; color: #5a3b1c; font-weight: 800; }
-        #pk-code { width: 100%; height: 405px; resize: none; padding: 12px; color: #bdefff; background: #101528; border: 2px solid #31567d; border-radius: 7px; outline: none; font: 13px/1.45 Consolas, monospace; tab-size: 4; }
-        #pk-code:focus { border-color: #3d8bd1; box-shadow: 0 0 0 3px #3d8bd133; }
-        .input-row { display: grid; grid-template-columns: 1fr 74px; gap: 5px; margin-top: 7px; }
-        .runtime-input { min-width: 0; padding: 8px; color: #172235; background: #fff8df; border: 1px solid #8b6c41; border-radius: 5px; }
-        button { padding: 8px; color: white; background: #315f93; border: 0; border-radius: 5px; font-weight: 800; cursor: pointer; }
-        button:hover:not(:disabled) { filter: brightness(1.12); }
-        button:disabled { opacity: .45; cursor: not-allowed; }
-        .feedback { min-height: 48px; margin-top: 7px; padding: 8px; color: #17334c; background: #d7e8f6; border-radius: 5px; font-size: 12px; line-height: 1.3; }
-        .feedback[data-type="success"] { color: #164d26; background: #d5efd9; }
-        .feedback[data-type="warning"] { color: #694900; background: #f6e8b8; }
-        .feedback[data-type="error"], .feedback[data-type="danger"] { color: #702323; background: #f4cccc; }
-        .actions { display: grid; grid-template-columns: 1.25fr 1fr 1fr 1fr; gap: 5px; margin-top: 8px; }
-        .actions button { font-size: 10px; }
-        .actions .run { background: #267746; }
-        .actions .restore { background: #775b3a; }
-    </style>
+    <link rel="stylesheet" href="./ui/game.css">
     <script src="./phaser.min.js"></script>
 </head>
 <body>
     <div id="game-container"></div>
+    <div id="interface"></div>
     <script src="./systems/GameConstants.js"></script>
     <script src="./activities.js"></script>
+    <script src="./activities-v3.js"></script>
+    <script src="./systems/AssetCatalog.js"></script>
     <script src="./Boot.js"></script>
     <script src="./MainMenu.js"></script>
+    <script src="./systems/SpriteAtlasSystem.js"></script>
     <script src="./Preloader.js"></script>
     <script src="./systems/BarrierSystem.js"></script>
     <script src="./systems/PythonSubsetParser.js"></script>
@@ -56,10 +25,16 @@
     <script src="./systems/ProgressionSystem.js"></script>
     <script src="./systems/MissionObjectiveSystem.js"></script>
     <script src="./systems/TutorialSystem.js"></script>
+    <script src="./systems/DiscoverySystem.js"></script>
+    <script src="./systems/AnimationSystem.js"></script>
+    <script src="./systems/MechanismSystem.js"></script>
     <script src="./systems/DungeonSystem.js"></script>
     <script src="./systems/PlayerController.js"></script>
     <script src="./systems/CommandInterpreter.js"></script>
     <script src="./systems/MapRenderer.js"></script>
+    <script src="./ui/ActivityGuide.js"></script>
+    <script src="./ui/CodeEditor.js"></script>
+    <script src="./systems/CameraController.js"></script>
     <script src="./ui/GameUI.js"></script>
     <script src="./Game.js"></script>
 </body>

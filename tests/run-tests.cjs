@@ -172,6 +172,8 @@ const INTERACTION_PROBES = {
     20: { type:'chest', api:'abrir_bau', mode:'ahead' }
 };
 function prepareRequirements (scene, entity) {
+    // Portal classification now requires a value actually read at the pedestal.
+    if (scene.atividade.id === 15 && entity.type === 'portal') scene.runState.inputs = [entity.value === 3 ? '25' : entity.value === 2 ? '15' : '5'];
     scene.runState.hasKey = true;
     (entity.requires || []).forEach((flag) => { scene.runState.flags[flag] = true; });
     (entity.requiresAny || []).forEach((flag) => { scene.runState.flags[flag] = true; });

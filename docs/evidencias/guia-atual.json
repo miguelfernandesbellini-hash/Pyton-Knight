@@ -1,0 +1,796 @@
+[
+  {
+    "id": 1,
+    "nome": "Primeiros Passos",
+    "concept": "Atribuição de variável e movimento orientado",
+    "rows": 4,
+    "cols": 7,
+    "start": {
+      "linha": 1,
+      "coluna": 1
+    },
+    "entities": [],
+    "inputs": [],
+    "data": [
+      "Guto começa olhando para Leste. Cada casa caminhável corresponde a um passo."
+    ]
+  },
+  {
+    "id": 2,
+    "nome": "O Caminho Mutável",
+    "concept": "Reatribuição",
+    "rows": 4,
+    "cols": 7,
+    "start": {
+      "linha": 1,
+      "coluna": 1
+    },
+    "entities": [],
+    "inputs": [],
+    "data": [
+      "Reatribuir é guardar um novo valor no mesmo nome de variável."
+    ]
+  },
+  {
+    "id": 3,
+    "nome": "As Grades da Masmorra",
+    "concept": "Operações entre variáveis",
+    "rows": 5,
+    "cols": 7,
+    "start": {
+      "linha": 1,
+      "coluna": 1
+    },
+    "entities": [],
+    "inputs": [],
+    "data": [
+      "As grades bloqueiam a passagem entre duas casas, mesmo quando ambas têm piso."
+    ]
+  },
+  {
+    "id": 4,
+    "nome": "O Corredor de Lava",
+    "concept": "Operadores +, - e *",
+    "rows": 6,
+    "cols": 7,
+    "start": {
+      "linha": 1,
+      "coluna": 1
+    },
+    "entities": [],
+    "inputs": [],
+    "data": [
+      "A lava é letal. Uma colisão com parede ou grade apenas interrompe o programa."
+    ],
+    "budget": 15
+  },
+  {
+    "id": 5,
+    "nome": "O Labirinto das Variáveis",
+    "concept": "Integração da Unidade 1",
+    "rows": 6,
+    "cols": 8,
+    "start": {
+      "linha": 1,
+      "coluna": 1
+    },
+    "entities": [],
+    "inputs": [],
+    "data": [
+      "Planeje as curvas antes de executar. O orçamento conta instruções, inclusive na mesma linha."
+    ],
+    "budget": 17
+  },
+  {
+    "id": 6,
+    "nome": "O Pedestal da Palavra",
+    "concept": "print() e saída de dados",
+    "rows": 7,
+    "cols": 10,
+    "start": {
+      "linha": 1,
+      "coluna": 1
+    },
+    "entities": [
+      {
+        "id": "pedestal_word",
+        "type": "pedestal"
+      },
+      {
+        "id": "rune",
+        "type": "output_rune"
+      },
+      {
+        "id": "gate",
+        "type": "gate"
+      }
+    ],
+    "inputs": [],
+    "data": [
+      "Palavra gravada: AURORA",
+      "Produza a palavra junto à runa. A grade abre automaticamente."
+    ]
+  },
+  {
+    "id": 7,
+    "nome": "O Guardião da Resposta",
+    "concept": "input(), variável e print()",
+    "rows": 8,
+    "cols": 11,
+    "start": {
+      "linha": 1,
+      "coluna": 1
+    },
+    "entities": [
+      {
+        "id": "input_pedestal",
+        "type": "pedestal"
+      },
+      {
+        "id": "answer_rune",
+        "type": "output_rune"
+      },
+      {
+        "id": "guardian",
+        "type": "guardian"
+      },
+      {
+        "id": "door",
+        "type": "door"
+      }
+    ],
+    "inputs": [
+      "CORAGEM"
+    ],
+    "data": [
+      "Palavra gravada: CORAGEM",
+      "Receba a palavra no pedestal e envie-a à runa com print(). Depois interaja com o Guardião e com a porta, quando estiver perto de cada um."
+    ]
+  },
+  {
+    "id": 8,
+    "nome": "A Ponte dos Construtores",
+    "concept": "int(input()) e processamento numérico",
+    "rows": 9,
+    "cols": 13,
+    "start": {
+      "linha": 1,
+      "coluna": 1
+    },
+    "entities": [
+      {
+        "id": "lever",
+        "type": "lever"
+      },
+      {
+        "id": "measure_pedestal",
+        "type": "pedestal"
+      },
+      {
+        "id": "measure_rune",
+        "type": "output_rune"
+      },
+      {
+        "id": "bridge1",
+        "type": "bridge"
+      },
+      {
+        "id": "bridge2",
+        "type": "bridge"
+      },
+      {
+        "id": "bridge3",
+        "type": "bridge"
+      }
+    ],
+    "inputs": [
+      "2",
+      "3"
+    ],
+    "data": [
+      "Grupos: 2 · Segmentos por grupo: 3",
+      "A inscrição pede o produto: grupos × segmentos. Acione a alavanca antes de enviar o total à runa."
+    ]
+  },
+  {
+    "id": 9,
+    "nome": "O Salão dos Espelhos Rúnicos",
+    "concept": "Múltiplas entradas e processamento",
+    "rows": 10,
+    "cols": 15,
+    "start": {
+      "linha": 5,
+      "coluna": 1
+    },
+    "entities": [
+      {
+        "id": "rune_pedestal",
+        "type": "pedestal"
+      },
+      {
+        "id": "selector_rune",
+        "type": "output_rune"
+      },
+      {
+        "id": "mirror3",
+        "type": "mirror"
+      },
+      {
+        "id": "mirror5",
+        "type": "mirror"
+      },
+      {
+        "id": "mirror7",
+        "type": "mirror"
+      },
+      {
+        "id": "wrong_spikes_3",
+        "type": "hazard"
+      },
+      {
+        "id": "wrong_spikes_7",
+        "type": "hazard"
+      },
+      {
+        "id": "cofre",
+        "type": "gate"
+      }
+    ],
+    "inputs": [
+      "2",
+      "3"
+    ],
+    "data": [
+      "Primeira runa: 2 · Segunda runa: 3",
+      "Some as duas runas. O resultado identifica o espelho e a distância a partir do pedestal. Caminhe até o espelho para entrar nele."
+    ],
+    "budget": 14
+  },
+  {
+    "id": 10,
+    "nome": "O Cofre das Três Runas",
+    "concept": "Integração de entrada, processamento e saída",
+    "rows": 12,
+    "cols": 17,
+    "start": {
+      "linha": 1,
+      "coluna": 1
+    },
+    "entities": [
+      {
+        "id": "pedestal_a",
+        "type": "pedestal"
+      },
+      {
+        "id": "lever",
+        "type": "lever"
+      },
+      {
+        "id": "pedestal_b",
+        "type": "pedestal"
+      },
+      {
+        "id": "rune_b",
+        "type": "output_rune"
+      },
+      {
+        "id": "bridge1",
+        "type": "bridge"
+      },
+      {
+        "id": "bridge2",
+        "type": "bridge"
+      },
+      {
+        "id": "bridge3",
+        "type": "bridge"
+      },
+      {
+        "id": "mirror5",
+        "type": "mirror"
+      },
+      {
+        "id": "rune_c",
+        "type": "output_rune"
+      },
+      {
+        "id": "pedestal_c",
+        "type": "pedestal"
+      },
+      {
+        "id": "cofre",
+        "type": "gate"
+      }
+    ],
+    "inputs": [
+      "1",
+      "2",
+      "3"
+    ],
+    "data": [
+      "Runa A: 1 · Runa B: 2 · Runa C: 3",
+      "Inscrição da ponte: A × B. Inscrição final: (A × B) + C. Envie cada resultado junto à runa correspondente."
+    ],
+    "budget": 45
+  },
+  {
+    "id": 11,
+    "nome": "A Porta do Guardião",
+    "concept": "if e condição booleana",
+    "rows": 8,
+    "cols": 11,
+    "start": {
+      "linha": 1,
+      "coluna": 1
+    },
+    "entities": [
+      {
+        "id": "key",
+        "type": "key"
+      },
+      {
+        "id": "door",
+        "type": "door"
+      },
+      {
+        "id": "guardian",
+        "type": "guardian"
+      }
+    ],
+    "inputs": [],
+    "data": [
+      "A chave está no desvio. Os dois bloqueios exigem a chave e interação próxima."
+    ]
+  },
+  {
+    "id": 12,
+    "nome": "Os Dois Caminhos",
+    "concept": "if / else",
+    "rows": 9,
+    "cols": 13,
+    "start": {
+      "linha": 4,
+      "coluna": 1
+    },
+    "entities": [
+      {
+        "id": "plate",
+        "type": "toggle_plate"
+      },
+      {
+        "id": "spikes_upper",
+        "type": "hazard"
+      },
+      {
+        "id": "spikes_lower",
+        "type": "hazard"
+      }
+    ],
+    "inputs": [],
+    "data": [
+      "Placa ON: rota superior segura. Placa OFF: rota inferior segura.",
+      "Consulte placa_ativa() na bifurcação. A placa fica no desvio; seu estado inicial pode variar."
+    ]
+  },
+  {
+    "id": 13,
+    "nome": "A Câmara das Comparações",
+    "concept": "Operadores relacionais",
+    "rows": 10,
+    "cols": 14,
+    "start": {
+      "linha": 8,
+      "coluna": 1
+    },
+    "entities": [
+      {
+        "id": "energy_pedestal",
+        "type": "pedestal"
+      },
+      {
+        "id": "door_low",
+        "type": "door"
+      },
+      {
+        "id": "door_equal",
+        "type": "door"
+      },
+      {
+        "id": "guardian_high",
+        "type": "guardian"
+      },
+      {
+        "id": "door_high",
+        "type": "door"
+      },
+      {
+        "id": "guardian_second",
+        "type": "guardian"
+      },
+      {
+        "id": "door_second",
+        "type": "door"
+      }
+    ],
+    "inputs": [
+      "12"
+    ],
+    "data": [
+      "Energia da runa: 12",
+      "Primeiro Guardião: energia maior ou igual a 10. Segundo Guardião: energia diferente de 0.",
+      "Converta a entrada em número. Cada Guardião abre a porta conectada quando você interage perto dele."
+    ]
+  },
+  {
+    "id": 14,
+    "nome": "O Selo das Duas Alavancas",
+    "concept": "and / or",
+    "rows": 11,
+    "cols": 16,
+    "start": {
+      "linha": 9,
+      "coluna": 7
+    },
+    "entities": [
+      {
+        "id": "lever_blue",
+        "type": "lever"
+      },
+      {
+        "id": "toggle_plate",
+        "type": "toggle_plate"
+      },
+      {
+        "id": "spikes",
+        "type": "hazard"
+      },
+      {
+        "id": "lever_green",
+        "type": "lever"
+      },
+      {
+        "id": "gate_main",
+        "type": "gate"
+      },
+      {
+        "id": "gate_side",
+        "type": "gate"
+      }
+    ],
+    "inputs": [],
+    "data": [
+      "Selo principal: alavanca azul E alavanca verde. Passagem secundária: azul OU verde.",
+      "A placa alterna os espinhos a cada nova pisada. As alavancas mantêm o estado até novo acionamento."
+    ],
+    "budget": 30
+  },
+  {
+    "id": 15,
+    "nome": "O Julgamento dos Três Portões",
+    "concept": "if / elif / else e integração",
+    "rows": 12,
+    "cols": 18,
+    "start": {
+      "linha": 10,
+      "coluna": 1
+    },
+    "entities": [
+      {
+        "id": "key",
+        "type": "key"
+      },
+      {
+        "id": "lever",
+        "type": "lever"
+      },
+      {
+        "id": "power_pedestal",
+        "type": "pedestal"
+      },
+      {
+        "id": "portal1",
+        "type": "portal"
+      },
+      {
+        "id": "portal2",
+        "type": "portal"
+      },
+      {
+        "id": "portal3",
+        "type": "portal"
+      },
+      {
+        "id": "gate",
+        "type": "gate"
+      }
+    ],
+    "inputs": [
+      "25"
+    ],
+    "data": [
+      "Poder da runa: 25",
+      "Sol (3): poder ≥ 20. Lua (2): 10 ≤ poder < 20. Sombra (1): poder < 10.",
+      "Os portões exigem chave e alavanca. Caminhe até o portão correspondente antes de entrar."
+    ],
+    "budget": 45
+  },
+  {
+    "id": 16,
+    "nome": "A Ponte dos Ecos",
+    "concept": "for + range()",
+    "rows": 8,
+    "cols": 12,
+    "start": {
+      "linha": 1,
+      "coluna": 1
+    },
+    "entities": [
+      {
+        "id": "t1",
+        "type": "totem"
+      },
+      {
+        "id": "t2",
+        "type": "totem"
+      },
+      {
+        "id": "t3",
+        "type": "totem"
+      },
+      {
+        "id": "t4",
+        "type": "totem"
+      },
+      {
+        "id": "t5",
+        "type": "totem"
+      },
+      {
+        "id": "bridge1",
+        "type": "bridge_segment"
+      },
+      {
+        "id": "bridge2",
+        "type": "bridge_segment"
+      },
+      {
+        "id": "bridge3",
+        "type": "bridge_segment"
+      },
+      {
+        "id": "bridge4",
+        "type": "bridge_segment"
+      },
+      {
+        "id": "bridge5",
+        "type": "bridge_segment"
+      }
+    ],
+    "inputs": [],
+    "data": [
+      "A galeria tem 5 totens. Cada ativação constrói um segmento da ponte."
+    ]
+  },
+  {
+    "id": 17,
+    "nome": "A Câmara dos Rubis",
+    "concept": "for + acumulador",
+    "rows": 10,
+    "cols": 14,
+    "start": {
+      "linha": 1,
+      "coluna": 1
+    },
+    "entities": [
+      {
+        "id": "r1",
+        "type": "coin"
+      },
+      {
+        "id": "r2",
+        "type": "coin"
+      },
+      {
+        "id": "r3",
+        "type": "coin"
+      },
+      {
+        "id": "r4",
+        "type": "coin"
+      },
+      {
+        "id": "r5",
+        "type": "coin"
+      },
+      {
+        "id": "door",
+        "type": "door"
+      }
+    ],
+    "inputs": [],
+    "data": [
+      "A porta pede 5 rubis. O acumulador desta atividade deve se chamar total e terminar com 5.",
+      "Colete no tile do rubi. Observe o padrão de distâncias no circuito."
+    ]
+  },
+  {
+    "id": 18,
+    "nome": "O Corredor das Placas",
+    "concept": "while e condição de continuidade",
+    "rows": 11,
+    "cols": 16,
+    "start": {
+      "linha": 1,
+      "coluna": 1
+    },
+    "entities": [
+      {
+        "id": "h1",
+        "type": "hazard"
+      },
+      {
+        "id": "h2",
+        "type": "hazard"
+      },
+      {
+        "id": "h3",
+        "type": "hazard"
+      },
+      {
+        "id": "h4",
+        "type": "hazard"
+      },
+      {
+        "id": "p1",
+        "type": "toggle_plate"
+      },
+      {
+        "id": "p2",
+        "type": "toggle_plate"
+      },
+      {
+        "id": "p3",
+        "type": "toggle_plate"
+      },
+      {
+        "id": "p4",
+        "type": "toggle_plate"
+      },
+      {
+        "id": "side1",
+        "type": "hazard"
+      },
+      {
+        "id": "side2",
+        "type": "hazard"
+      },
+      {
+        "id": "side3",
+        "type": "hazard"
+      },
+      {
+        "id": "side4",
+        "type": "hazard"
+      }
+    ],
+    "inputs": [],
+    "data": [
+      "corredor_continua() verifica perigo ativo à frente. desativar_armadilha() age no perigo à frente.",
+      "As placas do percurso alternam os perigos laterais. Observe as curvas entre as zonas seguras."
+    ]
+  },
+  {
+    "id": 19,
+    "nome": "A Chave Perdida",
+    "concept": "while + break",
+    "rows": 12,
+    "cols": 18,
+    "start": {
+      "linha": 10,
+      "coluna": 1
+    },
+    "entities": [
+      {
+        "id": "chest1",
+        "type": "chest"
+      },
+      {
+        "id": "chest2",
+        "type": "chest"
+      },
+      {
+        "id": "chest3",
+        "type": "chest"
+      },
+      {
+        "id": "door",
+        "type": "door"
+      }
+    ],
+    "inputs": [],
+    "data": [
+      "A chave está em um dos 3 baús; a posição varia entre sessões. Ela só é revelada ao abrir o baú.",
+      "Abrir um baú exige estar nele ou olhar para ele na casa anterior. Interrompa a busca quando encontrar a chave."
+    ],
+    "budget": 45
+  },
+  {
+    "id": 20,
+    "nome": "O Santuário do Basilisco",
+    "concept": "Integração final das quatro unidades",
+    "rows": 14,
+    "cols": 20,
+    "start": {
+      "linha": 1,
+      "coluna": 1
+    },
+    "entities": [
+      {
+        "id": "t1",
+        "type": "totem"
+      },
+      {
+        "id": "t2",
+        "type": "totem"
+      },
+      {
+        "id": "t3",
+        "type": "totem"
+      },
+      {
+        "id": "bridge1",
+        "type": "bridge_segment"
+      },
+      {
+        "id": "bridge2",
+        "type": "bridge_segment"
+      },
+      {
+        "id": "bridge3",
+        "type": "bridge_segment"
+      },
+      {
+        "id": "h1",
+        "type": "hazard"
+      },
+      {
+        "id": "h2",
+        "type": "hazard"
+      },
+      {
+        "id": "chest1",
+        "type": "chest"
+      },
+      {
+        "id": "chest2",
+        "type": "chest"
+      },
+      {
+        "id": "chest3",
+        "type": "chest"
+      },
+      {
+        "id": "r1",
+        "type": "coin"
+      },
+      {
+        "id": "r2",
+        "type": "coin"
+      },
+      {
+        "id": "r3",
+        "type": "coin"
+      },
+      {
+        "id": "basilisk",
+        "type": "guardian"
+      }
+    ],
+    "inputs": [],
+    "data": [
+      "Provas: 3 totens, armadilhas, busca em 3 baús e coleta de 3 rubis.",
+      "A proteção final exige chave, totens completos, armadilhas neutralizadas e rubis coletados."
+    ],
+    "budget": 50
+  }
+]

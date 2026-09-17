@@ -30,6 +30,15 @@ class Preloader extends Phaser.Scene
     this.load.setPath('');
     /* phaser:assets:end */
 
+    Object.entries(window.AssetCatalog).forEach(([role, asset]) => {
+        if (asset.derived) return;
+        if (asset.frameWidth) this.load.spritesheet(`official_${role}`, asset.path, { frameWidth:asset.frameWidth, frameHeight:asset.frameHeight });
+        else this.load.image(`official_${role}`, asset.path);
+    });
+
+    this.load.image('v3_guto_source','assets/v3/guto-source.png');
+    this.load.image('v3_props_source','assets/v3/props-source.png');
+    this.load.image('v3_tiles_source','assets/v3/tiles-source.png');
     this.load.image(
         'caminho',
         'assets/imagens/Caminho.png'
@@ -61,6 +70,7 @@ class Preloader extends Phaser.Scene
         /* phaser:assets:setup:start */
         /* phaser:assets:setup:end */
 
+        window.SpriteAtlasSystem.prepare(this);
         this.scene.start('MainMenu');
     }
 }

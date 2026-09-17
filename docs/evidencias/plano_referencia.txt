@@ -1,0 +1,233 @@
+xl/worksheets/sheet1.xml
+A1: PLANO DE TESTE — SISTEMA DESENVOLVIDO NO TCC
+A3: 1. IDENTIFICAÇÃO
+A4: ID do Plano | B4: PT-001 | D4: Versão | E4: 1.0 | G4: Data | H4: 46277
+A5: Título do TCC / Sistema | B5: Pyton Knight
+A6: Módulo(s) em teste | B6: Interpretador Python controlado; Livro Mágico/GameUI; movimento e dungeon; 20 atividades; objetivos, vidas, XP, moedas e progressão; mecânicas implementadas M01, M02, M03, M05, M06, M07, M08, M09, M12, M14, M17, M18, M19, M20, M21, M22, M23, M24, M26 e M30–M37.
+A7: Responsáveis | B7: Miguel F. Bellini; Diego L. P. Gomes; Nicolly de P. Santos
+A8: Orientador(a) | B8: Aparecido
+A10: 2. OBJETIVO E ESCOPO
+A11: Objetivo dos testes | C11: Validar a versão atual do Pyton Knight quanto ao funcionamento das funcionalidades efetivamente implementadas, à integração entre código e dungeon, à coerência dos resultados e feedbacks, à usabilidade da interface e à adequação pedagógica das atividades. A validação manual complementará a suíte automatizada já existente, com foco especial na homologação em navegador real e no teste com público-alvo.
+A12: Funcionalidades incluídas | C12: 20 atividades em 4 unidades; interpretador do subconjunto educacional de Python; editor/Livro Mágico; movimento orientado; EXECUTAR/RESTAURAR; objetivos e restrições; vidas e perigos; chaves e portas; placas de pressão e placas rúnicas; alavancas; pontes; espelhos; pedestais de entrada, runas de saída, cofres e guardiões; sensores; moedas/rubis e bolsa persistente; XP; desbloqueio/progressão; orçamento de código nas atividades configuradas; mensagens de sucesso/erro; tutoriais das atividades 1, 6, 11 e 16; compatibilidade e usabilidade em navegador desktop.
+A13: Fora do escopo | C13: Banco de dados, backend, contas de usuário e controle de acesso; multiplayer e sincronização em nuvem; Python completo fora do subconjunto aceito; mecânicas da biblioteca que não são usadas nas 20 atividades; áudio e animações avançadas; arte/assets finais ainda não concluídos; funcionalidades futuras não presentes na versão atual. Testes de carga/escala de servidor também não se aplicam à arquitetura atual, que é local no navegador.
+A16: 3. ESTRATÉGIA
+A17: Tipos de teste previstos | C17: Funcional; Integração; Usabilidade; Compatibilidade; Outro (validação pedagógica). A segurança é tratada apenas no limite do interpretador controlado/whitelist, pois a versão atual não possui backend.
+A18: Técnica / abordagem | C18: Caixa-preta e testes baseados em cenários, com casos positivos, negativos, limites e entradas inválidas; testes de estado/reset e persistência; regressão com a suíte automatizada existente; execução manual em navegador real; observação de uso e questionário pós-teste com o público-alvo.
+A19: Ambiente de teste | C19: Projeto servido por HTTP local (ex.: servidor Python na porta 8000), em computador desktop/notebook com navegador moderno (Chrome, Edge e/ou Firefox) e localStorage habilitado. Registrar sistema operacional e versões reais dos navegadores no momento da execução. Modo de desenvolvimento poderá ser usado somente para isolar atividades durante testes técnicos.
+A20: Dados de teste | C20: Soluções de referência do gabarito oficial; códigos incompletos; erros de sintaxe; comandos desconhecidos; uso de conceitos futuros; operações inválidas; entradas textuais e numéricas válidas/inválidas; valores de fronteira de comparações; variantes de rotas/baús; perfis de progresso limpos e previamente salvos em localStorage. Os dados usados em cada execução devem ser registrados no próprio caso.
+A23: 4. CRITÉRIOS E CONTROLE
+A24: Critérios de entrada | C24: Versão atual do projeto carregando por HTTP; arquivos e assets essenciais disponíveis; atividades configuradas em activities.js; gabarito oficial disponível para os testes técnicos; navegador com localStorage habilitado; ambiente identificado; para teste com usuários, TCLE apresentado e consentimento obtido antes da participação.
+A25: Critérios de saída | C25: Todos os casos P1 executados; casos P2 representativos executados; defeitos registrados com evidência; nenhum defeito Crítico ou Alto aberto impedindo o fluxo principal; evidências anexadas; teste de usabilidade realizado e questionários coletados. Casos bloqueados devem ter justificativa e plano de reexecução.
+A26: Critério geral de aprovação | C26: 100% dos casos P1 aprovados, pelo menos 90% dos casos técnicos executados aprovados e ausência de defeitos Críticos/Altos abertos nas funções centrais. A usabilidade e a proposta educacional serão analisadas separadamente pelas respostas do questionário e observações, sem transformar percepção do participante em resultado funcional automático.
+A27: Riscos / restrições | C27: Homologação visual manual ainda pendente; alguns elementos visuais são provisórios; balanceamento de XP/moedas/orçamentos pode ser recalibrado após playtests; persistência é local ao navegador e pode contaminar testes se o localStorage não for controlado; diferenças de navegador e experiência prévia dos participantes podem afetar o resultado. Não foi localizado catálogo formal de requisitos do tipo RF-xx; a rastreabilidade usa os identificadores oficiais já existentes: número da atividade e códigos Mxx.
+A28: Evidências previstas | C28: Capturas de tela; gravações curtas de tela quando necessárias; logs/console do navegador; saída da suíte automatizada; registro preenchido na aba Fluxo de Teste; identificação de navegador/ambiente; respostas agregadas e comentários do questionário do público-alvo.
+A32: 5. PLANEJAMENTO DA EXECUÇÃO
+A33: Módulo / Funcionalidade | B33: Requisito(s) | C33: Tipo de Teste | D33: Prioridade | E33: Responsável | F33: Data Prevista | G33: Situação | H33: Observações
+A34: Interpretador Python controlado | B34: Ativ. 1–20; M32; M36 | C34: Funcional | D34: P1 - Alta | E34: Equipe do TCC | F34: A definir após validação | G34: Não Iniciado | H34: Sintaxe, AST, whitelist, erros, bloqueio de conceito futuro e guardas de loop.
+A35: Movimento orientado, colisões e reset | B35: M31; M32; Ativ. 1–20 | C35: Integração | D35: P1 - Alta | E35: Equipe do TCC | F35: A definir após validação | G35: Não Iniciado | H35: Validar andar_frente(), giros, paredes, porta fechada, execução incompleta e reset determinístico.
+A36: Livro Mágico, editor, objetivos e feedback | B36: M32; M36; Ativ. 1, 6, 11, 16 | C36: Usabilidade | D36: P1 - Alta | E36: Equipe do TCC + participantes | F36: A definir após validação | G36: Não Iniciado | H36: Inclui tutoriais, preservação do código, mensagens e acessibilidade dos controles.
+A37: Atividades educacionais e progressão | B37: Ativ. 1–20; M35; M36 | C37: Funcional | D37: P1 - Alta | E37: Equipe do TCC + participantes | F37: A definir após validação | G37: Não Iniciado | H37: Validar conclusão, bloqueio/desbloqueio e coerência entre conceito, objetivo e resultado.
+A38: Vidas, perigos e falhas | B38: M33 (Ativ. 1–20); M09 (Ativ. 12, 14, 18, 20); M12 (Ativ. 18, 20); Ativ. 4 (lava/perigo letal tratado por M33) | C38: Funcional | D38: P1 - Alta | E38: Equipe do TCC | F38: A definir após validação | G38: Não Iniciado | H38: Somente falha letal deve consumir vida; código deve permanecer para correção.
+A39: Chaves, portas e sensores | B39: M05 (Ativ. 11); M06 (Ativ. 13, 14, 15, 17, 20); M21 (Ativ. 11, 15, 19, 20); M30 (Ativ. 11, 12, 13, 14, 15, 17, 18, 19, 20) | C39: Integração | D39: P1 - Alta | E39: Equipe do TCC | F39: A definir após validação | G39: Não Iniciado | H39: Validar estado real da dungeon e bloqueios físicos.
+A40: Placas, alavancas, pontes e mecanismos | B40: M01 (Ativ. 12, 15); M02 (Ativ. 14, 15, 18, 20); M03 (Ativ. 8, 10, 14, 15, 20); M07 (Ativ. 8, 10); M08 (Ativ. 16, 20); M14 (Ativ. 9, 10, 15); M30 (Ativ. 11, 12, 13, 14, 15, 17, 18, 19, 20) | C40: Integração | D40: P2 - Média | E40: Equipe do TCC | F40: A definir após validação | G40: Não Iniciado | H40: Validar acionamento contextual e efeitos no mapa, sem telecomando.
+A41: Moedas/rubis, XP e persistência | B41: M24 e M34 (Ativ. 17, 20); M35 (Ativ. 1–20) | C41: Integração | D41: P1 - Alta | E41: Equipe do TCC | F41: A definir após validação | G41: Não Iniciado | H41: Crédito somente após vitória; replay sem duplicação; persistência em localStorage.
+A42: Orçamento de código | B42: M37; Ativ. 4, 5, 9, 10, 14, 15, 19, 20 | C42: Funcional | D42: P2 - Média | E42: Equipe do TCC | F42: A definir após validação | G42: Não Iniciado | H42: Contagem semântica; excesso não deve consumir vida.
+A43: Homologação visual, usabilidade e compatibilidade | B43: Ativ. 1–20; GameUI/MapRenderer | C43: Usabilidade | D43: P1 - Alta | E43: Participantes + observador | F43: A definir após validação | G43: Não Iniciado | H43: Prioridade por ser pendência real: legibilidade, sobreposição, scroll, feedback e execução em navegador real.
+xl/worksheets/sheet2.xml
+A1: FLUXO / CASOS DE TESTE — REGISTRO DE EXECUÇÃO
+A3: Uma linha por caso. Escreva passos suficientes para que outra pessoa consiga reproduzir o teste.
+A5: ID Caso | B5: Módulo / Funcionalidade | C5: Requisito / História | D5: Cenário / Título | E5: Tipo de Teste | F5: Prioridade | G5: Pré-condições | H5: Dados de Teste | I5: Passos / Fluxo | J5: Resultado Esperado | K5: Resultado Obtido | L5: Status | M5: Severidade do Defeito | N5: ID Defeito | O5: Evidência | P5: Executor | Q5: Data Execução | R5: Observações
+A6: CT-INT-001 | B6: Interpretador / Atividade 1 | C6: Ativ. 1; M31; M32; M36 | D6: Executar código válido e concluir a atividade | E6: Funcional | F6: P1 - Alta | G6: Projeto carregado por HTTP; Atividade 1 no estado inicial; progresso limpo ou atividade acessível. | H6: Usar a solução de referência da Atividade 1 ou código equivalente válido dentro do subconjunto permitido. | I6: 1. Abrir a Atividade 1.
+2. Conferir a orientação inicial de Guto.
+3. Inserir o código válido no Livro Mágico.
+4. Clicar EXECUTAR.
+5. Aguardar o término da execução. | J6: Guto executa as instruções na ordem correta, cumpre os objetivos da missão, alcança a saída e recebe feedback de sucesso; nenhuma vida é perdida por execução correta. | L6: Não Executado | O6: Captura da tela final + log/console da execução | P6: Equipe do TCC | R6: Caso base positivo do interpretador e da integração código-dungeon.
+A7: CT-INT-002 | B7: Interpretador / sintaxe | C7: Ativ. 11; M32; M36 | D7: Erro de sintaxe/indentação deve ser tratado sem perda de vida | E7: Funcional | F7: P1 - Alta | G7: Atividade 11 acessível; 3 vidas visíveis. | H7: Exemplo inválido: `if tem_chave()` sem `:` ou bloco com indentação incorreta. | I7: 1. Abrir a Atividade 11.
+2. Registrar o número de vidas.
+3. Digitar o código inválido.
+4. Clicar EXECUTAR.
+5. Observar feedback, posição e vidas. | J7: O código não é executado como solução; o jogo apresenta mensagem de erro de sintaxe/pedagógica, mantém o código para correção, não conclui a atividade e não reduz vidas. | L7: Não Executado | O7: Print do erro + print do contador de vidas | P7: Equipe do TCC | R7: Teste negativo.
+A8: CT-INT-003 | B8: Interpretador / whitelist | C8: Ativ. 1–20; M32 | D8: Comando desconhecido deve ser bloqueado | E8: Funcional | F8: P1 - Alta | G8: Qualquer atividade carregada; editor disponível. | H8: `voar(3)` ou outro comando inexistente na API autorizada. | I8: 1. Abrir uma atividade.
+2. Registrar posição/vidas.
+3. Inserir o comando desconhecido.
+4. Clicar EXECUTAR.
+5. Observar feedback e estado. | J8: O interpretador rejeita o comando, informa que ele não é reconhecido/permitido, não move Guto indevidamente, não conclui a missão e não consome vida. | L8: Não Executado | O8: Print do feedback + estado de Guto | P8: Equipe do TCC | R8: Teste de segurança funcional da API controlada.
+A9: CT-INT-004 | B9: Progressão pedagógica do interpretador | C9: Ativ. 1–5; M36 | D9: Conceito futuro deve ser bloqueado em unidade anterior | E9: Funcional | F9: P1 - Alta | G9: Atividade da Unidade 1 aberta. | H9: Exemplo: `for i in range(3):` na Atividade 1. | I9: 1. Abrir a Atividade 1.
+2. Inserir código usando `for/range()`.
+3. Clicar EXECUTAR.
+4. Observar a mensagem e as vidas. | J9: O conceito ainda não liberado é recusado com feedback pedagógico; a atividade não é concluída e nenhuma vida é perdida. | L9: Não Executado | O9: Print da mensagem de bloqueio | P9: Equipe do TCC | R9: Confirma progressão de conteúdos.
+A10: CT-INT-005 | B10: Interpretador / semântica | C10: Ativ. 1–20 | D10: Operação inválida deve gerar erro controlado | E10: Funcional | F10: P2 - Média | G10: Atividade que permita aritmética aberta; editor disponível. | H10: Ex.: divisão por zero ou operação incompatível entre tipos, conforme gramática permitida. | I10: 1. Abrir atividade compatível.
+2. Inserir expressão inválida.
+3. Clicar EXECUTAR.
+4. Observar mensagem, código e vidas. | J10: O runtime encerra a tentativa com erro semântico controlado, indica a causa/linha quando disponível, preserva o código e não reduz vidas. | L10: Não Executado | O10: Print do feedback + console | P10: Equipe do TCC | R10: Usar somente uma operação aceita pela gramática, porém semanticamente inválida.
+A11: CT-INT-006 | B11: Interpretador / proteção de loop | C11: Ativ. 18–20 | D11: Loop sem término deve ser interrompido pela guarda | E11: Desempenho | F11: P1 - Alta | G11: Atividade 18, 19 ou 20 aberta; interface responsiva. | H11: Loop `while` propositalmente sem condição de término válida. | I11: 1. Inserir um `while` que não encerre.
+2. Clicar EXECUTAR.
+3. Aguardar o mecanismo de proteção.
+4. Verificar se a página continua responsiva.
+5. Conferir vidas. | J11: A execução é interrompida pelo limite de segurança, a interface permanece utilizável, há feedback de limite/loop e nenhuma vida é perdida por esse erro. | L11: Não Executado | O11: Gravação curta + console | P11: Equipe do TCC | R11: Validar a proteção contra travamento do navegador.
+A12: CT-RUN-001 | B12: Execução e reset | C12: M32; Ativ. 1–20 | D12: Reexecutar o mesmo código deve restaurar o mundo e preservar o editor | E12: Integração | F12: P1 - Alta | G12: Atividade com objeto/mecanismo transitório aberta; código válido inserido. | H12: Usar solução de referência de uma atividade com mecanismo, ex. Atividade 11 ou 14. | I12: 1. Inserir o código.
+2. Executar uma vez e registrar estados finais.
+3. Sem apagar o editor, clicar EXECUTAR novamente.
+4. Observar o início da segunda execução.
+5. Comparar trajetórias/estados. | J12: Antes da nova execução, posição, orientação, itens e mecanismos transitórios retornam ao estado inicial; o texto do editor permanece; o comportamento é determinístico para os mesmos dados. | L12: Não Executado | O12: Vídeo das duas execuções ou sequência de prints | P12: Equipe do TCC | R12: Não confundir reset da tentativa com apagamento de progresso persistente.
+A13: CT-MOV-001 | B13: Movimento orientado | C13: M31 | D13: Giros alteram orientação e andar_frente usa a direção atual | E13: Funcional | F13: P1 - Alta | G13: Atividade com espaço para giro aberta; orientação inicial conhecida. | H13: `andar_frente(1)`, `virar_direita()`, `andar_frente(1)`, `virar_esquerda()`. | I13: 1. Registrar posição e orientação inicial.
+2. Inserir a sequência.
+3. Executar.
+4. Registrar posição/orientação após cada ação visível. | J13: `virar_direita()` e `virar_esquerda()` mudam apenas a orientação em 90°; `andar_frente()` desloca Guto conforme a orientação atual e não por direção absoluta. | L13: Não Executado | O13: Vídeo/prints de orientação e posição | P13: Equipe do TCC | R13: Confirmar coerência lógica e visual.
+A14: CT-MOV-002 | B14: Colisão com parede/limite | C14: M31; M32 | D14: Tentativa de atravessar parede deve gerar bloqueio sem perder vida | E14: Funcional | F14: P1 - Alta | G14: Atividade aberta com parede adjacente alcançável; 3 vidas registradas. | H14: Código que oriente Guto diretamente contra uma parede e tente avançar. | I14: 1. Posicionar/usar código até ficar diante da parede.
+2. Registrar vidas.
+3. Executar avanço contra a parede.
+4. Observar causa de término. | J14: O movimento é bloqueado, o feedback identifica colisão/bloqueio físico, a missão não é concluída e as vidas permanecem inalteradas. | L14: Não Executado | O14: Print do bloqueio + vidas | P14: Equipe do TCC | R14: Diferenciar WALL_COLLISION de execução incompleta.
+A15: CT-MOV-003 | B15: Execução incompleta | C15: M32; M36 | D15: Código que termina antes do objetivo não deve virar falsa colisão | E15: Funcional | F15: P1 - Alta | G15: Atividade aberta; Guto distante da saída. | H15: `andar_frente(1)` ou outro trecho válido que não conclua a missão e não colida. | I15: 1. Inserir código válido porém insuficiente.
+2. Registrar vidas.
+3. Executar.
+4. Observar feedback e causa de término. | J15: O sistema informa execução/objetivo incompleto, não registra colisão física, não conclui a atividade e não reduz vidas. | L15: Não Executado | O15: Print do feedback + vidas | P15: Equipe do TCC | R15: Regressão de problema já corrigido.
+A16: CT-LIV-001 | B16: Vidas e perigos | C16: M09 (Ativ. 12, 14, 18, 20); M12 (Ativ. 18, 20); M33 | D16: Perigo letal deve retirar exatamente uma vida e preservar o código | E16: Funcional | F16: P1 - Alta | G16: Atividade 12, 14, 18 ou 20 acessível; 3 vidas; editor com código que leve Guto a espinhos/armadilha letal. | H16: Rota proposital para tile de espinhos/perigo letal. | I16: 1. Registrar 3 vidas e o texto do editor.
+2. Executar a rota letal.
+3. Observar término.
+4. Conferir vidas e conteúdo do editor. | J16: A tentativa termina como falha letal; exatamente uma vida é removida; o código permanece para correção; o mundo fica pronto para nova tentativa conforme a regra da atividade. | L16: Não Executado | O16: Print antes/depois das vidas + editor | P16: Equipe do TCC | R16: Teste negativo de gameplay.
+A17: CT-IO-001 | B17: Saída de dados / Atividade 6 | C17: Ativ. 6; M18; M32; M36 | D17: print() correto deve produzir saída e liberar o mecanismo da fase | E17: Funcional | F17: P1 - Alta | G17: Atividade 6 aberta no tutorial; runa/grade em estado inicial. | H17: Saída correta prevista pela atividade (palavra visível no cenário, conforme configuração atual). | I17: 1. Seguir as microetapas do tutorial até a introdução de `print()`.
+2. Informar/imprimir a saída correta.
+3. Executar o programa completo.
+4. Observar console, runa/grade e cristal. | J17: `print()` aparece no console/saída, o mecanismo associado reconhece o valor esperado, a passagem é liberada e a atividade pode ser concluída; tutorial progride sem apagar o código acumulado. | L17: Não Executado | O17: Vídeo curto do tutorial + print final | P17: Equipe do TCC | R17: Usar o valor exibido pela versão atual, não um valor memorizado de documento antigo.
+A18: CT-IO-002 | B18: Entrada/saída / Atividade 7 | C18: Ativ. 7; M17; M18; M20 | D18: input() com resposta correta deve alimentar a validação | E18: Integração | F18: P1 - Alta | G18: Atividade 7 aberta; pedestal/guardião no estado inicial. | H18: Resposta correta visível no cenário/configuração atual. | I18: 1. Inserir/usar código com `input()` e `print()` conforme objetivo.
+2. Clicar EXECUTAR.
+3. Quando o campo de entrada for ativado, informar a resposta correta.
+4. Confirmar e observar o mundo.
+5. Finalizar o percurso. | J18: O campo de entrada só aparece/ativa no momento de `input()`; o valor é armazenado e ecoado por `print()`; o guardião/mecanismo reconhece a resposta e libera a progressão. | L18: Não Executado | O18: Print do input + print do mecanismo liberado | P18: Equipe do TCC | R18: Integração Livro Mágico ↔ runtime ↔ dungeon.
+A19: CT-IO-003 | B19: Entrada/saída / Atividade 7 | C19: Ativ. 7; M17; M20 | D19: Resposta incorreta não deve liberar a passagem | E19: Funcional | F19: P1 - Alta | G19: Atividade 7 aberta com 3 vidas. | H19: Texto propositalmente diferente da resposta esperada. | I19: 1. Executar código que solicite `input()`.
+2. Informar valor incorreto.
+3. Continuar a execução.
+4. Observar guardião, porta, feedback e vidas. | J19: O validador não libera a passagem; o feedback informa erro de resposta/objetivo; a atividade não é concluída e a resposta incorreta não consome vida por si só. | L19: Não Executado | O19: Print do feedback + porta/guardião | P19: Equipe do TCC | R19: Cenário negativo de entrada.
+A20: CT-KEY-001 | B20: Chave, sensor e porta / Atividade 11 | C20: Ativ. 11; M05; M21; M30 | D20: Coletar chave e usar if/tem_chave() deve abrir a porta | E20: Integração | F20: P1 - Alta | G20: Atividade 11 aberta; chave no mapa; porta fechada; 3 vidas. | H20: Usar solução de referência ou equivalente que colete a chave, consulte `tem_chave()` e chame `abrir_porta()`. | I20: 1. Executar a rota até a chave.
+2. Confirmar coleta visual/estado.
+3. Avaliar `if tem_chave():`.
+4. Chamar `abrir_porta()` em contexto válido.
+5. Alcançar o cristal. | J20: A chave é removida do mapa e registrada no estado; o sensor retorna verdadeiro; a porta abre apenas em contexto válido; Guto alcança o cristal e recebe sucesso. | L20: Não Executado | O20: Vídeo/prints da chave, porta e sucesso | P20: Equipe do TCC | R20: Cenário positivo do tutorial de `if`.
+A21: CT-KEY-002 | B21: Chave e porta / Atividade 11 | C21: Ativ. 11; M05; M21 | D21: Tentar abrir/atravessar sem chave deve manter porta fechada | E21: Funcional | F21: P1 - Alta | G21: Atividade 11 aberta; chave ainda não coletada; 3 vidas. | H21: Código que tente chegar/abrir a porta sem satisfazer a condição da chave. | I21: 1. Evitar a coleta da chave ou executar trecho que não a obtenha.
+2. Tentar `abrir_porta()`/atravessar a porta.
+3. Observar estado e vidas. | J21: A porta permanece fechada; o jogo informa bloqueio/condição não satisfeita; Guto não atravessa; nenhuma vida é perdida apenas por porta fechada. | L21: Não Executado | O21: Print da porta fechada + vidas | P21: Equipe do TCC | R21: Cenário negativo.
+A22: CT-MEC-001 | B22: Placa de pressão e if/else / Atividade 12 | C22: Ativ. 12; M01; M09; M30 | D22: Placa deve alterar o estado e o código escolher a rota segura | E22: Integração | F22: P1 - Alta | G22: Atividade 12 aberta; placa e rotas no estado inicial. | H22: Usar solução de referência ou equivalente baseada no sensor da armadilha/placa, testando a variante disponível. | I22: 1. Executar até a placa de pressão.
+2. Observar alteração de estado da armadilha/rota.
+3. Consultar o sensor previsto.
+4. Executar os ramos `if/else`.
+5. Verificar a rota escolhida e a conclusão. | J22: A placa altera o estado real da dungeon; o sensor reflete esse estado; somente o ramo coerente é executado; Guto atravessa a rota segura e alcança a saída sem usar conteúdo futuro. | L22: Não Executado | O22: Vídeo da mudança de estado + rota tomada | P22: Equipe do TCC | R22: Executar também a outra variante do cenário quando disponível.
+A23: CT-MEC-002 | B23: Alavancas e condição composta / Atividade 14 | C23: Ativ. 14; M02; M03; M06; M09; M30; M37 | D23: and/or devem refletir o estado real de alavancas/placas | E23: Integração | F23: P1 - Alta | G23: Atividade 14 aberta; mecanismos no estado inicial. | H23: Solução de referência ou equivalente dentro do limite de código, usando estados das alavancas/placas. | I23: 1. Percorrer as regiões até as alavancas/placa.
+2. Acionar os mecanismos em contexto válido.
+3. Consultar seus sensores.
+4. Avaliar a condição composta `and/or`.
+5. Tentar liberar a passagem e concluir. | J23: A condição composta produz resultado coerente com os estados reais; a porta/armadilha responde corretamente; o objetivo só é cumprido quando a combinação prevista é satisfeita. | L23: Não Executado | O23: Prints dos estados + passagem final | P23: Equipe do TCC | R23: Também observar o orçamento configurado da atividade.
+A24: CT-MEC-003 | B24: Interação contextual com mecanismos | C24: M03; M05; M06; M26; M30 | D24: Comando de mundo fora de contexto não deve funcionar como telecomando | E24: Funcional | F24: P2 - Média | G24: Atividade com alavanca/porta/runa aberta; Guto longe do mecanismo. | H24: Ex.: chamar `ativar_alavanca()` antes de chegar à alavanca. | I24: 1. Registrar posição de Guto e estado do mecanismo.
+2. Chamar o comando estando longe.
+3. Executar.
+4. Observar mecanismo, feedback e vidas. | J24: O mecanismo não é acionado à distância; o sistema exige posição/proximidade/contexto compatível, apresenta feedback apropriado e não concede objetivo/recompensa indevida. | L24: Não Executado | O24: Print de posição + estado do mecanismo | P24: Equipe do TCC | R24: Garante coerência espacial das APIs da dungeon.
+A25: CT-CND-001 | B25: Comparações / Atividade 13 | C25: Ativ. 13; M06; M17; M20; M30 | D25: Operador relacional deve tratar corretamente um valor de fronteira | E25: Funcional | F25: P1 - Alta | G25: Atividade 13 aberta; limite numérico visível/definido na própria fase. | H25: Usar exatamente o valor de fronteira mostrado pela versão atual e o operador esperado (ex.: >= versus >). | I25: 1. Ler o limite exibido na atividade.
+2. Inserir o valor de fronteira no pedestal/input.
+3. Executar a comparação prevista.
+4. Observar porta/guardião e resultado.
+5. Repetir com um valor imediatamente fora do limite. | J25: O comportamento muda conforme a relação matemática correta; igualdade é tratada de acordo com o operador configurado; porta/feedback não aceitam comparação incorreta. | L25: Não Executado | O25: Print dos dois valores e estados da porta | P25: Equipe do TCC | R25: Teste de limite; registrar os números reais usados.
+A26: CT-CND-002 | B26: if/elif/else / Atividade 15 | C26: Ativ. 15; M14; M20; M21; M30; M37 | D26: Entrada da faixa alta deve seguir o ramo correspondente | E26: Funcional | F26: P1 - Alta | G26: Atividade 15 aberta; usar configuração atual das três faixas. | H26: Valor pertencente claramente à faixa alta indicada pela fase/gabarito atual. | I26: 1. Abrir Atividade 15.
+2. Inserir solução de referência/equivalente.
+3. Fornecer valor da faixa alta.
+4. Executar até o fim.
+5. Registrar o portão/rota escolhida. | J26: Somente o ramo `if` correspondente à faixa alta é executado; Guto segue a rota correta, satisfaz os objetivos e pode concluir sem ultrapassar o orçamento. | L26: Não Executado | O26: Vídeo/print da rota alta | P26: Equipe do TCC | R26: Registrar o valor real usado.
+A27: CT-CND-003 | B27: if/elif/else / Atividade 15 | C27: Ativ. 15; M14; M20; M21; M30; M37 | D27: Entrada da faixa intermediária deve seguir o ramo correspondente | E27: Funcional | F27: P1 - Alta | G27: Atividade 15 aberta; estado restaurado. | H27: Valor pertencente claramente à faixa intermediária indicada pela fase/gabarito atual. | I27: 1. Restaurar a atividade.
+2. Inserir/manter solução válida.
+3. Fornecer valor da faixa intermediária.
+4. Executar.
+5. Registrar a rota. | J27: Somente o ramo `elif` correspondente é executado; a rota intermediária correta é tomada e a conclusão permanece válida. | L27: Não Executado | O27: Vídeo/print da rota intermediária | P27: Equipe do TCC | R27: Executar em tentativa independente.
+A28: CT-CND-004 | B28: if/elif/else / Atividade 15 | C28: Ativ. 15; M14; M20; M21; M30; M37 | D28: Entrada da faixa baixa deve seguir o else | E28: Funcional | F28: P1 - Alta | G28: Atividade 15 aberta; estado restaurado. | H28: Valor pertencente à faixa baixa configurada. | I28: 1. Restaurar a atividade.
+2. Usar solução válida.
+3. Fornecer valor da faixa baixa.
+4. Executar.
+5. Registrar a rota. | J28: O ramo `else` é usado para a faixa baixa; Guto percorre a rota prevista e a atividade pode ser concluída corretamente. | L28: Não Executado | O28: Vídeo/print da rota baixa | P28: Equipe do TCC | R28: Executar em tentativa independente.
+A29: CT-LOP-001 | B29: for/range / Atividade 16 | C29: Ativ. 16; M08; M26 | D29: Tutorial de for/range deve construir e executar a repetição | E29: Funcional | F29: P1 - Alta | G29: Atividade 16 aberta desde a primeira microetapa. | H29: Seguir o código parcial e as orientações apresentadas pelo próprio Livro Mágico. | I29: 1. Iniciar o tutorial.
+2. Executar a repetição manual apresentada, se houver.
+3. Avançar até `for`/`range()`.
+4. Completar a parte solicitada.
+5. Executar a solução final.
+6. Observar totens/ponte. | J29: As microetapas avançam somente após a condição correta; `for/range()` repete as ações previstas; os totens/segmentos respondem em sequência; o código permanece no editor entre as etapas. | L29: Não Executado | O29: Vídeo curto das microetapas | P29: Equipe do TCC | R29: Validação funcional e pedagógica do tutorial.
+A30: CT-LOP-002 | B30: for + acumulador / Atividade 17 | C30: Ativ. 17; M06; M24; M30; M34 | D30: Rubis coletados devem alimentar contador e só persistir após vitória | E30: Integração | F30: P1 - Alta | G30: Atividade 17 aberta; bolsa persistente registrada antes do teste. | H30: Solução de referência/equivalente com `for` e acumulador; coletar rubis exigidos pela fase. | I30: 1. Registrar saldo persistente inicial.
+2. Executar o código e coletar rubis.
+3. Antes da vitória, observar contador temporário.
+4. Concluir validamente a atividade.
+5. Conferir bolsa persistente. | J30: Cada rubi é coletado uma vez na tentativa; o contador temporário aumenta; o saldo persistente só é creditado após a vitória válida e corresponde ao valor configurado, sem duplicação. | L30: Não Executado | O30: Print saldo antes/durante/depois | P30: Equipe do TCC | R30: Reexecutar via caso de replay para confirmar idempotência.
+A31: CT-LOP-003 | B31: while / Atividade 18 | C31: Ativ. 18; M02; M09; M12; M30 | D31: while deve repetir enquanto o sensor indicar continuidade | E31: Integração | F31: P1 - Alta | G31: Atividade 18 aberta; sequência de placas/armadilhas no estado inicial. | H31: Solução de referência/equivalente usando `while` e o sensor de continuidade da fase. | I31: 1. Executar o programa.
+2. Observar cada iteração no trecho repetitivo.
+3. Verificar que o sensor muda/encerra a condição no fim do padrão.
+4. Confirmar saída do loop e movimento final. | J31: O laço repete somente enquanto a condição do mundo for verdadeira, termina quando o padrão acaba e permite alcançar o cristal; não depende de contagem fixa indevida. | L31: Não Executado | O31: Vídeo do loop no mapa + sucesso | P31: Equipe do TCC | R31: Validar que o sensor reflete o mundo real.
+A32: CT-LOP-004 | B32: while + break / Atividade 19 | C32: Ativ. 19; M21; M22; M23; M30; M37 | D32: Busca em baús deve interromper ao encontrar a chave | E32: Integração | F32: P1 - Alta | G32: Atividade 19 aberta em uma variante oficial; baús fechados e chave ainda não encontrada. | H32: Solução de referência/equivalente com `while` e `break`, dentro do orçamento. | I32: 1. Executar a busca a partir do primeiro baú.
+2. Abrir os baús no contexto correto.
+3. A cada tentativa, verificar `encontrou_chave()`/sensor equivalente.
+4. Ao encontrar a chave, confirmar que `break` encerra o laço.
+5. Finalizar a fase. | J32: O programa procura sem conhecer antecipadamente a posição da chave; ao encontrá-la, o estado é atualizado, o laço é interrompido e a sequência posterior continua corretamente. | L32: Não Executado | O32: Vídeo/prints da busca + chave encontrada | P32: Equipe do TCC | R32: Repetir em pelo menos outra variante oficial.
+A33: CT-BUD-001 | B33: Orçamento de código | C33: M37; Ativ. 4,5,9,10,14,15,19,20 | D33: Solução dentro do orçamento deve ser aceita | E33: Funcional | F33: P2 - Média | G33: Escolher uma atividade com orçamento; valor do limite exibido/configurado. | H33: Solução oficial ou equivalente cuja contagem semântica seja menor ou igual ao limite. | I33: 1. Abrir a atividade escolhida.
+2. Registrar o limite.
+3. Inserir a solução dentro do limite.
+4. Executar.
+5. Verificar se o orçamento não bloqueia a execução. | J33: O validador contabiliza instruções semânticas e permite a execução quando o total está dentro do limite; comentários/linhas vazias não geram bloqueio indevido. | L33: Não Executado | O33: Print do orçamento + execução | P33: Equipe do TCC | R33: Registrar atividade e total contado.
+A34: CT-BUD-002 | B34: Orçamento de código | C34: M37; Ativ. 4,5,9,10,14,15,19,20 | D34: Código acima do orçamento deve ser rejeitado sem perda de vida | E34: Funcional | F34: P1 - Alta | G34: Atividade com orçamento aberta; 3 vidas. | H34: Partir de código válido e adicionar instruções executáveis suficientes para ultrapassar o limite. | I34: 1. Registrar limite e vidas.
+2. Inserir código acima do limite.
+3. Clicar EXECUTAR.
+4. Observar feedback e vidas. | J34: A execução é bloqueada por orçamento excedido com mensagem clara; a atividade não é concluída; o código permanece no editor; nenhuma vida é consumida. | L34: Não Executado | O34: Print do limite, mensagem e vidas | P34: Equipe do TCC | R34: Não usar apenas comentários/linhas vazias para exceder.
+A35: CT-PRG-001 | B35: Progressão de atividades | C35: M35; M36 | D35: Atividade futura deve permanecer bloqueada até conclusão da anterior | E35: Funcional | F35: P1 - Alta | G35: Perfil novo/limpo de localStorage; modo normal, sem parâmetro de desenvolvimento. | H35: Tentar acessar atividade seguinte antes e depois de concluir a anterior. | I35: 1. Limpar/usar perfil novo.
+2. Abrir o jogo em modo normal.
+3. Tentar avançar para uma atividade ainda bloqueada.
+4. Concluir validamente a atividade anterior.
+5. Tentar novamente o acesso. | J35: Antes da conclusão, a atividade futura não fica disponível para progressão normal; após a vitória válida, a próxima atividade é desbloqueada e permanece acessível conforme o progresso. | L35: Não Executado | O35: Print antes/depois do desbloqueio | P35: Equipe do TCC | R35: Modo `?dev=1` não deve ser usado neste caso.
+A36: CT-PRG-002 | B36: XP por desempenho | C36: M33; M35 | D36: XP deve variar de forma monotônica conforme vidas restantes | E36: Funcional | F36: P2 - Média | G36: Ambiente de teste controlado; possibilidade de executar a mesma atividade em perfis isolados/estado reinicializado sem recompensa prévia. | H36: Três execuções equivalentes concluídas com 3, 2 e 1 vida restante. | I36: 1. Em perfil A, concluir com 3 vidas e registrar XP.
+2. Reinicializar estado de teste.
+3. Em perfil B, provocar uma morte letal e concluir com 2 vidas; registrar XP.
+4. Em perfil C, concluir com 1 vida.
+5. Comparar. | J36: A recompensa de XP com 3 vidas é maior que com 2, e com 2 é maior que com 1; apenas conclusões válidas geram crédito e os valores seguem a configuração atual. | L36: Não Executado | O36: Registro dos três valores de XP | P36: Equipe do TCC | R36: Usar perfis isolados para evitar a regra de replay.
+A37: CT-PRG-003 | B37: Recompensas / replay | C37: M34; M35 | D37: Repetir atividade concluída não deve duplicar XP ou moedas | E37: Integração | F37: P1 - Alta | G37: Atividade 17 ou 20 já concluída uma vez; saldo de XP/moedas registrado. | H37: Executar novamente a mesma solução correta. | I37: 1. Registrar XP e moedas atuais.
+2. Reabrir/reexecutar a atividade concluída.
+3. Finalizar novamente com sucesso.
+4. Comparar saldos. | J37: O replay é permitido, porém não adiciona novamente a recompensa já consolidada da mesma atividade; saldos permanecem estáveis. | L37: Não Executado | O37: Print dos saldos antes/depois | P37: Equipe do TCC | R37: Teste de idempotência.
+A38: CT-PER-001 | B38: Persistência local | C38: M34; M35; ProgressionSystem | D38: Progresso, XP e moedas devem persistir após recarregar o navegador | E38: Integração | F38: P1 - Alta | G38: Ter ao menos uma atividade concluída e algum progresso/recompensa salvo. | H38: Perfil de localStorage existente na chave da versão atual. | I38: 1. Registrar atividade desbloqueada, XP e moedas.
+2. Recarregar a página/fechar e reabrir a aba.
+3. Voltar ao menu/progresso.
+4. Comparar os dados. | J38: O estado persistente é restaurado do localStorage: conclusões, desbloqueios, XP e moedas permanecem; tentativa parcial/transitória não deve ser tratada como progresso concluído. | L38: Não Executado | O38: Print antes/depois do reload | P38: Equipe do TCC | R38: Não limpar dados do site durante o teste.
+A39: CT-OBJ-001 | B39: Objetivos e validação de conclusão | C39: M36; Ativ. 1–20 | D39: Objetivos parciais devem atualizar sem conceder vitória antecipada | E39: Funcional | F39: P1 - Alta | G39: Atividade com vários objetivos aberta, ex. 11, 14, 19 ou 20. | H39: Código que cumpra apenas parte dos objetivos e termine sem chegar à conclusão válida. | I39: 1. Executar código parcial que cumpra um objetivo intermediário.
+2. Observar a caixa de objetivos.
+3. Encerrar a execução sem cumprir os demais.
+4. Verificar feedback/recompensa.
+5. Executar solução completa. | J39: Objetivos cumpridos são atualizados visualmente, mas não há vitória, XP ou moedas enquanto os requisitos finais não forem satisfeitos; a solução completa concede sucesso apenas uma vez. | L39: Não Executado | O39: Print de objetivos parciais e finais | P39: Equipe do TCC | R39: Diferenciar progresso parcial de sucesso.
+A40: CT-UI-001 | B40: Livro Mágico / layout e feedback | C40: GameUI; Ativ. 1–20 | D40: Editor, mensagens e botões devem permanecer acessíveis sem sobreposição | E40: Usabilidade | F40: P1 - Alta | G40: Jogo aberto em navegador desktop no tamanho usado na aplicação; selecionar uma atividade com texto longo e provocar mensagem de feedback. | H40: Usar uma atividade com bloco de instruções extenso; inserir código suficiente para exigir rolagem do editor; provocar sucesso e erro. | I40: 1. Abrir atividade com conteúdo extenso.
+2. Verificar posição de EXECUTAR, RESTAURAR e navegação.
+3. Inserir código longo e usar a rolagem do editor.
+4. Executar um erro e depois uma solução válida.
+5. Observar se mensagens cobrem controles. | J40: O editor mantém área utilizável com rolagem interna quando necessário; botões permanecem visíveis/clicáveis; mensagens de feedback não impedem acesso aos controles; não há sobreposição crítica entre Livro, HUD e dungeon. | L40: Não Executado | O40: Capturas em cada estado + vídeo curto | P40: Equipe do TCC + participante | R40: Caso criado para a pendência real de homologação visual e problemas de sobreposição já observados durante o desenvolvimento.
+A41: CT-UI-002 | B41: Modo Tutorial x Modo Desafio | C41: Ativ. 1,6,11,16 e demais atividades; M36 | D41: Tutoriais devem orientar por microetapas e desafios não revelar solução completa | E41: Usabilidade | F41: P2 - Média | G41: Uma atividade tutorial e uma atividade de desafio acessíveis. | H41: Atividade tutorial: 6 ou 11; desafio: 7, 12 ou 17. | I41: 1. Abrir a atividade tutorial e observar instruções/código parcial.
+2. Avançar uma microetapa.
+3. Abrir a atividade de desafio escolhida.
+4. Ler objetivo, restrições e ajuda.
+5. Procurar se a solução completa é exibida. | J41: No tutorial, o Livro conduz gradualmente e pode fornecer código parcial; no modo desafio, apresenta objetivos/lembretes/feedback, mas não entrega a solução completa nem a sequência exata necessária. | L41: Não Executado | O41: Print de uma tela tutorial e uma desafio | P41: Equipe do TCC + participante | R41: Validação pedagógica da interface.
+A42: CT-CMP-001 | B42: Compatibilidade em navegador | C42: Aplicação web Phaser 3; Ativ. 1–20 | D42: Fluxo essencial deve funcionar em navegadores desktop modernos | E42: Compatibilidade | F42: P2 - Média | G42: Mesmo projeto/versão servido pelo mesmo HTTP local; dois ou mais navegadores modernos disponíveis; localStorage habilitado. | H42: Executar pelo menos Atividade 1 e uma atividade com input/mecanismo em cada navegador. | I42: 1. Registrar navegador e versão.
+2. Abrir a mesma URL.
+3. Executar Atividade 1.
+4. Executar uma atividade com `input()`/mecanismo.
+5. Testar reset e reload.
+6. Comparar layout e comportamento. | J42: O jogo carrega sem erro bloqueante, editor/controles funcionam, movimento e input respondem, reset/persistência funcionam e não há diferença crítica de layout/comportamento entre os navegadores testados. | L42: Não Executado | O42: Tabela de ambiente + prints por navegador | P42: Equipe do TCC | R42: Registrar exatamente os navegadores e versões usados.
+A43: CT-USO-001 | B43: Usabilidade com público-alvo | C43: Livro Mágico; atividade tutorial representativa | D43: Participante compreende objetivo e inicia o fluxo sem instrução do desenvolvedor | E43: Usabilidade | F43: P1 - Alta | G43: TCLE aceito; participante recebeu apenas as orientações padronizadas da sessão; jogo aberto em atividade tutorial definida para a aplicação. | H43: Roteiro de observação: localizar objetivo, editor e botão EXECUTAR; seguir microetapas. | I43: 1. Entregar o roteiro padronizado.
+2. Solicitar que o participante leia a tela e inicie a atividade.
+3. Não ensinar a solução; intervir somente em impedimento técnico.
+4. Registrar dúvidas, hesitações e pontos de bloqueio.
+5. Ao final, encaminhar ao questionário. | J43: O participante consegue identificar a finalidade básica da tela e iniciar o fluxo usando as instruções do próprio sistema; dificuldades de compreensão são registradas como evidência de usabilidade, não como defeito funcional automático. | L43: Não Executado | O43: Ficha de observação sem dados identificáveis + questionário | P43: Participante + observador | R43: Teste humano; avaliar junto às respostas do formulário.
+A44: CT-USO-002 | B44: Avaliação pedagógica com público-alvo | C44: Atividades representativas das unidades | D44: Participante relaciona código escrito às ações de Guto e avalia aprendizagem | E44: Outro | F44: P2 - Média | G44: TCLE aceito; participante utilizou o conjunto de atividades definido pela equipe na sessão. | H44: Roteiro padronizado de atividades + questionário pós-uso. | I44: 1. Permitir que o participante conclua o roteiro previsto.
+2. Solicitar que observe o efeito de comandos/condições/repetições no personagem.
+3. Aplicar o questionário imediatamente após o uso.
+4. Registrar somente respostas previstas no formulário. | J44: A coleta produz dados sobre compreensão da relação código-ação, clareza, dificuldade, progressão, motivação e percepção de aprendizagem. O resultado será analisado separadamente dos testes técnicos. | L44: Não Executado | O44: Respostas do Google Forms + observações agregadas | P44: Participante + observador | R44: Não usar respostas do questionário para marcar automaticamente casos funcionais como aprovados/reprovados.
+xl/worksheets/sheet3.xml
+A1: TEMPLATE DE TESTES — TCC CIÊNCIA DA COMPUTAÇÃO
+A3: Aba | B3: Finalidade | C3: Quando preencher | D3: Quem preenche | E3: Resultado esperado | F3: Observação
+A4: Plano de Teste | B4: Define o que será testado, como, onde, por quem e com quais critérios. | C4: Antes da execução. | D4: Grupo do TCC. | E4: Plano pronto para orientar a execução. | F4: Documento vivo; revisar quando necessário.
+A5: Fluxo de Teste | B5: Registra casos/cenários e a execução passo a passo. | C5: Casos antes; resultados durante a execução. | D5: Executor do teste. | E5: Status e evidências por caso. | F5: Uma linha por caso de teste.
+A6: Referência | B6: Modelo didático baseado em boas práticas de documentação e rastreabilidade. | C6: Durante o TCC. | D6: Grupo e orientador. | E6: Testes reproduzíveis e rastreáveis. | F6: Adaptar ao contexto do projeto.
+A8: CONVENÇÕES SUGERIDAS
+A9: Prioridade | B9: P1 - Alta / P2 - Média / P3 - Baixa
+A10: Status | B10: Não Executado / Em Execução / Aprovado / Reprovado / Bloqueado
+A11: Severidade | B11: Crítica / Alta / Média / Baixa
+A12: Tipos | B12: Funcional / Integração / Usabilidade / Desempenho / Segurança / Compatibilidade / Outro
+A13: IDs | B13: PT-001 (plano), CT-MOD-001 (caso), BUG-001 (defeito)
+A14: Evidência | B14: Print, vídeo, log, relatório ou saída de ferramenta/API

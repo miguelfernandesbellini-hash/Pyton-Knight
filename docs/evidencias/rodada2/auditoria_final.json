@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "suite_legada": "PASS com fixture contextual de input atualizada",
+  "testes_adicionais": 146,
+  "cenarios_oficiais": 27,
+  "replays_oficiais": 27,
+  "atividades": 20,
+  "activities_editor_camera_progression_118_testes": "arquivos idênticos à entrega anterior",
+  "planilha_sha256": "8ace2b65a8e2cd5494cdec666dae8d1342aa5cad0cfe922adaab48dc6be87249",
+  "PK-022": "Resolvido documentalmente",
+  "PK-023": "Corrigido",
+  "PK-024": "Pendente: homologação visual real bloqueada"
+}

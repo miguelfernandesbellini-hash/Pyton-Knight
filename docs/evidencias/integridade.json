@@ -1,0 +1,27 @@
+{
+  "planilha_original_sha256": "8ace2b65a8e2cd5494cdec666dae8d1342aa5cad0cfe922adaab48dc6be87249",
+  "planilha_final_sha256": "8ace2b65a8e2cd5494cdec666dae8d1342aa5cad0cfe922adaab48dc6be87249",
+  "planilha_identica": true,
+  "backup_zip_sha256": "1fb3117550cecd003ac7c8aca0da0bcb74bcf5c4e71d71d2dd21fd1bc8158be4",
+  "arquivos_recebidos_inalterados": 624,
+  "arquivos_recebidos_alterados": [
+    "01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/Game.js",
+    "01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/activities.js",
+    "01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/Preloader.js",
+    "01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/MainMenu.js",
+    "01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/README.md",
+    "01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/index.html",
+    "01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/systems/MapRenderer.js",
+    "01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/systems/CommandInterpreter.js",
+    "01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/systems/PlayerController.js",
+    "01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/systems/PythonSubsetParser.js",
+    "01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/systems/MissionObjectiveSystem.js",
+    "01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/systems/DungeonSystem.js",
+    "01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/systems/BarrierSystem.js",
+    "01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/systems/PersistenceService.js",
+    "01_JOGO_ATUAL/Pyton-Knight-20-Atividades-Mapas-Reelaborados/ui/GameUI.js"
+  ],
+  "arquivos_recebidos_excluidos": [],
+  "fontes_oficiais_02_03_04": "inalteradas",
+  "suite_original": "inalterada"
+}

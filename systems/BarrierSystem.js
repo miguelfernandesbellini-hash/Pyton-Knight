@@ -36,38 +36,12 @@ window.BarrierSystem = {
                 (y1 + y2) / 2;
 
 
-            // =====================================
-            // CASAS UMA EM CIMA DA OUTRA
-            // =====================================
+            // Same logical edge; only the original red marker becomes an official gate.
+            const horizontal = de.coluna === para.coluna;
+            scene.add.image(meioX, meioY, 'official_gate_front')
+                .setDisplaySize(scene.tileSize * 0.95, scene.tileSize * 0.22)
+                .setAngle(horizontal ? 0 : 90).setDepth(8);
 
-            if (de.coluna === para.coluna)
-            {
-                scene.add.rectangle(
-                    meioX,
-                    meioY,
-                    62,
-                    7,
-                    0xff0000
-                )
-                .setDepth(8);
-            }
-
-
-            // =====================================
-            // CASAS LADO A LADO
-            // =====================================
-
-            else if (de.linha === para.linha)
-            {
-                scene.add.rectangle(
-                    meioX,
-                    meioY,
-                    7,
-                    62,
-                    0xff0000
-                )
-                .setDepth(8);
-            }
         }
     },
 

@@ -1,0 +1,17 @@
+[
+  {
+    "arquivo": "Documentacao_Oficial_V3.docx",
+    "sha256": "fe007be01921a97cbb1884d23217545df8da15cf9e26755c5326e7357f14176d",
+    "copiaIntegra": true
+  },
+  {
+    "arquivo": "Plano_e_Fluxo_de_Testes_Pyton_Knight.xlsx",
+    "sha256": "8ace2b65a8e2cd5494cdec666dae8d1342aa5cad0cfe922adaab48dc6be87249",
+    "copiaIntegra": true
+  },
+  {
+    "arquivo": "Gabarito_Baseline_Enviado.txt",
+    "sha256": "fb2a658d5b2dcde710b8b8f8a0c3fd5f96e37583bfa222106451cd994ac912b4",
+    "copiaIntegra": true
+  }
+]

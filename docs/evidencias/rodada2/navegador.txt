@@ -1,0 +1,3 @@
+15/09/2026 — Chrome remoto, tentativa real de abrir http://127.0.0.1:8000/?dev=1
+Resultado: net::ERR_BLOCKED_BY_CLIENT. Não foi possível renderizar o projeto neste navegador.
+Não foram executadas medições CSS ou testes visuais reais. Nenhum bypass ou publicação externa foi realizado.

@@ -1,0 +1,16 @@
+REFERÊNCIAS VISUAIS — PYTON KNIGHT V3
+
+01_Dungeon_Tileset_Referencia.png
+Referência principal de dungeon: pisos, paredes, salas, corredores, ambientação, escala e composição.
+
+02_Alavancas_Botoes_Interruptores_Referencia.png
+Referência de alavancas, botões, interruptores e estados de mecanismos interativos.
+
+03_Bau_Referencia.png
+Referência visual para baús/cofres, incluindo estados fechado e aberto.
+
+04_Espinhos_Retrateis_Referencia.gif
+Referência para armadilha de espinhos retráteis, com furos visíveis no chão e animação de disparo.
+
+Use essas imagens como referência de linguagem visual e não como mapas/assets a serem copiados literalmente.
+Os demais assets devem seguir estilo pixel art coerente, com proporção, paleta, contorno, sombreamento e legibilidade compatíveis.

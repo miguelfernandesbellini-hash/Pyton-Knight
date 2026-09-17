@@ -1,0 +1,111 @@
+[
+  {
+    "id": "indent_4",
+    "code": "if True:\n    andar_frente()",
+    "expected": "ACCEPT",
+    "actual": "ACCEPT",
+    "pass": true
+  },
+  {
+    "id": "indent_2_python",
+    "code": "if True:\n  andar_frente()",
+    "expected": "ACCEPT",
+    "actual": "ERROR",
+    "line": 2,
+    "message": "A indentação deve usar múltiplos de 4 espaços.",
+    "pass": false
+  },
+  {
+    "id": "comment_indent",
+    "code": "if True:\n # comentário\n    andar_frente()",
+    "expected": "ACCEPT",
+    "actual": "ERROR",
+    "line": 2,
+    "message": "A indentação deve usar múltiplos de 4 espaços.",
+    "pass": false
+  },
+  {
+    "id": "indent_unexpected",
+    "code": "    andar_frente()",
+    "expected": "ERROR",
+    "actual": "ERROR",
+    "line": 1,
+    "message": "Indentação inesperada.",
+    "pass": true
+  },
+  {
+    "id": "indent_bad_dedent",
+    "code": "if True:\n    andar_frente()\n  virar_direita()",
+    "expected": "ERROR",
+    "actual": "ERROR",
+    "line": 3,
+    "message": "A indentação deve usar múltiplos de 4 espaços.",
+    "pass": true
+  },
+  {
+    "id": "aurora_exact",
+    "actual": "SUCCESS",
+    "message": "Atividade concluída com 3 vida(s). +110 XP.",
+    "environment": {
+      "palavra": "AURORA"
+    }
+  },
+  {
+    "id": "aurora_spaces",
+    "actual": "CLOSED_DOOR_BLOCK",
+    "message": "Linha 9: Uma porta ou passagem ainda está fechada.",
+    "environment": {}
+  },
+  {
+    "id": "coragem_exact",
+    "actual": "SUCCESS",
+    "message": "Atividade concluída com 3 vida(s). +115 XP.",
+    "environment": {
+      "resposta": "CORAGEM"
+    }
+  },
+  {
+    "id": "coragem_spaces",
+    "actual": "CLOSED_DOOR_BLOCK",
+    "message": "Linha 9: Uma porta ou passagem ainda está fechada.",
+    "environment": {}
+  },
+  {
+    "id": "int_empty",
+    "actual": "INCOMPLETE_EXECUTION",
+    "message": "Guto executou todo o código, mas ainda precisa cumprir: Prova 1: complete os totens com for; Prova 2: atravesse as armadilhas com while; Prova 3: encontre a chave e use break; Prova 4: acumule 3 rubis; Prova 5: desative as proteções do Basilisco; Aplique for; Aplique while; Aplique break; Combine as condições finais com and; Alcance o cristal final.",
+    "environment": {
+      "x": 0
+    }
+  },
+  {
+    "id": "int_decimal_string",
+    "actual": "INCOMPLETE_EXECUTION",
+    "message": "Guto executou todo o código, mas ainda precisa cumprir: Prova 1: complete os totens com for; Prova 2: atravesse as armadilhas com while; Prova 3: encontre a chave e use break; Prova 4: acumule 3 rubis; Prova 5: desative as proteções do Basilisco; Aplique for; Aplique while; Aplique break; Combine as condições finais com and; Alcance o cristal final.",
+    "environment": {
+      "x": 3
+    }
+  },
+  {
+    "id": "int_float",
+    "actual": "SEMANTIC_ERROR",
+    "message": "Linha 1: int() não conseguiu converter '3.8'.",
+    "environment": {}
+  },
+  {
+    "id": "range_string",
+    "actual": "INCOMPLETE_EXECUTION",
+    "message": "Guto executou todo o código, mas ainda precisa cumprir: Prova 1: complete os totens com for; Prova 2: atravesse as armadilhas com while; Prova 3: encontre a chave e use break; Prova 4: acumule 3 rubis; Prova 5: desative as proteções do Basilisco; Aplique while; Aplique break; Combine as condições finais com and; Alcance o cristal final.",
+    "environment": {
+      "x": 1
+    }
+  },
+  {
+    "id": "comparison_mixed",
+    "actual": "INCOMPLETE_EXECUTION",
+    "message": "Guto executou todo o código, mas ainda precisa cumprir: Prova 1: complete os totens com for; Prova 2: atravesse as armadilhas com while; Prova 3: encontre a chave e use break; Prova 4: acumule 3 rubis; Prova 5: desative as proteções do Basilisco; Aplique for; Aplique while; Aplique break; Combine as condições finais com and; Alcance o cristal final.",
+    "environment": {
+      "x": true
+    }
+  }
+]

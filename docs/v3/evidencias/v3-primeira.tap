@@ -1,0 +1,665 @@
+✖ V3 atividade 1, variante 0: solução, replay e recompensa (21.578854ms)
+✖ V3 atividade 2, variante 0: solução, replay e recompensa (19.071965ms)
+✖ V3 atividade 3, variante 0: solução, replay e recompensa (25.727502ms)
+✖ V3 atividade 4, variante 0: solução, replay e recompensa (26.548947ms)
+✖ V3 atividade 5, variante 0: solução, replay e recompensa (39.647501ms)
+✖ V3 atividade 6, variante 0: solução, replay e recompensa (19.43713ms)
+✖ V3 atividade 7, variante 0: solução, replay e recompensa (23.75811ms)
+✖ V3 atividade 8, variante 0: solução, replay e recompensa (41.311553ms)
+✖ V3 atividade 9, variante 0: solução, replay e recompensa (44.918807ms)
+✖ V3 atividade 10, variante 0: solução, replay e recompensa (74.733303ms)
+✖ V3 atividade 11, variante 0: solução, replay e recompensa (25.685609ms)
+✖ V3 atividade 12, variante 0: solução, replay e recompensa (27.622841ms)
+✖ V3 atividade 12, variante 1: solução, replay e recompensa (26.604501ms)
+✖ V3 atividade 13, variante 0: solução, replay e recompensa (47.646408ms)
+✖ V3 atividade 14, variante 0: solução, replay e recompensa (46.662208ms)
+✖ V3 atividade 15, variante 0: solução, replay e recompensa (92.410897ms)
+✖ V3 atividade 15, variante 1: solução, replay e recompensa (73.509854ms)
+✖ V3 atividade 15, variante 2: solução, replay e recompensa (102.289564ms)
+✖ V3 atividade 16, variante 0: solução, replay e recompensa (37.317991ms)
+✖ V3 atividade 17, variante 0: solução, replay e recompensa (58.49246ms)
+✖ V3 atividade 18, variante 0: solução, replay e recompensa (60.143822ms)
+✖ V3 atividade 18, variante 1: solução, replay e recompensa (63.299247ms)
+✖ V3 atividade 18, variante 2: solução, replay e recompensa (77.859129ms)
+✖ V3 atividade 19, variante 0: solução, replay e recompensa (26.368598ms)
+✖ V3 atividade 19, variante 1: solução, replay e recompensa (36.566706ms)
+✖ V3 atividade 19, variante 2: solução, replay e recompensa (33.653231ms)
+✖ V3 atividade 20, variante 0: solução, replay e recompensa (143.116079ms)
+✖ V3 atividade 20, variante 1: solução, replay e recompensa (156.791851ms)
+✖ V3 atividade 20, variante 2: solução, replay e recompensa (152.742273ms)
+✔ V3 tutorial 1: quatro microetapas e descobertas preservadas (16.93921ms)
+✔ V3 tutorial 6: quatro microetapas e descobertas preservadas (30.012082ms)
+✔ V3 tutorial 11: quatro microetapas e descobertas preservadas (24.896274ms)
+✔ V3 tutorial 16: quatro microetapas e descobertas preservadas (30.855455ms)
+✔ V3 leitura e luz persistem; reinício limpa descoberta e execução mantém estado transitório separado (15.760998ms)
+✔ V3 pistas não podem ser examinadas à distância e pedestal exige descoberta (6.958443ms)
+✔ V3 saber a palavra sem visitar o arquivo não abre a saída (5.322873ms)
+✔ V3 atividade 7: ignorar as entradas e imprimir literal não ativa a solução (13.116132ms)
+✔ V3 atividade 8: ignorar as entradas e imprimir literal não ativa a solução (21.417884ms)
+✔ V3 atividade 9: ignorar as entradas e imprimir literal não ativa a solução (19.977928ms)
+✔ V3 atividade 10: ignorar as entradas e imprimir literal não ativa a solução (32.008298ms)
+✔ V3 requisitos do validador impedem abrir por if True com energia insuficiente (18.980439ms)
+✖ V3 PK-023 poder 25 recusa portão 1 (6.833064ms)
+✖ V3 PK-023 poder 25 recusa portão 2 (6.545462ms)
+✖ V3 PK-023 poder 15 recusa portão 1 (5.271446ms)
+✖ V3 PK-023 poder 15 recusa portão 3 (5.219408ms)
+✖ V3 PK-023 poder 5 recusa portão 2 (5.019247ms)
+✖ V3 PK-023 poder 5 recusa portão 3 (5.20742ms)
+✔ V3 poder deve corresponder ao registro da variante (36.305869ms)
+✔ V3 espelhos incorretos não teleportam nem recompensam (5.272208ms)
+✔ V3 andar sem iluminar a névoa avisa primeiro e perde exatamente uma vida depois (4.8815ms)
+✔ V3 espinhos são contextuais, retraídos têm estado legível e ciclos são determinísticos (4.257531ms)
+✔ V3 lava é cenário bloqueado, sem morte por piso (4.383511ms)
+✔ V3 rubis não são confundidos com moedas opcionais (4.732706ms)
+✔ V3 porta mantém colisão durante abertura e a libera ao completar a animação (4.549711ms)
+✔ V3 orientações e movimentos correspondem às quatro famílias de animação (4.06978ms)
+✔ V3 busca 19: abre apenas o prefixo necessário em cada posição de chave (33.201051ms)
+✔ V3 busca 20: abre apenas o prefixo necessário em cada posição de chave (170.957321ms)
+✔ V3 não aceita inserir um laço decorativo e fazer a mecânica fora dele (16.618798ms)
+✔ V3 alternativa legítima: acumulador com outro nome, soma explícita e range com início e passo (28.51835ms)
+✔ V3 alternativa legítima: passarela longa evita os espinhos da Forja (22.653111ms)
+✔ V3 nova sintaxe não libera conceitos futuros nas unidades iniciais (7.598005ms)
+✔ V3 UI inicial, instruções e tutoriais não publicam os segredos de input (4.556581ms)
+ℹ tests 62
+ℹ suites 0
+ℹ pass 27
+ℹ fail 35
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2376.058964
+
+✖ failing tests:
+
+test at tests/v3-redesign.test.cjs:5:58
+✖ V3 atividade 1, variante 0: solução, replay e recompensa (21.578854ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":85,"completedActivities":[1],"unlockedMax":2,"rewardedActivities":{"1":{"xp":85,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.247Z"}},"updatedAt":"2026-09-16T02:35:44.251Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":85,"completedActivities":[1],"unlockedMax":2,"rewardedActivities":{"1":{"xp":85,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.247Z"}},"updatedAt":"2026-09-16T02:35:44.248Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:9:160)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":85,"completedActivities":[1],"unlockedMax":2,"rewardedActivities":{"1":{"xp":85,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.247Z"}},"updatedAt":"2026-09-16T02:35:44.251Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":85,"completedActivities":[1],"unlockedMax":2,"rewardedActivities":{"1":{"xp":85,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.247Z"}},"updatedAt":"2026-09-16T02:35:44.248Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/v3-redesign.test.cjs:5:58
+✖ V3 atividade 2, variante 0: solução, replay e recompensa (19.071965ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":90,"completedActivities":[2],"unlockedMax":3,"rewardedActivities":{"2":{"xp":90,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.266Z"}},"updatedAt":"2026-09-16T02:35:44.272Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":90,"completedActivities":[2],"unlockedMax":3,"rewardedActivities":{"2":{"xp":90,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.266Z"}},"updatedAt":"2026-09-16T02:35:44.266Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:9:160)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":90,"completedActivities":[2],"unlockedMax":3,"rewardedActivities":{"2":{"xp":90,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.266Z"}},"updatedAt":"2026-09-16T02:35:44.272Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":90,"completedActivities":[2],"unlockedMax":3,"rewardedActivities":{"2":{"xp":90,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.266Z"}},"updatedAt":"2026-09-16T02:35:44.266Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/v3-redesign.test.cjs:5:58
+✖ V3 atividade 3, variante 0: solução, replay e recompensa (25.727502ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":95,"completedActivities":[3],"unlockedMax":4,"rewardedActivities":{"3":{"xp":95,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.288Z"}},"updatedAt":"2026-09-16T02:35:44.298Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":95,"completedActivities":[3],"unlockedMax":4,"rewardedActivities":{"3":{"xp":95,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.288Z"}},"updatedAt":"2026-09-16T02:35:44.288Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:9:160)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":95,"completedActivities":[3],"unlockedMax":4,"rewardedActivities":{"3":{"xp":95,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.288Z"}},"updatedAt":"2026-09-16T02:35:44.298Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":95,"completedActivities":[3],"unlockedMax":4,"rewardedActivities":{"3":{"xp":95,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.288Z"}},"updatedAt":"2026-09-16T02:35:44.288Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/v3-redesign.test.cjs:5:58
+✖ V3 atividade 4, variante 0: solução, replay e recompensa (26.548947ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":100,"completedActivities":[4],"unlockedMax":5,"rewardedActivities":{"4":{"xp":100,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.314Z"}},"updatedAt":"2026-09-16T02:35:44.324Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":100,"completedActivities":[4],"unlockedMax":5,"rewardedActivities":{"4":{"xp":100,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.314Z"}},"updatedAt":"2026-09-16T02:35:44.315Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:9:160)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":100,"completedActivities":[4],"unlockedMax":5,"rewardedActivities":{"4":{"xp":100,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.314Z"}},"updatedAt":"2026-09-16T02:35:44.324Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":100,"completedActivities":[4],"unlockedMax":5,"rewardedActivities":{"4":{"xp":100,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.314Z"}},"updatedAt":"2026-09-16T02:35:44.315Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/v3-redesign.test.cjs:5:58
+✖ V3 atividade 5, variante 0: solução, replay e recompensa (39.647501ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[5],"unlockedMax":6,"rewardedActivities":{"5":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.347Z"}},"updatedAt":"2026-09-16T02:35:44.364Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[5],"unlockedMax":6,"rewardedActivities":{"5":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.347Z"}},"updatedAt":"2026-09-16T02:35:44.347Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:9:160)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[5],"unlockedMax":6,"rewardedActivities":{"5":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.347Z"}},"updatedAt":"2026-09-16T02:35:44.364Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[5],"unlockedMax":6,"rewardedActivities":{"5":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.347Z"}},"updatedAt":"2026-09-16T02:35:44.347Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/v3-redesign.test.cjs:5:58
+✖ V3 atividade 6, variante 0: solução, replay e recompensa (19.43713ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":110,"completedActivities":[6],"unlockedMax":7,"rewardedActivities":{"6":{"xp":110,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.378Z"}},"updatedAt":"2026-09-16T02:35:44.384Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":110,"completedActivities":[6],"unlockedMax":7,"rewardedActivities":{"6":{"xp":110,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.378Z"}},"updatedAt":"2026-09-16T02:35:44.378Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:9:160)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":110,"completedActivities":[6],"unlockedMax":7,"rewardedActivities":{"6":{"xp":110,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.378Z"}},"updatedAt":"2026-09-16T02:35:44.384Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":110,"completedActivities":[6],"unlockedMax":7,"rewardedActivities":{"6":{"xp":110,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.378Z"}},"updatedAt":"2026-09-16T02:35:44.378Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/v3-redesign.test.cjs:5:58
+✖ V3 atividade 7, variante 0: solução, replay e recompensa (23.75811ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":115,"completedActivities":[7],"unlockedMax":8,"rewardedActivities":{"7":{"xp":115,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.399Z"}},"updatedAt":"2026-09-16T02:35:44.407Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":115,"completedActivities":[7],"unlockedMax":8,"rewardedActivities":{"7":{"xp":115,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.399Z"}},"updatedAt":"2026-09-16T02:35:44.399Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:9:160)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":115,"completedActivities":[7],"unlockedMax":8,"rewardedActivities":{"7":{"xp":115,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.399Z"}},"updatedAt":"2026-09-16T02:35:44.407Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":115,"completedActivities":[7],"unlockedMax":8,"rewardedActivities":{"7":{"xp":115,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.399Z"}},"updatedAt":"2026-09-16T02:35:44.399Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/v3-redesign.test.cjs:5:58
+✖ V3 atividade 8, variante 0: solução, replay e recompensa (41.311553ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":120,"completedActivities":[8],"unlockedMax":9,"rewardedActivities":{"8":{"xp":120,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.433Z"}},"updatedAt":"2026-09-16T02:35:44.449Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":120,"completedActivities":[8],"unlockedMax":9,"rewardedActivities":{"8":{"xp":120,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.433Z"}},"updatedAt":"2026-09-16T02:35:44.433Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:9:160)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":120,"completedActivities":[8],"unlockedMax":9,"rewardedActivities":{"8":{"xp":120,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.433Z"}},"updatedAt":"2026-09-16T02:35:44.449Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":120,"completedActivities":[8],"unlockedMax":9,"rewardedActivities":{"8":{"xp":120,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.433Z"}},"updatedAt":"2026-09-16T02:35:44.433Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/v3-redesign.test.cjs:5:58
+✖ V3 atividade 9, variante 0: solução, replay e recompensa (44.918807ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":125,"completedActivities":[9],"unlockedMax":10,"rewardedActivities":{"9":{"xp":125,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.477Z"}},"updatedAt":"2026-09-16T02:35:44.494Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":125,"completedActivities":[9],"unlockedMax":10,"rewardedActivities":{"9":{"xp":125,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.477Z"}},"updatedAt":"2026-09-16T02:35:44.477Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:9:160)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":125,"completedActivities":[9],"unlockedMax":10,"rewardedActivities":{"9":{"xp":125,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.477Z"}},"updatedAt":"2026-09-16T02:35:44.494Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":125,"completedActivities":[9],"unlockedMax":10,"rewardedActivities":{"9":{"xp":125,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.477Z"}},"updatedAt":"2026-09-16T02:35:44.477Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/v3-redesign.test.cjs:5:58
+✖ V3 atividade 10, variante 0: solução, replay e recompensa (74.733303ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[10],"unlockedMax":11,"rewardedActivities":{"10":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.539Z"}},"updatedAt":"2026-09-16T02:35:44.568Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[10],"unlockedMax":11,"rewardedActivities":{"10":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.539Z"}},"updatedAt":"2026-09-16T02:35:44.539Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:9:160)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[10],"unlockedMax":11,"rewardedActivities":{"10":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.539Z"}},"updatedAt":"2026-09-16T02:35:44.568Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[10],"unlockedMax":11,"rewardedActivities":{"10":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.539Z"}},"updatedAt":"2026-09-16T02:35:44.539Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/v3-redesign.test.cjs:5:58
+✖ V3 atividade 11, variante 0: solução, replay e recompensa (25.685609ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":135,"completedActivities":[11],"unlockedMax":12,"rewardedActivities":{"11":{"xp":135,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.585Z"}},"updatedAt":"2026-09-16T02:35:44.594Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":135,"completedActivities":[11],"unlockedMax":12,"rewardedActivities":{"11":{"xp":135,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.585Z"}},"updatedAt":"2026-09-16T02:35:44.585Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:9:160)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":135,"completedActivities":[11],"unlockedMax":12,"rewardedActivities":{"11":{"xp":135,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.585Z"}},"updatedAt":"2026-09-16T02:35:44.594Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":135,"completedActivities":[11],"unlockedMax":12,"rewardedActivities":{"11":{"xp":135,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.585Z"}},"updatedAt":"2026-09-16T02:35:44.585Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/v3-redesign.test.cjs:5:58
+✖ V3 atividade 12, variante 0: solução, replay e recompensa (27.622841ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":140,"completedActivities":[12],"unlockedMax":13,"rewardedActivities":{"12":{"xp":140,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.610Z"}},"updatedAt":"2026-09-16T02:35:44.622Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":140,"completedActivities":[12],"unlockedMax":13,"rewardedActivities":{"12":{"xp":140,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.610Z"}},"updatedAt":"2026-09-16T02:35:44.610Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:9:160)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":140,"completedActivities":[12],"unlockedMax":13,"rewardedActivities":{"12":{"xp":140,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.610Z"}},"updatedAt":"2026-09-16T02:35:44.622Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":140,"completedActivities":[12],"unlockedMax":13,"rewardedActivities":{"12":{"xp":140,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.610Z"}},"updatedAt":"2026-09-16T02:35:44.610Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/v3-redesign.test.cjs:5:58
+✖ V3 atividade 12, variante 1: solução, replay e recompensa (26.604501ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":140,"completedActivities":[12],"unlockedMax":13,"rewardedActivities":{"12":{"xp":140,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.638Z"}},"updatedAt":"2026-09-16T02:35:44.649Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":140,"completedActivities":[12],"unlockedMax":13,"rewardedActivities":{"12":{"xp":140,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.638Z"}},"updatedAt":"2026-09-16T02:35:44.638Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:9:160)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":140,"completedActivities":[12],"unlockedMax":13,"rewardedActivities":{"12":{"xp":140,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.638Z"}},"updatedAt":"2026-09-16T02:35:44.649Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":140,"completedActivities":[12],"unlockedMax":13,"rewardedActivities":{"12":{"xp":140,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.638Z"}},"updatedAt":"2026-09-16T02:35:44.638Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/v3-redesign.test.cjs:5:58
+✖ V3 atividade 13, variante 0: solução, replay e recompensa (47.646408ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":145,"completedActivities":[13],"unlockedMax":14,"rewardedActivities":{"13":{"xp":145,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.672Z"}},"updatedAt":"2026-09-16T02:35:44.696Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":145,"completedActivities":[13],"unlockedMax":14,"rewardedActivities":{"13":{"xp":145,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.672Z"}},"updatedAt":"2026-09-16T02:35:44.672Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:9:160)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":145,"completedActivities":[13],"unlockedMax":14,"rewardedActivities":{"13":{"xp":145,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.672Z"}},"updatedAt":"2026-09-16T02:35:44.696Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":145,"completedActivities":[13],"unlockedMax":14,"rewardedActivities":{"13":{"xp":145,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.672Z"}},"updatedAt":"2026-09-16T02:35:44.672Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/v3-redesign.test.cjs:5:58
+✖ V3 atividade 14, variante 0: solução, replay e recompensa (46.662208ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":150,"completedActivities":[14],"unlockedMax":15,"rewardedActivities":{"14":{"xp":150,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.725Z"}},"updatedAt":"2026-09-16T02:35:44.743Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":150,"completedActivities":[14],"unlockedMax":15,"rewardedActivities":{"14":{"xp":150,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.725Z"}},"updatedAt":"2026-09-16T02:35:44.725Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:9:160)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":150,"completedActivities":[14],"unlockedMax":15,"rewardedActivities":{"14":{"xp":150,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.725Z"}},"updatedAt":"2026-09-16T02:35:44.743Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":150,"completedActivities":[14],"unlockedMax":15,"rewardedActivities":{"14":{"xp":150,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.725Z"}},"updatedAt":"2026-09-16T02:35:44.725Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/v3-redesign.test.cjs:5:58
+✖ V3 atividade 15, variante 0: solução, replay e recompensa (92.410897ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[15],"unlockedMax":16,"rewardedActivities":{"15":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.794Z"}},"updatedAt":"2026-09-16T02:35:44.836Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[15],"unlockedMax":16,"rewardedActivities":{"15":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.794Z"}},"updatedAt":"2026-09-16T02:35:44.794Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:9:160)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[15],"unlockedMax":16,"rewardedActivities":{"15":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.794Z"}},"updatedAt":"2026-09-16T02:35:44.836Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[15],"unlockedMax":16,"rewardedActivities":{"15":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.794Z"}},"updatedAt":"2026-09-16T02:35:44.794Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/v3-redesign.test.cjs:5:58
+✖ V3 atividade 15, variante 1: solução, replay e recompensa (73.509854ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[15],"unlockedMax":16,"rewardedActivities":{"15":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.874Z"}},"updatedAt":"2026-09-16T02:35:44.909Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[15],"unlockedMax":16,"rewardedActivities":{"15":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.874Z"}},"updatedAt":"2026-09-16T02:35:44.874Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:9:160)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[15],"unlockedMax":16,"rewardedActivities":{"15":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.874Z"}},"updatedAt":"2026-09-16T02:35:44.909Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[15],"unlockedMax":16,"rewardedActivities":{"15":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.874Z"}},"updatedAt":"2026-09-16T02:35:44.874Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/v3-redesign.test.cjs:5:58
+✖ V3 atividade 15, variante 2: solução, replay e recompensa (102.289564ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[15],"unlockedMax":16,"rewardedActivities":{"15":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.956Z"}},"updatedAt":"2026-09-16T02:35:45.012Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[15],"unlockedMax":16,"rewardedActivities":{"15":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.956Z"}},"updatedAt":"2026-09-16T02:35:44.956Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:9:160)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[15],"unlockedMax":16,"rewardedActivities":{"15":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.956Z"}},"updatedAt":"2026-09-16T02:35:45.012Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[15],"unlockedMax":16,"rewardedActivities":{"15":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:44.956Z"}},"updatedAt":"2026-09-16T02:35:44.956Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/v3-redesign.test.cjs:5:58
+✖ V3 atividade 16, variante 0: solução, replay e recompensa (37.317991ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[16],"unlockedMax":17,"rewardedActivities":{"16":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.036Z"}},"updatedAt":"2026-09-16T02:35:45.049Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[16],"unlockedMax":17,"rewardedActivities":{"16":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.036Z"}},"updatedAt":"2026-09-16T02:35:45.036Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:9:160)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[16],"unlockedMax":17,"rewardedActivities":{"16":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.036Z"}},"updatedAt":"2026-09-16T02:35:45.049Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":160,"completedActivities":[16],"unlockedMax":17,"rewardedActivities":{"16":{"xp":160,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.036Z"}},"updatedAt":"2026-09-16T02:35:45.036Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/v3-redesign.test.cjs:5:58
+✖ V3 atividade 17, variante 0: solução, replay e recompensa (58.49246ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":5,"totalXp":165,"completedActivities":[17],"unlockedMax":18,"rewardedActivities":{"17":{"xp":165,"coins":5,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.085Z"}},"updatedAt":"2026-09-16T02:35:45.108Z"}'
+  - '{"schemaVersion":2,"walletCoins":5,"totalXp":165,"completedActivities":[17],"unlockedMax":18,"rewardedActivities":{"17":{"xp":165,"coins":5,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.085Z"}},"updatedAt":"2026-09-16T02:35:45.085Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:9:160)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":5,"totalXp":165,"completedActivities":[17],"unlockedMax":18,"rewardedActivities":{"17":{"xp":165,"coins":5,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.085Z"}},"updatedAt":"2026-09-16T02:35:45.108Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":5,"totalXp":165,"completedActivities":[17],"unlockedMax":18,"rewardedActivities":{"17":{"xp":165,"coins":5,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.085Z"}},"updatedAt":"2026-09-16T02:35:45.085Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/v3-redesign.test.cjs:5:58
+✖ V3 atividade 18, variante 0: solução, replay e recompensa (60.143822ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":170,"completedActivities":[18],"unlockedMax":19,"rewardedActivities":{"18":{"xp":170,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.144Z"}},"updatedAt":"2026-09-16T02:35:45.168Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":170,"completedActivities":[18],"unlockedMax":19,"rewardedActivities":{"18":{"xp":170,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.144Z"}},"updatedAt":"2026-09-16T02:35:45.144Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:9:160)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":170,"completedActivities":[18],"unlockedMax":19,"rewardedActivities":{"18":{"xp":170,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.144Z"}},"updatedAt":"2026-09-16T02:35:45.168Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":170,"completedActivities":[18],"unlockedMax":19,"rewardedActivities":{"18":{"xp":170,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.144Z"}},"updatedAt":"2026-09-16T02:35:45.144Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/v3-redesign.test.cjs:5:58
+✖ V3 atividade 18, variante 1: solução, replay e recompensa (63.299247ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":170,"completedActivities":[18],"unlockedMax":19,"rewardedActivities":{"18":{"xp":170,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.205Z"}},"updatedAt":"2026-09-16T02:35:45.231Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":170,"completedActivities":[18],"unlockedMax":19,"rewardedActivities":{"18":{"xp":170,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.205Z"}},"updatedAt":"2026-09-16T02:35:45.205Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:9:160)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":170,"completedActivities":[18],"unlockedMax":19,"rewardedActivities":{"18":{"xp":170,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.205Z"}},"updatedAt":"2026-09-16T02:35:45.231Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":170,"completedActivities":[18],"unlockedMax":19,"rewardedActivities":{"18":{"xp":170,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.205Z"}},"updatedAt":"2026-09-16T02:35:45.205Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/v3-redesign.test.cjs:5:58
+✖ V3 atividade 18, variante 2: solução, replay e recompensa (77.859129ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":170,"completedActivities":[18],"unlockedMax":19,"rewardedActivities":{"18":{"xp":170,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.271Z"}},"updatedAt":"2026-09-16T02:35:45.309Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":170,"completedActivities":[18],"unlockedMax":19,"rewardedActivities":{"18":{"xp":170,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.271Z"}},"updatedAt":"2026-09-16T02:35:45.272Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:9:160)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":170,"completedActivities":[18],"unlockedMax":19,"rewardedActivities":{"18":{"xp":170,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.271Z"}},"updatedAt":"2026-09-16T02:35:45.309Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":170,"completedActivities":[18],"unlockedMax":19,"rewardedActivities":{"18":{"xp":170,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.271Z"}},"updatedAt":"2026-09-16T02:35:45.272Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/v3-redesign.test.cjs:5:58
+✖ V3 atividade 19, variante 0: solução, replay e recompensa (26.368598ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":175,"completedActivities":[19],"unlockedMax":20,"rewardedActivities":{"19":{"xp":175,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.326Z"}},"updatedAt":"2026-09-16T02:35:45.335Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":175,"completedActivities":[19],"unlockedMax":20,"rewardedActivities":{"19":{"xp":175,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.326Z"}},"updatedAt":"2026-09-16T02:35:45.326Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:9:160)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":175,"completedActivities":[19],"unlockedMax":20,"rewardedActivities":{"19":{"xp":175,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.326Z"}},"updatedAt":"2026-09-16T02:35:45.335Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":175,"completedActivities":[19],"unlockedMax":20,"rewardedActivities":{"19":{"xp":175,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.326Z"}},"updatedAt":"2026-09-16T02:35:45.326Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/v3-redesign.test.cjs:5:58
+✖ V3 atividade 19, variante 1: solução, replay e recompensa (36.566706ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":175,"completedActivities":[19],"unlockedMax":20,"rewardedActivities":{"19":{"xp":175,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.359Z"}},"updatedAt":"2026-09-16T02:35:45.372Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":175,"completedActivities":[19],"unlockedMax":20,"rewardedActivities":{"19":{"xp":175,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.359Z"}},"updatedAt":"2026-09-16T02:35:45.359Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:9:160)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":175,"completedActivities":[19],"unlockedMax":20,"rewardedActivities":{"19":{"xp":175,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.359Z"}},"updatedAt":"2026-09-16T02:35:45.372Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":175,"completedActivities":[19],"unlockedMax":20,"rewardedActivities":{"19":{"xp":175,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.359Z"}},"updatedAt":"2026-09-16T02:35:45.359Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/v3-redesign.test.cjs:5:58
+✖ V3 atividade 19, variante 2: solução, replay e recompensa (33.653231ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":0,"totalXp":175,"completedActivities":[19],"unlockedMax":20,"rewardedActivities":{"19":{"xp":175,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.392Z"}},"updatedAt":"2026-09-16T02:35:45.406Z"}'
+  - '{"schemaVersion":2,"walletCoins":0,"totalXp":175,"completedActivities":[19],"unlockedMax":20,"rewardedActivities":{"19":{"xp":175,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.392Z"}},"updatedAt":"2026-09-16T02:35:45.392Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:9:160)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":0,"totalXp":175,"completedActivities":[19],"unlockedMax":20,"rewardedActivities":{"19":{"xp":175,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.392Z"}},"updatedAt":"2026-09-16T02:35:45.406Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":0,"totalXp":175,"completedActivities":[19],"unlockedMax":20,"rewardedActivities":{"19":{"xp":175,"coins":0,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.392Z"}},"updatedAt":"2026-09-16T02:35:45.392Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/v3-redesign.test.cjs:5:58
+✖ V3 atividade 20, variante 0: solução, replay e recompensa (143.116079ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":3,"totalXp":160,"completedActivities":[20],"unlockedMax":20,"rewardedActivities":{"20":{"xp":160,"coins":3,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.483Z"}},"updatedAt":"2026-09-16T02:35:45.549Z"}'
+  - '{"schemaVersion":2,"walletCoins":3,"totalXp":160,"completedActivities":[20],"unlockedMax":20,"rewardedActivities":{"20":{"xp":160,"coins":3,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.483Z"}},"updatedAt":"2026-09-16T02:35:45.484Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:9:160)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":3,"totalXp":160,"completedActivities":[20],"unlockedMax":20,"rewardedActivities":{"20":{"xp":160,"coins":3,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.483Z"}},"updatedAt":"2026-09-16T02:35:45.549Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":3,"totalXp":160,"completedActivities":[20],"unlockedMax":20,"rewardedActivities":{"20":{"xp":160,"coins":3,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.483Z"}},"updatedAt":"2026-09-16T02:35:45.484Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/v3-redesign.test.cjs:5:58
+✖ V3 atividade 20, variante 1: solução, replay e recompensa (156.791851ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":3,"totalXp":160,"completedActivities":[20],"unlockedMax":20,"rewardedActivities":{"20":{"xp":160,"coins":3,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.631Z"}},"updatedAt":"2026-09-16T02:35:45.706Z"}'
+  - '{"schemaVersion":2,"walletCoins":3,"totalXp":160,"completedActivities":[20],"unlockedMax":20,"rewardedActivities":{"20":{"xp":160,"coins":3,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.631Z"}},"updatedAt":"2026-09-16T02:35:45.631Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:9:160)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":3,"totalXp":160,"completedActivities":[20],"unlockedMax":20,"rewardedActivities":{"20":{"xp":160,"coins":3,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.631Z"}},"updatedAt":"2026-09-16T02:35:45.706Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":3,"totalXp":160,"completedActivities":[20],"unlockedMax":20,"rewardedActivities":{"20":{"xp":160,"coins":3,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.631Z"}},"updatedAt":"2026-09-16T02:35:45.631Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/v3-redesign.test.cjs:5:58
+✖ V3 atividade 20, variante 2: solução, replay e recompensa (152.742273ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '{"schemaVersion":2,"walletCoins":3,"totalXp":160,"completedActivities":[20],"unlockedMax":20,"rewardedActivities":{"20":{"xp":160,"coins":3,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.787Z"}},"updatedAt":"2026-09-16T02:35:45.859Z"}'
+  - '{"schemaVersion":2,"walletCoins":3,"totalXp":160,"completedActivities":[20],"unlockedMax":20,"rewardedActivities":{"20":{"xp":160,"coins":3,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.787Z"}},"updatedAt":"2026-09-16T02:35:45.787Z"}'
+  
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:9:160)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{"schemaVersion":2,"walletCoins":3,"totalXp":160,"completedActivities":[20],"unlockedMax":20,"rewardedActivities":{"20":{"xp":160,"coins":3,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.787Z"}},"updatedAt":"2026-09-16T02:35:45.859Z"}',
+    expected: '{"schemaVersion":2,"walletCoins":3,"totalXp":160,"completedActivities":[20],"unlockedMax":20,"rewardedActivities":{"20":{"xp":160,"coins":3,"livesRemaining":3,"rewardedAt":"2026-09-16T02:35:45.787Z"}},"updatedAt":"2026-09-16T02:35:45.787Z"}',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/v3-redesign.test.cjs:37:83
+✖ V3 PK-023 poder 25 recusa portão 1 (6.833064ms)
+  TypeError: Cannot read properties of undefined (reading '15')
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:38:609)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at tests/v3-redesign.test.cjs:37:83
+✖ V3 PK-023 poder 25 recusa portão 2 (6.545462ms)
+  TypeError: Cannot read properties of undefined (reading '15')
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:38:609)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at tests/v3-redesign.test.cjs:37:83
+✖ V3 PK-023 poder 15 recusa portão 1 (5.271446ms)
+  TypeError: Cannot read properties of undefined (reading '15')
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:38:609)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at tests/v3-redesign.test.cjs:37:83
+✖ V3 PK-023 poder 15 recusa portão 3 (5.219408ms)
+  TypeError: Cannot read properties of undefined (reading '15')
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:38:609)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at tests/v3-redesign.test.cjs:37:83
+✖ V3 PK-023 poder 5 recusa portão 2 (5.019247ms)
+  TypeError: Cannot read properties of undefined (reading '15')
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:38:609)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at tests/v3-redesign.test.cjs:37:83
+✖ V3 PK-023 poder 5 recusa portão 3 (5.20742ms)
+  TypeError: Cannot read properties of undefined (reading '15')
+      at TestContext.<anonymous> (/workspace/scratch/3d7e9c33b5c0/Pyton_Knight_V3/tests/v3-redesign.test.cjs:38:609)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)

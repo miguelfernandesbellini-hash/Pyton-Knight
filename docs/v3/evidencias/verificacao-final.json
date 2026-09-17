@@ -1,0 +1,53 @@
+{
+  "node": "v24.19.0",
+  "syntaxFiles": 36,
+  "syntax": "PASS",
+  "htmlReferences": 29,
+  "htmlReferencesStatus": "PASS",
+  "originalFilesStillPresent": 151,
+  "preservedModules": [
+    {
+      "file": "activities.js",
+      "sha256": "84768f7a477641820d8e5356034bfd323a6a2f899a1421e4f2284f97eb5ad71e",
+      "identicalToBase": true
+    },
+    {
+      "file": "systems/PythonSubsetParser.js",
+      "sha256": "fc48bbbf2f0f959fc5eb641f78abe655a237d38f8701c71f364b31d7f4f2c69a",
+      "identicalToBase": true
+    },
+    {
+      "file": "systems/PersistenceService.js",
+      "sha256": "ca00eb6f40124e9784e2c3f2fbc9cd813fc2a6aa6240738f15c35fb2e2c1af83",
+      "identicalToBase": true
+    },
+    {
+      "file": "systems/ProgressionSystem.js",
+      "sha256": "6c3be18b595fc9950c75f1de538784f004a46deaba3e71cf2dac680e07692661",
+      "identicalToBase": true
+    },
+    {
+      "file": "systems/GameConstants.js",
+      "sha256": "c19158f4a2ad8a4523ef34bcce6f8a2782bafb02b05d572079aa94fb88dbb155",
+      "identicalToBase": true
+    },
+    {
+      "file": "ui/CodeEditor.js",
+      "sha256": "9dfee428fff22ca30005e283c932700d2149395dfd37613698bf42b9849ae7bc",
+      "identicalToBase": true
+    },
+    {
+      "file": "phaser.min.js",
+      "sha256": "8634d4b539506bcffba0e4f551b19d0e2b57a0e5ca4a3f215af9b59b9c58319e",
+      "identicalToBase": true
+    }
+  ],
+  "academicPlanSha256": "8ace2b65a8e2cd5494cdec666dae8d1342aa5cad0cfe922adaab48dc6be87249",
+  "academicPlanUnchanged": true,
+  "browserHomologation": "PENDING: ERR_BLOCKED_BY_CLIENT",
+  "assetRoles": 74,
+  "assetPaths": "PASS",
+  "baselineCommit": "a58fc9c666f0fd13c4adaf258a8c6689452f76a7",
+  "workBranch": "redesign-v3",
+  "sourceZipSha256": "982440ea2db7ce802cbd28049154bce599afae01fbd52fdedb6423a36643a465"
+}
