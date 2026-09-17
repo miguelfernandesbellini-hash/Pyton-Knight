@@ -1,0 +1,611 @@
+{
+  "v3GitHubCommit": "8664886f9682d298da8d427ca3b061b5299f0b49",
+  "count": 121,
+  "files": [
+    {
+      "path": "Gabarito_Oficial_Pyton_Knight_V3.txt",
+      "sha256": "baa4df93cbc61cccd022ed93f1730f84ca7474536d1ac4b9289e0d6e13a849d6",
+      "unchanged": true
+    },
+    {
+      "path": "activities-v3.js",
+      "sha256": "a502ba77b20ec1017bf491cd5504a43f321ee1373bde160eb1c51a7604646262",
+      "unchanged": true
+    },
+    {
+      "path": "activities.js",
+      "sha256": "84768f7a477641820d8e5356034bfd323a6a2f899a1421e4f2284f97eb5ad71e",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_a01.png",
+      "sha256": "d0a2e6ae0bb9e853bc7b0ce289b6a37f2db5373d6453880961f6fce5331351dc",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_a02.png",
+      "sha256": "37ee63ac79a39fd0db9404d0f4ff458ab6cdb6ffbbe885e7bd582f70831435a5",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_a03.png",
+      "sha256": "22bcfca065378880fb212c86165091f2fbad23a34278d1b4fc6ae2007e21870c",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_a06.png",
+      "sha256": "ba7196d2d67d8d860fac1ed7e29ca6b784e7ca908e9a1b20fb566d12d787b236",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_d02.png",
+      "sha256": "1ce67bbc59b6eead9a3e1ed136abdfd529fb6da28e0f1cfc46d099864b8e6de6",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_f01.png",
+      "sha256": "b6f9bbf5b1a28c5436c7941cda53c3b25817c5fd79d6e7f9b0f1db2c7c4fa0d1",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_f13.png",
+      "sha256": "1787b583a1d20e59aae558baeb1c02f9e23e22d75b63a7d8392b413e98d65a65",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_g06.png",
+      "sha256": "ebb67b1bcdbd7b9edddeba836685267979b3f7b81d9180c5f5b63f30b1026ff6",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_g13.png",
+      "sha256": "e212b23c4a562440e9c45000c1fe3dcc2993fc01181940f91bfd1a71dbd61d85",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_h01.png",
+      "sha256": "c00a3ca97d173d0b38321f7fb5e3062b44c58b1ab55cc3ed0a039cf24c03ec15",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_i01.png",
+      "sha256": "cc36ae9ddeb55d2142fd1c378285ac13c2baa107968a5c9be6e76e54d18b7414",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_i13.png",
+      "sha256": "fd5efba34662761f9061e673be43ecf2d2334f7f3e59ea99db130c4c932c2eaa",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_j01.png",
+      "sha256": "6c48892c06c7406c6c2ce0797d4f2e7bb3e8a5a57af48538ca1c22387274082e",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_l01.png",
+      "sha256": "5c8fb30e6b7058961a47e97001c1eb2546348b6aa1888f291ce84b869c302dcb",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_m01.png",
+      "sha256": "95ed1587b878e6f71c9b575ed8e5ffb1304041c37e2c598a8e7b03e6a0121b9f",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_m04.png",
+      "sha256": "31ca86ee81838326acdde912d039f8605f62f5c8e99b86f75ff526dd907e7497",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_n01.png",
+      "sha256": "5edad4fea956e23551111769740080c05b1846aaa1194a57871e417fe14cfe45",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_n06.png",
+      "sha256": "76ecc6710ee5ef1e570fa2fb10ebde3f4a7581f83a04a5fa104d77980f41cfa3",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_o01.png",
+      "sha256": "fe0c2b5b77120cc1ff64f74d6d661c645fc85238ef89fdf8fbb2ad56f29e0927",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_q02.png",
+      "sha256": "79f9f759e1489b5bb70c8c6b48627139213efc8a3c1667b04aa296df8a46bd78",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_r02.png",
+      "sha256": "d4d3755d5eef42fa99ef8138ef23e497b04ded83840a0642da4231d1fcc14576",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_s02.png",
+      "sha256": "1aacc4dce359f102f3b3969d21e2fe4d04bb83586b953b874058e5ecf1e5e236",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_t02.png",
+      "sha256": "81256c868b2730659ac2d687ef5b259e6354c2eb488c110cc25033acaaaa0e96",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_t09.png",
+      "sha256": "496ab1c8a8b11ab1697010070fc1e400b24f3d799c86585af5525ed8a327b78c",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_u02.png",
+      "sha256": "8413b44461a1acc1889b5a9a53586acad9cb7fea2955f54d482784de9be5b655",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_u07.png",
+      "sha256": "e98395b019ec46762d8f52c86e5de36fede103b4cadb1848075c31910c3cfb0a",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_u08.png",
+      "sha256": "2fafb85fe3560382ab39007a45e3c880411132fedfbacd64b8ebd2b79d561302",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_u09.png",
+      "sha256": "59c07fb62967455912947a75c8770e74d9ece213e9946dc941d9058a0a1513da",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_v04.png",
+      "sha256": "9318686d97d660e6a59b5df5c4e4582b2a8c7777a4ca0a1db9f62e5f3b203412",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_v09.png",
+      "sha256": "c181fa0cfdaabdaea11cfb1d38ccf3291cea5a57ca1e1be54e1d8a048da160bf",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_v12.png",
+      "sha256": "6c29311430edf18ebabbba89908c451b6176e275263944e629d96604164dc0da",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_v13.png",
+      "sha256": "13faf5117fc6499fe59930d1f19faf55c88cc12d6772c30c5f3fa09bc55415b4",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_w04.png",
+      "sha256": "aeb6fc562f053c4d7550219ea47906b72cd35c7b317dcacabd77b25b5dd0e570",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_w09.png",
+      "sha256": "a92502e7c190328c55fb5d5a2c25173c46c055af2a5fee5b0efdcb6611a371ef",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_x04.png",
+      "sha256": "2badad730b5ae5b95d7eeac587e6132b786b2191b7b18f8736ddf516b0741786",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_x08.png",
+      "sha256": "584f08117bc20634630d9748a8720ddc01265053a48d93a4782ae5898a002219",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_x10.png",
+      "sha256": "758be7c95e72ac356592b47bbf1642e3298931023abd025c4dcdadee98d93cf0",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_x11.png",
+      "sha256": "d33e20ec93b3e6ca50b014f358c68d396e435786a70b20cfcb0ee00a47ae1ae0",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_x12.png",
+      "sha256": "0a96da2a9f6a30c7c4e1f03d4bba33257468d18b488a18c5eaaa1403d35cbc3d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_y04.png",
+      "sha256": "01f078da053fecf66aea9eb65c38f62c6ef0210094fef0f60b2ce99b4d364b98",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_y08.png",
+      "sha256": "f0d7fd0098cea55bc9d45648208a4d2c28a0a1ad2c159396648ae3891adc3b5c",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_y10.png",
+      "sha256": "87f201bda5106e4b7e6e1ef7781fd40bfd7f2cc5b76378cf63282e7657aa3c2a",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/castle_details/individual_tiles/tile_y11.png",
+      "sha256": "eb367ae0ae752d17731a6811448fdfd660b7ab65f9c42bef89d96aaa1557e1dd",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/interactives/buttons/button.png",
+      "sha256": "32c8b7938a2e1771bace3461671239868b5d3ed267a63767a1fef421851531fe",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/interactives/chests/yellow_chest_open.png",
+      "sha256": "f04892be494418c3f7cb7985b157e71f7355eaf2b85a952a2451205d66a7a38c",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/interactives/keys/key_idle.png",
+      "sha256": "103a8c2556fe979820359f438d90d07654ea7a89bbf76cd202080b8e2ce4f778",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/traps/spikes/spikes_off.png",
+      "sha256": "51edd6782b3a349ee838ffc223c2132968dfd9c49f0bf87f7a67465a28064e68",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/traps/spikes/spikes_on.png",
+      "sha256": "b7d8e9d82fba13c85b7ea41480fe6eaed67b0d2436e3aab6d744dd8796ae668a",
+      "unchanged": true
+    },
+    {
+      "path": "assets/dungeon/traps/trapdoors/trapdoor_open.png",
+      "sha256": "0475dd8aea6107c6ece08c64214fd293399e0d4792e0802e37fff8a86c19a944",
+      "unchanged": true
+    },
+    {
+      "path": "assets/v3/guto-source.png",
+      "sha256": "62c24a7a5b788662135b058789ed7ec5870cbd67fe83ca355e0147a2f470a8db",
+      "unchanged": true
+    },
+    {
+      "path": "assets/v3/props-source.png",
+      "sha256": "8493b3ce13d52e8c2a2393adeb8beea5107a1ca57c1fef9db1e57d033e0d4c63",
+      "unchanged": true
+    },
+    {
+      "path": "assets/v3/tiles-source.png",
+      "sha256": "4fe32202ebbb34db5dc026ab0c4a14786be5c82d29d4f490e85ee205714d355f",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/API_V3.md",
+      "sha256": "97d79f6ab6f9ecd026b181263f0374d5a8e0f3be725e86435a93160f661987f9",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/ASSETS.md",
+      "sha256": "09f4359d8b91fd253f8f76fcc13159f8e1464ec50ed3a6b9a76160307bd25f39",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/AUDITORIA_ANTI_ATALHO.md",
+      "sha256": "8a7c15ff717f6601832984c2dff291a1ab45d5c08534c658933c5990ec311f66",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/BUGS_E_CORRECOES.md",
+      "sha256": "77d57a297ee6c92e92b03ca30c8f5e0b5fbffeb24e1823a8f971c7e3335e28fe",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/CATALOGO_ATIVIDADES.json",
+      "sha256": "7b41719f1c0fdb7fd6cac2259e09165228e6445e85bd1a4884bf90eaafd599fa",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/ENTREGA_V3.md",
+      "sha256": "031c9c4d357912ff8e62b73d9baff7150ad0c34bea8e48aaf0d3c55052343809",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/HOMOLOGACAO_VISUAL.md",
+      "sha256": "8cedbdced5161da4fdf8318c6e3fe2cc6fefd493c234bb9d7092b265831fde97",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/MATRIZ_ATIVIDADES.md",
+      "sha256": "a918e1b2df219a2330c7fa72350d110fc59a85327a3865ae128b2d651a9d6381",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/RELATORIO_TESTES.md",
+      "sha256": "4365b94e93d65034c5e139f9ae5e6457514384814bc681b13c931c6a682eb68b",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/atividades-baseline.json",
+      "sha256": "5973bc9156cb9e006111999ded510c4b334a79428e3b501e73a66359f2490598",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/auditoria.json",
+      "sha256": "89bb96dbabeb2b290b06d3dc531eec015f1812dc3addae2ea2b9bcc17b39230d",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/baseline-legada.json",
+      "sha256": "0d6d0933faaa121fdef0d0bff470ffed2141f632e3fd0dc89c0cbc6537cadc55",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/baseline.tap",
+      "sha256": "162eb5dccd9637b37bfc5f6d0cb2c7e90efd1228bc2864a6235afb178cd6dbb0",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/core-regressao.tap",
+      "sha256": "1581456cf5b8ac9042a366a3ad3888b25f16125753296cad768c75e27c8562ff",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/legada-apos-redesign.json",
+      "sha256": "0d6d0933faaa121fdef0d0bff470ffed2141f632e3fd0dc89c0cbc6537cadc55",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/legada-final.json",
+      "sha256": "0d6d0933faaa121fdef0d0bff470ffed2141f632e3fd0dc89c0cbc6537cadc55",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/semantica-regressao.tap",
+      "sha256": "bb995f4788a3e406c708d5d5b047c30052ec50126c5a1b31ee2e84254e92d8c1",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/suite-final.tap",
+      "sha256": "239a51db3721b2ee822c21fd71bce20023e3038cde8b6640dc216f7341435cf9",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/unidade1-regressao.tap",
+      "sha256": "fa02d8b7177745e0688846b39b7743ac81acf6947c3c6415d26ffe7e73551d6f",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/unidade2-regressao.tap",
+      "sha256": "f0cdb68af2368231006000c4e97cada1ce3b6aeb27723ff1b50331e54fc30ca4",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/unidade4-regressao.tap",
+      "sha256": "75391bbedb7d62229ac3dcf094ecc0b8cbc4fd03dc2854bb1c7246f81aa5a6d8",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/v3-integracao.tap",
+      "sha256": "d3be9a4fde2725a848f08d0b11ec677cdb97514949ef5ce1f26e818963ee4aa4",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/v3-primeira.tap",
+      "sha256": "4747d4c471feb474e63639c8a040b5339a06d229e43a9353e2672a7177a60821",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/v3-regressao.tap",
+      "sha256": "ef7303a61cb5f95099f4e478f6b682d3355e5d281decbbb9a952b73da6b4f181",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/verificacao-final.json",
+      "sha256": "31ad4945dac826994d343e01857c985b2a96b06b0fc888f1bb2a4e9eb88570ee",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/visual/atividade-01.png",
+      "sha256": "d232c26d704b734e1a398f41ba87b6152229f74e49f83488b255286d44f754eb",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/visual/atividade-02.png",
+      "sha256": "ab80ac6dc485451bc5281381ce6f7d30e62c29e03c3752c9e29d1951d8f48b69",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/visual/atividade-03.png",
+      "sha256": "4df4f9c7d8795ec7f769d68d5fb150a1ba9b2969277c6a0efcbcb269554de7c1",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/visual/atividade-04.png",
+      "sha256": "7a959bd05b1bcceb9ee7109eba92ba93fa83fe58208d2cf70d0a0f69f2385a6e",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/visual/atividade-05.png",
+      "sha256": "b1f79af2ac6b3c3324be34dbe8d17fc364b87725b672cad359452fbb55f65ab0",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/visual/atividade-06.png",
+      "sha256": "c2c3e2c29be37bd070b347c0e7fcc3b386e30186ffa073b40c696ff38163bb8d",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/visual/atividade-07.png",
+      "sha256": "d118e121e21a16e5f4185fc33f6c770d4dcdda6697352abb2fbf34315aa54dbc",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/visual/atividade-08.png",
+      "sha256": "87f70fc35d2bfe7ffc6d72db8d690cd1fe630a5febc7505b671ff1788d812a27",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/visual/atividade-09.png",
+      "sha256": "617655c1f8bb408fccdd05240b6fe55d554c4d273e5abbe533b202293517452b",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/visual/atividade-10.png",
+      "sha256": "6419c39ef8ae3f2907b23e598d886a0646233e46a0b0db9794464901b45b045d",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/visual/atividade-11.png",
+      "sha256": "7dc62124aa9fcbf0d6e3c5f125828a4c7d77fe2f79a436025e362325be95b060",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/visual/atividade-12.png",
+      "sha256": "bfb586efd5d25137cc4d5c94b97bd1fbaeb6f315ce1bc390e37c360e88cbc8f8",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/visual/atividade-13.png",
+      "sha256": "223bdde0c19812f74d7a106c453adbb0b4dd90011f9198a355905414e19d10e1",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/visual/atividade-14.png",
+      "sha256": "065a58dfabbcf442d0d4745a1751de327811107d8f064b2d7eb9b45c291e3bee",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/visual/atividade-15.png",
+      "sha256": "95eeed1cc7bbac7596cc50bd911967bbe8dbbb508f166117dcfb7e39929cbd15",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/visual/atividade-16.png",
+      "sha256": "6c86ad7298821bf2f0bbb069727e1f7b0357b7c621b66a254dbdfbf5e950648d",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/visual/atividade-17.png",
+      "sha256": "ab4057ebb270116e52eeb898d5d7d9605dd4c956bba1e0b1526b8dcdef565eca",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/visual/atividade-18.png",
+      "sha256": "45c6040ef17c5094917db3d21db7d340afdc1c1bb50c24a7263c58d26d64642c",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/visual/atividade-19.png",
+      "sha256": "b7a8e8a72d43d4befb346c55ff96d721799d6022f7fe0265246feb1a3c193c82",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/visual/atividade-20.png",
+      "sha256": "4158b2ee7837081b267f2b4cd9011e4bf6d3ecbb193b0fd8cb7bd96eed3518a3",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/visual/guto-atlas.png",
+      "sha256": "379a785036e7914db1c8c81d3187ddd50c34b29891d9b63a9d113a87bb8d6e4a",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/visual/props-atlas.png",
+      "sha256": "3439f1cdf3c6f0f339827dada7b116a1a4a13ef54ddc8d1daa1610483a8cb6fb",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/visual/unidade-1.png",
+      "sha256": "64ecf218f92250d1beabab540cb5cb77796bce75f0278bc9f61ad21907ac24ce",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/visual/unidade-2.png",
+      "sha256": "4addf4d92a992c3d83a5edcbd054f33eca52310466532f18957e707ecf6f9007",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/visual/unidade-3.png",
+      "sha256": "b598127af008c910502b18d2f106c1741621dc27b7859d598715dc8c435eb2b7",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/evidencias/visual/unidade-4.png",
+      "sha256": "02abe8a01f3a442273ecb51b9ba3fb594e39847420046944f353c163ba36c41f",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/historico/ESTADO_DA_EXECUCAO_RODADA2.md",
+      "sha256": "e0d2821c2c99f18b50824506b658147fa0fb68c96431108f5ea0330a0da92a1e",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/historico/Gabarito_Final_Pyton_Knight_20_Atividades.txt",
+      "sha256": "21c1c156c3769658f24bfef0f33a71f88d15febd7470cedb6027658c3d3a4ae7",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/historico/README.md",
+      "sha256": "94615b946747f6c46d4e503e8becac8bbb8dc4dd182e913747ba63cdb8ce118d",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/referencias/Documentacao_Oficial_V3.docx",
+      "sha256": "fe007be01921a97cbb1884d23217545df8da15cf9e26755c5326e7357f14176d",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/referencias/Gabarito_Baseline_Enviado.txt",
+      "sha256": "fb2a658d5b2dcde710b8b8f8a0c3fd5f96e37583bfa222106451cd994ac912b4",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/referencias/Plano_e_Fluxo_de_Testes_Pyton_Knight.xlsx",
+      "sha256": "8ace2b65a8e2cd5494cdec666dae8d1342aa5cad0cfe922adaab48dc6be87249",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/referencias/integridade.json",
+      "sha256": "fae3f945581f236f633463958a2b8ca563628dfd0a4fa8d0ee7d669701a48c28",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/referencias/visuais/01_Dungeon_Tileset_Referencia.png",
+      "sha256": "a9e676f16956f633a7c9081461f070e60cfa68c1e07e0d6c2a87aa091f130b52",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/referencias/visuais/02_Alavancas_Botoes_Interruptores_Referencia.png",
+      "sha256": "9958d5c2fa7e0af58347463a445779c6be50c91aa8fac80ca6afd7f4085eaca0",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/referencias/visuais/03_Bau_Referencia.png",
+      "sha256": "257c543af81eff2bde5711e031e89d064f27d7ac4c7e55503e438f63e0bffaaf",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/referencias/visuais/04_Espinhos_Retrateis_Referencia.gif",
+      "sha256": "639eb7472edb1ed292e7951b644df333a7c421cf82cf30737adee32b4450420a",
+      "unchanged": true
+    },
+    {
+      "path": "docs/v3/referencias/visuais/LEIA-ME_REFERENCIAS.txt",
+      "sha256": "8bab266628d0b464366cd8212d765e222061708bd10925a32832149d673140a0",
+      "unchanged": true
+    },
+    {
+      "path": "phaser.min.js",
+      "sha256": "8634d4b539506bcffba0e4f551b19d0e2b57a0e5ca4a3f215af9b59b9c58319e",
+      "unchanged": true
+    },
+    {
+      "path": "systems/CodeBudgetValidator.js",
+      "sha256": "88637ca30bc81366373027274caa6ff3d0b7face8c2706dc490d18e110ef34b5",
+      "unchanged": true
+    },
+    {
+      "path": "systems/PythonSubsetParser.js",
+      "sha256": "fc48bbbf2f0f959fc5eb641f78abe655a237d38f8701c71f364b31d7f4f2c69a",
+      "unchanged": true
+    }
+  ]
+}

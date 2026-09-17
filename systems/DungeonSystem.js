@@ -80,6 +80,7 @@
             if(activity.v3) entities.forEach(e=>{ if(e.variantMinTraps) e.minTraps=e.variantMinTraps[(scene.sessionVariantIndex||0)%e.variantMinTraps.length]; if(e.variantTexts) e.text=e.variantTexts[(scene.sessionVariantIndex||0)%e.variantTexts.length]; if(e.variantInputs) e.expectedInput=e.variantInputs[(scene.sessionVariantIndex||0)%e.variantInputs.length]; });
             scene.budgetResult = null;
             scene.runState = { entities, outputs: [], inputs: [], inputsByPedestal: {}, sequences: {}, worldTick: 0, traceOrder: 0, actions: [], assignments: [], searchLog: [], coinsPending: 0, flags: { ...(activity.initialFlags || {}) }, hasKey: false, reachedExit: false, environment: {}, analysis: null, occupiedTile: null };
+            window.CoinSystem?.restore(scene);
             scene.completionProcessed = false; window.PlayerController.reiniciar(scene); window.DiscoverySystem?.restore(scene); if (window.MapRenderer) window.MapRenderer.atualizarEntidades(scene); if (window.MissionObjectiveSystem) window.MissionObjectiveSystem.reset(scene); if (window.GameUI) window.GameUI.atualizarMoedasDaExecucao(scene);
         },
         isBlocked (scene, row, column) {
@@ -87,6 +88,8 @@
             if (row < 0 || row >= scene.mapa.length || column < 0 || column >= scene.mapa[0].length) return { cause: T.WALL_COLLISION, message: 'Guto tentou sair dos limites da dungeon.' };
             if (scene.atividade.v3 && scene.mapa[row][column] === window.GAME_CONSTANTS.TILE.PERIGO) return { cause:T.WALL_COLLISION, message:'O fosso de lava é cenário e não pode ser atravessado.' };
             if (scene.mapa[row][column] === window.GAME_CONSTANTS.TILE.PAREDE) return { cause: T.WALL_COLLISION, message: 'Guto tentou atravessar uma parede.' };
+            const decor = scene.atividade.decorations?.find(e => e.solid && e.row === row && e.column === column);
+            if (decor) return { cause:T.WALL_COLLISION, message:`${decor.label || 'Este objeto'} impede a passagem. Contorne-o; nenhuma vida foi perdida.` };
             if (window.BarrierSystem && window.BarrierSystem.existe && window.BarrierSystem.existe(scene, scene.gutoPosition.linha, scene.gutoPosition.coluna, row, column)) return { cause: T.WALL_COLLISION, message: 'Uma grade bloqueia esse caminho.' };
             const blocker = scene.runState.entities.find((entity) => entity.row === row && entity.column === column && ((['door', 'gate', 'guardian'].includes(entity.type) && !['open', 'inactive', 'defeated'].includes(entity.state)) || (['bridge', 'bridge_segment'].includes(entity.type) && !['active', 'open'].includes(entity.state)) || (entity.type === 'chest' && entity.state !== 'open')));
             if (blocker) return { cause: T.CLOSED_DOOR_BLOCK, message: 'Uma porta ou passagem ainda está fechada.' };
@@ -106,7 +109,7 @@
             if (scene.mapa[row][column] === window.GAME_CONSTANTS.TILE.SAIDA) scene.runState.reachedExit = true;
             scene.runState.entities.filter((entity) => entity.row === row && entity.column === column).forEach((entity) => {
                 if (entity.type === 'key' && entity.state === 'available') { entity.state = 'collected'; scene.runState.hasKey = true; scene.runState.flags.keyCollected = true; }
-                if (entity.type === 'coin' && entity.state === 'available' && !entity.manualCollect) { entity.state = 'collected'; scene.runState.coinsPending++; if (entity.flag) scene.runState.flags[entity.flag] = true; }
+                if (entity.type === 'coin' && entity.state === 'available' && !entity.manualCollect) { if (scene.atividade.v4) window.CoinSystem.collect(scene, entity); else { entity.state = 'collected'; scene.runState.coinsPending++; } if (entity.flag) scene.runState.flags[entity.flag] = true; }
                 if(scene.atividade.v3 && ['pressure_plate','toggle_plate'].includes(entity.type) && entity.mode==='sequence'){window.MechanismSystem.enterSequencePlate(scene,entity);return;}
                 if (entity.type === 'pressure_plate') { entity.state = 'on'; scene.runState.flags[entity.flag || entity.id] = true; applyConnections(scene, entity, true); }
                 if (entity.type === 'toggle_plate' && entity.mode !== 'logic') { entity.state = entity.state === 'on' ? 'off' : 'on'; scene.runState.flags[entity.flag || entity.id] = entity.state === 'on'; applyConnections(scene, entity, entity.state === 'on'); }
@@ -175,7 +178,7 @@
                 }
                 const previous=entity.state; entity.state = 'active'; scene.runState.flags[entity.flag || `${entity.id}Used`] = true; if(scene.atividade.v3) await window.AnimationSystem.transition(scene,entity,previous,'active'); if (entity.target) { if (scene.atividade.v3) await window.AnimationSystem.teleport(scene,()=>window.PlayerController.teletransportar(scene, entity.target)); else window.PlayerController.teletransportar(scene, entity.target); } refresh(scene); return true; }
             if (name === 'ativar_runa') { const entity = requireEntity(scene, scene.atividade.v3 ? ['totem', 'output_rune'] : ['totem', 'bridge_segment', 'output_rune'], args[0], ['active', 'correct'], ['same', 'ahead'], 'ativar_runa()', line); entity.state = 'active'; scene.runState.flags[entity.flag || entity.id] = true; scene.runState.flags.runesActivated = (scene.runState.flags.runesActivated || 0) + 1; applyConnections(scene, entity, true); refresh(scene); return true; }
-            if (name === 'coletar_rubi') { const entity = requireEntity(scene, 'coin', args[0], ['collected'], ['same'], 'coletar_rubi()', line); entity.state = 'collected'; scene.runState.coinsPending++; scene.runState.flags.rubiesCollected = scene.atividade.v3 ? (scene.runState.flags.rubiesCollected || 0) + 1 : scene.runState.coinsPending; if (entity.flag) scene.runState.flags[entity.flag] = true; refresh(scene); return true; }
+            if (name === 'coletar_rubi') { const entity = requireEntity(scene, scene.atividade.v4 ? 'ruby' : 'coin', args[0], ['collected'], ['same'], 'coletar_rubi()', line); entity.state = 'collected'; if (!scene.atividade.v4) scene.runState.coinsPending++; scene.runState.flags.rubiesCollected = scene.atividade.v3 ? (scene.runState.flags.rubiesCollected || 0) + 1 : scene.runState.coinsPending; if (entity.flag) scene.runState.flags[entity.flag] = true; refresh(scene); return true; }
             if (name === 'abrir_bau') { const entity = requireEntity(scene, 'chest', args[0], ['open'], ['same', 'ahead'], 'abrir_bau()', line); entity.state = 'open'; scene.runState.flags.lastChest = entity.id; scene.runState.searchLog.push({id:entity.id,found:entity.content==='key'}); if (entity.content === 'key') { scene.runState.hasKey = true; scene.runState.flags.keyFound = true; } if (scene.atividade.v3 && entity.content === 'coin') scene.runState.coinsPending++; if (scene.atividade.v3 && entity.clue) window.DiscoverySystem.examine(scene, { id:entity.id, label:entity.label || 'Fragmento do baú', text:entity.clue, row:entity.row, column:entity.column }); refresh(scene); return entity.content || 'empty'; }
             if (name === 'desativar_armadilha') { const entity = requireEntity(scene, 'hazard', args[0], ['inactive'], ['ahead'], 'desativar_armadilha()', line); entity.state = 'inactive'; scene.runState.flags.trapsDisabled = (scene.runState.flags.trapsDisabled || 0) + 1; if (entity.flag) scene.runState.flags[entity.flag] = true; refresh(scene); return true; }
             const entities = scene.runState.entities;
@@ -193,6 +196,7 @@
             if (name === 'tem_bau_a_frente') return Boolean(entityAhead(scene, 'chest', ['open']));
             if (name === 'caminho_livre') { const vector = window.GAME_CONSTANTS.VETORES_ORIENTACAO[scene.playerFacing]; return !this.isBlocked(scene, scene.gutoPosition.linha + vector.linha, scene.gutoPosition.coluna + vector.coluna); }
             if (name === 'rubis_coletados' && scene.atividade.v3) return scene.runState.flags.rubiesCollected || 0;
+            if (name === 'moedas_coletadas' && scene.atividade.v4) return window.CoinSystem.stats(scene).collected;
             if (name === 'moedas_coletadas' || name === 'rubis_coletados') return scene.runState.coinsPending;
             throw new PytonKnightRuntimeError(window.GAME_CONSTANTS.TERMINOS.UNKNOWN_COMMAND, `O comando ${name}() não existe.`, line);
         }

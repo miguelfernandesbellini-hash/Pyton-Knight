@@ -1,28 +1,33 @@
-# Pyton Knight V3 — dungeon educacional
+# Pyton Knight V4 — dungeon educacional
 
-Versão atual da rodada V3, continuada a partir do projeto funcional. As 20 atividades foram redesenhadas com exploração, pistas físicas, iluminação e mecanismos animados, preservando Phaser, interpretador, Livro Mágico e progressão.
+Continuação da V3 final: as 20 fases, soluções e paredes foram preservadas. A V4 acrescenta decoração, estantes investigáveis com **!**, novos totens, orçamento flexível para explorar, modal de conclusão e **100 moedas únicas persistentes**.
 
-**Validação:** 221 testes aprovados (146 anteriores + 75 novos), suíte legada aprovada, 29 cenários V3 e 69 verificações isoladas de pistas/requisitos. **Homologação visual no navegador: PENDENTE**, devido a `ERR_BLOCKED_BY_CLIENT`. Não declarar o acabamento homologado antes dessa etapa.
+**Validação:** 269 testes aprovados (221 anteriores + 48 V4), suíte legada PASS, 29 cenários oficiais, 69 verificações de pistas/requisitos e 145 verificações de acesso às moedas. **Homologação visual em navegador real: PENDENTE**, por `ERR_BLOCKED_BY_CLIENT`. Plantas estáticas e testes não substituem essa etapa.
 
 ## Executar
 
-Não há build nem instalação de dependências de produção. Phaser e assets estão incluídos. Com Python 3 instalado, na pasta do projeto:
+Não há build nem dependências externas de produção. Phaser e todos os assets estão incluídos. Na pasta do projeto, com Python 3 instalado:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-No Windows, use `py -m http.server 8000`. Abra **http://localhost:8000** em Chrome, Edge ou Firefox. O jogo deve ser servido por HTTP. Para avaliação de todas as fases, use **http://localhost:8000/?dev=1**; esse modo libera o seletor de atividades. No modo normal, os desbloqueios seguem a progressão salva.
+No Windows: `py -m http.server 8000`. Abra **http://localhost:8000/** no navegador. Use **http://localhost:8000/?dev=1** para selecionar qualquer atividade durante avaliação. No modo normal, o progresso salvo controla os desbloqueios.
 
-Guto é controlado pelo programa no Livro Mágico. Arrastar o mapa e usar zoom são controles da câmera. As quatro orientações e o movimento tile a tile são animados.
+Guto se move pelo código do Livro Mágico. Arrastar e aproximar o mapa controla somente a câmera. Tutoriais A1, A6, A11 e A16 mantêm VER → EXECUTAR → COMPLETAR → ESCREVER.
 
-## Jogar e descobrir
+## Explorar e concluir
 
-`EXECUTAR` preserva o código e as descobertas da atividade, mas restaura posição, chaves, moedas provisórias, portas e mecanismos temporários. A luz revelada e as inscrições lidas permanecem durante a atividade. `REINICIAR` limpa código, tutorial e descobertas; preserva vidas e progressão consolidada.
+- EXECUTAR restaura posição, mecanismos, chaves e rubis; preserva as pistas e luz descobertas na atividade. Programas acima do orçamento também executam.
+- Para concluir, cumpra os objetivos físicos e pedagógicos **e** o limite de instruções semânticas. O indicador conta instruções do parser, não linhas. Acima do limite, o jogo pede otimização ao alcançar o cristal.
+- Use `examinar()` diante de inscrições e estantes investigáveis. O **!** indica proximidade; o Diário só registra a leitura feita pelo jogador. A luz revela objetos, sem ler os livros automaticamente.
+- Cada fase tem cinco moedas opcionais. A coleta é salva imediatamente; executar, morrer, reiniciar ou repetir a fase não recria moedas nem duplica o saldo. Rubis vermelhos continuam sendo itens provisórios das atividades de laços.
+- A conclusão mostra objetivos, regras e estatísticas. TENTAR NOVAMENTE começa nova partida com três vidas e zero tentativas, preservando código e recompensas salvas. PRÓXIMA ATIVIDADE avança; A20 permite CONCLUIR JORNADA.
+- REINICIAR restaura código, tutorial e descobertas; preserva vidas, contador da visita e dados persistentes.
 
-Use `examinar()` diante de livros/inscrições e consulte o **DIÁRIO**. `input()` recebe as descobertas no pedestal; o campo não entrega respostas. Nas atividades 1, 6, 11 e 16, siga VER → EXECUTAR → COMPLETAR → ESCREVER.
+A coleção é salva no perfil e endereço do navegador. Reabra o mesmo endereço/porta para usar o mesmo save. XP, desbloqueios e saldo anteriores da V3 são preservados; moedas antigas viram crédito legado separado dos 100 IDs da V4.
 
-| Unidade | Atividades | Conceitos |
+| Unidade | Atividades | Conteúdo preservado |
 |---|---|---|
 | 1 | 1–5 | Variáveis, reatribuição, aritmética e movimento |
 | 2 | 6–10 | print, input, int e processamento |
@@ -31,38 +36,47 @@ Use `examinar()` diante de livros/inscrições e consulte o **DIÁRIO**. `input(
 
 ## Documentação atual
 
-- [Gabarito oficial das 20 atividades](Gabarito_Oficial_Pyton_Knight_V3.txt)
-- [Resumo da entrega e pendências](docs/v3/ENTREGA_V3.md)
-- [API e arquitetura](docs/v3/API_V3.md)
-- [Matriz por atividade, mapas e pistas](docs/v3/MATRIZ_ATIVIDADES.md)
-- [Auditoria anti-atalho](docs/v3/AUDITORIA_ANTI_ATALHO.md)
-- [Relatório de testes](docs/v3/RELATORIO_TESTES.md)
-- [Bugs e correções](docs/v3/BUGS_E_CORRECOES.md)
-- [Homologação visual](docs/v3/HOMOLOGACAO_VISUAL.md)
-- [Assets e lacunas de arte](docs/v3/ASSETS.md)
+- [Entrega V4 e limitações](docs/v4/ENTREGA_V4.md)
+- [Gabarito oficial V4 das 20 atividades](Gabarito_Oficial_Pyton_Knight_V4.txt)
+- [API, orçamento, coleção e migração](docs/v4/API_V4.md)
+- [Matriz V4 por atividade](docs/v4/MATRIZ_V4.md)
+- [Testes e cobertura dos requisitos](docs/v4/RELATORIO_TESTES.md)
+- [Auditoria de rotas, pistas e moedas](docs/v4/AUDITORIA_V4.md)
+- [Bugs e correções](docs/v4/BUGS_E_CORRECOES.md)
+- [Homologação visual pendente](docs/v4/HOMOLOGACAO_VISUAL.md)
+- [Assets e prompt dos totens](docs/v4/ASSETS.md)
+- [Versionamento V3/V4 no GitHub](docs/v4/VERSIONAMENTO.md)
 
-Os documentos anteriores fora de `docs/v3` são históricos. A planilha acadêmica e o documento oficial V3 foram copiados integralmente para `docs/v3/referencias`, com SHA-256 registrado. O novo gabarito substitui as soluções anteriores apenas para os mapas V3.
+A documentação V3 permanece em `docs/v3`, com matriz completa das regiões, mecânicas, pistas e dependências que continuam em uso. O gabarito V3 está preservado. Documentos de rodadas anteriores fora dessas pastas são históricos. A planilha acadêmica em `docs/v3/referencias` permanece intacta.
 
-## Código e compatibilidade
+## Código e autoria
 
-`activities.js` preserva a base histórica. **O navegador sempre carrega também `activities-v3.js`**, que aplica os 20 mapas atuais. Para editar uma fase, altere `tools/v3/unitN.cjs` e execute `node tools/v3/build.cjs`; depois valide as soluções e gere a documentação com `node tools/v3/document.cjs`.
+O navegador carrega `activities.js`, `activities-v3.js` e `activities-v4.js`, nessa ordem. O último é uma camada de adições: não redefine geometrias ou soluções. Parser e contagem semântica são os mesmos da V3.
 
-O parser continua sendo o original. A extensão do interpretador registra contexto de comandos e origem dos inputs para verificar a aplicação pedagógica. Não executa Python arbitrário. Progressão mantém `localStorage`, XP por vidas, moedas consolidadas e recompensa única por atividade. Descobertas permanecem em memória apenas na cena atual; fechar/reabrir a página ou trocar de atividade inicia nova descoberta.
+```bash
+node tools/v4/build.cjs
+node tools/v4/document.cjs
+```
+
+Esses comandos atualizam apenas adições/gabarito/documentos V4. Não regenere o redesign V3 para mudar decoração ou moedas. Todos os resultados necessários para jogar já estão incluídos.
+
+`CoinSystem` controla IDs persistentes; `CompletionSystem` apresenta o resultado validado; `DecorationSystem` desenha ambientação e indicadores. O saldo e o histórico de coleta são separados para futura loja cosmética; nenhuma loja faz parte desta entrega.
 
 ## Testar
 
-Requer Node.js com suporte a `node:test` (validado em Node 24.19.0).
+Validado em Node.js 24.19.0, sem instalar dependências para as suítes:
 
 ```bash
 node --test --test-reporter=tap tests/*.test.cjs
 node tests/run-tests.cjs
-node tools/v3/audit.cjs
+node tools/v3/audit.cjs --v4
+node tools/v4/audit-coins.cjs
 ```
 
-Os testes antigos verificam compatibilidade com o catálogo histórico; as suítes `v3-*` e a auditoria verificam o catálogo realmente carregado no jogo. Ambas precisam passar.
+Os testes históricos verificam compatibilidade; `v3-*` preservam o baseline; `v4-*` validam o catálogo de produção, as novas regras e suas variantes. Todos precisam passar.
 
-`tools/v3/render-review.cjs` gera plantas estáticas e atlas para revisão de arte. Esse utilitário opcional usa `@napi-rs/canvas`, localizado por `CODEX_PRIMARY_RUNTIME_NODE_MODULES` no ambiente de produção dos relatórios; ele não é necessário para jogar ou executar os testes. As imagens já estão incluídas.
+`node tools/v3/render-review.cjs --v4` gera plantas estáticas usando `@napi-rs/canvas`. `tools/v4/prepare-assets.cjs` normaliza o atlas com `sharp`. São ferramentas opcionais de autoria, localizadas por `CODEX_PRIMARY_RUNTIME_NODE_MODULES` neste ambiente; não são necessárias para executar o jogo ou os testes. Imagens prontas e evidências estão no repositório.
 
-## Limites explícitos
+## Versões
 
-A API é um subconjunto pedagógico de Python. Balanceamento de XP/orçamentos e estimativas de tentativas ainda precisam de playtest com alunos. A execução lógica foi validada; enquadramento, CSS, fluidez, câmera e legibilidade final em navegador real aguardam PK-024. Estados de interação, medo, dano e vitória combinam poses direcionais com efeitos procedurais; não possuem folhas desenhadas exclusivas para cada ação.
+`main` contém a V4. A V3 final está em `release/v3-final-2026-09-17`, commit `8664886f9682d298da8d427ca3b061b5299f0b49`. A referência V4 é `release/v4-2026-09-17`. A branch `backup-pre-v3-2026-09-17` permanece inalterada.

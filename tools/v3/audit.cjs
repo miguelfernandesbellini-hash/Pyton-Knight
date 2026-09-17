@@ -1,6 +1,8 @@
 // Geometry, isolated missing-requirement checks and mutation audit through the production interpreter.
 const fs=require('fs'),path=require('path'),assert=require('assert/strict');
 const {setupV3}=require('../../tests/v3-helpers.cjs');
+const v4=process.argv.includes('--v4');
+const setup=v4?require('../../tests/v4-helpers.cjs').setupV4:setupV3;
 const root=path.resolve(__dirname,'../..');
 function scenarios(a){return a.testScenarios||Array.from({length:a.chestKeyVariants?.length||a.variantStates?.length||1},(_,variant)=>({variant}));}
 function reachable(h,s,{allOpen=false,closedId,portals=false,start=s.atividade.startPosition}={}){
@@ -12,8 +14,8 @@ function reachable(h,s,{allOpen=false,closedId,portals=false,start=s.atividade.s
 }
 (async()=>{
  const report=[];let mutations=0;
- for(const base of setupV3().context.ACTIVITIES){
- const h=setupV3(),a=h.context.ACTIVITIES[base.id-1],s=h.scene(a),exit=[];
+ for(const base of setup().context.ACTIVITIES){
+ const h=setup(),a=h.context.ACTIVITIES[base.id-1],s=h.scene(a),exit=[];
  for(let r=0;r<a.mapa.length;r++)for(let c=0;c<a.mapa[r].length;c++)if(a.mapa[r][c]===3)exit.push(`${r},${c}`);
  assert.equal(exit.length,1,`${a.id}: cristal único`);assert.ok(a.mapa[a.startPosition.linha][a.startPosition.coluna]>0);
  for(const e of a.entities)assert.ok(a.mapa[e.row]?.[e.column]&&a.mapa[e.row][e.column]!==4,`${a.id} ${e.id}: objeto em piso inválido`);
@@ -27,7 +29,7 @@ function reachable(h,s,{allOpen=false,closedId,portals=false,start=s.atividade.s
  // Each required inscription is independently omitted while preserving every movement and other command.
  const omissions=[];
  for(const objective of a.objectives.filter(o=>o.type==='discovered')){
-  const altered=setupV3(),original=altered.context.DiscoverySystem.examine;altered.context.DiscoverySystem.examine=function(scene,e){if(e.id===objective.id)return '';return original.call(this,scene,e);};
+  const altered=setup(),original=altered.context.DiscoverySystem.examine;altered.context.DiscoverySystem.examine=function(scene,e){if(e.id===objective.id)return '';return original.call(this,scene,e);};
   const run=await altered.run(altered.context.ACTIVITIES[a.id-1]);assert.notEqual(run.result.cause,'SUCCESS',`${a.id}: ignora ${objective.id}`);omissions.push({clue:objective.id,result:run.result.cause});mutations++;
  }
  // Remove each physical requirement independently from a successful world, then try the mechanism again locally.
@@ -45,6 +47,6 @@ function reachable(h,s,{allOpen=false,closedId,portals=false,start=s.atividade.s
  }
  report.push({activity:a.id,name:a.nome,initialExitReachable:false,doorCuts:cuts,scenarios:runs,omissions,missingRequirements:locks,regions:a.regions.map(r=>({id:r.id,label:r.label,area:r.width*r.height,objects:a.entities.filter(e=>h.context.DiscoverySystem.contains(r,e.row,e.column)).map(e=>e.id),visitedInOfficial:runs.some(x=>x.regions.includes(r.id))}))});
  }
- const output={generatedAt:new Date().toISOString(),activities:report.length,scenarios:report.reduce((n,a)=>n+a.scenarios.length,0),isolatedMutations:mutations,limits:'Auditoria de geometria e casos adversariais; não é prova formal de todos os programas possíveis e não substitui homologação no navegador.',report};
- fs.mkdirSync(path.join(root,'docs/v3/evidencias'),{recursive:true});fs.writeFileSync(path.join(root,'docs/v3/evidencias/auditoria.json'),JSON.stringify(output,null,2));console.log(`PASS: ${output.activities} mapas, ${output.scenarios} cenários, ${mutations} omissões/requisitos isolados.`);
+ const output={version:v4?'V4':'V3',generatedAt:new Date().toISOString(),activities:report.length,scenarios:report.reduce((n,a)=>n+a.scenarios.length,0),isolatedMutations:mutations,limits:'Auditoria de geometria e casos adversariais; não é prova formal de todos os programas possíveis e não substitui homologação no navegador.',report};
+ const dir=path.join(root,v4?'docs/v4/evidencias':'docs/v3/evidencias');fs.mkdirSync(dir,{recursive:true});fs.writeFileSync(path.join(dir,'auditoria.json'),JSON.stringify(output,null,2));console.log(`PASS: ${output.activities} mapas, ${output.scenarios} cenários, ${mutations} omissões/requisitos isolados.`);
 })().catch(e=>{console.error(e);process.exitCode=1;});

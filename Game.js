@@ -22,7 +22,7 @@ class Game extends Phaser.Scene {
         this.cameras.main.fadeIn(220, 10, 12, 17);
         this.events.once('shutdown', () => { this.cancelRequested = true; window.GameUI.destruir(this); });
     }
-    update (_time, delta) { if (this.cameraController) this.cameraController.update(delta); window.DiscoverySystem?.draw(this); if(this.atividade?.v3 && this.guto && this.gutoFacingIndicator) this.gutoFacingIndicator.setPosition(this.guto.x,this.guto.y-this.tileSize*.48); }
+    update (_time, delta) { if (this.cameraController) this.cameraController.update(delta); window.DiscoverySystem?.draw(this); window.DecorationSystem?.updateMarkers(this); if(this.atividade?.v3 && this.guto && this.gutoFacingIndicator) this.gutoFacingIndicator.setPosition(this.guto.x,this.guto.y-this.tileSize*.48); }
 }
 const config = {
     type: Phaser.AUTO, width: window.innerWidth, height: window.innerHeight, parent:'game-container', backgroundColor:'#0c0f15',

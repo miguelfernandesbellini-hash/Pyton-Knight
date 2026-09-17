@@ -5,6 +5,9 @@
     function sprite (scene, point, role, size = 1, frame) { return scene.add.image(point.x, point.y, `official_${role}`, frame).setDisplaySize(scene.tileSize * size, scene.tileSize * size).setDepth(6); }
     function appearance (entity) {
         const active = ACTIVE.has(entity.state);
+        if (entity.visualVariant==='v4_totem') return {role:active?'v4_totem_on':'v4_totem_off',size:1,caption:`Totem ${entity.symbol || ''}`};
+        if (entity.visualVariant==='bookshelf') return {role:entity.state==='read'?'bookshelf_right':'bookshelf_left',size:.94,caption:'Arquivo'};
+        if (entity.type==='ruby') return {role:'v3_ruby',size:.72};
         if(entity.skin==='v3'){
             const role=({lever:active?'v3_lever_on':'v3_lever_off',light_switch:active?'v3_light_on':'v3_light_off',inscription:entity.state==='read'?'v3_book_open':'v3_book_closed',output_rune:active?'v3_rune_on':'v3_rune_off',pressure_plate:active?'v3_rune_on':'v3_rune_off',toggle_plate:active?'v3_rune_on':'v3_rune_off',mirror:active?'v3_portal_on':'v3_portal_off',portal:active?'v3_portal_on':'v3_portal_off',chest:entity.state==='open'?'v3_chest_open':entity.state==='opening'?'v3_chest_opening':'v3_chest_closed',coin:entity.manualCollect?'v3_ruby':'coin_pile'})[entity.type];
             if(role) return {role,size:entity.type==='coin'?.72:1,caption:['portal','mirror'].includes(entity.type)?`${entity.label||'Espelho'} · ${entity.value}`:entity.type==='light_switch'?'Luz':entity.type==='inscription'?'Inscrição':entity.type==='lever'?(entity.label||'Alavanca'):''};
@@ -53,6 +56,7 @@
                 if (tile === T.SAIDA) { scene.exitVisual = scene.add.image(point.x, point.y, scene.atividade.v3?'official_v3_crystal':'saida').setDisplaySize(scene.tileSize * .74, scene.tileSize * .86).setDepth(4); }
                 if (tile === T.PERIGO) { sprite(scene, point, 'fireplace_bright').setDepth(3); if(!scene.atividade.v3) scene.add.text(point.x, point.y + 22, 'LAVA', { font:'bold 9px Arial', color:'#ffbb82', backgroundColor:'#241311' }).setOrigin(.5).setDepth(7); }
             }
+            window.DecorationSystem?.draw(scene);
             // Position is authoritative even if a map marker differs.
             const start = xy(scene, scene.startPosition.linha, scene.startPosition.coluna);
             scene.guto = scene.atividade.v3 ? scene.add.sprite(start.x,start.y,'guto_v3',4).setDisplaySize(scene.tileSize,scene.tileSize).setDepth(20) : scene.add.image(start.x, start.y, 'guto').setDisplaySize(scene.tileSize * .64, scene.tileSize * .85).setDepth(20);
@@ -76,16 +80,16 @@
                     if (look.lever) visual.handle = scene.add.rectangle(point.x, point.y - 3, 5, 23, 0xbaa383).setOrigin(.5,.9).setDepth(8);
                     scene.entitySprites.set(entity.id, visual); scene.entityVisuals.push(visual.image, visual.label); if (visual.handle) scene.entityVisuals.push(visual.handle);
                 }
-                const collected = ['key','coin'].includes(entity.type) && entity.state === 'collected';
+                const collected = ['key','coin','ruby'].includes(entity.type) && entity.state === 'collected';
                 visual.image.setTexture(`official_${look.role}`, look.frame).setDisplaySize(scene.tileSize * (look.size || 1), scene.tileSize * (look.size || 1)).setVisible(!collected);
                 if (look.role.startsWith('custom_')) { const asset = window.AssetCatalog[look.role]; const ratio = asset.sourceWidth / asset.sourceHeight; const size = scene.tileSize * (look.size || 1); visual.image.setDisplaySize(size * Math.min(1, ratio), size * Math.min(1, 1 / ratio)); }
                 if (entity.type === 'key') visual.image.setDisplaySize(scene.tileSize * .38, scene.tileSize * .76);
                 visual.label.setText(look.caption || '').setVisible(!collected && Boolean(look.caption));
                 if (visual.handle) visual.handle.setAngle(entity.state === 'on' ? 35 : -35);
                 visual.image.clearTint();
-                if (['output_rune','totem'].includes(entity.type)) visual.image.setTint(ACTIVE.has(entity.state) ? 0xffe3a0 : 0x929ca8);
+                if (['output_rune','totem'].includes(entity.type) && entity.visualVariant!=='v4_totem') visual.image.setTint(ACTIVE.has(entity.state) ? 0xffe3a0 : 0x929ca8);
                 if (entity.type === 'guardian' && ACTIVE.has(entity.state)) visual.image.setTint(0x869b8e);
-                if(entity.skin==='v3' && entity.type==='inscription' && scene.discoveryState?.inscriptions[entity.id]) visual.image.setTexture('official_v3_book_open');
+                if(entity.skin==='v3' && entity.type==='inscription' && scene.discoveryState?.inscriptions[entity.id]) visual.image.setTexture(entity.visualVariant==='bookshelf'?'official_bookshelf_right':'official_v3_book_open');
                 if (entity.state === 'incorrect') visual.image.setTint(0xdf8a82);
                 if (entity.type === 'pedestal' && entity.state === 'receiving') visual.image.setTint(0xffdfa2);
                 if (entity.type === 'lever' && entity.label === 'verde') visual.image.setTint(0x8caf91);
@@ -96,7 +100,8 @@
                 } else visual.image.setAlpha(1);
                 visual.state = entity.state;
             });
-            for (const [id, visual] of scene.entitySprites) if (!seen.has(id)) { visual.image.destroy(); visual.label.destroy(); if (visual.handle) visual.handle.destroy(); scene.entitySprites.delete(id); }
+            for (const [id, visual] of scene.entitySprites) if (!seen.has(id)) { visual.image.destroy(); visual.label.destroy(); if (visual.handle) visual.handle.destroy(); visual.marker?.destroy(); scene.entitySprites.delete(id); }
+            window.DecorationSystem?.updateMarkers(scene);
         },
         feedbackDano (scene) { if (scene.guto && scene.tweens) { scene.guto.setTint(0xff887d); scene.time.delayedCall(220, () => scene.guto && scene.guto.active && scene.guto.clearTint()); } },
         feedbackConclusao (scene) { if(scene.atividade.v3 && scene.guto && scene.tweens){window.AnimationSystem.pose(scene,'victory');scene.tweens.add({targets:scene.guto,y:scene.guto.y-10,duration:200,yoyo:true,repeat:2});} if (scene.exitVisual && scene.tweens) { scene.tweens.killTweensOf(scene.exitVisual); scene.tweens.add({ targets:scene.exitVisual, alpha:.45, duration:220, yoyo:true, repeat:2 }); } }

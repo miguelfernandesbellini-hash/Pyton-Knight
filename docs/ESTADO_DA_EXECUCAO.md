@@ -1,23 +1,24 @@
-# Estado atual — continuação V3, 16/09/2026
+# Estado atual — V4, 17/09/2026
 
-A base de trabalho atual é esta pasta com `activities-v3.js`. Não restaurar o ZIP original e não executar os geradores históricos de documentação da rodada anterior. O histórico deste arquivo foi preservado em `v3/historico/ESTADO_DA_EXECUCAO_RODADA2.md`.
+Usar esta versão como base. Não restaurar ZIP original, não reconstruir fases V3 e não executar geradores históricos de documentação por engano.
 
 ## Concluído
 
-- Baseline de 146 testes preservado; backup e branch de segurança já criados.
-- Redesign das 20 atividades, soluções, tutoriais e variantes.
-- Descoberta separada da tentativa, Diário, iluminação, medo e investigação.
-- Guto direcional, tileset V3, objetos/estados e transições integrados.
-- Input sem respostas entregues pela UI; pistas locais e requisitos físicos.
-- Auditoria: 20 mapas, 29 cenários e 69 omissões/requisitos isolados aprovados.
-- Suíte final: 221 testes PASS (146 anteriores + 75 novos); suíte legada PASS.
-- Gabarito e documentação V3 consolidados em `docs/v3`.
-- Planilha acadêmica preservada, sem alterações.
+- V3 final exata registrada no GitHub: `8664886f9682d298da8d427ca3b061b5299f0b49`, referência `release/v3-final-2026-09-17`.
+- Branch `backup-pre-v3-2026-09-17` preservada em `1ca7e942ef269410b4109036435f4804ace66cdf`.
+- V4 sobre os mesmos 20 mapas, paredes, pistas, soluções, variantes e whitelists.
+- Orçamento semântico em todas as atividades; execução acima do limite permitida; conclusão exige otimização.
+- Modal com objetivos, regras, estatísticas, tentativas válidas, repetir/próxima e conclusão da jornada.
+- 100 moedas persistentes, opcionais e não farmáveis; rubis separados; saldo V3 preservado como crédito legado.
+- 125 decorações, nove estantes investigáveis, ! contextual e oito totens com novos sprites OFF/ON.
+- 269 testes PASS: 221 anteriores + 48 V4; suíte legada PASS.
+- 29 cenários, 69 verificações físicas/descoberta e 145 acessos sem dano às moedas aprovados.
+- Gabarito V4 e documentação técnica em `docs/v4`; documentos V3 preservados.
+- Planilha acadêmica, parser, dados V3, paredes e assets anteriores preservados por integridade.
+- Publicação V4 em `main` e `release/v4-2026-09-17`, como revisão sucessora direta da V3. O SHA desta versão é o commit dessas referências; ver `v4/VERSIONAMENTO.md`.
 
 ## Pendente
 
-PK-024: homologação em navegador real. A tentativa remota retornou `ERR_BLOCKED_BY_CLIENT`. Atlas e plantas foram inspecionados estaticamente; UI/câmera/fluidez/efeitos no navegador e playtest com alunos não foram homologados.
+**PK-024 — homologação visual interativa.** A nova tentativa no navegador retornou `net::ERR_BLOCKED_BY_CLIENT`. Fonte dos totens e pranchas estáticas foram inspecionadas. Não foram homologados CSS, foco real, câmera, fluidez, neblina dinâmica ou taxa de quadros no navegador.
 
-## Próxima ação
-
-Executar o roteiro `v3/HOMOLOGACAO_VISUAL.md` em ambiente acessível. Usar esta versão como nova base. Corrigir somente defeitos reproduzidos, revalidar as suítes afetadas e atualizar a documentação/evidência. Próximo ID livre: PK-041.
+Próxima ação: executar o roteiro `v4/HOMOLOGACAO_VISUAL.md` em ambiente acessível, registrar evidências reais e corrigir somente defeitos reproduzidos. Playtest com alunos continua necessário para medir dificuldade/clareza. Próximo ID livre: PK-049.

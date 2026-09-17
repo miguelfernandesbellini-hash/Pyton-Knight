@@ -1,0 +1,2171 @@
+[
+  {
+    "id": 1,
+    "name": "Primeiros Passos",
+    "instructionBudget": 18,
+    "semanticInstructions": 11,
+    "coins": [
+      {
+        "id": "A01_C01",
+        "type": "coin",
+        "row": 6,
+        "column": 6,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A01_C02",
+        "type": "coin",
+        "row": 7,
+        "column": 6,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A01_C03",
+        "type": "coin",
+        "row": 8,
+        "column": 13,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A01_C04",
+        "type": "coin",
+        "row": 8,
+        "column": 1,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A01_C05",
+        "type": "coin",
+        "row": 2,
+        "column": 5,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      }
+    ],
+    "decorations": [
+      {
+        "row": 5,
+        "column": 3,
+        "id": "decor_1",
+        "role": "banner_blue_plain",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 1,
+        "column": 6,
+        "id": "decor_2",
+        "role": "painting_landscape",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 5,
+        "column": 11,
+        "id": "decor_3",
+        "role": "shield_blue",
+        "size": 0.7,
+        "solid": false
+      }
+    ],
+    "bookshelves": [],
+    "totems": []
+  },
+  {
+    "id": 2,
+    "name": "O Caminho Mutável",
+    "instructionBudget": 22,
+    "semanticInstructions": 12,
+    "coins": [
+      {
+        "id": "A02_C01",
+        "type": "coin",
+        "row": 6,
+        "column": 6,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A02_C02",
+        "type": "coin",
+        "row": 7,
+        "column": 8,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A02_C03",
+        "type": "coin",
+        "row": 12,
+        "column": 6,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A02_C04",
+        "type": "coin",
+        "row": 6,
+        "column": 15,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A02_C05",
+        "type": "coin",
+        "row": 8,
+        "column": 1,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      }
+    ],
+    "decorations": [
+      {
+        "row": 5,
+        "column": 3,
+        "id": "decor_1",
+        "role": "banner_blue_plain",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 1,
+        "column": 5,
+        "id": "decor_2",
+        "role": "painting_landscape",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 10,
+        "column": 5,
+        "id": "decor_3",
+        "role": "shield_blue",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 5,
+        "column": 14,
+        "id": "decor_4",
+        "role": "banner_blue_plain",
+        "size": 0.7,
+        "solid": false
+      }
+    ],
+    "bookshelves": [],
+    "totems": []
+  },
+  {
+    "id": 3,
+    "name": "As Grades da Masmorra",
+    "instructionBudget": 26,
+    "semanticInstructions": 24,
+    "coins": [
+      {
+        "id": "A03_C01",
+        "type": "coin",
+        "row": 6,
+        "column": 4,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A03_C02",
+        "type": "coin",
+        "row": 11,
+        "column": 12,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A03_C03",
+        "type": "coin",
+        "row": 6,
+        "column": 20,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A03_C04",
+        "type": "coin",
+        "row": 6,
+        "column": 10,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A03_C05",
+        "type": "coin",
+        "row": 8,
+        "column": 7,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      }
+    ],
+    "decorations": [
+      {
+        "row": 5,
+        "column": 3,
+        "id": "decor_1",
+        "role": "banner_blue_plain",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 1,
+        "column": 4,
+        "id": "decor_2",
+        "role": "painting_landscape",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 5,
+        "column": 9,
+        "id": "decor_3",
+        "role": "shield_blue",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 10,
+        "column": 13,
+        "id": "decor_4",
+        "role": "banner_blue_plain",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 5,
+        "column": 19,
+        "id": "decor_5",
+        "role": "painting_landscape",
+        "size": 0.7,
+        "solid": false
+      }
+    ],
+    "bookshelves": [],
+    "totems": []
+  },
+  {
+    "id": 4,
+    "name": "O Corredor da Forja",
+    "instructionBudget": 28,
+    "semanticInstructions": 16,
+    "coins": [
+      {
+        "id": "A04_C01",
+        "type": "coin",
+        "row": 4,
+        "column": 6,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A04_C02",
+        "type": "coin",
+        "row": 7,
+        "column": 8,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A04_C03",
+        "type": "coin",
+        "row": 6,
+        "column": 20,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A04_C04",
+        "type": "coin",
+        "row": 13,
+        "column": 5,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A04_C05",
+        "type": "coin",
+        "row": 10,
+        "column": 14,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      }
+    ],
+    "decorations": [
+      {
+        "row": 5,
+        "column": 3,
+        "id": "decor_1",
+        "role": "banner_blue_plain",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 1,
+        "column": 6,
+        "id": "decor_2",
+        "role": "painting_landscape",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 10,
+        "column": 5,
+        "id": "decor_3",
+        "role": "shield_blue",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 5,
+        "column": 10,
+        "id": "decor_4",
+        "role": "banner_blue_plain",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 9,
+        "column": 11,
+        "id": "decor_5",
+        "role": "painting_landscape",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 5,
+        "column": 19,
+        "id": "decor_6",
+        "role": "shield_blue",
+        "size": 0.7,
+        "solid": false
+      }
+    ],
+    "bookshelves": [],
+    "totems": []
+  },
+  {
+    "id": 5,
+    "name": "O Labirinto das Variáveis",
+    "instructionBudget": 38,
+    "semanticInstructions": 24,
+    "coins": [
+      {
+        "id": "A05_C01",
+        "type": "coin",
+        "row": 6,
+        "column": 9,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A05_C02",
+        "type": "coin",
+        "row": 13,
+        "column": 5,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A05_C03",
+        "type": "coin",
+        "row": 4,
+        "column": 15,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A05_C04",
+        "type": "coin",
+        "row": 10,
+        "column": 21,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A05_C05",
+        "type": "coin",
+        "row": 8,
+        "column": 1,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      }
+    ],
+    "decorations": [
+      {
+        "row": 7,
+        "column": 3,
+        "id": "decor_1",
+        "role": "banner_blue_plain",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 6,
+        "column": 10,
+        "id": "decor_2",
+        "role": "painting_landscape",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 1,
+        "column": 9,
+        "id": "decor_3",
+        "role": "shield_blue",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 13,
+        "column": 4,
+        "id": "decor_4",
+        "role": "banner_blue_plain",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 13,
+        "column": 10,
+        "id": "decor_5",
+        "role": "painting_landscape",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 2,
+        "column": 15,
+        "id": "decor_6",
+        "role": "shield_blue",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 7,
+        "column": 20,
+        "id": "decor_7",
+        "role": "banner_blue_plain",
+        "size": 0.7,
+        "solid": false
+      }
+    ],
+    "bookshelves": [],
+    "totems": []
+  },
+  {
+    "id": 6,
+    "name": "O Pedestal da Palavra",
+    "instructionBudget": 20,
+    "semanticInstructions": 14,
+    "coins": [
+      {
+        "id": "A06_C01",
+        "type": "coin",
+        "row": 5,
+        "column": 6,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A06_C02",
+        "type": "coin",
+        "row": 7,
+        "column": 11,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A06_C03",
+        "type": "coin",
+        "row": 6,
+        "column": 18,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A06_C04",
+        "type": "coin",
+        "row": 8,
+        "column": 1,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A06_C05",
+        "type": "coin",
+        "row": 8,
+        "column": 15,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      }
+    ],
+    "decorations": [
+      {
+        "row": 5,
+        "column": 3,
+        "id": "decor_1",
+        "role": "painting_castle",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 1,
+        "column": 6,
+        "id": "decor_2",
+        "role": "bookshelf_left",
+        "size": 0.7,
+        "solid": false,
+        "label": "Estante decorativa"
+      },
+      {
+        "row": 5,
+        "column": 10,
+        "id": "decor_3",
+        "role": "banner_blue_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 5,
+        "column": 16,
+        "id": "decor_4",
+        "role": "painting_castle",
+        "size": 0.7,
+        "solid": false
+      }
+    ],
+    "bookshelves": [
+      "juramento"
+    ],
+    "totems": []
+  },
+  {
+    "id": 7,
+    "name": "O Guardião da Resposta",
+    "instructionBudget": 26,
+    "semanticInstructions": 18,
+    "coins": [
+      {
+        "id": "A07_C01",
+        "type": "coin",
+        "row": 4,
+        "column": 4,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A07_C02",
+        "type": "coin",
+        "row": 9,
+        "column": 11,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A07_C03",
+        "type": "coin",
+        "row": 8,
+        "column": 20,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A07_C04",
+        "type": "coin",
+        "row": 10,
+        "column": 1,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A07_C05",
+        "type": "coin",
+        "row": 8,
+        "column": 7,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      }
+    ],
+    "decorations": [
+      {
+        "row": 7,
+        "column": 3,
+        "id": "decor_1",
+        "role": "painting_castle",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 1,
+        "column": 5,
+        "id": "decor_2",
+        "role": "bookshelf_left",
+        "size": 0.7,
+        "solid": false,
+        "label": "Estante decorativa"
+      },
+      {
+        "row": 7,
+        "column": 9,
+        "id": "decor_3",
+        "role": "banner_blue_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 7,
+        "column": 13,
+        "id": "decor_4",
+        "role": "painting_castle",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 7,
+        "column": 19,
+        "id": "decor_5",
+        "role": "bookshelf_left",
+        "size": 0.7,
+        "solid": false
+      }
+    ],
+    "bookshelves": [
+      "memoria"
+    ],
+    "totems": []
+  },
+  {
+    "id": 8,
+    "name": "A Ponte dos Construtores",
+    "instructionBudget": 34,
+    "semanticInstructions": 26,
+    "coins": [
+      {
+        "id": "A08_C01",
+        "type": "coin",
+        "row": 5,
+        "column": 5,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A08_C02",
+        "type": "coin",
+        "row": 9,
+        "column": 11,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A08_C03",
+        "type": "coin",
+        "row": 7,
+        "column": 23,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A08_C04",
+        "type": "coin",
+        "row": 9,
+        "column": 1,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A08_C05",
+        "type": "coin",
+        "row": 9,
+        "column": 19,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      }
+    ],
+    "decorations": [
+      {
+        "row": 6,
+        "column": 3,
+        "id": "decor_1",
+        "role": "painting_castle",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 1,
+        "column": 5,
+        "id": "decor_2",
+        "role": "bookshelf_left",
+        "size": 0.7,
+        "solid": false,
+        "label": "Estante decorativa"
+      },
+      {
+        "row": 6,
+        "column": 9,
+        "id": "decor_3",
+        "role": "banner_blue_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 11,
+        "column": 13,
+        "id": "decor_4",
+        "role": "painting_castle",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 7,
+        "column": 16,
+        "id": "decor_5",
+        "role": "bookshelf_left",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 6,
+        "column": 21,
+        "id": "decor_6",
+        "role": "banner_blue_gold",
+        "size": 0.7,
+        "solid": false
+      }
+    ],
+    "bookshelves": [
+      "grupos",
+      "segmentos"
+    ],
+    "totems": []
+  },
+  {
+    "id": 9,
+    "name": "O Salão dos Espelhos Rúnicos",
+    "instructionBudget": 38,
+    "semanticInstructions": 30,
+    "coins": [
+      {
+        "id": "A09_C01",
+        "type": "coin",
+        "row": 5,
+        "column": 5,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A09_C02",
+        "type": "coin",
+        "row": 9,
+        "column": 9,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A09_C03",
+        "type": "coin",
+        "row": 2,
+        "column": 26,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A09_C04",
+        "type": "coin",
+        "row": 3,
+        "column": 15,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A09_C05",
+        "type": "coin",
+        "row": 13,
+        "column": 16,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      }
+    ],
+    "decorations": [
+      {
+        "row": 6,
+        "column": 3,
+        "id": "decor_1",
+        "role": "painting_castle",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 1,
+        "column": 5,
+        "id": "decor_2",
+        "role": "bookshelf_left",
+        "size": 0.7,
+        "solid": false,
+        "label": "Estante decorativa"
+      },
+      {
+        "row": 11,
+        "column": 10,
+        "id": "decor_3",
+        "role": "banner_blue_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 6,
+        "column": 10,
+        "id": "decor_4",
+        "role": "painting_castle",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 6,
+        "column": 16,
+        "id": "decor_5",
+        "role": "bookshelf_left",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 2,
+        "column": 15,
+        "id": "decor_6",
+        "role": "banner_blue_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 10,
+        "column": 16,
+        "id": "decor_7",
+        "role": "painting_castle",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 1,
+        "column": 25,
+        "id": "decor_8",
+        "role": "bookshelf_left",
+        "size": 0.7,
+        "solid": false
+      }
+    ],
+    "bookshelves": [
+      "primeira",
+      "segunda"
+    ],
+    "totems": []
+  },
+  {
+    "id": 10,
+    "name": "O Cofre das Três Runas",
+    "instructionBudget": 56,
+    "semanticInstructions": 40,
+    "coins": [
+      {
+        "id": "A10_C01",
+        "type": "coin",
+        "row": 6,
+        "column": 10,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A10_C02",
+        "type": "coin",
+        "row": 13,
+        "column": 11,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A10_C03",
+        "type": "coin",
+        "row": 9,
+        "column": 23,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A10_C04",
+        "type": "coin",
+        "row": 10,
+        "column": 1,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A10_C05",
+        "type": "coin",
+        "row": 18,
+        "column": 17,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      }
+    ],
+    "decorations": [
+      {
+        "row": 8,
+        "column": 3,
+        "id": "decor_1",
+        "role": "painting_castle",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 7,
+        "column": 9,
+        "id": "decor_2",
+        "role": "bookshelf_left",
+        "size": 0.7,
+        "solid": false,
+        "label": "Estante decorativa"
+      },
+      {
+        "row": 1,
+        "column": 10,
+        "id": "decor_3",
+        "role": "banner_blue_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 15,
+        "column": 6,
+        "id": "decor_4",
+        "role": "painting_castle",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 15,
+        "column": 16,
+        "id": "decor_5",
+        "role": "bookshelf_left",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 8,
+        "column": 20,
+        "id": "decor_6",
+        "role": "banner_blue_gold",
+        "size": 0.7,
+        "solid": false
+      }
+    ],
+    "bookshelves": [
+      "a",
+      "b",
+      "c"
+    ],
+    "totems": []
+  },
+  {
+    "id": 11,
+    "name": "A Porta do Guardião",
+    "instructionBudget": 24,
+    "semanticInstructions": 16,
+    "coins": [
+      {
+        "id": "A11_C01",
+        "type": "coin",
+        "row": 6,
+        "column": 7,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A11_C02",
+        "type": "coin",
+        "row": 8,
+        "column": 12,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A11_C03",
+        "type": "coin",
+        "row": 7,
+        "column": 21,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A11_C04",
+        "type": "coin",
+        "row": 9,
+        "column": 1,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A11_C05",
+        "type": "coin",
+        "row": 9,
+        "column": 18,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      }
+    ],
+    "decorations": [
+      {
+        "row": 6,
+        "column": 3,
+        "id": "decor_1",
+        "role": "shield_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 1,
+        "column": 8,
+        "id": "decor_2",
+        "role": "weapons_crossed_steel",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 6,
+        "column": 8,
+        "id": "decor_3",
+        "role": "banner_blue_plain",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 6,
+        "column": 14,
+        "id": "decor_4",
+        "role": "shield_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 6,
+        "column": 20,
+        "id": "decor_5",
+        "role": "weapons_crossed_steel",
+        "size": 0.7,
+        "solid": false
+      }
+    ],
+    "bookshelves": [],
+    "totems": []
+  },
+  {
+    "id": 12,
+    "name": "Os Dois Caminhos",
+    "instructionBudget": 28,
+    "semanticInstructions": 18,
+    "coins": [
+      {
+        "id": "A12_C01",
+        "type": "coin",
+        "row": 5,
+        "column": 6,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A12_C02",
+        "type": "coin",
+        "row": 5,
+        "column": 16,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A12_C03",
+        "type": "coin",
+        "row": 9,
+        "column": 23,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A12_C04",
+        "type": "coin",
+        "row": 12,
+        "column": 11,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A12_C05",
+        "type": "coin",
+        "row": 9,
+        "column": 1,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      }
+    ],
+    "decorations": [
+      {
+        "row": 6,
+        "column": 3,
+        "id": "decor_1",
+        "role": "shield_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 2,
+        "column": 9,
+        "id": "decor_2",
+        "role": "weapons_crossed_steel",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 10,
+        "column": 9,
+        "id": "decor_3",
+        "role": "banner_blue_plain",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 6,
+        "column": 15,
+        "id": "decor_4",
+        "role": "shield_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 6,
+        "column": 21,
+        "id": "decor_5",
+        "role": "weapons_crossed_steel",
+        "size": 0.7,
+        "solid": false
+      }
+    ],
+    "bookshelves": [],
+    "totems": []
+  },
+  {
+    "id": 13,
+    "name": "A Câmara das Comparações",
+    "instructionBudget": 36,
+    "semanticInstructions": 30,
+    "coins": [
+      {
+        "id": "A13_C01",
+        "type": "coin",
+        "row": 6,
+        "column": 5,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A13_C02",
+        "type": "coin",
+        "row": 8,
+        "column": 12,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A13_C03",
+        "type": "coin",
+        "row": 7,
+        "column": 24,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A13_C04",
+        "type": "coin",
+        "row": 14,
+        "column": 9,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A13_C05",
+        "type": "coin",
+        "row": 9,
+        "column": 1,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      }
+    ],
+    "decorations": [
+      {
+        "row": 6,
+        "column": 3,
+        "id": "decor_1",
+        "role": "shield_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 1,
+        "column": 5,
+        "id": "decor_2",
+        "role": "weapons_crossed_steel",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 11,
+        "column": 11,
+        "id": "decor_3",
+        "role": "banner_blue_plain",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 6,
+        "column": 10,
+        "id": "decor_4",
+        "role": "shield_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 6,
+        "column": 16,
+        "id": "decor_5",
+        "role": "weapons_crossed_steel",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 6,
+        "column": 23,
+        "id": "decor_6",
+        "role": "banner_blue_plain",
+        "size": 0.7,
+        "solid": false
+      }
+    ],
+    "bookshelves": [],
+    "totems": []
+  },
+  {
+    "id": 14,
+    "name": "O Selo das Duas Alavancas",
+    "instructionBudget": 40,
+    "semanticInstructions": 26,
+    "coins": [
+      {
+        "id": "A14_C01",
+        "type": "coin",
+        "row": 5,
+        "column": 7,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A14_C02",
+        "type": "coin",
+        "row": 8,
+        "column": 11,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A14_C03",
+        "type": "coin",
+        "row": 7,
+        "column": 26,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A14_C04",
+        "type": "coin",
+        "row": 9,
+        "column": 1,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A14_C05",
+        "type": "coin",
+        "row": 9,
+        "column": 19,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      }
+    ],
+    "decorations": [
+      {
+        "row": 6,
+        "column": 3,
+        "id": "decor_1",
+        "role": "shield_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 6,
+        "column": 8,
+        "id": "decor_2",
+        "role": "weapons_crossed_steel",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 1,
+        "column": 8,
+        "id": "decor_3",
+        "role": "banner_blue_plain",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 12,
+        "column": 8,
+        "id": "decor_4",
+        "role": "shield_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 6,
+        "column": 14,
+        "id": "decor_5",
+        "role": "weapons_crossed_steel",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 6,
+        "column": 20,
+        "id": "decor_6",
+        "role": "banner_blue_plain",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 6,
+        "column": 25,
+        "id": "decor_7",
+        "role": "shield_gold",
+        "size": 0.7,
+        "solid": false
+      }
+    ],
+    "bookshelves": [],
+    "totems": []
+  },
+  {
+    "id": 15,
+    "name": "O Julgamento dos Três Portões",
+    "instructionBudget": 65,
+    "semanticInstructions": 48,
+    "coins": [
+      {
+        "id": "A15_C01",
+        "type": "coin",
+        "row": 12,
+        "column": 5,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A15_C02",
+        "type": "coin",
+        "row": 10,
+        "column": 12,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A15_C03",
+        "type": "coin",
+        "row": 13,
+        "column": 33,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A15_C04",
+        "type": "coin",
+        "row": 3,
+        "column": 24,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A15_C05",
+        "type": "coin",
+        "row": 21,
+        "column": 23,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      }
+    ],
+    "decorations": [
+      {
+        "row": 10,
+        "column": 3,
+        "id": "decor_1",
+        "role": "shield_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 2,
+        "column": 5,
+        "id": "decor_2",
+        "role": "weapons_crossed_steel",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 16,
+        "column": 6,
+        "id": "decor_3",
+        "role": "banner_blue_plain",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 2,
+        "column": 13,
+        "id": "decor_4",
+        "role": "shield_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 9,
+        "column": 13,
+        "id": "decor_5",
+        "role": "weapons_crossed_steel",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 2,
+        "column": 24,
+        "id": "decor_6",
+        "role": "banner_blue_plain",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 10,
+        "column": 24,
+        "id": "decor_7",
+        "role": "shield_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 18,
+        "column": 24,
+        "id": "decor_8",
+        "role": "weapons_crossed_steel",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 10,
+        "column": 29,
+        "id": "decor_9",
+        "role": "banner_blue_plain",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 10,
+        "column": 33,
+        "id": "decor_10",
+        "role": "shield_gold",
+        "size": 0.7,
+        "solid": false
+      }
+    ],
+    "bookshelves": [],
+    "totems": []
+  },
+  {
+    "id": 16,
+    "name": "A Ponte dos Ecos",
+    "instructionBudget": 20,
+    "semanticInstructions": 13,
+    "coins": [
+      {
+        "id": "A16_C01",
+        "type": "coin",
+        "row": 5,
+        "column": 5,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A16_C02",
+        "type": "coin",
+        "row": 10,
+        "column": 11,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A16_C03",
+        "type": "coin",
+        "row": 9,
+        "column": 22,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A16_C04",
+        "type": "coin",
+        "row": 11,
+        "column": 1,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A16_C05",
+        "type": "coin",
+        "row": 3,
+        "column": 13,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      }
+    ],
+    "decorations": [
+      {
+        "row": 8,
+        "column": 3,
+        "id": "decor_1",
+        "role": "banner_blue_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 2,
+        "column": 8,
+        "id": "decor_2",
+        "role": "painting_castle",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 2,
+        "column": 13,
+        "id": "decor_3",
+        "role": "weapons_crossed_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 9,
+        "column": 15,
+        "id": "decor_4",
+        "role": "banner_blue_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 8,
+        "column": 20,
+        "id": "decor_5",
+        "role": "painting_castle",
+        "size": 0.7,
+        "solid": false
+      }
+    ],
+    "bookshelves": [],
+    "totems": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "A Câmara dos Rubis",
+    "instructionBudget": 26,
+    "semanticInstructions": 17,
+    "coins": [
+      {
+        "id": "A17_C01",
+        "type": "coin",
+        "row": 5,
+        "column": 8,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A17_C02",
+        "type": "coin",
+        "row": 8,
+        "column": 16,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A17_C03",
+        "type": "coin",
+        "row": 3,
+        "column": 19,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A17_C04",
+        "type": "coin",
+        "row": 9,
+        "column": 1,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A17_C05",
+        "type": "coin",
+        "row": 5,
+        "column": 26,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      }
+    ],
+    "decorations": [
+      {
+        "row": 6,
+        "column": 3,
+        "id": "decor_1",
+        "role": "banner_blue_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 7,
+        "column": 14,
+        "id": "decor_2",
+        "role": "painting_castle",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 2,
+        "column": 25,
+        "id": "decor_3",
+        "role": "weapons_crossed_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 2,
+        "column": 4,
+        "id": "decor_4",
+        "role": "banner_blue_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 2,
+        "column": 9,
+        "id": "decor_5",
+        "role": "painting_castle",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 2,
+        "column": 13,
+        "id": "decor_6",
+        "role": "weapons_crossed_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 2,
+        "column": 16,
+        "id": "decor_7",
+        "role": "banner_blue_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 2,
+        "column": 20,
+        "id": "decor_8",
+        "role": "painting_castle",
+        "size": 0.7,
+        "solid": false
+      }
+    ],
+    "bookshelves": [],
+    "totems": []
+  },
+  {
+    "id": 18,
+    "name": "O Corredor das Placas",
+    "instructionBudget": 28,
+    "semanticInstructions": 12,
+    "coins": [
+      {
+        "id": "A18_C01",
+        "type": "coin",
+        "row": 6,
+        "column": 8,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A18_C02",
+        "type": "coin",
+        "row": 11,
+        "column": 19,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A18_C03",
+        "type": "coin",
+        "row": 21,
+        "column": 23,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A18_C04",
+        "type": "coin",
+        "row": 1,
+        "column": 1,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A18_C05",
+        "type": "coin",
+        "row": 13,
+        "column": 14,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      }
+    ],
+    "decorations": [
+      {
+        "row": 0,
+        "column": 1,
+        "id": "decor_1",
+        "role": "banner_blue_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 18,
+        "column": 23,
+        "id": "decor_2",
+        "role": "painting_castle",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 1,
+        "column": 4,
+        "id": "decor_3",
+        "role": "weapons_crossed_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 4,
+        "column": 8,
+        "id": "decor_4",
+        "role": "banner_blue_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 7,
+        "column": 10,
+        "id": "decor_5",
+        "role": "painting_castle",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 10,
+        "column": 14,
+        "id": "decor_6",
+        "role": "weapons_crossed_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 13,
+        "column": 16,
+        "id": "decor_7",
+        "role": "banner_blue_gold",
+        "size": 0.7,
+        "solid": false
+      }
+    ],
+    "bookshelves": [],
+    "totems": []
+  },
+  {
+    "id": 19,
+    "name": "A Chave Perdida",
+    "instructionBudget": 30,
+    "semanticInstructions": 20,
+    "coins": [
+      {
+        "id": "A19_C01",
+        "type": "coin",
+        "row": 7,
+        "column": 4,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A19_C02",
+        "type": "coin",
+        "row": 10,
+        "column": 13,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A19_C03",
+        "type": "coin",
+        "row": 9,
+        "column": 23,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A19_C04",
+        "type": "coin",
+        "row": 4,
+        "column": 10,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A19_C05",
+        "type": "coin",
+        "row": 11,
+        "column": 1,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      }
+    ],
+    "decorations": [
+      {
+        "row": 8,
+        "column": 3,
+        "id": "decor_1",
+        "role": "banner_blue_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 5,
+        "column": 11,
+        "id": "decor_2",
+        "role": "painting_castle",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 9,
+        "column": 11,
+        "id": "decor_3",
+        "role": "weapons_crossed_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 8,
+        "column": 23,
+        "id": "decor_4",
+        "role": "banner_blue_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 3,
+        "column": 4,
+        "id": "decor_5",
+        "role": "painting_castle",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 3,
+        "column": 9,
+        "id": "decor_6",
+        "role": "weapons_crossed_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 3,
+        "column": 14,
+        "id": "decor_7",
+        "role": "banner_blue_gold",
+        "size": 0.7,
+        "solid": false
+      }
+    ],
+    "bookshelves": [],
+    "totems": []
+  },
+  {
+    "id": 20,
+    "name": "O Santuário do Basilisco",
+    "instructionBudget": 72,
+    "semanticInstructions": 61,
+    "coins": [
+      {
+        "id": "A20_C01",
+        "type": "coin",
+        "row": 7,
+        "column": 12,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A20_C02",
+        "type": "coin",
+        "row": 18,
+        "column": 23,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A20_C03",
+        "type": "coin",
+        "row": 15,
+        "column": 1,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A20_C04",
+        "type": "coin",
+        "row": 23,
+        "column": 16,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      },
+      {
+        "id": "A20_C05",
+        "type": "coin",
+        "row": 9,
+        "column": 21,
+        "skin": "v3",
+        "family": "coin",
+        "persistent": true
+      }
+    ],
+    "decorations": [
+      {
+        "row": 12,
+        "column": 3,
+        "id": "decor_1",
+        "role": "banner_blue_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 11,
+        "column": 10,
+        "id": "decor_2",
+        "role": "painting_castle",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 3,
+        "column": 9,
+        "id": "decor_3",
+        "role": "weapons_crossed_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 6,
+        "column": 20,
+        "id": "decor_4",
+        "role": "banner_blue_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 11,
+        "column": 21,
+        "id": "decor_5",
+        "role": "painting_castle",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 17,
+        "column": 10,
+        "id": "decor_6",
+        "role": "weapons_crossed_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 19,
+        "column": 11,
+        "id": "decor_7",
+        "role": "banner_blue_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 20,
+        "column": 23,
+        "id": "decor_8",
+        "role": "painting_castle",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 17,
+        "column": 28,
+        "id": "decor_9",
+        "role": "weapons_crossed_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 15,
+        "column": 26,
+        "id": "decor_10",
+        "role": "banner_blue_gold",
+        "size": 0.7,
+        "solid": false
+      },
+      {
+        "row": 13,
+        "column": 28,
+        "id": "decor_11",
+        "role": "painting_castle",
+        "size": 0.7,
+        "solid": false
+      }
+    ],
+    "bookshelves": [],
+    "totems": [
+      "t1",
+      "t2",
+      "t3"
+    ]
+  }
+]

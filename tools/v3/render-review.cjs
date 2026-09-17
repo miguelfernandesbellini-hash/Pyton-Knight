@@ -2,10 +2,11 @@
 const fs=require('fs'),path=require('path'),vm=require('vm');
 const {createCanvas,loadImage}=require(process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES+'/@napi-rs/canvas');
 const {setupV3}=require('../../tests/v3-helpers.cjs');
-const root=path.resolve(__dirname,'../..'),out=path.join(root,'docs/v3/evidencias/visual');fs.mkdirSync(out,{recursive:true});
+const v4=process.argv.includes('--v4'),setup=v4?require('../../tests/v4-helpers.cjs').setupV4:setupV3;
+const root=path.resolve(__dirname,'../..'),out=path.join(root,v4?'docs/v4/evidencias/visual':'docs/v3/evidencias/visual');fs.mkdirSync(out,{recursive:true});
 const document={createElement:()=>createCanvas(1,1)};
 (async()=>{
- const env=setupV3({document}),c=env.context;env.load('systems/SpriteAtlasSystem.js');env.load('systems/MapRenderer.js');
+ const env=setup({document}),c=env.context;env.load('systems/SpriteAtlasSystem.js');env.load('systems/MapRenderer.js');
  const guto=c.SpriteAtlasSystem.normalize(await loadImage(path.join(root,'assets/v3/guto-source.png')),[0,345,630,910,1254],50,42);
  const props=c.SpriteAtlasSystem.normalize(await loadImage(path.join(root,'assets/v3/props-source.png')),[0,310,600,910,1254],54,54);
  fs.writeFileSync(path.join(out,'guto-atlas.png'),guto.toBuffer('image/png'));fs.writeFileSync(path.join(out,'props-atlas.png'),props.toBuffer('image/png'));
@@ -15,7 +16,8 @@ const document={createElement:()=>createCanvas(1,1)};
  const maps=[];
  for(const a of c.ACTIVITIES){const s=env.scene(a),tile=32,w=a.mapa[0].length*tile,h=a.mapa.length*tile;const canvas=createCanvas(w,h+62),ctx=canvas.getContext('2d');ctx.imageSmoothingEnabled=false;ctx.fillStyle='#0b101a';ctx.fillRect(0,0,w,h+62);ctx.fillStyle='#ebd29d';ctx.font='bold 19px sans-serif';ctx.fillText(`${a.id}. ${a.nome}`,15,25);ctx.fillStyle='#94a8bf';ctx.font='11px sans-serif';ctx.fillText('Planta para revisão de arte e percursos · regiões reveladas apenas nesta prancha',15,44);ctx.translate(0,62);
  for(let r=0;r<a.mapa.length;r++)for(let col=0;col<a.mapa[r].length;col++){const t=a.mapa[r][col],below=a.mapa[r+1]?.[col]!==0;texture(ctx,c.MapRenderer.tileRole(s,r,col),col*tile,r*tile,tile);if(t===3)texture(ctx,'v3_crystal',col*tile,r*tile,tile);if(t===4)texture(ctx,'fireplace_bright',col*tile,r*tile,tile);}
- for(const e of s.runState.entities){const look=c.MapRenderer.appearance(e);texture(ctx,look.role,e.column*tile,e.row*tile,tile,look.frame||0);}
+ for(const d of a.decorations||[]){const size=tile*(d.size||1),offset=(tile-size)/2;texture(ctx,d.role,d.column*tile+offset,d.row*tile+offset,size);}
+ for(const e of s.runState.entities){const look=c.MapRenderer.appearance(e);const size=tile*(look.size||1),offset=(tile-size)/2;texture(ctx,look.role,e.column*tile+offset,e.row*tile+offset,size,look.frame||0);}
  for(const r of a.regions){ctx.fillStyle='#060e18ba';ctx.fillRect(r.column*tile-3,r.row*tile-11,Math.min(w-r.column*tile,ctx.measureText(r.label).width+8),13);ctx.fillStyle='#e8ce9c';ctx.font='9px sans-serif';ctx.fillText(r.label,r.column*tile,r.row*tile);}
  ctx.drawImage(guto,0,64,64,64,a.startPosition.coluna*tile,a.startPosition.linha*tile,tile,tile);
  fs.writeFileSync(path.join(out,`atividade-${String(a.id).padStart(2,'0')}.png`),canvas.toBuffer('image/png'));maps.push(canvas);

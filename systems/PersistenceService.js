@@ -10,6 +10,15 @@
         result.completedActivities = Array.isArray(state.completedActivities) ? [...new Set(state.completedActivities.filter(Number.isInteger))] : [];
         result.unlockedMax = Number.isInteger(state.unlockedMax) ? Math.min(20, Math.max(1, state.unlockedMax)) : 1;
         result.rewardedActivities = state.rewardedActivities && typeof state.rewardedActivities === 'object' ? { ...state.rewardedActivities } : {};
+        // Optional V4 extension: the storage key and V2 progression remain compatible.
+        if (state.coinCollection && state.coinCollection.version === 1) {
+            const ledger = state.coinCollection;
+            const ids = [...new Set((Array.isArray(ledger.ids) ? ledger.ids : []).filter(id => typeof id === 'string' && /^A(?:0[1-9]|1[0-9]|20)_C0[1-5]$/.test(id)))].sort();
+            const legacyCredit = Number.isFinite(ledger.legacyCredit) ? Math.max(0, Math.floor(ledger.legacyCredit)) : 0;
+            const spent = Number.isFinite(ledger.spent) ? Math.min(legacyCredit + ids.length, Math.max(0, Math.floor(ledger.spent))) : 0;
+            result.coinCollection = { version:1, ids, legacyCredit, spent };
+            result.walletCoins = legacyCredit + ids.length - spent;
+        }
         result.updatedAt = state.updatedAt || null; return result;
     }
     function storageAvailable () { try { return typeof window.localStorage !== 'undefined' && window.localStorage !== null; } catch (error) { return false; } }

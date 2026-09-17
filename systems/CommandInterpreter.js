@@ -135,7 +135,10 @@
             if (scene.executando) return { cause: 'BUSY', message: 'A execução atual ainda não terminou.' };
             const code = options && typeof options.code === 'string' ? options.code : scene.editorTexto.value;
             if (!code || !code.trim()) return report(scene, { cause: window.GAME_CONSTANTS.TERMINOS.SYNTAX_ERROR, message: 'Digite pelo menos uma instrução antes de executar.' }, 'error');
-            scene.cancelRequested = false; scene.executando = true; scene.executionCount = (scene.executionCount || 0) + 1; window.DungeonSystem.resetRun(scene); if (window.GameUI) { window.GameUI.limparConsole(scene); window.GameUI.definirExecutando(scene, true); if (window.GameUI.marcarErro) window.GameUI.marcarErro(scene, null); }
+            scene.cancelRequested = false; scene.executando = true;
+            if (!scene.atividade.v4) scene.executionCount = (scene.executionCount || 0) + 1;
+            window.CompletionSystem?.hide(scene);
+            window.DungeonSystem.resetRun(scene); if (window.GameUI) { window.GameUI.limparConsole(scene); window.GameUI.definirExecutando(scene, true); if (window.GameUI.marcarErro) window.GameUI.marcarErro(scene, null); }
             let parsed;
             try { parsed = window.PythonSubsetParser.parse(code); }
             catch (error) { finishBusy(scene); return report(scene, { cause: window.GAME_CONSTANTS.TERMINOS.SYNTAX_ERROR, message: `${error.lineNumber ? `Linha ${error.lineNumber}: ` : ''}${error.message}`, lineNumber: error.lineNumber || null }, 'error'); }
@@ -148,7 +151,9 @@
                 if (!window.DungeonSystem.isKnownApi(command)) { finishBusy(scene); return report(scene, { cause: window.GAME_CONSTANTS.TERMINOS.UNKNOWN_COMMAND, message: `O comando ${command}() não existe na API do Pyton Knight.` }, 'warning'); }
                 if (!BUILTINS.has(command) && !allowedCommands.has(command)) { finishBusy(scene); return report(scene, { cause: window.GAME_CONSTANTS.TERMINOS.LOCKED_CONCEPT, message: `${command}() ainda não está disponível nesta atividade.` }, 'warning'); }
             }
-            if (!scene.budgetResult.valid) { finishBusy(scene); window.MissionObjectiveSystem.avaliar(scene, analysis, {}); return report(scene, { cause: window.GAME_CONSTANTS.TERMINOS.CODE_BUDGET_EXCEEDED, message: `Seu código usa ${scene.budgetResult.used} instruções e o limite é ${scene.budgetResult.limit}.` }, 'warning'); }
+            if (!scene.budgetResult.valid && !scene.atividade.v4) { finishBusy(scene); window.MissionObjectiveSystem.avaliar(scene, analysis, {}); return report(scene, { cause: window.GAME_CONSTANTS.TERMINOS.CODE_BUDGET_EXCEEDED, message: `Seu código usa ${scene.budgetResult.used} instruções e o limite é ${scene.budgetResult.limit}.` }, 'warning'); }
+            if (scene.atividade.v4 && !program.body.length) { finishBusy(scene); return report(scene, { cause:window.GAME_CONSTANTS.TERMINOS.SYNTAX_ERROR, message:'Digite pelo menos uma instrução antes de executar.' }, 'error'); }
+            if (scene.atividade.v4) scene.executionCount = (scene.executionCount || 0) + 1;
             const runtimeAnalysis = { ...analysis, concepts: new Set(), commands: new Set() };
             scene.runState.runtimeAnalysis = runtimeAnalysis;
             const context = { environment: {}, executedInstructions: 0, analysis, runtimeAnalysis };
@@ -158,6 +163,10 @@
                 const tutorial = window.TutorialSystem.processarExecucao(scene, runtimeAnalysis); if (tutorial.handled) { finishBusy(scene); return report(scene, tutorial.result, tutorial.result.cause === window.GAME_CONSTANTS.TERMINOS.TUTORIAL_STEP_COMPLETE ? 'success' : 'info'); }
                 const mission = window.MissionObjectiveSystem.avaliar(scene, analysis, context.environment);
                 if (mission.allRequiredCompleted) { const reward = window.ProgressionSystem.concluirAtividade(scene); const rewardText = reward.firstCompletion ? ` +${reward.xp} XP${reward.coins ? ` e +${reward.coins} moedas` : ''}.` : ' Recompensas já consolidadas.'; finishBusy(scene); if (window.GameUI) window.GameUI.mostrarResumoConclusao(scene, reward); return report(scene, { cause: window.GAME_CONSTANTS.TERMINOS.SUCCESS, message: `Atividade concluída com ${scene.livesRemaining} vida(s).${rewardText}`, reward, objectives: mission.statuses }, 'success'); }
+                if (scene.atividade.v4 && !scene.budgetResult.valid && scene.runState.reachedExit) {
+                    finishBusy(scene);
+                    return report(scene, { cause:window.GAME_CONSTANTS.TERMINOS.CODE_BUDGET_EXCEEDED, message:`Você alcançou o objetivo, mas seu código ainda ultrapassa o limite da atividade. Reduza a quantidade de instruções para concluir.\nInstruções utilizadas: ${scene.budgetResult.used} / ${scene.budgetResult.limit}${mission.pending.some(o=>o.type!=='budget') ? '\nConfira também os objetivos pendentes no Livro Mágico.' : ''}`, objectives:mission.statuses }, 'warning');
+                }
                 finishBusy(scene); return report(scene, { cause: window.GAME_CONSTANTS.TERMINOS.INCOMPLETE_EXECUTION, message: `Ainda falta: ${mission.pending[0].label}.${mission.pending.length > 1 ? '\nConsulte os demais objetivos da missão.' : ''}`, objectives: mission.statuses }, 'info');
             }
             catch (error) {

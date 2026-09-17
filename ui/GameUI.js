@@ -4,14 +4,14 @@
     function q (scene, selector) { return scene.bookNode ? scene.bookNode.querySelector(selector) : null; }
     function setText (scene, selector, value) { const node = q(scene, selector); if (node) node.textContent = value; }
     function element (tag, text, className) { const node = document.createElement(tag); if (text !== undefined) node.textContent = text; if (className) node.className = className; return node; }
-    const NAMES = { door:'Porta', gate:'Grade / cofre', guardian:'Guardião', lever:'Alavanca', pressure_plate:'Placa de pressão', toggle_plate:'Placa alternadora', hazard:'Espinhos', key:'Chave', coin:'Rubi', pedestal:'Pedestal', output_rune:'Runa de saída', bridge:'Ponte', bridge_segment:'Segmento', mirror:'Espelho', portal:'Portão', chest:'Baú', totem:'Totem' };
+    const NAMES = { door:'Porta', gate:'Grade / cofre', guardian:'Guardião', lever:'Alavanca', pressure_plate:'Placa de pressão', toggle_plate:'Placa alternadora', hazard:'Espinhos', key:'Chave', coin:'Moeda', ruby:'Rubi', pedestal:'Pedestal', output_rune:'Runa de saída', bridge:'Ponte', bridge_segment:'Segmento', mirror:'Espelho', portal:'Portão', chest:'Baú', totem:'Totem' };
     window.GameUI = {
         criar (scene) {
             const host = document.getElementById('interface'); host.textContent = '';
             host.innerHTML = `<div class="play-screen">
                 <section class="map-panel" aria-label="Dungeon">
                     <header class="map-header"><div><span class="brand">PYTON KNIGHT</span><p class="map-subtitle"></p></div><button class="menu-button" title="Voltar ao menu">MENU</button></header>
-                    <div class="map-hud"><span class="lives"></span><span class="facing"></span><span class="progress"></span><span class="key-status"></span></div>
+                    <div class="map-hud"><span class="lives"></span><span class="facing"></span><span class="progress"></span><span class="phase-coins"></span><span class="key-status"></span></div>
                     <div class="dungeon-viewport" aria-label="Mapa da dungeon: arraste para explorar e use a roda para aproximar" role="img"></div>
                     <footer class="map-controls"><div class="zoom-controls"><button class="zoom-out" aria-label="Diminuir zoom">−</button><output class="zoom-value">100%</output><button class="zoom-in" aria-label="Aumentar zoom">+</button></div><button class="center-guto">Centralizar no Guto</button><button class="journal-toggle" title="Ler as pistas já encontradas">DIÁRIO <span class="journal-count">0</span></button><span class="camera-status">Arraste para explorar</span></footer>
                     <aside class="clue-dialog" hidden aria-live="polite"><button class="clue-close" aria-label="Fechar inscrição">×</button><strong class="clue-title"></strong><p class="clue-text"></p></aside><select class="dev-selector" aria-label="Atividade de desenvolvimento" hidden></select>
@@ -39,6 +39,8 @@
             scene.codeEditor = window.CodeEditor.attach(scene.editorTexto, q(scene, '.line-numbers'), q(scene, '.error-line'), (code) => {
                 let used = '—'; try { used = window.PythonSubsetParser.parse(code).analysis.instructionCount; } catch (_) {}
                 setText(scene, '.budget', scene.atividade.instructionBudget ? `${used} / ${scene.atividade.instructionBudget} instruções` : `${used} instruções`);
+                const budget=q(scene,'.budget');
+                if (budget) { const over=typeof used==='number' && used>scene.atividade.instructionBudget; budget.dataset.over=String(over); budget.title=scene.atividade.v4 ? 'Instruções semânticas. Acima do limite, você pode executar e explorar; otimize para concluir.' : 'Instruções semânticas'; budget.setAttribute('aria-label',`${used} instruções semânticas${scene.atividade.instructionBudget ? ` de ${scene.atividade.instructionBudget}` : ''}${scene.atividade.v4 && over ? '; acima do limite, exploração permitida' : ''}`); }
             });
             q(scene,'.journal-toggle').addEventListener('click',()=>{ q(scene,'.journal-panel').hidden=false; this.atualizarDescobertas(scene); });
             q(scene,'.journal-close').addEventListener('click',()=>{ q(scene,'.journal-panel').hidden=true; });
@@ -46,6 +48,7 @@
             q(scene, '.run').addEventListener('click', () => window.CommandInterpreter.executar(scene));
             q(scene, '.restore').addEventListener('click', async () => {
                 await window.CommandInterpreter.cancelar(scene);
+                window.CompletionSystem?.hide(scene);
                 scene.tutorialStepIndex = 0; scene.cancelRequested = false;
                 window.DiscoverySystem?.resetActivity(scene); const clue=q(scene,'.clue-dialog'); if(clue) clue.hidden=true;
                 scene.editorTexto.value = scene.atividade.codigoInicial || '';
@@ -89,15 +92,15 @@
         atualizarTutor (scene) { const box = q(scene, '.tutor'); if (!box) return; const steps = scene.atividade.tutorialSteps; box.hidden = !steps; if (steps) { const step = steps[scene.tutorialStepIndex || 0]; setText(scene, '.tutor-title', step.title); setText(scene, '.tutor-message', step.message || 'Execute o trecho e observe o resultado.'); setText(scene, '.tutorial-count', `Etapa ${(scene.tutorialStepIndex || 0) + 1} de ${steps.length}`); } if (scene.codeEditor) scene.codeEditor.refresh(); },
         atualizarVidas (scene) { setText(scene, '.lives', `${'♥'.repeat(scene.livesRemaining)}${'♡'.repeat(3 - scene.livesRemaining)}  ${scene.livesRemaining}/3`); },
         atualizarOrientacao (scene) { const vector = window.GAME_CONSTANTS.VETORES_ORIENTACAO[scene.playerFacing]; setText(scene, '.facing', `${vector.simbolo} ${scene.playerFacing}`); },
-        atualizarProgresso (scene) { const progress = scene.playerProgress || window.PersistenceService.load(); setText(scene, '.progress', `XP ${progress.totalXp} · Moedas ${progress.walletCoins}`); const next = q(scene, '.next'); if (next) next.disabled = Boolean(scene.executando) || scene.atividadeIndex >= 19 || !window.ProgressionSystem.atividadeDesbloqueada(scene, scene.atividadeIndex + 2); const previous = q(scene, '.previous'); if (previous) previous.disabled = Boolean(scene.executando) || scene.atividadeIndex <= 0; },
-        atualizarMoedasDaExecucao (scene) { const progress = scene.playerProgress || window.PersistenceService.load(); const pending = scene.runState ? scene.runState.coinsPending : 0; setText(scene, '.progress', `XP ${progress.totalXp} · Moedas ${progress.walletCoins}${pending ? ` (+${pending})` : ''}`); },
+        atualizarProgresso (scene) { const progress = scene.playerProgress || window.PersistenceService.load(); setText(scene, '.progress', `XP ${progress.totalXp} · Moedas ${progress.walletCoins}`); if(scene.atividade.v4){const coins=window.CoinSystem.stats(scene);setText(scene,'.phase-coins',`Moedas da fase: ${coins.collected} / 5 · Total: ${coins.total} / 100`);} const next = q(scene, '.next'); if (next) next.disabled = Boolean(scene.executando) || scene.atividadeIndex >= 19 || !window.ProgressionSystem.atividadeDesbloqueada(scene, scene.atividadeIndex + 2); const previous = q(scene, '.previous'); if (previous) previous.disabled = Boolean(scene.executando) || scene.atividadeIndex <= 0; },
+        atualizarMoedasDaExecucao (scene) { if(scene.atividade.v4){this.atualizarProgresso(scene);return;} const progress = scene.playerProgress || window.PersistenceService.load(); const pending = scene.runState ? scene.runState.coinsPending : 0; setText(scene, '.progress', `XP ${progress.totalXp} · Moedas ${progress.walletCoins}${pending ? ` (+${pending})` : ''}`); },
         atualizarCamera (scene, zoom, tracking) { setText(scene, '.zoom-value', `${Math.round(zoom * 100)}%`); setText(scene, '.camera-status', tracking ? 'Acompanhando Guto' : 'Arraste para explorar'); },
         marcarErro (scene, line) { if (scene.codeEditor) scene.codeEditor.markError(line); },
         definirFeedback (scene, message, type, cause) { const node = q(scene, '.feedback'); if (!node) return; node.dataset.type = type || 'info'; node.dataset.cause = cause || ''; node.textContent = message; node.scrollTop = 0; },
         definirExecutando (scene, value) { const run = q(scene, '.run'); if (run) { run.disabled = value; run.textContent = value ? 'EXECUTANDO…' : '▶ EXECUTAR'; } if (scene.editorTexto) scene.editorTexto.readOnly = value; setText(scene, '.run-state', value ? 'Executando seu programa' : 'Pronto para executar'); this.atualizarProgresso(scene); if (scene.cameraController) scene.cameraController.setExecuting(value); },
         adicionarConsole (scene, value) { const node = q(scene, '.console'); if (node) { node.textContent += `${value}\n`; node.scrollTop = node.scrollHeight; } },
         limparConsole (scene) { const node = q(scene, '.console'); if (node) node.textContent = ''; },
-        mostrarResumoConclusao (scene, reward) { this.atualizarProgresso(scene); this.definirFeedback(scene, `Vitória! ${reward.xp ? `+${reward.xp} XP` : 'Recompensa já recebida'}${reward.coins ? ` · +${reward.coins} moedas` : ''}.`, 'success'); if (window.MapRenderer.feedbackConclusao) window.MapRenderer.feedbackConclusao(scene); },
+        mostrarResumoConclusao (scene, reward) { this.atualizarProgresso(scene); this.definirFeedback(scene, `Vitória! ${reward.xp ? `+${reward.xp} XP` : 'Recompensa já recebida'}${reward.coins ? ` · +${reward.coins} moedas` : ''}.`, 'success'); if (window.MapRenderer.feedbackConclusao) window.MapRenderer.feedbackConclusao(scene); if(scene.atividade.v4) window.CompletionSystem.show(scene,reward); },
         cancelarEntrada (scene) { if (scene.cancelInput) scene.cancelInput(); },
         solicitarEntrada (scene, prompt) {
             const form = q(scene, '.input-area'), input = q(scene, '.runtime-input');

@@ -5,12 +5,12 @@ window.ProgressionSystem = {
         if (scene.completionProcessed) return scene.lastReward || { xp: 0, coins: 0, firstCompletion: false };
         scene.completionProcessed = true;
         const activity = scene.atividade; const balance = window.GAME_CONSTANTS.BALANCEAMENTO_PROVISORIO; const progress = window.PersistenceService.load();
-        const rewarded = Boolean(progress.rewardedActivities[activity.id]); const replay = Boolean(activity.rewards && activity.rewards.replayRewards) || balance.RECOMPENSA_EM_REPLAY;
+        const rewarded = Boolean(progress.rewardedActivities[activity.id]); const replay = !activity.v4 && (Boolean(activity.rewards && activity.rewards.replayRewards) || balance.RECOMPENSA_EM_REPLAY);
         let xp = 0; let coins = 0;
         if (!rewarded || replay) {
             const base = activity.rewards && Number.isFinite(activity.rewards.xpBase) ? activity.rewards.xpBase : balance.XP_BASE_PADRAO;
             xp = Math.round(base * (balance.MULTIPLICADOR_XP_POR_VIDAS[scene.livesRemaining] || 0.5));
-            coins = Math.max(0, Number(scene.runState.coinsPending) || 0);
+            coins = activity.v4 ? 0 : Math.max(0, Number(scene.runState.coinsPending) || 0);
             progress.totalXp += xp; progress.walletCoins += coins;
             progress.rewardedActivities[activity.id] = { xp, coins, livesRemaining: scene.livesRemaining, rewardedAt: new Date().toISOString() };
         }

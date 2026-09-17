@@ -53,8 +53,8 @@
         examine (scene, entity) {
             const d = this.ensure(scene);
             const entry = { id:entity.id, title:entity.label || 'Inscrição antiga', text:entity.text || '', region:this.regionAt(scene, entity.row, entity.column)?.label || 'Dungeon' };
-            entity.state='read'; window.MapRenderer?.atualizarEntidades(scene);
             d.inscriptions[entity.id] = entry; scene.runState.flags[`read_${entity.id}`] = true;
+            entity.state='read'; window.MapRenderer?.atualizarEntidades(scene);
             window.GameUI?.mostrarInscricao?.(scene, entry);
             window.GameUI?.atualizarDescobertas?.(scene);
             return entry.text;
