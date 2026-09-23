@@ -8,6 +8,7 @@ class MainMenu extends Phaser.Scene {
         const screen = document.createElement('main'); screen.className = 'menu-screen';
         screen.innerHTML = `<section class="menu-card"><span class="menu-eyebrow">EXPLORE. PROGRAME. APRENDA.</span><h1>PYTON<br>KNIGHT</h1><p>Uma dungeon. Vinte desafios.<br>Escreva o código que abre o caminho.</p><div class="menu-stats"><span class="completed"></span><span class="xp"></span><span class="coins"></span></div><div class="menu-progress" aria-label="Progresso"><span></span></div><button class="play-button"></button><p class="menu-current"></p><p class="menu-footer">Quatro unidades de Python · Guto se move pelo seu código</p></section>`;
         host.appendChild(screen);
+        window.AudioSystem?.mount(this, screen.querySelector('.menu-card'));
         screen.querySelector('.completed').textContent = `${progress.completedActivities.length}/20 concluídas`;
         screen.querySelector('.xp').textContent = `${progress.totalXp} XP`; screen.querySelector('.coins').textContent = `${progress.walletCoins} moedas`;
         screen.querySelector('.menu-progress span').style.width = `${progress.completedActivities.length * 5}%`;

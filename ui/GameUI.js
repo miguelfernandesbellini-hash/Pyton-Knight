@@ -27,6 +27,7 @@
                 </section>
             </div>`;
             scene.bookNode = host; scene.editorTexto = q(scene, '#pk-code'); scene.editorTexto.value = scene.atividade.codigoInicial || '';
+            window.AudioSystem?.mount(scene, q(scene,'.map-header'));
             setText(scene, '.activity-number', `UNIDADE ${scene.atividade.unidade} / ATIVIDADE ${scene.atividade.id} DE 20`);
             setText(scene, 'h1', scene.atividade.nome); setText(scene, '.concept', scene.atividade.concept); setText(scene, '.description', scene.atividade.descricao);
             setText(scene, '.map-subtitle', scene.atividade.tutorial ? 'Observe, programe e descubra o caminho.' : 'Seu código conduz Guto pela dungeon.');

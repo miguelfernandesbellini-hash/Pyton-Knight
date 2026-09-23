@@ -2,8 +2,10 @@
     'use strict';
     const directions = { SUL:'down', OESTE:'left', LESTE:'right', NORTE:'up' };
     const rows = { down:0, left:2, right:1, up:3 };
+    let motionPreference;
     function duration (scene, ms) { return scene.testMode ? 0 : ms / (scene.animationSpeed || 1); }
     window.AnimationSystem = {
+        reducedMotion () { motionPreference ||= window.matchMedia?.('(prefers-reduced-motion: reduce)'); return Boolean(motionPreference?.matches); },
         async tween (scene, targets, values, ms = 220) {
             if (!targets || scene.testMode || !scene.tweens) return;
             await new Promise(resolve => scene.tweens.add({ targets, ...values, duration:duration(scene,ms), onComplete:resolve, onStop:resolve }));
@@ -31,6 +33,7 @@
             this.pose(scene);
         },
         async interact (scene) {
+            window.AudioSystem?.play(scene, 'interact');
             this.pose(scene, 'interact');
             if (scene.guto && !scene.testMode) { const y = scene.guto.y; await this.tween(scene,scene.guto,{y:y-4},80); await this.tween(scene,scene.guto,{y},80); }
             this.pose(scene);
@@ -44,7 +47,10 @@
             if(scene.guto){const x=scene.guto.x;await this.tween(scene,scene.guto,{x:x-2},65);await this.tween(scene,scene.guto,{x:x+2},65);await this.tween(scene,scene.guto,{x},65);}
         },
         async teleport (scene, action) {
+            window.AudioSystem?.play(scene, 'portal');
             await this.tween(scene, scene.guto, {alpha:0},180); action();
+            // Reframe while Guto is hidden instead of travelling across the map.
+            if (scene.cameraController?.tracking) scene.cameraController.centerOnGuto(false);
             await this.tween(scene, scene.guto, {alpha:1},220); this.pose(scene);
         },
         async transition (scene, entity, oldState, newState) {

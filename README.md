@@ -1,4 +1,34 @@
-# Pyton Knight V4 — dungeon educacional
+# Pyton Knight V5 — polimento audiovisual
+
+**V5 IMPLEMENTADA — AGUARDANDO HOMOLOGAÇÃO.** PK-024 permanece pendente de
+avaliação visual e sonora humana. Esta versão ainda não é a referência final congelada.
+
+A V5 acrescenta uma trilha ambiente original provisória em loop, seis efeitos
+sonoros, controles de música/efeitos e mudo compartilhados entre menu e atividades,
+iluminação decorativa sob a névoa, halo do Guto, partículas discretas, feedback de
+coleta e progresso na conclusão. As 20 atividades, mapas, soluções, interpretador,
+Livro Mágico e regras de recompensas da V4 foram preservados.
+
+Abra **ÁUDIO** no menu ou no cabeçalho da dungeon. A música começa após interação
+com a página; volume e mudo permanecem durante a sessão, incluindo retorno ao menu.
+As preferências de áudio voltam aos valores iniciais ao recarregar a página.
+
+**Validação V5:** 281 testes aprovados (269 existentes + 12 específicos), suíte
+legada PASS, 29 cenários oficiais, 69 verificações de requisitos e 145 verificações
+de acesso às 100 moedas. O teste no Chrome automatizado foi bloqueado por
+`spawn EPERM`; os testes de DOM/renderização usam adaptadores e não homologam
+aparência, som, desempenho real ou console do navegador.
+
+- [Relatório V5, decisões e pendências](docs/v5/ENTREGA_V5.md)
+- [Checklist de homologação visual e sonora — PK-024](docs/v5/HOMOLOGACAO_VISUAL_SONORA.md)
+- [Texto preparado para PR](docs/v5/PR.md)
+- [Origem e licença do áudio](assets/audio/README.md)
+
+O conteúdo abaixo descreve a base V4 preservada. Para testar no ambiente restrito
+do Codex, use `node --test --test-isolation=none --test-reporter=tap tests/*.test.cjs`.
+Esse modo evita o bloqueio de criação de subprocessos sem remover testes.
+
+## Base V4 preservada
 
 Continuação da V3 final: as 20 fases, soluções e paredes foram preservadas. A V4 acrescenta decoração, estantes investigáveis com **!**, novos totens, orçamento flexível para explorar, modal de conclusão e **100 moedas únicas persistentes**.
 

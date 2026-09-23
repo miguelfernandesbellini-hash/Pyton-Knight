@@ -98,12 +98,13 @@
                     scene.tweens.killTweensOf(visual.image);
                     if (!collected) { visual.image.setAlpha(.45); scene.tweens.add({ targets:visual.image, alpha:1, duration:220 }); }
                 } else visual.image.setAlpha(1);
-                visual.state = entity.state;
+                if (visual.runState === scene.runState) window.AtmosphereSystem?.changed(scene, entity, visual.state);
+                visual.state = entity.state; visual.runState = scene.runState;
             });
             for (const [id, visual] of scene.entitySprites) if (!seen.has(id)) { visual.image.destroy(); visual.label.destroy(); if (visual.handle) visual.handle.destroy(); visual.marker?.destroy(); scene.entitySprites.delete(id); }
             window.DecorationSystem?.updateMarkers(scene);
         },
-        feedbackDano (scene) { if (scene.guto && scene.tweens) { scene.guto.setTint(0xff887d); scene.time.delayedCall(220, () => scene.guto && scene.guto.active && scene.guto.clearTint()); } },
-        feedbackConclusao (scene) { if(scene.atividade.v3 && scene.guto && scene.tweens){window.AnimationSystem.pose(scene,'victory');scene.tweens.add({targets:scene.guto,y:scene.guto.y-10,duration:200,yoyo:true,repeat:2});} if (scene.exitVisual && scene.tweens) { scene.tweens.killTweensOf(scene.exitVisual); scene.tweens.add({ targets:scene.exitVisual, alpha:.45, duration:220, yoyo:true, repeat:2 }); } }
+        feedbackDano (scene) { window.AudioSystem?.play(scene,'damage'); if (scene.guto && scene.tweens) { scene.guto.setTint(0xff887d); scene.time.delayedCall(220, () => scene.guto && scene.guto.active && scene.guto.clearTint()); } },
+        feedbackConclusao (scene) { window.AudioSystem?.play(scene,'complete'); if(scene.atividade.v3 && scene.guto && scene.tweens && !window.AnimationSystem.reducedMotion()){window.AnimationSystem.pose(scene,'victory');scene.tweens.add({targets:scene.guto,y:scene.guto.y-10,duration:200,yoyo:true,repeat:2});} if (scene.exitVisual && scene.tweens) { scene.tweens.killTweensOf(scene.exitVisual); scene.tweens.add({ targets:scene.exitVisual, alpha:.45, duration:220, yoyo:true, repeat:2 }); } }
     };
 })();

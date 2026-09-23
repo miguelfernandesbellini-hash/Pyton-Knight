@@ -1,0 +1,1264 @@
+{
+  "activities": 20,
+  "scenarios": 29,
+  "coinAccessChecks": 145,
+  "uniqueIds": 100,
+  "method": "Snapshots de soluções oficiais + deslocamentos reais sem dano; nenhum requisito ou porta forçado.",
+  "rows": [
+    {
+      "activity": 1,
+      "variant": 0,
+      "coins": [
+        {
+          "id": "A01_C01",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A01_C02",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A01_C03",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 7,
+            "coluna": 12
+          },
+          "steps": 2
+        },
+        {
+          "id": "A01_C04",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 7,
+            "coluna": 3
+          },
+          "steps": 3
+        },
+        {
+          "id": "A01_C05",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 3,
+            "coluna": 6
+          },
+          "steps": 2
+        }
+      ]
+    },
+    {
+      "activity": 2,
+      "variant": 0,
+      "coins": [
+        {
+          "id": "A02_C01",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A02_C02",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A02_C03",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 7,
+            "coluna": 6
+          },
+          "steps": 5
+        },
+        {
+          "id": "A02_C04",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 7,
+            "coluna": 14
+          },
+          "steps": 2
+        },
+        {
+          "id": "A02_C05",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 7,
+            "coluna": 3
+          },
+          "steps": 3
+        }
+      ]
+    },
+    {
+      "activity": 3,
+      "variant": 0,
+      "coins": [
+        {
+          "id": "A03_C01",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A03_C02",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A03_C03",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 7,
+            "coluna": 19
+          },
+          "steps": 2
+        },
+        {
+          "id": "A03_C04",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 7,
+            "coluna": 10
+          },
+          "steps": 1
+        },
+        {
+          "id": "A03_C05",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 7,
+            "coluna": 7
+          },
+          "steps": 1
+        }
+      ]
+    },
+    {
+      "activity": 4,
+      "variant": 0,
+      "coins": [
+        {
+          "id": "A04_C01",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A04_C02",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A04_C03",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 7,
+            "coluna": 19
+          },
+          "steps": 2
+        },
+        {
+          "id": "A04_C04",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 12,
+            "coluna": 6
+          },
+          "steps": 2
+        },
+        {
+          "id": "A04_C05",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 7,
+            "coluna": 14
+          },
+          "steps": 3
+        }
+      ]
+    },
+    {
+      "activity": 5,
+      "variant": 0,
+      "coins": [
+        {
+          "id": "A05_C01",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A05_C02",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A05_C03",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 9,
+            "coluna": 15
+          },
+          "steps": 5
+        },
+        {
+          "id": "A05_C04",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 9,
+            "coluna": 20
+          },
+          "steps": 2
+        },
+        {
+          "id": "A05_C05",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 9,
+            "coluna": 3
+          },
+          "steps": 3
+        }
+      ]
+    },
+    {
+      "activity": 6,
+      "variant": 0,
+      "coins": [
+        {
+          "id": "A06_C01",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A06_C02",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A06_C03",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 7,
+            "coluna": 17
+          },
+          "steps": 2
+        },
+        {
+          "id": "A06_C04",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 7,
+            "coluna": 3
+          },
+          "steps": 3
+        },
+        {
+          "id": "A06_C05",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 7,
+            "coluna": 15
+          },
+          "steps": 1
+        }
+      ]
+    },
+    {
+      "activity": 7,
+      "variant": 0,
+      "coins": [
+        {
+          "id": "A07_C01",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A07_C02",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A07_C03",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 9,
+            "coluna": 19
+          },
+          "steps": 2
+        },
+        {
+          "id": "A07_C04",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 9,
+            "coluna": 3
+          },
+          "steps": 3
+        },
+        {
+          "id": "A07_C05",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 9,
+            "coluna": 7
+          },
+          "steps": 1
+        }
+      ]
+    },
+    {
+      "activity": 8,
+      "variant": 0,
+      "coins": [
+        {
+          "id": "A08_C01",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A08_C02",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A08_C03",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 8,
+            "coluna": 22
+          },
+          "steps": 2
+        },
+        {
+          "id": "A08_C04",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 8,
+            "coluna": 3
+          },
+          "steps": 3
+        },
+        {
+          "id": "A08_C05",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 8,
+            "coluna": 19
+          },
+          "steps": 1
+        }
+      ]
+    },
+    {
+      "activity": 9,
+      "variant": 0,
+      "coins": [
+        {
+          "id": "A09_C01",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A09_C02",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A09_C03",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 3,
+            "coluna": 25
+          },
+          "steps": 2
+        },
+        {
+          "id": "A09_C04",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 8,
+            "coluna": 15
+          },
+          "steps": 5
+        },
+        {
+          "id": "A09_C05",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 8,
+            "coluna": 15
+          },
+          "steps": 6
+        }
+      ]
+    },
+    {
+      "activity": 10,
+      "variant": 0,
+      "coins": [
+        {
+          "id": "A10_C01",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A10_C02",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A10_C03",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 10,
+            "coluna": 22
+          },
+          "steps": 2
+        },
+        {
+          "id": "A10_C04",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 10,
+            "coluna": 3
+          },
+          "steps": 2
+        },
+        {
+          "id": "A10_C05",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 17,
+            "coluna": 17
+          },
+          "steps": 1
+        }
+      ]
+    },
+    {
+      "activity": 11,
+      "variant": 0,
+      "coins": [
+        {
+          "id": "A11_C01",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A11_C02",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A11_C03",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 8,
+            "coluna": 20
+          },
+          "steps": 2
+        },
+        {
+          "id": "A11_C04",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 8,
+            "coluna": 3
+          },
+          "steps": 3
+        },
+        {
+          "id": "A11_C05",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 8,
+            "coluna": 18
+          },
+          "steps": 1
+        }
+      ]
+    },
+    {
+      "activity": 12,
+      "variant": 0,
+      "coins": [
+        {
+          "id": "A12_C01",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A12_C02",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A12_C03",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 8,
+            "coluna": 22
+          },
+          "steps": 2
+        },
+        {
+          "id": "A12_C04",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 4,
+            "coluna": 11
+          },
+          "steps": 18
+        },
+        {
+          "id": "A12_C05",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 8,
+            "coluna": 3
+          },
+          "steps": 3
+        }
+      ]
+    },
+    {
+      "activity": 12,
+      "variant": 1,
+      "coins": [
+        {
+          "id": "A12_C01",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 8,
+            "coluna": 6
+          },
+          "steps": 3
+        },
+        {
+          "id": "A12_C02",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 8,
+            "coluna": 16
+          },
+          "steps": 3
+        },
+        {
+          "id": "A12_C03",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 8,
+            "coluna": 22
+          },
+          "steps": 2
+        },
+        {
+          "id": "A12_C04",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A12_C05",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 8,
+            "coluna": 3
+          },
+          "steps": 3
+        }
+      ]
+    },
+    {
+      "activity": 13,
+      "variant": 0,
+      "coins": [
+        {
+          "id": "A13_C01",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A13_C02",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A13_C03",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 8,
+            "coluna": 23
+          },
+          "steps": 2
+        },
+        {
+          "id": "A13_C04",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 13,
+            "coluna": 10
+          },
+          "steps": 2
+        },
+        {
+          "id": "A13_C05",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 8,
+            "coluna": 3
+          },
+          "steps": 3
+        }
+      ]
+    },
+    {
+      "activity": 14,
+      "variant": 0,
+      "coins": [
+        {
+          "id": "A14_C01",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A14_C02",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A14_C03",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 8,
+            "coluna": 25
+          },
+          "steps": 2
+        },
+        {
+          "id": "A14_C04",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 8,
+            "coluna": 3
+          },
+          "steps": 3
+        },
+        {
+          "id": "A14_C05",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 8,
+            "coluna": 19
+          },
+          "steps": 1
+        }
+      ]
+    },
+    {
+      "activity": 15,
+      "variant": 0,
+      "coins": [
+        {
+          "id": "A15_C01",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A15_C02",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A15_C03",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 12,
+            "coluna": 32
+          },
+          "steps": 2
+        },
+        {
+          "id": "A15_C04",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 4,
+            "coluna": 25
+          },
+          "steps": 2
+        },
+        {
+          "id": "A15_C05",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 12,
+            "coluna": 28
+          },
+          "steps": 14
+        }
+      ]
+    },
+    {
+      "activity": 15,
+      "variant": 1,
+      "coins": [
+        {
+          "id": "A15_C01",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A15_C02",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A15_C03",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 12,
+            "coluna": 32
+          },
+          "steps": 2
+        },
+        {
+          "id": "A15_C04",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 12,
+            "coluna": 25
+          },
+          "steps": 16
+        },
+        {
+          "id": "A15_C05",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 12,
+            "coluna": 25
+          },
+          "steps": 17
+        }
+      ]
+    },
+    {
+      "activity": 15,
+      "variant": 2,
+      "coins": [
+        {
+          "id": "A15_C01",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A15_C02",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A15_C03",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 12,
+            "coluna": 32
+          },
+          "steps": 2
+        },
+        {
+          "id": "A15_C04",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 12,
+            "coluna": 28
+          },
+          "steps": 13
+        },
+        {
+          "id": "A15_C05",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 20,
+            "coluna": 25
+          },
+          "steps": 3
+        }
+      ]
+    },
+    {
+      "activity": 16,
+      "variant": 0,
+      "coins": [
+        {
+          "id": "A16_C01",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A16_C02",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A16_C03",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 10,
+            "coluna": 21
+          },
+          "steps": 2
+        },
+        {
+          "id": "A16_C04",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 10,
+            "coluna": 3
+          },
+          "steps": 3
+        },
+        {
+          "id": "A16_C05",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 4,
+            "coluna": 10
+          },
+          "steps": 4
+        }
+      ]
+    },
+    {
+      "activity": 17,
+      "variant": 0,
+      "coins": [
+        {
+          "id": "A17_C01",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A17_C02",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A17_C03",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 4,
+            "coluna": 20
+          },
+          "steps": 2
+        },
+        {
+          "id": "A17_C04",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 8,
+            "coluna": 3
+          },
+          "steps": 3
+        },
+        {
+          "id": "A17_C05",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 5,
+            "coluna": 24
+          },
+          "steps": 2
+        }
+      ]
+    },
+    {
+      "activity": 18,
+      "variant": 0,
+      "coins": [
+        {
+          "id": "A18_C01",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A18_C02",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A18_C03",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 20,
+            "coluna": 22
+          },
+          "steps": 2
+        },
+        {
+          "id": "A18_C04",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 2,
+            "coluna": 3
+          },
+          "steps": 3
+        },
+        {
+          "id": "A18_C05",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 11,
+            "coluna": 14
+          },
+          "steps": 2
+        }
+      ]
+    },
+    {
+      "activity": 18,
+      "variant": 1,
+      "coins": [
+        {
+          "id": "A18_C01",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A18_C02",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 14,
+            "coluna": 19
+          },
+          "steps": 9
+        },
+        {
+          "id": "A18_C03",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 20,
+            "coluna": 22
+          },
+          "steps": 2
+        },
+        {
+          "id": "A18_C04",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 2,
+            "coluna": 3
+          },
+          "steps": 3
+        },
+        {
+          "id": "A18_C05",
+          "access": "percurso oficial",
+          "steps": 0
+        }
+      ]
+    },
+    {
+      "activity": 18,
+      "variant": 2,
+      "coins": [
+        {
+          "id": "A18_C01",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A18_C02",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 11,
+            "coluna": 14
+          },
+          "steps": 5
+        },
+        {
+          "id": "A18_C03",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 20,
+            "coluna": 22
+          },
+          "steps": 2
+        },
+        {
+          "id": "A18_C04",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 2,
+            "coluna": 3
+          },
+          "steps": 3
+        },
+        {
+          "id": "A18_C05",
+          "access": "percurso oficial",
+          "steps": 0
+        }
+      ]
+    },
+    {
+      "activity": 19,
+      "variant": 0,
+      "coins": [
+        {
+          "id": "A19_C01",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A19_C02",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A19_C03",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 10,
+            "coluna": 22
+          },
+          "steps": 2
+        },
+        {
+          "id": "A19_C04",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 10,
+            "coluna": 10
+          },
+          "steps": 8
+        },
+        {
+          "id": "A19_C05",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 10,
+            "coluna": 3
+          },
+          "steps": 3
+        }
+      ]
+    },
+    {
+      "activity": 19,
+      "variant": 1,
+      "coins": [
+        {
+          "id": "A19_C01",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A19_C02",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A19_C03",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 10,
+            "coluna": 22
+          },
+          "steps": 2
+        },
+        {
+          "id": "A19_C04",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 6,
+            "coluna": 9
+          },
+          "steps": 3
+        },
+        {
+          "id": "A19_C05",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 10,
+            "coluna": 3
+          },
+          "steps": 3
+        }
+      ]
+    },
+    {
+      "activity": 19,
+      "variant": 2,
+      "coins": [
+        {
+          "id": "A19_C01",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A19_C02",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 10,
+            "coluna": 14
+          },
+          "steps": 1
+        },
+        {
+          "id": "A19_C03",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 10,
+            "coluna": 22
+          },
+          "steps": 2
+        },
+        {
+          "id": "A19_C04",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 6,
+            "coluna": 10
+          },
+          "steps": 2
+        },
+        {
+          "id": "A19_C05",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 10,
+            "coluna": 3
+          },
+          "steps": 3
+        }
+      ]
+    },
+    {
+      "activity": 20,
+      "variant": 0,
+      "coins": [
+        {
+          "id": "A20_C01",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A20_C02",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A20_C03",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 14,
+            "coluna": 3
+          },
+          "steps": 3
+        },
+        {
+          "id": "A20_C04",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 22,
+            "coluna": 16
+          },
+          "steps": 1
+        },
+        {
+          "id": "A20_C05",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 9,
+            "coluna": 20
+          },
+          "steps": 1
+        }
+      ]
+    },
+    {
+      "activity": 20,
+      "variant": 1,
+      "coins": [
+        {
+          "id": "A20_C01",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A20_C02",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A20_C03",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 14,
+            "coluna": 3
+          },
+          "steps": 3
+        },
+        {
+          "id": "A20_C04",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 22,
+            "coluna": 16
+          },
+          "steps": 1
+        },
+        {
+          "id": "A20_C05",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 9,
+            "coluna": 20
+          },
+          "steps": 1
+        }
+      ]
+    },
+    {
+      "activity": 20,
+      "variant": 2,
+      "coins": [
+        {
+          "id": "A20_C01",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A20_C02",
+          "access": "percurso oficial",
+          "steps": 0
+        },
+        {
+          "id": "A20_C03",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 14,
+            "coluna": 3
+          },
+          "steps": 3
+        },
+        {
+          "id": "A20_C04",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 22,
+            "coluna": 16
+          },
+          "steps": 1
+        },
+        {
+          "id": "A20_C05",
+          "access": "desvio opcional sem dano",
+          "from": {
+            "linha": 9,
+            "coluna": 20
+          },
+          "steps": 1
+        }
+      ]
+    }
+  ]
+}
