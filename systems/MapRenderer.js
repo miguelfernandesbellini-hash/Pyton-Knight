@@ -4,7 +4,10 @@
     function xy (scene, row, column) { return { x: scene.startX + column * scene.tileSize, y: scene.startY + row * scene.tileSize }; }
     function sprite (scene, point, role, size = 1, frame) { return scene.add.image(point.x, point.y, `official_${role}`, frame).setDisplaySize(scene.tileSize * size, scene.tileSize * size).setDepth(6); }
     function appearance (entity) {
+        if(entity.v6 && ['opening','closing'].includes(entity.state) && ['door','gate','guardian'].includes(entity.type))return appearance({...entity,state:entity.transitionFrom || 'closed'});
         const active = ACTIVE.has(entity.state);
+        if(entity.v6 && entity.type==='coin')return {role:'v6_coin',size:.72};
+        if(entity.discreet)return {role:'v3_lever_off',size:.48,caption:'Interruptor'};
         if (entity.visualVariant==='v4_totem') return {role:active?'v4_totem_on':'v4_totem_off',size:1,caption:`Totem ${entity.symbol || ''}`};
         if (entity.visualVariant==='bookshelf') return {role:entity.state==='read'?'bookshelf_right':'bookshelf_left',size:.94,caption:'Arquivo'};
         if (entity.type==='ruby') return {role:'v3_ruby',size:.72};
@@ -50,7 +53,8 @@
             for (let row = 0; row < scene.mapa.length; row++) for (let column = 0; column < scene.mapa[row].length; column++) {
                 const tile = scene.mapa[row][column], point = xy(scene, row, column);
                 const floorBelow = scene.mapa[row + 1] && scene.mapa[row + 1][column] !== T.PAREDE;
-                const role = this.tileRole(scene,row,column);
+                let role = this.tileRole(scene,row,column);
+                if(scene.atividade.v6 && ['wall_face_main','wall_face_alt','wall_top_main'].includes(role))role=`v6_${role}`;
                 sprite(scene, point, role).setDepth(1);
                 if (tile === T.PAREDE && floorBelow && column % 5 === 2) scene.decorations.push(sprite(scene, point, column % 2 ? 'torch_left' : 'torch_right').setDepth(2));
                 if (tile === T.SAIDA) { scene.exitVisual = scene.add.image(point.x, point.y, scene.atividade.v3?'official_v3_crystal':'saida').setDisplaySize(scene.tileSize * .74, scene.tileSize * .86).setDepth(4); }

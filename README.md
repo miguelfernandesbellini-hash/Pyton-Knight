@@ -1,4 +1,62 @@
-# Pyton Knight V5 — polimento audiovisual
+# Pyton Knight V6 — jornada, gameplay e persistência
+
+**V6 IMPLEMENTADA — HOMOLOGAÇÃO VISUAL MANUAL PENDENTE.** Esta é a versão
+carregada por `index.html`. A documentação V3/V4/V5 abaixo é histórica.
+
+A V6 acrescenta morte definitiva com retorno obrigatório à atividade anterior,
+save da jornada, estatísticas e encerramento após A20. Revê A6/A12/A13/A14,
+anotações e tutoriais; uniformiza portas e ajusta a arte de moedas e paredes.
+As 20 geometrias, o parser, as moedas e o polimento audiovisual V5 são preservados.
+
+## Executar a V6
+
+Não exige instalação nem build: Phaser, scripts e assets acompanham o projeto.
+Com Python 3, execute na pasta que contém este arquivo:
+
+```powershell
+py -m http.server 8000
+```
+
+Em outros sistemas: `python3 -m http.server 8000`.
+Abra **http://localhost:8000/**. Progresso, vidas, rascunho e Diário ficam no
+armazenamento desse navegador/endereço. A retomada restaura um ponto seguro:
+posição e mecanismos temporários recomeçam, evitando carregar uma execução quebrada.
+Após perder três vidas, conclua novamente a atividade anterior para avançar.
+Após A20, o estado **JORNADA CONCLUÍDA** persiste até **REINICIAR DUNGEON**.
+Esse botão apaga os dados da jornada e começa A1 com estatísticas zeradas.
+
+**http://localhost:8000/?dev=1** usa o mesmo jogo com seletor de atividades e
+**DEV: ATIVAR VOO** (setas). O voo inspeciona o cenário sem coletar ou concluir;
+encerre-o para executar código. O perfil dev fica em memória e não altera o save
+normal. Não há aceleração dos comandos.
+
+Abra **ÁUDIO** para ajustar música e efeitos separadamente ou usar o mudo geral.
+As preferências permanecem entre cenas durante a sessão. A música inicia após
+interação com a página e continua **provisória**. PK-024 não está encerrado.
+
+## Referências V6
+
+- [Implementação, save, narrativa e decisões](docs/v6/IMPLEMENTACAO.md)
+- [Testes, resultados e regressões](docs/v6/TESTES.md)
+- [Estado atual e continuidade](docs/v6/ESTADO_ATUAL.md)
+- [Checklist manual V6 / PK-024](docs/v6/HOMOLOGACAO_MANUAL.md)
+- [Gabarito V6 das 20 atividades](Gabarito_Oficial_Pyton_Knight_V6.txt)
+
+Com Node.js 24, sem dependências adicionais para os testes:
+
+```powershell
+node --test --test-isolation=none --test-reporter=tap tests/*.test.cjs
+node tests/run-tests.cjs
+node tools/v3/audit.cjs --v6
+node tools/v6/audit-coins.cjs
+```
+
+O primeiro comando evita subprocessos bloqueados no ambiente restrito; não altera
+a velocidade do jogo. As suítes usam adaptadores e não homologam aparência ou som.
+Não execute os geradores históricos V3/V4 para atualizar a V6. Para regenerar
+somente gabarito e catálogo V6, use `node tools/v6/document.cjs`.
+
+## Histórico V5 — polimento audiovisual
 
 **V5 IMPLEMENTADA — AGUARDANDO HOMOLOGAÇÃO.** PK-024 permanece pendente de
 avaliação visual e sonora humana. Esta versão ainda não é a referência final congelada.

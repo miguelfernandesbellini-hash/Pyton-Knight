@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "catalogPaths": 80,
+  "entityStateReferences": 3036,
+  "coin": {
+    "preservedOpaquePixels": 952,
+    "removedBackgroundPixels": 3144,
+    "cornersTransparent": true
+  },
+  "derivedTextures": [
+    "guto_v3",
+    "official_v3_lever_off",
+    "official_v3_lever_on",
+    "official_v3_light_off",
+    "official_v3_light_on",
+    "official_v3_book_closed",
+    "official_v3_book_open",
+    "official_v3_rune_off",
+    "official_v3_rune_on",
+    "official_v3_portal_off",
+    "official_v3_portal_on",
+    "official_v3_ruby",
+    "official_v3_crystal",
+    "official_v3_chest_closed",
+    "official_v3_chest_opening",
+    "official_v3_chest_open",
+    "official_v3_scroll",
+    "official_v3_floor",
+    "official_v3_floor_cracked",
+    "official_v3_floor_rune",
+    "official_v3_bridge",
+    "official_v6_coin",
+    "official_v6_wall_face_main",
+    "official_v6_wall_face_alt",
+    "official_v6_wall_top_main"
+  ],
+  "limit": "Verificação técnica de pixels, referências e geração de texturas; não é homologação visual no jogo."
+}

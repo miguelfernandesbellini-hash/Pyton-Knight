@@ -1,0 +1,1966 @@
+TAP version 13
+# Subtest: Enter após dois pontos
+ok 1 - Enter após dois pontos
+  ---
+  duration_ms: 2.8448
+  type: 'test'
+  ...
+# Subtest: Enter mantém bloco
+ok 2 - Enter mantém bloco
+  ---
+  duration_ms: 0.1943
+  type: 'test'
+  ...
+# Subtest: Enter após comentário
+ok 3 - Enter após comentário
+  ---
+  duration_ms: 0.0656
+  type: 'test'
+  ...
+# Subtest: Enter ignora \# em string
+ok 4 - Enter ignora \# em string
+  ---
+  duration_ms: 0.052
+  type: 'test'
+  ...
+# Subtest: Tab acrescenta quatro espaços
+ok 5 - Tab acrescenta quatro espaços
+  ---
+  duration_ms: 0.0838
+  type: 'test'
+  ...
+# Subtest: Shift Tab recua
+ok 6 - Shift Tab recua
+  ---
+  duration_ms: 0.1215
+  type: 'test'
+  ...
+# Subtest: Shift Tab recua parcial
+ok 7 - Shift Tab recua parcial
+  ---
+  duration_ms: 0.077
+  type: 'test'
+  ...
+# Subtest: Shift Tab no nível zero
+ok 8 - Shift Tab no nível zero
+  ---
+  duration_ms: 0.0457
+  type: 'test'
+  ...
+# Subtest: Tab e Shift Tab em seleção multilinha preservam linhas externas
+ok 9 - Tab e Shift Tab em seleção multilinha preservam linhas externas
+  ---
+  duration_ms: 0.1243
+  type: 'test'
+  ...
+# Subtest: Enter substitui seleção sem apagar o restante
+ok 10 - Enter substitui seleção sem apagar o restante
+  ---
+  duration_ms: 0.1345
+  type: 'test'
+  ...
+# Subtest: else retorna ao nível do if
+ok 11 - else retorna ao nível do if
+  ---
+  duration_ms: 0.2875
+  type: 'test'
+  ...
+# Subtest: elif em bloco aninhado alinha com if interno
+ok 12 - elif em bloco aninhado alinha com if interno
+  ---
+  duration_ms: 0.0981
+  type: 'test'
+  ...
+# Subtest: Editor: eventos reais do componente, numeração, erro, scroll e limpeza
+ok 13 - Editor: eventos reais do componente, numeração, erro, scroll e limpeza
+  ---
+  duration_ms: 0.3848
+  type: 'test'
+  ...
+# Subtest: Zoom inicial, mínimo e máximo
+ok 14 - Zoom inicial, mínimo e máximo
+  ---
+  duration_ms: 0.1701
+  type: 'test'
+  ...
+# Subtest: Zoom mantém ponto sob cursor fora dos limites
+ok 15 - Zoom mantém ponto sob cursor fora dos limites
+  ---
+  duration_ms: 0.1666
+  type: 'test'
+  ...
+# Subtest: Pan considera zoom e limita os quatro lados
+ok 16 - Pan considera zoom e limita os quatro lados
+  ---
+  duration_ms: 0.2139
+  type: 'test'
+  ...
+# Subtest: Mapa menor que viewport permanece centralizado
+ok 17 - Mapa menor que viewport permanece centralizado
+  ---
+  duration_ms: 0.0857
+  type: 'test'
+  ...
+# Subtest: Acompanhamento aproxima suavemente e converge
+ok 18 - Acompanhamento aproxima suavemente e converge
+  ---
+  duration_ms: 0.5785
+  type: 'test'
+  ...
+# Subtest: Câmera integra eventos, recenter, viewport Phaser e remoção de listeners
+ok 19 - Câmera integra eventos, recenter, viewport Phaser e remoção de listeners
+  ---
+  duration_ms: 1.3001
+  type: 'test'
+  ...
+# Subtest: Todos os spritesheets têm quadros compatíveis com as dimensões PNG
+ok 20 - Todos os spritesheets têm quadros compatíveis com as dimensões PNG
+  ---
+  duration_ms: 38.2081
+  type: 'test'
+  ...
+# Subtest: Contrato CSS: livro limitado, áreas roláveis e rodapé não encolhe (análise estática)
+ok 21 - Contrato CSS: livro limitado, áreas roláveis e rodapé não encolhe (análise estática)
+  ---
+  duration_ms: 0.5193
+  type: 'test'
+  ...
+# Subtest: Atividade 15: poder 25, portal 1
+ok 22 - Atividade 15: poder 25, portal 1
+  ---
+  duration_ms: 5.5966
+  type: 'test'
+  ...
+# Subtest: Atividade 15: poder 25, portal 2
+ok 23 - Atividade 15: poder 25, portal 2
+  ---
+  duration_ms: 4.7919
+  type: 'test'
+  ...
+# Subtest: Atividade 15: poder 25, portal 3
+ok 24 - Atividade 15: poder 25, portal 3
+  ---
+  duration_ms: 5.5777
+  type: 'test'
+  ...
+# Subtest: Atividade 15: poder 15, portal 1
+ok 25 - Atividade 15: poder 15, portal 1
+  ---
+  duration_ms: 4.1632
+  type: 'test'
+  ...
+# Subtest: Atividade 15: poder 15, portal 2
+ok 26 - Atividade 15: poder 15, portal 2
+  ---
+  duration_ms: 4.0196
+  type: 'test'
+  ...
+# Subtest: Atividade 15: poder 15, portal 3
+ok 27 - Atividade 15: poder 15, portal 3
+  ---
+  duration_ms: 4.21
+  type: 'test'
+  ...
+# Subtest: Atividade 15: poder 5, portal 1
+ok 28 - Atividade 15: poder 5, portal 1
+  ---
+  duration_ms: 3.6495
+  type: 'test'
+  ...
+# Subtest: Atividade 15: poder 5, portal 2
+ok 29 - Atividade 15: poder 5, portal 2
+  ---
+  duration_ms: 6.6818
+  type: 'test'
+  ...
+# Subtest: Atividade 15: poder 5, portal 3
+ok 30 - Atividade 15: poder 5, portal 3
+  ---
+  duration_ms: 5.0275
+  type: 'test'
+  ...
+# Subtest: Atividade 15: poder 20, portal 1
+ok 31 - Atividade 15: poder 20, portal 1
+  ---
+  duration_ms: 4.193
+  type: 'test'
+  ...
+# Subtest: Atividade 15: poder 20, portal 2
+ok 32 - Atividade 15: poder 20, portal 2
+  ---
+  duration_ms: 5.5755
+  type: 'test'
+  ...
+# Subtest: Atividade 15: poder 20, portal 3
+ok 33 - Atividade 15: poder 20, portal 3
+  ---
+  duration_ms: 3.7652
+  type: 'test'
+  ...
+# Subtest: Atividade 15: poder 10, portal 1
+ok 34 - Atividade 15: poder 10, portal 1
+  ---
+  duration_ms: 5.1922
+  type: 'test'
+  ...
+# Subtest: Atividade 15: poder 10, portal 2
+ok 35 - Atividade 15: poder 10, portal 2
+  ---
+  duration_ms: 9.054
+  type: 'test'
+  ...
+# Subtest: Atividade 15: poder 10, portal 3
+ok 36 - Atividade 15: poder 10, portal 3
+  ---
+  duration_ms: 8.2327
+  type: 'test'
+  ...
+# Subtest: Atividade 15: poder 9, portal 1
+ok 37 - Atividade 15: poder 9, portal 1
+  ---
+  duration_ms: 5.401
+  type: 'test'
+  ...
+# Subtest: Atividade 15: poder 9, portal 2
+ok 38 - Atividade 15: poder 9, portal 2
+  ---
+  duration_ms: 3.9267
+  type: 'test'
+  ...
+# Subtest: Atividade 15: poder 9, portal 3
+ok 39 - Atividade 15: poder 9, portal 3
+  ---
+  duration_ms: 4.5884
+  type: 'test'
+  ...
+# Subtest: Solução oficial completa da 15 preservada: 25
+ok 40 - Solução oficial completa da 15 preservada: 25
+  ---
+  duration_ms: 9.3087
+  type: 'test'
+  ...
+# Subtest: Solução oficial completa da 15 preservada: 15
+ok 41 - Solução oficial completa da 15 preservada: 15
+  ---
+  duration_ms: 5.5169
+  type: 'test'
+  ...
+# Subtest: Solução oficial completa da 15 preservada: 5
+ok 42 - Solução oficial completa da 15 preservada: 5
+  ---
+  duration_ms: 5.383
+  type: 'test'
+  ...
+# Subtest: Programa com classificação forçada incorreta não recompensa: 25 como 5
+ok 43 - Programa com classificação forçada incorreta não recompensa: 25 como 5
+  ---
+  duration_ms: 5.4197
+  type: 'test'
+  ...
+# Subtest: Programa com classificação forçada incorreta não recompensa: 15 como 25
+ok 44 - Programa com classificação forçada incorreta não recompensa: 15 como 25
+  ---
+  duration_ms: 6.9247
+  type: 'test'
+  ...
+# Subtest: Programa com classificação forçada incorreta não recompensa: 5 como 15
+ok 45 - Programa com classificação forçada incorreta não recompensa: 5 como 15
+  ---
+  duration_ms: 5.1636
+  type: 'test'
+  ...
+# Subtest: Conceito e comando em ramo não executado não satisfazem objetivo
+ok 46 - Conceito e comando em ramo não executado não satisfazem objetivo
+  ---
+  duration_ms: 8.1035
+  type: 'test'
+  ...
+# Subtest: Loop sem iteração não satisfaz objetivo de repetição
+ok 47 - Loop sem iteração não satisfaz objetivo de repetição
+  ---
+  duration_ms: 7.0182
+  type: 'test'
+  ...
+# Subtest: Portal sem input não ativa nem recebe correctPortal
+ok 48 - Portal sem input não ativa nem recebe correctPortal
+  ---
+  duration_ms: 7.4665
+  type: 'test'
+  ...
+# Subtest: Novas sprites substituem escudos, estante e bandeira nos papéis principais
+ok 49 - Novas sprites substituem escudos, estante e bandeira nos papéis principais
+  ---
+  duration_ms: 5.168
+  type: 'test'
+  ...
+# Subtest: Python: if/elif/else e duas camadas
+ok 50 - Python: if/elif/else e duas camadas
+  ---
+  duration_ms: 4.4912
+  type: 'test'
+  ...
+# Subtest: Python: dois espaços válidos em Python
+ok 51 - Python: dois espaços válidos em Python
+  ---
+  duration_ms: 5.687
+  type: 'test'
+  ...
+# Subtest: Python: comentários e linhas vazias não definem nível
+ok 52 - Python: comentários e linhas vazias não definem nível
+  ---
+  duration_ms: 10.6397
+  type: 'test'
+  ...
+# Subtest: Python: for aninhado e acumulador
+ok 53 - Python: for aninhado e acumulador
+  ---
+  duration_ms: 5.329
+  type: 'test'
+  ...
+# Subtest: Python: while, if e break
+ok 54 - Python: while, if e break
+  ---
+  duration_ms: 4.0506
+  type: 'test'
+  ...
+# Subtest: Python: comparação encadeada
+ok 55 - Python: comparação encadeada
+  ---
+  duration_ms: 5.2333
+  type: 'test'
+  ...
+# Subtest: Python: and/or retornam operandos e curto-circuitam
+ok 56 - Python: and/or retornam operandos e curto-circuitam
+  ---
+  duration_ms: 3.91
+  type: 'test'
+  ...
+# Subtest: Python: precedência de not
+ok 57 - Python: precedência de not
+  ---
+  duration_ms: 3.7815
+  type: 'test'
+  ...
+# Subtest: Python: int trunca números e aceita inteiros textuais
+ok 58 - Python: int trunca números e aceita inteiros textuais
+  ---
+  duration_ms: 3.6713
+  type: 'test'
+  ...
+# Subtest: Python: range negativo
+ok 59 - Python: range negativo
+  ---
+  duration_ms: 5.6645
+  type: 'test'
+  ...
+# Subtest: Python: comparação booleana numérica Python
+ok 60 - Python: comparação booleana numérica Python
+  ---
+  duration_ms: 5.2344
+  type: 'test'
+  ...
+# Subtest: Indentação inválida: fora de bloco
+ok 61 - Indentação inválida: fora de bloco
+  ---
+  duration_ms: 4.2811
+  type: 'test'
+  ...
+# Subtest: Indentação inválida: dedent inexistente
+ok 62 - Indentação inválida: dedent inexistente
+  ---
+  duration_ms: 5.0053
+  type: 'test'
+  ...
+# Subtest: Indentação inválida: bloco sem corpo
+ok 63 - Indentação inválida: bloco sem corpo
+  ---
+  duration_ms: 3.6952
+  type: 'test'
+  ...
+# Subtest: Indentação inválida: else solto
+ok 64 - Indentação inválida: else solto
+  ---
+  duration_ms: 4.2303
+  type: 'test'
+  ...
+# Subtest: Indentação inválida: mistura de tab e espaços
+ok 65 - Indentação inválida: mistura de tab e espaços
+  ---
+  duration_ms: 3.4333
+  type: 'test'
+  ...
+# Subtest: Indentação inválida: if sem dois-pontos
+ok 66 - Indentação inválida: if sem dois-pontos
+  ---
+  duration_ms: 6.1809
+  type: 'test'
+  ...
+# Subtest: Indentação inválida: elif após else
+ok 67 - Indentação inválida: elif após else
+  ---
+  duration_ms: 4.4023
+  type: 'test'
+  ...
+# Subtest: Entrada/tipo inválido: x = int("")
+ok 68 - Entrada/tipo inválido: x = int("")
+  ---
+  duration_ms: 4.2376
+  type: 'test'
+  ...
+# Subtest: Entrada/tipo inválido: x = int(" ")
+ok 69 - Entrada/tipo inválido: x = int(" ")
+  ---
+  duration_ms: 4.0032
+  type: 'test'
+  ...
+# Subtest: Entrada/tipo inválido: x = int("3.0")
+ok 70 - Entrada/tipo inválido: x = int("3.0")
+  ---
+  duration_ms: 4.5442
+  type: 'test'
+  ...
+# Subtest: Entrada/tipo inválido: x = int("0x10")
+ok 71 - Entrada/tipo inválido: x = int("0x10")
+  ---
+  duration_ms: 4.0781
+  type: 'test'
+  ...
+# Subtest: Entrada/tipo inválido: x = int("erro")
+ok 72 - Entrada/tipo inválido: x = int("erro")
+  ---
+  duration_ms: 4.0435
+  type: 'test'
+  ...
+# Subtest: Entrada/tipo inválido: x = "10" >= 2
+ok 73 - Entrada/tipo inválido: x = "10" >= 2
+  ---
+  duration_ms: 4.228
+  type: 'test'
+  ...
+# Subtest: Entrada/tipo inválido: x = range("2")
+ok 74 - Entrada/tipo inválido: x = range("2")
+  ---
+  duration_ms: 4.8951
+  type: 'test'
+  ...
+# Subtest: Entrada/tipo inválido: x = range(1, 2, 0)
+ok 75 - Entrada/tipo inválido: x = range(1, 2, 0)
+  ---
+  duration_ms: 4.9564
+  type: 'test'
+  ...
+# Subtest: Entrada/tipo inválido: x = int(1,2)
+ok 76 - Entrada/tipo inválido: x = int(1,2)
+  ---
+  duration_ms: 6.6665
+  type: 'test'
+  ...
+# Subtest: Entrada/tipo inválido: virar_direita(1)
+ok 77 - Entrada/tipo inválido: virar_direita(1)
+  ---
+  duration_ms: 4.2569
+  type: 'test'
+  ...
+# Subtest: Erro em elif informa a própria linha
+ok 78 - Erro em elif informa a própria linha
+  ---
+  duration_ms: 5.7462
+  type: 'test'
+  ...
+# Subtest: input e print preservam o texto e booleanos Python
+ok 79 - input e print preservam o texto e booleanos Python
+  ---
+  duration_ms: 8.6274
+  type: 'test'
+  ...
+# Subtest: Palavra da atividade 6: exata
+ok 80 - Palavra da atividade 6: exata
+  ---
+  duration_ms: 7.4647
+  type: 'test'
+  ...
+# Subtest: Palavra da atividade 6: espaços
+ok 81 - Palavra da atividade 6: espaços
+  ---
+  duration_ms: 4.584
+  type: 'test'
+  ...
+# Subtest: Palavra da atividade 6: incorreta
+ok 82 - Palavra da atividade 6: incorreta
+  ---
+  duration_ms: 4.8091
+  type: 'test'
+  ...
+# Subtest: Palavra da atividade 6: minúscula
+ok 83 - Palavra da atividade 6: minúscula
+  ---
+  duration_ms: 4.1839
+  type: 'test'
+  ...
+# Subtest: Palavra da atividade 7: exata
+ok 84 - Palavra da atividade 7: exata
+  ---
+  duration_ms: 5.2796
+  type: 'test'
+  ...
+# Subtest: Palavra da atividade 7: espaços
+ok 85 - Palavra da atividade 7: espaços
+  ---
+  duration_ms: 5.9231
+  type: 'test'
+  ...
+# Subtest: Palavra da atividade 7: incorreta
+ok 86 - Palavra da atividade 7: incorreta
+  ---
+  duration_ms: 5.4729
+  type: 'test'
+  ...
+# Subtest: Palavra da atividade 7: minúscula
+ok 87 - Palavra da atividade 7: minúscula
+  ---
+  duration_ms: 6.1556
+  type: 'test'
+  ...
+# Subtest: Input numérico vazio é erro recuperável na atividade 8
+ok 88 - Input numérico vazio é erro recuperável na atividade 8
+  ---
+  duration_ms: 6.3253
+  type: 'test'
+  ...
+# Subtest: Input numérico vazio é erro recuperável na atividade 9
+ok 89 - Input numérico vazio é erro recuperável na atividade 9
+  ---
+  duration_ms: 5.4874
+  type: 'test'
+  ...
+# Subtest: Input numérico vazio é erro recuperável na atividade 10
+ok 90 - Input numérico vazio é erro recuperável na atividade 10
+  ---
+  duration_ms: 7.2538
+  type: 'test'
+  ...
+# Subtest: Input numérico vazio é erro recuperável na atividade 13
+ok 91 - Input numérico vazio é erro recuperável na atividade 13
+  ---
+  duration_ms: 6.4256
+  type: 'test'
+  ...
+# Subtest: Input numérico vazio é erro recuperável na atividade 15
+ok 92 - Input numérico vazio é erro recuperável na atividade 15
+  ---
+  duration_ms: 7.7594
+  type: 'test'
+  ...
+# Subtest: Atividade 1: solução com blocos de 2 espaços e comentários
+ok 93 - Atividade 1: solução com blocos de 2 espaços e comentários
+  ---
+  duration_ms: 5.4048
+  type: 'test'
+  ...
+# Subtest: Atividade 2: solução com blocos de 2 espaços e comentários
+ok 94 - Atividade 2: solução com blocos de 2 espaços e comentários
+  ---
+  duration_ms: 7.9377
+  type: 'test'
+  ...
+# Subtest: Atividade 3: solução com blocos de 2 espaços e comentários
+ok 95 - Atividade 3: solução com blocos de 2 espaços e comentários
+  ---
+  duration_ms: 4.8309
+  type: 'test'
+  ...
+# Subtest: Atividade 4: solução com blocos de 2 espaços e comentários
+ok 96 - Atividade 4: solução com blocos de 2 espaços e comentários
+  ---
+  duration_ms: 5.859
+  type: 'test'
+  ...
+# Subtest: Atividade 5: solução com blocos de 2 espaços e comentários
+ok 97 - Atividade 5: solução com blocos de 2 espaços e comentários
+  ---
+  duration_ms: 5.3104
+  type: 'test'
+  ...
+# Subtest: Atividade 6: solução com blocos de 2 espaços e comentários
+ok 98 - Atividade 6: solução com blocos de 2 espaços e comentários
+  ---
+  duration_ms: 4.5554
+  type: 'test'
+  ...
+# Subtest: Atividade 7: solução com blocos de 2 espaços e comentários
+ok 99 - Atividade 7: solução com blocos de 2 espaços e comentários
+  ---
+  duration_ms: 5.0229
+  type: 'test'
+  ...
+# Subtest: Atividade 8: solução com blocos de 2 espaços e comentários
+ok 100 - Atividade 8: solução com blocos de 2 espaços e comentários
+  ---
+  duration_ms: 5.5958
+  type: 'test'
+  ...
+# Subtest: Atividade 9: solução com blocos de 2 espaços e comentários
+ok 101 - Atividade 9: solução com blocos de 2 espaços e comentários
+  ---
+  duration_ms: 4.6225
+  type: 'test'
+  ...
+# Subtest: Atividade 10: solução com blocos de 2 espaços e comentários
+ok 102 - Atividade 10: solução com blocos de 2 espaços e comentários
+  ---
+  duration_ms: 6.1511
+  type: 'test'
+  ...
+# Subtest: Atividade 11: solução com blocos de 2 espaços e comentários
+ok 103 - Atividade 11: solução com blocos de 2 espaços e comentários
+  ---
+  duration_ms: 4.5872
+  type: 'test'
+  ...
+# Subtest: Atividade 12: solução com blocos de 2 espaços e comentários
+ok 104 - Atividade 12: solução com blocos de 2 espaços e comentários
+  ---
+  duration_ms: 4.5842
+  type: 'test'
+  ...
+# Subtest: Atividade 13: solução com blocos de 2 espaços e comentários
+ok 105 - Atividade 13: solução com blocos de 2 espaços e comentários
+  ---
+  duration_ms: 4.8468
+  type: 'test'
+  ...
+# Subtest: Atividade 14: solução com blocos de 2 espaços e comentários
+ok 106 - Atividade 14: solução com blocos de 2 espaços e comentários
+  ---
+  duration_ms: 6.0162
+  type: 'test'
+  ...
+# Subtest: Atividade 15: solução com blocos de 2 espaços e comentários
+ok 107 - Atividade 15: solução com blocos de 2 espaços e comentários
+  ---
+  duration_ms: 5.3349
+  type: 'test'
+  ...
+# Subtest: Atividade 16: solução com blocos de 2 espaços e comentários
+ok 108 - Atividade 16: solução com blocos de 2 espaços e comentários
+  ---
+  duration_ms: 5.1877
+  type: 'test'
+  ...
+# Subtest: Atividade 17: solução com blocos de 2 espaços e comentários
+ok 109 - Atividade 17: solução com blocos de 2 espaços e comentários
+  ---
+  duration_ms: 5.9872
+  type: 'test'
+  ...
+# Subtest: Atividade 18: solução com blocos de 2 espaços e comentários
+ok 110 - Atividade 18: solução com blocos de 2 espaços e comentários
+  ---
+  duration_ms: 9.6259
+  type: 'test'
+  ...
+# Subtest: Atividade 19: solução com blocos de 2 espaços e comentários
+ok 111 - Atividade 19: solução com blocos de 2 espaços e comentários
+  ---
+  duration_ms: 5.3501
+  type: 'test'
+  ...
+# Subtest: Atividade 20: solução com blocos de 2 espaços e comentários
+ok 112 - Atividade 20: solução com blocos de 2 espaços e comentários
+  ---
+  duration_ms: 6.1938
+  type: 'test'
+  ...
+# Subtest: As vinte atividades desbloqueiam em ordem, com replay idempotente
+ok 113 - As vinte atividades desbloqueiam em ordem, com replay idempotente
+  ---
+  duration_ms: 55.144
+  type: 'test'
+  ...
+# Subtest: Persistência continua em memória quando localStorage falha
+ok 114 - Persistência continua em memória quando localStorage falha
+  ---
+  duration_ms: 5.2851
+  type: 'test'
+  ...
+# Subtest: M01 libera a pressão ao sair e M02 não alterna duas vezes na mesma entrada
+ok 115 - M01 libera a pressão ao sair e M02 não alterna duas vezes na mesma entrada
+  ---
+  duration_ms: 4.1175
+  type: 'test'
+  ...
+# Subtest: M03 alterna alavanca e restaura a conexão
+ok 116 - M03 alterna alavanca e restaura a conexão
+  ---
+  duration_ms: 3.838
+  type: 'test'
+  ...
+# Subtest: Objetivos físicos atualizam durante o movimento
+ok 117 - Objetivos físicos atualizam durante o movimento
+  ---
+  duration_ms: 4.753
+  type: 'test'
+  ...
+# Subtest: Dados do jogador são publicados sem ler testInputs ou officialSolution
+ok 118 - Dados do jogador são publicados sem ler testInputs ou officialSolution
+  ---
+  duration_ms: 4.2813
+  type: 'test'
+  ...
+# Subtest: Todos os assets oficiais e scripts referenciados existem
+ok 119 - Todos os assets oficiais e scripts referenciados existem
+  ---
+  duration_ms: 8.7962
+  type: 'test'
+  ...
+# Subtest: Atividade 12: pisar novamente na placa mantém o sensor coerente com as duas rotas
+ok 120 - Atividade 12: pisar novamente na placa mantém o sensor coerente com as duas rotas
+  ---
+  duration_ms: 4.4119
+  type: 'test'
+  ...
+# Subtest: UI/renderer real com adaptadores: atividade 1, solução, replay e limpeza
+ok 121 - UI/renderer real com adaptadores: atividade 1, solução, replay e limpeza
+  ---
+  duration_ms: 20.6187
+  type: 'test'
+  ...
+# Subtest: UI/renderer real com adaptadores: atividade 2, solução, replay e limpeza
+ok 122 - UI/renderer real com adaptadores: atividade 2, solução, replay e limpeza
+  ---
+  duration_ms: 13.9223
+  type: 'test'
+  ...
+# Subtest: UI/renderer real com adaptadores: atividade 3, solução, replay e limpeza
+ok 123 - UI/renderer real com adaptadores: atividade 3, solução, replay e limpeza
+  ---
+  duration_ms: 11.5151
+  type: 'test'
+  ...
+# Subtest: UI/renderer real com adaptadores: atividade 4, solução, replay e limpeza
+ok 124 - UI/renderer real com adaptadores: atividade 4, solução, replay e limpeza
+  ---
+  duration_ms: 13.0913
+  type: 'test'
+  ...
+# Subtest: UI/renderer real com adaptadores: atividade 5, solução, replay e limpeza
+ok 125 - UI/renderer real com adaptadores: atividade 5, solução, replay e limpeza
+  ---
+  duration_ms: 11.9463
+  type: 'test'
+  ...
+# Subtest: UI/renderer real com adaptadores: atividade 6, solução, replay e limpeza
+ok 126 - UI/renderer real com adaptadores: atividade 6, solução, replay e limpeza
+  ---
+  duration_ms: 17.8573
+  type: 'test'
+  ...
+# Subtest: UI/renderer real com adaptadores: atividade 7, solução, replay e limpeza
+ok 127 - UI/renderer real com adaptadores: atividade 7, solução, replay e limpeza
+  ---
+  duration_ms: 13.8691
+  type: 'test'
+  ...
+# Subtest: UI/renderer real com adaptadores: atividade 8, solução, replay e limpeza
+ok 128 - UI/renderer real com adaptadores: atividade 8, solução, replay e limpeza
+  ---
+  duration_ms: 19.3631
+  type: 'test'
+  ...
+# Subtest: UI/renderer real com adaptadores: atividade 9, solução, replay e limpeza
+ok 129 - UI/renderer real com adaptadores: atividade 9, solução, replay e limpeza
+  ---
+  duration_ms: 16.8733
+  type: 'test'
+  ...
+# Subtest: UI/renderer real com adaptadores: atividade 10, solução, replay e limpeza
+ok 130 - UI/renderer real com adaptadores: atividade 10, solução, replay e limpeza
+  ---
+  duration_ms: 39.5764
+  type: 'test'
+  ...
+# Subtest: UI/renderer real com adaptadores: atividade 11, solução, replay e limpeza
+ok 131 - UI/renderer real com adaptadores: atividade 11, solução, replay e limpeza
+  ---
+  duration_ms: 13.4414
+  type: 'test'
+  ...
+# Subtest: UI/renderer real com adaptadores: atividade 12, solução, replay e limpeza
+ok 132 - UI/renderer real com adaptadores: atividade 12, solução, replay e limpeza
+  ---
+  duration_ms: 11.7959
+  type: 'test'
+  ...
+# Subtest: UI/renderer real com adaptadores: atividade 13, solução, replay e limpeza
+ok 133 - UI/renderer real com adaptadores: atividade 13, solução, replay e limpeza
+  ---
+  duration_ms: 16.2887
+  type: 'test'
+  ...
+# Subtest: UI/renderer real com adaptadores: atividade 14, solução, replay e limpeza
+ok 134 - UI/renderer real com adaptadores: atividade 14, solução, replay e limpeza
+  ---
+  duration_ms: 23.6901
+  type: 'test'
+  ...
+# Subtest: UI/renderer real com adaptadores: atividade 15, solução, replay e limpeza
+ok 135 - UI/renderer real com adaptadores: atividade 15, solução, replay e limpeza
+  ---
+  duration_ms: 25.4186
+  type: 'test'
+  ...
+# Subtest: UI/renderer real com adaptadores: atividade 16, solução, replay e limpeza
+ok 136 - UI/renderer real com adaptadores: atividade 16, solução, replay e limpeza
+  ---
+  duration_ms: 17.4656
+  type: 'test'
+  ...
+# Subtest: UI/renderer real com adaptadores: atividade 17, solução, replay e limpeza
+ok 137 - UI/renderer real com adaptadores: atividade 17, solução, replay e limpeza
+  ---
+  duration_ms: 19.9261
+  type: 'test'
+  ...
+# Subtest: UI/renderer real com adaptadores: atividade 18, solução, replay e limpeza
+ok 138 - UI/renderer real com adaptadores: atividade 18, solução, replay e limpeza
+  ---
+  duration_ms: 18.3634
+  type: 'test'
+  ...
+# Subtest: UI/renderer real com adaptadores: atividade 19, solução, replay e limpeza
+ok 139 - UI/renderer real com adaptadores: atividade 19, solução, replay e limpeza
+  ---
+  duration_ms: 21.1401
+  type: 'test'
+  ...
+# Subtest: UI/renderer real com adaptadores: atividade 20, solução, replay e limpeza
+ok 140 - UI/renderer real com adaptadores: atividade 20, solução, replay e limpeza
+  ---
+  duration_ms: 30.5162
+  type: 'test'
+  ...
+# Subtest: Feedback extenso preserva controles e conteúdo como texto (sem medição CSS)
+ok 141 - Feedback extenso preserva controles e conteúdo como texto (sem medição CSS)
+  ---
+  duration_ms: 8.1268
+  type: 'test'
+  ...
+# Subtest: input mostra pergunta, recebe texto exato, fecha e permite nova entrada
+ok 142 - input mostra pergunta, recebe texto exato, fecha e permite nova entrada
+  ---
+  duration_ms: 8.4988
+  type: 'test'
+  ...
+# Subtest: Restaurar durante input cancela execução sem perder vidas
+ok 143 - Restaurar durante input cancela execução sem perder vidas
+  ---
+  duration_ms: 41.5267
+  type: 'test'
+  ...
+# Subtest: Anterior/próxima preservam rascunho e usam fade; fase bloqueada não navega
+ok 144 - Anterior/próxima preservam rascunho e usam fade; fase bloqueada não navega
+  ---
+  duration_ms: 14.6245
+  type: 'test'
+  ...
+# Subtest: Todos os estados visuais das entidades apontam para texturas catalogadas
+ok 145 - Todos os estados visuais das entidades apontam para texturas catalogadas
+  ---
+  duration_ms: 5.1525
+  type: 'test'
+  ...
+# Subtest: Menu mostra progresso e abre a atividade disponível sem perfil
+ok 146 - Menu mostra progresso e abre a atividade disponível sem perfil
+  ---
+  duration_ms: 4.1318
+  type: 'test'
+  ...
+# Subtest: V3 todas as cenas montam mapa, Livro, Diário e controles com dados atuais
+ok 147 - V3 todas as cenas montam mapa, Livro, Diário e controles com dados atuais
+  ---
+  duration_ms: 180.759
+  type: 'test'
+  ...
+# Subtest: V3 UI registra somente pista lida, preserva entre execuções e limpa ao REINICIAR
+ok 148 - V3 UI registra somente pista lida, preserva entre execuções e limpa ao REINICIAR
+  ---
+  duration_ms: 23.7533
+  type: 'test'
+  ...
+# Subtest: V3 progressão sequencial 1–20, persistência e desbloqueios mantêm valores de recompensa
+ok 149 - V3 progressão sequencial 1–20, persistência e desbloqueios mantêm valores de recompensa
+  ---
+  duration_ms: 331.2979
+  type: 'test'
+  ...
+# Subtest: V3 XP com 1 vida(s) usa o multiplicador preservado
+ok 150 - V3 XP com 1 vida(s) usa o multiplicador preservado
+  ---
+  duration_ms: 26.6623
+  type: 'test'
+  ...
+# Subtest: V3 XP com 2 vida(s) usa o multiplicador preservado
+ok 151 - V3 XP com 2 vida(s) usa o multiplicador preservado
+  ---
+  duration_ms: 25.8876
+  type: 'test'
+  ...
+# Subtest: V3 XP com 3 vida(s) usa o multiplicador preservado
+ok 152 - V3 XP com 3 vida(s) usa o multiplicador preservado
+  ---
+  duration_ms: 24.3337
+  type: 'test'
+  ...
+# Subtest: V3 orçamento rejeita programas grandes antes de mover ou recompensar
+ok 153 - V3 orçamento rejeita programas grandes antes de mover ou recompensar
+  ---
+  duration_ms: 62.0746
+  type: 'test'
+  ...
+# Subtest: V3 segmentos não podem ser ativados ignorando a galeria dos totens
+ok 154 - V3 segmentos não podem ser ativados ignorando a galeria dos totens
+  ---
+  duration_ms: 12.019
+  type: 'test'
+  ...
+# Subtest: V3 baú continua bloqueado enquanto a tampa abre
+ok 155 - V3 baú continua bloqueado enquanto a tampa abre
+  ---
+  duration_ms: 5.7335
+  type: 'test'
+  ...
+# Subtest: V3 portas, placas, baús, alavancas, runas, pontes, portais e espinhos têm aparências distintas por estado
+ok 156 - V3 portas, placas, baús, alavancas, runas, pontes, portais e espinhos têm aparências distintas por estado
+  ---
+  duration_ms: 6.556
+  type: 'test'
+  ...
+# Subtest: V3 caixa de pistas permanece oculta até interagir, mesmo após revelar a sala
+ok 157 - V3 caixa de pistas permanece oculta até interagir, mesmo após revelar a sala
+  ---
+  duration_ms: 8.6245
+  type: 'test'
+  ...
+# Subtest: V3 portal energiza na origem antes do transporte e finaliza na posição lógica
+ok 158 - V3 portal energiza na origem antes do transporte e finaliza na posição lógica
+  ---
+  duration_ms: 6.8928
+  type: 'test'
+  ...
+# Subtest: V3 família de placas: sequência configurável reage à ordem e reinicia com a tentativa
+ok 159 - V3 família de placas: sequência configurável reage à ordem e reinicia com a tentativa
+  ---
+  duration_ms: 5.5189
+  type: 'test'
+  ...
+# Subtest: V3 atividade 1, variante 0: solução, replay e recompensa
+ok 160 - V3 atividade 1, variante 0: solução, replay e recompensa
+  ---
+  duration_ms: 12.9721
+  type: 'test'
+  ...
+# Subtest: V3 atividade 2, variante 0: solução, replay e recompensa
+ok 161 - V3 atividade 2, variante 0: solução, replay e recompensa
+  ---
+  duration_ms: 17.0062
+  type: 'test'
+  ...
+# Subtest: V3 atividade 3, variante 0: solução, replay e recompensa
+ok 162 - V3 atividade 3, variante 0: solução, replay e recompensa
+  ---
+  duration_ms: 30.3727
+  type: 'test'
+  ...
+# Subtest: V3 atividade 4, variante 0: solução, replay e recompensa
+ok 163 - V3 atividade 4, variante 0: solução, replay e recompensa
+  ---
+  duration_ms: 32.2557
+  type: 'test'
+  ...
+# Subtest: V3 atividade 5, variante 0: solução, replay e recompensa
+ok 164 - V3 atividade 5, variante 0: solução, replay e recompensa
+  ---
+  duration_ms: 41.3887
+  type: 'test'
+  ...
+# Subtest: V3 atividade 6, variante 0: solução, replay e recompensa
+ok 165 - V3 atividade 6, variante 0: solução, replay e recompensa
+  ---
+  duration_ms: 18.6884
+  type: 'test'
+  ...
+# Subtest: V3 atividade 7, variante 0: solução, replay e recompensa
+ok 166 - V3 atividade 7, variante 0: solução, replay e recompensa
+  ---
+  duration_ms: 26.8154
+  type: 'test'
+  ...
+# Subtest: V3 atividade 8, variante 0: solução, replay e recompensa
+ok 167 - V3 atividade 8, variante 0: solução, replay e recompensa
+  ---
+  duration_ms: 35.803
+  type: 'test'
+  ...
+# Subtest: V3 atividade 9, variante 0: solução, replay e recompensa
+ok 168 - V3 atividade 9, variante 0: solução, replay e recompensa
+  ---
+  duration_ms: 42.268
+  type: 'test'
+  ...
+# Subtest: V3 atividade 10, variante 0: solução, replay e recompensa
+ok 169 - V3 atividade 10, variante 0: solução, replay e recompensa
+  ---
+  duration_ms: 62.4495
+  type: 'test'
+  ...
+# Subtest: V3 atividade 11, variante 0: solução, replay e recompensa
+ok 170 - V3 atividade 11, variante 0: solução, replay e recompensa
+  ---
+  duration_ms: 30.1198
+  type: 'test'
+  ...
+# Subtest: V3 atividade 12, variante 0: solução, replay e recompensa
+ok 171 - V3 atividade 12, variante 0: solução, replay e recompensa
+  ---
+  duration_ms: 26.4769
+  type: 'test'
+  ...
+# Subtest: V3 atividade 12, variante 1: solução, replay e recompensa
+ok 172 - V3 atividade 12, variante 1: solução, replay e recompensa
+  ---
+  duration_ms: 24.3677
+  type: 'test'
+  ...
+# Subtest: V3 atividade 13, variante 0: solução, replay e recompensa
+ok 173 - V3 atividade 13, variante 0: solução, replay e recompensa
+  ---
+  duration_ms: 38.0819
+  type: 'test'
+  ...
+# Subtest: V3 atividade 14, variante 0: solução, replay e recompensa
+ok 174 - V3 atividade 14, variante 0: solução, replay e recompensa
+  ---
+  duration_ms: 43.2106
+  type: 'test'
+  ...
+# Subtest: V3 atividade 15, variante 0: solução, replay e recompensa
+ok 175 - V3 atividade 15, variante 0: solução, replay e recompensa
+  ---
+  duration_ms: 83.0737
+  type: 'test'
+  ...
+# Subtest: V3 atividade 15, variante 1: solução, replay e recompensa
+ok 176 - V3 atividade 15, variante 1: solução, replay e recompensa
+  ---
+  duration_ms: 75.2177
+  type: 'test'
+  ...
+# Subtest: V3 atividade 15, variante 2: solução, replay e recompensa
+ok 177 - V3 atividade 15, variante 2: solução, replay e recompensa
+  ---
+  duration_ms: 81.9554
+  type: 'test'
+  ...
+# Subtest: V3 atividade 16, variante 0: solução, replay e recompensa
+ok 178 - V3 atividade 16, variante 0: solução, replay e recompensa
+  ---
+  duration_ms: 25.8568
+  type: 'test'
+  ...
+# Subtest: V3 atividade 17, variante 0: solução, replay e recompensa
+ok 179 - V3 atividade 17, variante 0: solução, replay e recompensa
+  ---
+  duration_ms: 47.3972
+  type: 'test'
+  ...
+# Subtest: V3 atividade 18, variante 0: solução, replay e recompensa
+ok 180 - V3 atividade 18, variante 0: solução, replay e recompensa
+  ---
+  duration_ms: 55.8631
+  type: 'test'
+  ...
+# Subtest: V3 atividade 18, variante 1: solução, replay e recompensa
+ok 181 - V3 atividade 18, variante 1: solução, replay e recompensa
+  ---
+  duration_ms: 60.1764
+  type: 'test'
+  ...
+# Subtest: V3 atividade 18, variante 2: solução, replay e recompensa
+ok 182 - V3 atividade 18, variante 2: solução, replay e recompensa
+  ---
+  duration_ms: 65.9399
+  type: 'test'
+  ...
+# Subtest: V3 atividade 19, variante 0: solução, replay e recompensa
+ok 183 - V3 atividade 19, variante 0: solução, replay e recompensa
+  ---
+  duration_ms: 26.0437
+  type: 'test'
+  ...
+# Subtest: V3 atividade 19, variante 1: solução, replay e recompensa
+ok 184 - V3 atividade 19, variante 1: solução, replay e recompensa
+  ---
+  duration_ms: 28.8651
+  type: 'test'
+  ...
+# Subtest: V3 atividade 19, variante 2: solução, replay e recompensa
+ok 185 - V3 atividade 19, variante 2: solução, replay e recompensa
+  ---
+  duration_ms: 40.4878
+  type: 'test'
+  ...
+# Subtest: V3 atividade 20, variante 0: solução, replay e recompensa
+ok 186 - V3 atividade 20, variante 0: solução, replay e recompensa
+  ---
+  duration_ms: 365.8038
+  type: 'test'
+  ...
+# Subtest: V3 atividade 20, variante 1: solução, replay e recompensa
+ok 187 - V3 atividade 20, variante 1: solução, replay e recompensa
+  ---
+  duration_ms: 348.3684
+  type: 'test'
+  ...
+# Subtest: V3 atividade 20, variante 2: solução, replay e recompensa
+ok 188 - V3 atividade 20, variante 2: solução, replay e recompensa
+  ---
+  duration_ms: 383.3192
+  type: 'test'
+  ...
+# Subtest: V3 tutorial 1: quatro microetapas e descobertas preservadas
+ok 189 - V3 tutorial 1: quatro microetapas e descobertas preservadas
+  ---
+  duration_ms: 39.5709
+  type: 'test'
+  ...
+# Subtest: V3 tutorial 6: quatro microetapas e descobertas preservadas
+ok 190 - V3 tutorial 6: quatro microetapas e descobertas preservadas
+  ---
+  duration_ms: 50.4035
+  type: 'test'
+  ...
+# Subtest: V3 tutorial 11: quatro microetapas e descobertas preservadas
+ok 191 - V3 tutorial 11: quatro microetapas e descobertas preservadas
+  ---
+  duration_ms: 51.5795
+  type: 'test'
+  ...
+# Subtest: V3 tutorial 16: quatro microetapas e descobertas preservadas
+ok 192 - V3 tutorial 16: quatro microetapas e descobertas preservadas
+  ---
+  duration_ms: 53.5041
+  type: 'test'
+  ...
+# Subtest: V3 leitura e luz persistem; reinício limpa descoberta e execução mantém estado transitório separado
+ok 193 - V3 leitura e luz persistem; reinício limpa descoberta e execução mantém estado transitório separado
+  ---
+  duration_ms: 31.6687
+  type: 'test'
+  ...
+# Subtest: V3 pistas não podem ser examinadas à distância e pedestal exige descoberta
+ok 194 - V3 pistas não podem ser examinadas à distância e pedestal exige descoberta
+  ---
+  duration_ms: 18.6632
+  type: 'test'
+  ...
+# Subtest: V3 saber a palavra sem visitar o arquivo não abre a saída
+ok 195 - V3 saber a palavra sem visitar o arquivo não abre a saída
+  ---
+  duration_ms: 17.6258
+  type: 'test'
+  ...
+# Subtest: V3 atividade 7: ignorar as entradas e imprimir literal não ativa a solução
+ok 196 - V3 atividade 7: ignorar as entradas e imprimir literal não ativa a solução
+  ---
+  duration_ms: 40.6822
+  type: 'test'
+  ...
+# Subtest: V3 atividade 8: ignorar as entradas e imprimir literal não ativa a solução
+ok 197 - V3 atividade 8: ignorar as entradas e imprimir literal não ativa a solução
+  ---
+  duration_ms: 66.8608
+  type: 'test'
+  ...
+# Subtest: V3 atividade 9: ignorar as entradas e imprimir literal não ativa a solução
+ok 198 - V3 atividade 9: ignorar as entradas e imprimir literal não ativa a solução
+  ---
+  duration_ms: 37.6527
+  type: 'test'
+  ...
+# Subtest: V3 atividade 10: ignorar as entradas e imprimir literal não ativa a solução
+ok 199 - V3 atividade 10: ignorar as entradas e imprimir literal não ativa a solução
+  ---
+  duration_ms: 42.6757
+  type: 'test'
+  ...
+# Subtest: V3 requisitos do validador impedem abrir por if True com energia insuficiente
+ok 200 - V3 requisitos do validador impedem abrir por if True com energia insuficiente
+  ---
+  duration_ms: 38.1215
+  type: 'test'
+  ...
+# Subtest: V3 PK-023 poder 25 recusa portão 1
+ok 201 - V3 PK-023 poder 25 recusa portão 1
+  ---
+  duration_ms: 14.8226
+  type: 'test'
+  ...
+# Subtest: V3 PK-023 poder 25 recusa portão 2
+ok 202 - V3 PK-023 poder 25 recusa portão 2
+  ---
+  duration_ms: 10.579
+  type: 'test'
+  ...
+# Subtest: V3 PK-023 poder 15 recusa portão 1
+ok 203 - V3 PK-023 poder 15 recusa portão 1
+  ---
+  duration_ms: 9.7203
+  type: 'test'
+  ...
+# Subtest: V3 PK-023 poder 15 recusa portão 3
+ok 204 - V3 PK-023 poder 15 recusa portão 3
+  ---
+  duration_ms: 15.1411
+  type: 'test'
+  ...
+# Subtest: V3 PK-023 poder 5 recusa portão 2
+ok 205 - V3 PK-023 poder 5 recusa portão 2
+  ---
+  duration_ms: 22.7903
+  type: 'test'
+  ...
+# Subtest: V3 PK-023 poder 5 recusa portão 3
+ok 206 - V3 PK-023 poder 5 recusa portão 3
+  ---
+  duration_ms: 19.133
+  type: 'test'
+  ...
+# Subtest: V3 poder deve corresponder ao registro da variante
+ok 207 - V3 poder deve corresponder ao registro da variante
+  ---
+  duration_ms: 80.3296
+  type: 'test'
+  ...
+# Subtest: V3 espelhos incorretos não teleportam nem recompensam
+ok 208 - V3 espelhos incorretos não teleportam nem recompensam
+  ---
+  duration_ms: 9.7026
+  type: 'test'
+  ...
+# Subtest: V3 andar sem iluminar a névoa avisa primeiro e perde exatamente uma vida depois
+ok 209 - V3 andar sem iluminar a névoa avisa primeiro e perde exatamente uma vida depois
+  ---
+  duration_ms: 9.1718
+  type: 'test'
+  ...
+# Subtest: V3 espinhos são contextuais, retraídos têm estado legível e ciclos são determinísticos
+ok 210 - V3 espinhos são contextuais, retraídos têm estado legível e ciclos são determinísticos
+  ---
+  duration_ms: 8.3617
+  type: 'test'
+  ...
+# Subtest: V3 lava é cenário bloqueado, sem morte por piso
+ok 211 - V3 lava é cenário bloqueado, sem morte por piso
+  ---
+  duration_ms: 10.4428
+  type: 'test'
+  ...
+# Subtest: V3 rubis não são confundidos com moedas opcionais
+ok 212 - V3 rubis não são confundidos com moedas opcionais
+  ---
+  duration_ms: 13.6485
+  type: 'test'
+  ...
+# Subtest: V3 porta mantém colisão durante abertura e a libera ao completar a animação
+ok 213 - V3 porta mantém colisão durante abertura e a libera ao completar a animação
+  ---
+  duration_ms: 14.902
+  type: 'test'
+  ...
+# Subtest: V3 orientações e movimentos correspondem às quatro famílias de animação
+ok 214 - V3 orientações e movimentos correspondem às quatro famílias de animação
+  ---
+  duration_ms: 13.461
+  type: 'test'
+  ...
+# Subtest: V3 busca 19: abre apenas o prefixo necessário em cada posição de chave
+ok 215 - V3 busca 19: abre apenas o prefixo necessário em cada posição de chave
+  ---
+  duration_ms: 113.492
+  type: 'test'
+  ...
+# Subtest: V3 busca 20: abre apenas o prefixo necessário em cada posição de chave
+ok 216 - V3 busca 20: abre apenas o prefixo necessário em cada posição de chave
+  ---
+  duration_ms: 360.0226
+  type: 'test'
+  ...
+# Subtest: V3 não aceita inserir um laço decorativo e fazer a mecânica fora dele
+ok 217 - V3 não aceita inserir um laço decorativo e fazer a mecânica fora dele
+  ---
+  duration_ms: 46.4952
+  type: 'test'
+  ...
+# Subtest: V3 alternativa legítima: acumulador com outro nome, soma explícita e range com início e passo
+ok 218 - V3 alternativa legítima: acumulador com outro nome, soma explícita e range com início e passo
+  ---
+  duration_ms: 58.6498
+  type: 'test'
+  ...
+# Subtest: V3 alternativa legítima: passarela longa evita os espinhos da Forja
+ok 219 - V3 alternativa legítima: passarela longa evita os espinhos da Forja
+  ---
+  duration_ms: 50.3944
+  type: 'test'
+  ...
+# Subtest: V3 nova sintaxe não libera conceitos futuros nas unidades iniciais
+ok 220 - V3 nova sintaxe não libera conceitos futuros nas unidades iniciais
+  ---
+  duration_ms: 19.8075
+  type: 'test'
+  ...
+# Subtest: V3 UI inicial, instruções e tutoriais não publicam os segredos de input
+ok 221 - V3 UI inicial, instruções e tutoriais não publicam os segredos de input
+  ---
+  duration_ms: 8.6172
+  type: 'test'
+  ...
+# Subtest: V4 100 moedas acessíveis: 145 percursos nos 29 cenários, sem dano nem requisitos forçados
+ok 222 - V4 100 moedas acessíveis: 145 percursos nos 29 cenários, sem dano nem requisitos forçados
+  ---
+  duration_ms: 2885.1663
+  type: 'test'
+  ...
+# Subtest: V4 replay nunca duplica recompensa, mesmo com opção legada de replay ativada
+ok 223 - V4 replay nunca duplica recompensa, mesmo com opção legada de replay ativada
+  ---
+  duration_ms: 24.2936
+  type: 'test'
+  ...
+# Subtest: V4 alternativas legítimas preservam acumulador, range e iluminação
+ok 224 - V4 alternativas legítimas preservam acumulador, range e iluminação
+  ---
+  duration_ms: 44.3863
+  type: 'test'
+  ...
+# Subtest: V4 atividade 1: solução V3 intacta e todas as variantes concluíveis
+ok 225 - V4 atividade 1: solução V3 intacta e todas as variantes concluíveis
+  ---
+  duration_ms: 46.366
+  type: 'test'
+  ...
+# Subtest: V4 atividade 2: solução V3 intacta e todas as variantes concluíveis
+ok 226 - V4 atividade 2: solução V3 intacta e todas as variantes concluíveis
+  ---
+  duration_ms: 52.89
+  type: 'test'
+  ...
+# Subtest: V4 atividade 3: solução V3 intacta e todas as variantes concluíveis
+ok 227 - V4 atividade 3: solução V3 intacta e todas as variantes concluíveis
+  ---
+  duration_ms: 63.6813
+  type: 'test'
+  ...
+# Subtest: V4 atividade 4: solução V3 intacta e todas as variantes concluíveis
+ok 228 - V4 atividade 4: solução V3 intacta e todas as variantes concluíveis
+  ---
+  duration_ms: 67.1315
+  type: 'test'
+  ...
+# Subtest: V4 atividade 5: solução V3 intacta e todas as variantes concluíveis
+ok 229 - V4 atividade 5: solução V3 intacta e todas as variantes concluíveis
+  ---
+  duration_ms: 96.9626
+  type: 'test'
+  ...
+# Subtest: V4 atividade 6: solução V3 intacta e todas as variantes concluíveis
+ok 230 - V4 atividade 6: solução V3 intacta e todas as variantes concluíveis
+  ---
+  duration_ms: 53.1923
+  type: 'test'
+  ...
+# Subtest: V4 atividade 7: solução V3 intacta e todas as variantes concluíveis
+ok 231 - V4 atividade 7: solução V3 intacta e todas as variantes concluíveis
+  ---
+  duration_ms: 37.0709
+  type: 'test'
+  ...
+# Subtest: V4 atividade 8: solução V3 intacta e todas as variantes concluíveis
+ok 232 - V4 atividade 8: solução V3 intacta e todas as variantes concluíveis
+  ---
+  duration_ms: 86.8913
+  type: 'test'
+  ...
+# Subtest: V4 atividade 9: solução V3 intacta e todas as variantes concluíveis
+ok 233 - V4 atividade 9: solução V3 intacta e todas as variantes concluíveis
+  ---
+  duration_ms: 52.5288
+  type: 'test'
+  ...
+# Subtest: V4 atividade 10: solução V3 intacta e todas as variantes concluíveis
+ok 234 - V4 atividade 10: solução V3 intacta e todas as variantes concluíveis
+  ---
+  duration_ms: 96.8794
+  type: 'test'
+  ...
+# Subtest: V4 atividade 11: solução V3 intacta e todas as variantes concluíveis
+ok 235 - V4 atividade 11: solução V3 intacta e todas as variantes concluíveis
+  ---
+  duration_ms: 76.1864
+  type: 'test'
+  ...
+# Subtest: V4 atividade 12: solução V3 intacta e todas as variantes concluíveis
+ok 236 - V4 atividade 12: solução V3 intacta e todas as variantes concluíveis
+  ---
+  duration_ms: 80.2675
+  type: 'test'
+  ...
+# Subtest: V4 atividade 13: solução V3 intacta e todas as variantes concluíveis
+ok 237 - V4 atividade 13: solução V3 intacta e todas as variantes concluíveis
+  ---
+  duration_ms: 43.2361
+  type: 'test'
+  ...
+# Subtest: V4 atividade 14: solução V3 intacta e todas as variantes concluíveis
+ok 238 - V4 atividade 14: solução V3 intacta e todas as variantes concluíveis
+  ---
+  duration_ms: 64.7893
+  type: 'test'
+  ...
+# Subtest: V4 atividade 15: solução V3 intacta e todas as variantes concluíveis
+ok 239 - V4 atividade 15: solução V3 intacta e todas as variantes concluíveis
+  ---
+  duration_ms: 302.7137
+  type: 'test'
+  ...
+# Subtest: V4 atividade 16: solução V3 intacta e todas as variantes concluíveis
+ok 240 - V4 atividade 16: solução V3 intacta e todas as variantes concluíveis
+  ---
+  duration_ms: 42.6442
+  type: 'test'
+  ...
+# Subtest: V4 atividade 17: solução V3 intacta e todas as variantes concluíveis
+ok 241 - V4 atividade 17: solução V3 intacta e todas as variantes concluíveis
+  ---
+  duration_ms: 112.4848
+  type: 'test'
+  ...
+# Subtest: V4 atividade 18: solução V3 intacta e todas as variantes concluíveis
+ok 242 - V4 atividade 18: solução V3 intacta e todas as variantes concluíveis
+  ---
+  duration_ms: 191.6407
+  type: 'test'
+  ...
+# Subtest: V4 atividade 19: solução V3 intacta e todas as variantes concluíveis
+ok 243 - V4 atividade 19: solução V3 intacta e todas as variantes concluíveis
+  ---
+  duration_ms: 74.793
+  type: 'test'
+  ...
+# Subtest: V4 atividade 20: solução V3 intacta e todas as variantes concluíveis
+ok 244 - V4 atividade 20: solução V3 intacta e todas as variantes concluíveis
+  ---
+  duration_ms: 414.3094
+  type: 'test'
+  ...
+# Subtest: V4 orçamento semântico configurado em todas as atividades, crescente por unidade
+ok 245 - V4 orçamento semântico configurado em todas as atividades, crescente por unidade
+  ---
+  duration_ms: 14.4128
+  type: 'test'
+  ...
+# Subtest: V4 programa acima do orçamento executa, descobre e alcança saída; só conclusão é bloqueada
+ok 246 - V4 programa acima do orçamento executa, descobre e alcança saída; só conclusão é bloqueada
+  ---
+  duration_ms: 39.8429
+  type: 'test'
+  ...
+# Subtest: V4 exceder orçamento permite exploração parcial sem mensagem de execução proibida
+ok 247 - V4 exceder orçamento permite exploração parcial sem mensagem de execução proibida
+  ---
+  duration_ms: 15.3423
+  type: 'test'
+  ...
+# Subtest: V4 tentativas excluem código vazio, comentários, parsing e bloqueios estáticos
+ok 248 - V4 tentativas excluem código vazio, comentários, parsing e bloqueios estáticos
+  ---
+  duration_ms: 16.8022
+  type: 'test'
+  ...
+# Subtest: V4 moedas: cinco por fase, 100 IDs únicos e nenhum objetivo exige moeda
+ok 249 - V4 moedas: cinco por fase, 100 IDs únicos e nenhum objetivo exige moeda
+  ---
+  duration_ms: 10.5566
+  type: 'test'
+  ...
+# Subtest: V4 coleta grava imediatamente, credita uma vez e rejeita coleta remota
+ok 250 - V4 coleta grava imediatamente, credita uma vez e rejeita coleta remota
+  ---
+  duration_ms: 25.1405
+  type: 'test'
+  ...
+# Subtest: V4 executar, reiniciar descobertas e sair/voltar não recriam moedas
+ok 251 - V4 executar, reiniciar descobertas e sair/voltar não recriam moedas
+  ---
+  duration_ms: 24.13
+  type: 'test'
+  ...
+# Subtest: V4 morrer preserva moedas e desconta exatamente uma vida
+ok 252 - V4 morrer preserva moedas e desconta exatamente uma vida
+  ---
+  duration_ms: 24.1354
+  type: 'test'
+  ...
+# Subtest: V4 concluir e repetir mantém XP e saldo; rubis não geram moeda extra
+ok 253 - V4 concluir e repetir mantém XP e saldo; rubis não geram moeda extra
+  ---
+  duration_ms: 127.9061
+  type: 'test'
+  ...
+# Subtest: V4 todas as moedas rendem exatamente 100 uma única vez, inclusive após recarregar
+ok 254 - V4 todas as moedas rendem exatamente 100 uma única vez, inclusive após recarregar
+  ---
+  duration_ms: 166.9448
+  type: 'test'
+  ...
+# Subtest: V4 migração preserva XP, desbloqueios e saldo V3 sem inventar moedas coletadas
+ok 255 - V4 migração preserva XP, desbloqueios e saldo V3 sem inventar moedas coletadas
+  ---
+  duration_ms: 12.8559
+  type: 'test'
+  ...
+# Subtest: V4 ledger elimina IDs inválidos/duplicados e mantém saldo separado do histórico de coleta
+ok 256 - V4 ledger elimina IDs inválidos/duplicados e mantém saldo separado do histórico de coleta
+  ---
+  duration_ms: 18.8649
+  type: 'test'
+  ...
+# Subtest: V4 vinte conclusões, desbloqueios, XP por vidas e replays continuam coerentes
+ok 257 - V4 vinte conclusões, desbloqueios, XP por vidas e replays continuam coerentes
+  ---
+  duration_ms: 787.9328
+  type: 'test'
+  ...
+# Subtest: V4 soluções podem concluir sem coletar qualquer moeda opcional
+ok 258 - V4 soluções podem concluir sem coletar qualquer moeda opcional
+  ---
+  duration_ms: 627.3315
+  type: 'test'
+  ...
+# Subtest: V4 decoração preserva colisões; objeto sólido futuro bloqueia com aviso e sem dano
+ok 259 - V4 decoração preserva colisões; objeto sólido futuro bloqueia com aviso e sem dano
+  ---
+  duration_ms: 17.7259
+  type: 'test'
+  ...
+# Subtest: V4 orçamento: indicador semântico real destaca excesso e EXECUTAR permanece disponível
+ok 260 - V4 orçamento: indicador semântico real destaca excesso e EXECUTAR permanece disponível
+  ---
+  duration_ms: 93.5375
+  type: 'test'
+  ...
+# Subtest: V4 modal exige mundo, pedagogia e orçamento; não abre em execução incompleta
+ok 261 - V4 modal exige mundo, pedagogia e orçamento; não abre em execução incompleta
+  ---
+  duration_ms: 110.1569
+  type: 'test'
+  ...
+# Subtest: V4 modal apresenta só objetivos/regras locais e estatísticas reais da busca
+ok 262 - V4 modal apresenta só objetivos/regras locais e estatísticas reais da busca
+  ---
+  duration_ms: 107.857
+  type: 'test'
+  ...
+# Subtest: V4 modal sem baús omite estatística e tentar novamente reinicia sem duplicar recompensas
+ok 263 - V4 modal sem baús omite estatística e tentar novamente reinicia sem duplicar recompensas
+  ---
+  duration_ms: 111.8791
+  type: 'test'
+  ...
+# Subtest: V4 próxima atividade usa progresso salvo e conclui jornada retorna ao menu
+ok 264 - V4 próxima atividade usa progresso salvo e conclui jornada retorna ao menu
+  ---
+  duration_ms: 246.3066
+  type: 'test'
+  ...
+# Subtest: V4 HUD e renderização de moeda persistem após REINICIAR e retorno à fase
+ok 265 - V4 HUD e renderização de moeda persistem após REINICIAR e retorno à fase
+  ---
+  duration_ms: 20.5405
+  type: 'test'
+  ...
+# Subtest: V4 ! aparece apenas próximo e visível; examinar registra, afasta/esconde e persiste entre EXECUTARs
+ok 266 - V4 ! aparece apenas próximo e visível; examinar registra, afasta/esconde e persiste entre EXECUTARs
+  ---
+  duration_ms: 21.481
+  type: 'test'
+  ...
+# Subtest: V4 indicador não revela objetos ocultos nem transforma decoração em investigação
+ok 267 - V4 indicador não revela objetos ocultos nem transforma decoração em investigação
+  ---
+  duration_ms: 17.5097
+  type: 'test'
+  ...
+# Subtest: V4 totens usam os novos quadros OFF/ON, sincronizados com ativação e ponte
+ok 268 - V4 totens usam os novos quadros OFF/ON, sincronizados com ativação e ponte
+  ---
+  duration_ms: 21.2809
+  type: 'test'
+  ...
+# Subtest: V4 UI inicial, livros não lidos e prompts continuam sem respostas expostas
+ok 269 - V4 UI inicial, livros não lidos e prompts continuam sem respostas expostas
+  ---
+  duration_ms: 157.193
+  type: 'test'
+  ...
+# Subtest: V5 autoplay: aguarda gesto real e desbloqueio; uma única música atravessa cenas
+ok 270 - V5 autoplay: aguarda gesto real e desbloqueio; uma única música atravessa cenas
+  ---
+  duration_ms: 2.0115
+  type: 'test'
+  ...
+# Subtest: V5 volumes independentes e mudo preservam trilha e preferências entre cenas
+ok 271 - V5 volumes independentes e mudo preservam trilha e preferências entre cenas
+  ---
+  duration_ms: 2.7711
+  type: 'test'
+  ...
+# Subtest: V5 efeitos têm limite de frequência e instâncias reutilizadas; destroy remove listeners
+ok 272 - V5 efeitos têm limite de frequência e instâncias reutilizadas; destroy remove listeners
+  ---
+  duration_ms: 1.2772
+  type: 'test'
+  ...
+# Subtest: V5 sem áudio decodificado continua silencioso, sem erro e sem instâncias
+ok 273 - V5 sem áudio decodificado continua silencioso, sem erro e sem instâncias
+  ---
+  duration_ms: 1.2681
+  type: 'test'
+  ...
+# Subtest: V5 assets WAV são locais, completos, pequenos e com emenda contínua do loop
+ok 274 - V5 assets WAV são locais, completos, pequenos e com emenda contínua do loop
+  ---
+  duration_ms: 41.7517
+  type: 'test'
+  ...
+# Subtest: V5 atmosfera em todas as 20 atividades: fontes limitadas, sob a névoa, sem alterar estado
+ok 275 - V5 atmosfera em todas as 20 atividades: fontes limitadas, sob a névoa, sem alterar estado
+  ---
+  duration_ms: 744.9869
+  type: 'test'
+  ...
+# Subtest: V5 luzes ocultas e moedas coletadas não vazam; movimento reduzido elimina pulsação e idle
+ok 276 - V5 luzes ocultas e moedas coletadas não vazam; movimento reduzido elimina pulsação e idle
+  ---
+  duration_ms: 31.1897
+  type: 'test'
+  ...
+# Subtest: V5 efeitos e luzes não acumulam em reattach/reinício; bursts têm limite e expiram
+ok 277 - V5 efeitos e luzes não acumulam em reattach/reinício; bursts têm limite e expiram
+  ---
+  duration_ms: 36.1648
+  type: 'test'
+  ...
+# Subtest: V5 coleta tem feedback uma vez; reset, valores iguais e objetos ocultos são silenciosos
+ok 278 - V5 coleta tem feedback uma vez; reset, valores iguais e objetos ocultos são silenciosos
+  ---
+  duration_ms: 28.5672
+  type: 'test'
+  ...
+# Subtest: V5 teleporte enquadra durante fade e preserva a ação física existente
+ok 279 - V5 teleporte enquadra durante fade e preserva a ação física existente
+  ---
+  duration_ms: 16.7125
+  type: 'test'
+  ...
+# Subtest: V5 conclusão mostra progresso real, informa moedas e mantém XP idempotente
+ok 280 - V5 conclusão mostra progresso real, informa moedas e mantém XP idempotente
+  ---
+  duration_ms: 60.8826
+  type: 'test'
+  ...
+# Subtest: V5 controles DOM funcionam no jogo e menu; troca de cena remove assinaturas antigas
+ok 281 - V5 controles DOM funcionam no jogo e menu; troca de cena remove assinaturas antigas
+  ---
+  duration_ms: 21.2503
+  type: 'test'
+  ...
+# Subtest: V6 A1: solução e variantes oficiais, mapas e moedas preservados
+ok 282 - V6 A1: solução e variantes oficiais, mapas e moedas preservados
+  ---
+  duration_ms: 32.1968
+  type: 'test'
+  ...
+# Subtest: V6 A2: solução e variantes oficiais, mapas e moedas preservados
+ok 283 - V6 A2: solução e variantes oficiais, mapas e moedas preservados
+  ---
+  duration_ms: 38.1484
+  type: 'test'
+  ...
+# Subtest: V6 A3: solução e variantes oficiais, mapas e moedas preservados
+ok 284 - V6 A3: solução e variantes oficiais, mapas e moedas preservados
+  ---
+  duration_ms: 82.1733
+  type: 'test'
+  ...
+# Subtest: V6 A4: solução e variantes oficiais, mapas e moedas preservados
+ok 285 - V6 A4: solução e variantes oficiais, mapas e moedas preservados
+  ---
+  duration_ms: 84.3795
+  type: 'test'
+  ...
+# Subtest: V6 A5: solução e variantes oficiais, mapas e moedas preservados
+ok 286 - V6 A5: solução e variantes oficiais, mapas e moedas preservados
+  ---
+  duration_ms: 127.4212
+  type: 'test'
+  ...
+# Subtest: V6 A6: solução e variantes oficiais, mapas e moedas preservados
+ok 287 - V6 A6: solução e variantes oficiais, mapas e moedas preservados
+  ---
+  duration_ms: 40.8359
+  type: 'test'
+  ...
+# Subtest: V6 A7: solução e variantes oficiais, mapas e moedas preservados
+ok 288 - V6 A7: solução e variantes oficiais, mapas e moedas preservados
+  ---
+  duration_ms: 76.0976
+  type: 'test'
+  ...
+# Subtest: V6 A8: solução e variantes oficiais, mapas e moedas preservados
+ok 289 - V6 A8: solução e variantes oficiais, mapas e moedas preservados
+  ---
+  duration_ms: 54.32
+  type: 'test'
+  ...
+# Subtest: V6 A9: solução e variantes oficiais, mapas e moedas preservados
+ok 290 - V6 A9: solução e variantes oficiais, mapas e moedas preservados
+  ---
+  duration_ms: 59.5971
+  type: 'test'
+  ...
+# Subtest: V6 A10: solução e variantes oficiais, mapas e moedas preservados
+ok 291 - V6 A10: solução e variantes oficiais, mapas e moedas preservados
+  ---
+  duration_ms: 117.9683
+  type: 'test'
+  ...
+# Subtest: V6 A11: solução e variantes oficiais, mapas e moedas preservados
+ok 292 - V6 A11: solução e variantes oficiais, mapas e moedas preservados
+  ---
+  duration_ms: 36.6468
+  type: 'test'
+  ...
+# Subtest: V6 A12: solução e variantes oficiais, mapas e moedas preservados
+ok 293 - V6 A12: solução e variantes oficiais, mapas e moedas preservados
+  ---
+  duration_ms: 46.0518
+  type: 'test'
+  ...
+# Subtest: V6 A13: solução e variantes oficiais, mapas e moedas preservados
+ok 294 - V6 A13: solução e variantes oficiais, mapas e moedas preservados
+  ---
+  duration_ms: 91.0456
+  type: 'test'
+  ...
+# Subtest: V6 A14: solução e variantes oficiais, mapas e moedas preservados
+ok 295 - V6 A14: solução e variantes oficiais, mapas e moedas preservados
+  ---
+  duration_ms: 96.3785
+  type: 'test'
+  ...
+# Subtest: V6 A15: solução e variantes oficiais, mapas e moedas preservados
+ok 296 - V6 A15: solução e variantes oficiais, mapas e moedas preservados
+  ---
+  duration_ms: 188.81
+  type: 'test'
+  ...
+# Subtest: V6 A16: solução e variantes oficiais, mapas e moedas preservados
+ok 297 - V6 A16: solução e variantes oficiais, mapas e moedas preservados
+  ---
+  duration_ms: 54.4147
+  type: 'test'
+  ...
+# Subtest: V6 A17: solução e variantes oficiais, mapas e moedas preservados
+ok 298 - V6 A17: solução e variantes oficiais, mapas e moedas preservados
+  ---
+  duration_ms: 83.1334
+  type: 'test'
+  ...
+# Subtest: V6 A18: solução e variantes oficiais, mapas e moedas preservados
+ok 299 - V6 A18: solução e variantes oficiais, mapas e moedas preservados
+  ---
+  duration_ms: 240.71
+  type: 'test'
+  ...
+# Subtest: V6 A19: solução e variantes oficiais, mapas e moedas preservados
+ok 300 - V6 A19: solução e variantes oficiais, mapas e moedas preservados
+  ---
+  duration_ms: 85.011
+  type: 'test'
+  ...
+# Subtest: V6 A20: solução e variantes oficiais, mapas e moedas preservados
+ok 301 - V6 A20: solução e variantes oficiais, mapas e moedas preservados
+  ---
+  duration_ms: 496.8651
+  type: 'test'
+  ...
+# Subtest: V6 A6: juramento exige input correto; literal antigo, resposta errada ou ausência não passam
+ok 302 - V6 A6: juramento exige input correto; literal antigo, resposta errada ou ausência não passam
+  ---
+  duration_ms: 101.8734
+  type: 'test'
+  ...
+# Subtest: V6 A12: interruptor desligado, pisada inócua, sem variante previamente ativa
+ok 303 - V6 A12: interruptor desligado, pisada inócua, sem variante previamente ativa
+  ---
+  duration_ms: 38.0718
+  type: 'test'
+  ...
+# Subtest: V6 A13: duas respostas associadas aos registros, ambas obrigatórias e exatas
+ok 304 - V6 A13: duas respostas associadas aos registros, ambas obrigatórias e exatas
+  ---
+  duration_ms: 313.7383
+  type: 'test'
+  ...
+# Subtest: V6 A14: antigo atalho morre nos espinhos; detour indicado no diário passa
+ok 305 - V6 A14: antigo atalho morre nos espinhos; detour indicado no diário passa
+  ---
+  duration_ms: 81.8538
+  type: 'test'
+  ...
+# Subtest: V6 placas falsas: 2–6 apenas nas atividades com placas, piso válido, estado inerte
+ok 306 - V6 placas falsas: 2–6 apenas nas atividades com placas, piso válido, estado inerte
+  ---
+  duration_ms: 56.8937
+  type: 'test'
+  ...
+# Subtest: V6 tutorial A1: não escreve código e solução completa conclui desde etapa zero
+ok 307 - V6 tutorial A1: não escreve código e solução completa conclui desde etapa zero
+  ---
+  duration_ms: 40.2163
+  type: 'test'
+  ...
+# Subtest: V6 tutorial A6: não escreve código e solução completa conclui desde etapa zero
+ok 308 - V6 tutorial A6: não escreve código e solução completa conclui desde etapa zero
+  ---
+  duration_ms: 41.0795
+  type: 'test'
+  ...
+# Subtest: V6 tutorial A11: não escreve código e solução completa conclui desde etapa zero
+ok 309 - V6 tutorial A11: não escreve código e solução completa conclui desde etapa zero
+  ---
+  duration_ms: 44.8465
+  type: 'test'
+  ...
+# Subtest: V6 tutorial A16: não escreve código e solução completa conclui desde etapa zero
+ok 310 - V6 tutorial A16: não escreve código e solução completa conclui desde etapa zero
+  ---
+  duration_ms: 47.71
+  type: 'test'
+  ...
+# Subtest: V6 três mortes: contagem, bloqueio, retorno obrigatório e limite A1
+ok 311 - V6 três mortes: contagem, bloqueio, retorno obrigatório e limite A1
+  ---
+  duration_ms: 63.0721
+  type: 'test'
+  ...
+# Subtest: V6 save: migra V5 sem inventar métricas; conserva XP, moedas e recompensas
+ok 312 - V6 save: migra V5 sem inventar métricas; conserva XP, moedas e recompensas
+  ---
+  duration_ms: 66.8288
+  type: 'test'
+  ...
+# Subtest: V6 recuperação: não permite voltar imediatamente à missão da morte pelo botão próxima
+ok 313 - V6 recuperação: não permite voltar imediatamente à missão da morte pelo botão próxima
+  ---
+  duration_ms: 98.5918
+  type: 'test'
+  ...
+# Subtest: V6 estatísticas: instruções de laço efetivamente executadas, erros e respostas
+ok 314 - V6 estatísticas: instruções de laço efetivamente executadas, erros e respostas
+  ---
+  duration_ms: 72.9019
+  type: 'test'
+  ...
+# Subtest: V6 dev: voo não atravessa limites nem dispara coleta; save normal intacto
+ok 315 - V6 dev: voo não atravessa limites nem dispara coleta; save normal intacto
+  ---
+  duration_ms: 248.4406
+  type: 'test'
+  ...
+# Subtest: V6 interface: game over não oferece continuar; conclusão A20, estatísticas e reset persistente
+ok 316 - V6 interface: game over não oferece continuar; conclusão A20, estatísticas e reset persistente
+  ---
+  duration_ms: 234.5457
+  type: 'test'
+  ...
+# Subtest: V6 todas as portas das 20 atividades passam pelo sistema de transição
+ok 317 - V6 todas as portas das 20 atividades passam pelo sistema de transição
+  ---
+  duration_ms: 1296.1476
+  type: 'test'
+  ...
+# Subtest: V6 animação door: abertura e fechamento aguardam tween e mantêm colisão
+ok 318 - V6 animação door: abertura e fechamento aguardam tween e mantêm colisão
+  ---
+  duration_ms: 12.924
+  type: 'test'
+  ...
+# Subtest: V6 animação gate: abertura e fechamento aguardam tween e mantêm colisão
+ok 319 - V6 animação gate: abertura e fechamento aguardam tween e mantêm colisão
+  ---
+  duration_ms: 11.6969
+  type: 'test'
+  ...
+# Subtest: V6 animação guardian: abertura e fechamento aguardam tween e mantêm colisão
+ok 320 - V6 animação guardian: abertura e fechamento aguardam tween e mantêm colisão
+  ---
+  duration_ms: 15.844
+  type: 'test'
+  ...
+# Subtest: V6 interruptor discreto: representação idêntica ligado/desligado e sem burst
+ok 321 - V6 interruptor discreto: representação idêntica ligado/desligado e sem burst
+  ---
+  duration_ms: 12.6535
+  type: 'test'
+  ...
+# Subtest: V6 derivados: máscara preserva pixels dourados e remove piso; parede preserva alpha e contraste
+ok 322 - V6 derivados: máscara preserva pixels dourados e remove piso; parede preserva alpha e contraste
+  ---
+  duration_ms: 11.1081
+  type: 'test'
+  ...
+# Subtest: V6 interface A6 e A13 reutiliza input, separa resposta do editor e associa perguntas
+ok 323 - V6 interface A6 e A13 reutiliza input, separa resposta do editor e associa perguntas
+  ---
+  duration_ms: 47.8204
+  type: 'test'
+  ...
+# Subtest: V6 save retomado: Diário, vidas, variante e rascunho; estado físico sempre seguro
+ok 324 - V6 save retomado: Diário, vidas, variante e rascunho; estado físico sempre seguro
+  ---
+  duration_ms: 80.1457
+  type: 'test'
+  ...
+# Subtest: V6 game over reaparece após recarregar e não oferece botão de continuar a mesma missão
+ok 325 - V6 game over reaparece após recarregar e não oferece botão de continuar a mesma missão
+  ---
+  duration_ms: 27.2622
+  type: 'test'
+  ...
+# Subtest: V6 fim da jornada persiste no menu e reset não regrava checkpoint antigo
+ok 326 - V6 fim da jornada persiste no menu e reset não regrava checkpoint antigo
+  ---
+  duration_ms: 257.7375
+  type: 'test'
+  ...
+1..326
+# tests 326
+# suites 0
+# pass 326
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 19847.4705

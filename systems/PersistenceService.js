@@ -2,6 +2,8 @@
     'use strict';
     let memoryState = null;
     let storageFailed = false;
+    let devState = null;
+    function devProfile () { return Boolean(window.ACTIVITIES?.[0]?.v6 && new URLSearchParams(window.location?.search || "").get("dev") === "1"); }
     function defaults () { return { schemaVersion: 2, walletCoins: 0, totalXp: 0, completedActivities: [], unlockedMax: 1, rewardedActivities: {}, updatedAt: null }; }
     function normalize (raw) {
         const state = raw && typeof raw === 'object' ? raw : {}; const result = defaults();
@@ -19,12 +21,14 @@
             result.coinCollection = { version:1, ids, legacyCredit, spent };
             result.walletCoins = legacyCredit + ids.length - spent;
         }
+        if (window.ACTIVITIES?.[0]?.v6 && window.JourneySystem) { result.schemaVersion=3; result.journey=window.JourneySystem.normalize(state.journey,result); }
         result.updatedAt = state.updatedAt || null; return result;
     }
     function storageAvailable () { try { return typeof window.localStorage !== 'undefined' && window.localStorage !== null; } catch (error) { return false; } }
     window.PersistenceService = {
-        load () { if (storageFailed || !storageAvailable()) { memoryState = normalize(memoryState); return JSON.parse(JSON.stringify(memoryState)); } try { const raw = window.localStorage.getItem(window.GAME_CONSTANTS.STORAGE_KEY); return normalize(raw ? JSON.parse(raw) : null); } catch (error) { storageFailed = true; return normalize(memoryState); } },
-        save (state) { const value = normalize(state); value.updatedAt = new Date().toISOString(); memoryState = value; if (!storageFailed && storageAvailable()) { try { window.localStorage.setItem(window.GAME_CONSTANTS.STORAGE_KEY, JSON.stringify(value)); } catch (error) { storageFailed = true; memoryState = value; } } else memoryState = value; return JSON.parse(JSON.stringify(value)); },
-        resetForTests () { memoryState = defaults(); storageFailed = false; if (storageAvailable()) { try { window.localStorage.removeItem(window.GAME_CONSTANTS.STORAGE_KEY); } catch (error) { storageFailed = true; } } return this.load(); }
+        load () { if (devProfile()) { devState ||= normalize(null); return JSON.parse(JSON.stringify(devState)); } if (storageFailed || !storageAvailable()) { memoryState = normalize(memoryState); return JSON.parse(JSON.stringify(memoryState)); } try { const raw = window.localStorage.getItem(window.GAME_CONSTANTS.STORAGE_KEY); return normalize(raw ? JSON.parse(raw) : null); } catch (error) { storageFailed = true; return normalize(memoryState); } },
+        save (state) { const value = normalize(state); value.updatedAt = new Date().toISOString(); if (devProfile()) { devState=value; return JSON.parse(JSON.stringify(value)); } memoryState = value; if (!storageFailed && storageAvailable()) { try { window.localStorage.setItem(window.GAME_CONSTANTS.STORAGE_KEY, JSON.stringify(value)); } catch (error) { storageFailed = true; memoryState = value; } } else memoryState = value; return JSON.parse(JSON.stringify(value)); },
+        resetJourney () { return this.save(defaults()); },
+        resetForTests () { devState = null; memoryState = defaults(); storageFailed = false; if (storageAvailable()) { try { window.localStorage.removeItem(window.GAME_CONSTANTS.STORAGE_KEY); } catch (error) { storageFailed = true; } } return this.load(); }
     };
 })();

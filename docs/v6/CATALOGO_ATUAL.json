@@ -1,0 +1,1125 @@
+{
+  "version": 6,
+  "activities": 20,
+  "scenarios": 28,
+  "changes": [
+    6,
+    12,
+    13,
+    14
+  ],
+  "catalog": [
+    {
+      "id": 1,
+      "name": "Primeiros Passos",
+      "description": "Explore a câmara lateral e acenda a luz que revela a saída. Guarde distâncias em variáveis.",
+      "budget": 18,
+      "objectives": [
+        {
+          "type": "variable_movement",
+          "label": "Use uma variável para conduzir Guto"
+        },
+        {
+          "type": "illuminated",
+          "id": "final",
+          "label": "Acenda o interruptor da câmara lateral"
+        },
+        {
+          "type": "reach_exit",
+          "label": "Alcance o cristal após liberar a passagem"
+        },
+        {
+          "type": "budget",
+          "label": "Respeite o orçamento de instruções"
+        }
+      ],
+      "notes": [],
+      "falsePlates": []
+    },
+    {
+      "id": 2,
+      "name": "O Caminho Mutável",
+      "description": "Uma alavanca distante mantém a passagem final fechada. Encontre-a e reutilize a mesma variável em distâncias diferentes.",
+      "budget": 22,
+      "objectives": [
+        {
+          "type": "variable_movement",
+          "label": "Use uma variável para conduzir Guto"
+        },
+        {
+          "type": "reassigned",
+          "label": "Reatribua uma variável durante o percurso"
+        },
+        {
+          "type": "flag",
+          "flag": "leverDone",
+          "label": "Ative a alavanca na ala remota"
+        },
+        {
+          "type": "reach_exit",
+          "label": "Alcance o cristal após liberar a passagem"
+        },
+        {
+          "type": "budget",
+          "label": "Respeite o orçamento de instruções"
+        }
+      ],
+      "notes": [],
+      "falsePlates": []
+    },
+    {
+      "id": 3,
+      "name": "As Grades da Masmorra",
+      "description": "Investigue os dois arquivos. Use os registros para calcular as distâncias e abrir as grades.",
+      "budget": 26,
+      "objectives": [
+        {
+          "type": "discovered",
+          "id": "base",
+          "label": "Leia o caderno do mestre"
+        },
+        {
+          "type": "discovered",
+          "id": "fator",
+          "label": "Leia o caderno do aprendiz"
+        },
+        {
+          "type": "used_concept",
+          "concept": "arithmetic",
+          "label": "Calcule uma distância com operações"
+        },
+        {
+          "type": "variable_movement",
+          "label": "Use uma variável para conduzir Guto"
+        },
+        {
+          "type": "reach_exit",
+          "label": "Alcance o cristal após liberar a passagem"
+        },
+        {
+          "type": "budget",
+          "label": "Respeite o orçamento de instruções"
+        }
+      ],
+      "notes": [
+        {
+          "id": "base",
+          "title": "Caderno do mestre",
+          "text": "O mestre media a pedra com duas marcas no cinzel: essa era sua unidade. No inverno, repetiu a medida duas vezes para reconstruir a escada do arquivo. O aprendiz guardou o restante do projeto na outra ala."
+        },
+        {
+          "id": "fator",
+          "title": "Caderno do aprendiz",
+          "text": "Perdi o cinzel do mestre, mas não sua medida. Na última galeria couberam três unidades; uma pedra a mais sustentava o cristal. Que o próximo aprendiz confira as contas antes de caminhar."
+        }
+      ],
+      "falsePlates": []
+    },
+    {
+      "id": 4,
+      "name": "O Corredor da Forja",
+      "description": "Ilumine o piso suspeito. Use a oficina para recolher os espinhos ou percorra a passarela de inspeção. A lava fica no fosso.",
+      "budget": 28,
+      "objectives": [
+        {
+          "type": "illuminated",
+          "id": "traps",
+          "label": "Ilumine a galeria dos espinhos"
+        },
+        {
+          "type": "used_concept",
+          "concept": "arithmetic",
+          "label": "Use operações para planejar o caminho"
+        },
+        {
+          "type": "variable_movement",
+          "label": "Use uma variável para conduzir Guto"
+        },
+        {
+          "type": "budget",
+          "label": "Respeite o orçamento de instruções"
+        },
+        {
+          "type": "reach_exit",
+          "label": "Alcance o cristal após liberar a passagem"
+        }
+      ],
+      "notes": [],
+      "falsePlates": []
+    },
+    {
+      "id": 5,
+      "name": "O Labirinto das Variáveis",
+      "description": "Conquiste os três selos nas alas da orientação, mudança e cálculo. Volte ao salão e libere o cristal.",
+      "budget": 38,
+      "objectives": [
+        {
+          "type": "illuminated",
+          "id": "final",
+          "label": "Conquiste o selo de luz"
+        },
+        {
+          "type": "flag",
+          "flag": "seal_change",
+          "label": "Conquiste o selo da mudança"
+        },
+        {
+          "type": "discovered",
+          "id": "sigilo",
+          "label": "Conquiste o selo do cálculo"
+        },
+        {
+          "type": "variable_movement",
+          "label": "Use uma variável para conduzir Guto"
+        },
+        {
+          "type": "reassigned",
+          "label": "Reatribua uma variável durante o percurso"
+        },
+        {
+          "type": "used_concept",
+          "concept": "arithmetic",
+          "label": "Combine operações na navegação"
+        },
+        {
+          "type": "budget",
+          "label": "Respeite o orçamento de instruções"
+        },
+        {
+          "type": "reach_exit",
+          "label": "Alcance o cristal após liberar a passagem"
+        }
+      ],
+      "notes": [
+        {
+          "id": "sigilo",
+          "title": "Selo do cálculo",
+          "text": "A guardiã exigia três testemunhos de quem atravessava: a luz reacendida, o mecanismo movido e este registro lido. Do salão ao cristal, cinco passos para cada testemunho. Ninguém devia partir às cegas."
+        }
+      ],
+      "falsePlates": []
+    },
+    {
+      "id": 6,
+      "name": "O Pedestal da Palavra",
+      "description": "Leia o juramento preservado no arquivo. Diante do pedestal, receba a resposta no campo de entrada e use print para dar voz ao compromisso dos cavaleiros.",
+      "budget": 20,
+      "objectives": [
+        {
+          "type": "discovered",
+          "id": "juramento",
+          "label": "Leia a inscrição do arquivo"
+        },
+        {
+          "type": "flag",
+          "flag": "answer_juramento",
+          "label": "Responda ao juramento no campo de entrada"
+        },
+        {
+          "type": "used_concept",
+          "concept": "print",
+          "label": "Produza uma saída com print()"
+        },
+        {
+          "type": "flag",
+          "flag": "wordPrinted",
+          "label": "Energize a runa com a palavra encontrada"
+        },
+        {
+          "type": "reach_exit",
+          "label": "Alcance o cristal após liberar a passagem"
+        },
+        {
+          "type": "budget",
+          "label": "Respeite o orçamento de instruções"
+        }
+      ],
+      "notes": [
+        {
+          "id": "juramento",
+          "title": "Livro do amanhecer",
+          "text": "Passamos a noite ouvindo pedras ceder. Ao primeiro fio de luz, renovamos o juramento: esperar juntos a AURORA. Não prometemos vencer pela força; prometemos não abandonar quem ainda caminhava no escuro."
+        }
+      ],
+      "falsePlates": []
+    },
+    {
+      "id": 7,
+      "name": "O Guardião da Resposta",
+      "description": "Descubra a virtude do antigo juramento na biblioteca e apresente sua resposta ao Guardião.",
+      "budget": 26,
+      "objectives": [
+        {
+          "type": "discovered",
+          "id": "memoria",
+          "label": "Investigue a memória na biblioteca"
+        },
+        {
+          "type": "used_concept",
+          "concept": "input",
+          "label": "Receba a palavra no pedestal"
+        },
+        {
+          "type": "used_concept",
+          "concept": "print",
+          "label": "Ecoe a resposta com print()"
+        },
+        {
+          "type": "entity_state",
+          "entityId": "guardian",
+          "state": "defeated",
+          "label": "Libere o Guardião"
+        },
+        {
+          "type": "entity_state",
+          "entityId": "door",
+          "state": "open",
+          "label": "Abra a porta do juramento"
+        },
+        {
+          "type": "reach_exit",
+          "label": "Alcance o cristal após liberar a passagem"
+        },
+        {
+          "type": "budget",
+          "label": "Respeite o orçamento de instruções"
+        }
+      ],
+      "notes": [
+        {
+          "id": "memoria",
+          "title": "Memória do cavaleiro",
+          "text": "O escudo do capitão estava partido. Mesmo assim, ele voltou para buscar o último aprendiz. Os sobreviventes chamaram seu gesto de CORAGEM. O guardião conserva a memória desse retorno, não o nome de uma espada."
+        }
+      ],
+      "falsePlates": []
+    },
+    {
+      "id": 8,
+      "name": "A Ponte dos Construtores",
+      "description": "Investigue as duas oficinas, leia suas quantidades e calcule o material que constrói a travessia.",
+      "budget": 34,
+      "objectives": [
+        {
+          "type": "discovered",
+          "id": "grupos",
+          "label": "Investigue a oficina dos grupos"
+        },
+        {
+          "type": "discovered",
+          "id": "segmentos",
+          "label": "Investigue a oficina dos segmentos"
+        },
+        {
+          "type": "used_concept",
+          "concept": "input",
+          "label": "Receba os dados descobertos com input()"
+        },
+        {
+          "type": "used_concept",
+          "concept": "int",
+          "label": "Converta as entradas numéricas"
+        },
+        {
+          "type": "used_concept",
+          "concept": "arithmetic",
+          "label": "Processe os valores no programa"
+        },
+        {
+          "type": "flag",
+          "flag": "bridgeReady",
+          "label": "Materialize a ponte"
+        },
+        {
+          "type": "reach_exit",
+          "label": "Alcance o cristal após liberar a passagem"
+        },
+        {
+          "type": "budget",
+          "label": "Respeite o orçamento de instruções"
+        }
+      ],
+      "notes": [
+        {
+          "id": "grupos",
+          "title": "Registro de equipes",
+          "text": "Duas equipes chegaram à margem com ferramentas emprestadas. Cada uma assumiu uma parte igual da ponte. A quantidade fabricada por equipe ficou anotada na oficina do outro lado do salão."
+        },
+        {
+          "id": "segmentos",
+          "title": "Registro de fabricação",
+          "text": "A carpinteira entregou três segmentos a cada equipe. Conferimos o material multiplicando a produção de uma equipe pelo número de equipes. Só depois acionamos o guincho; a ponte não perdoa contas incompletas."
+        }
+      ],
+      "falsePlates": []
+    },
+    {
+      "id": 9,
+      "name": "O Salão dos Espelhos Rúnicos",
+      "description": "Encontre os fragmentos em duas alas, interprete seus valores e calcule qual espelho leva ao cofre.",
+      "budget": 38,
+      "objectives": [
+        {
+          "type": "discovered",
+          "id": "primeira",
+          "label": "Leia o primeiro fragmento"
+        },
+        {
+          "type": "discovered",
+          "id": "segunda",
+          "label": "Leia o segundo fragmento"
+        },
+        {
+          "type": "used_concept",
+          "concept": "input",
+          "label": "Receba os dados descobertos com input()"
+        },
+        {
+          "type": "used_concept",
+          "concept": "int",
+          "label": "Converta as entradas numéricas"
+        },
+        {
+          "type": "used_concept",
+          "concept": "arithmetic",
+          "label": "Processe os valores no programa"
+        },
+        {
+          "type": "flag",
+          "flag": "correctMirror",
+          "label": "Atravesse o espelho correspondente ao cálculo"
+        },
+        {
+          "type": "entity_state",
+          "entityId": "cofre",
+          "state": "open",
+          "label": "Abra o cofre no destino"
+        },
+        {
+          "type": "budget",
+          "label": "Respeite o orçamento de instruções"
+        },
+        {
+          "type": "reach_exit",
+          "label": "Alcance o cristal após liberar a passagem"
+        }
+      ],
+      "notes": [
+        {
+          "id": "primeira",
+          "title": "Fragmento do sol",
+          "text": "O astrônomo gravou no sol o menor número primo. Dizia que até a menor luz podia orientar um viajante, desde que ele também consultasse a memória da lua."
+        },
+        {
+          "id": "segunda",
+          "title": "Fragmento da lua",
+          "text": "A cartógrafa desenhou um triângulo na lua e contou seus lados. Somou essa lembrança à marca do sol: assim encontrou o espelho certo, sem confiar no brilho dos outros."
+        }
+      ],
+      "falsePlates": []
+    },
+    {
+      "id": 10,
+      "name": "O Cofre das Três Runas",
+      "description": "Investigue as três alas, construa a travessia e processe os fragmentos para abrir o cofre central.",
+      "budget": 56,
+      "objectives": [
+        {
+          "type": "discovered",
+          "id": "a",
+          "label": "Descubra o fragmento da aurora"
+        },
+        {
+          "type": "discovered",
+          "id": "b",
+          "label": "Descubra o fragmento da forja"
+        },
+        {
+          "type": "discovered",
+          "id": "c",
+          "label": "Descubra o fragmento da memória"
+        },
+        {
+          "type": "used_concept",
+          "concept": "input",
+          "label": "Receba os dados descobertos com input()"
+        },
+        {
+          "type": "used_concept",
+          "concept": "int",
+          "label": "Converta as entradas numéricas"
+        },
+        {
+          "type": "used_concept",
+          "concept": "arithmetic",
+          "label": "Processe os valores no programa"
+        },
+        {
+          "type": "flag",
+          "flag": "bridgeReady",
+          "label": "Construa a ponte da memória"
+        },
+        {
+          "type": "flag",
+          "flag": "mirrorDone",
+          "label": "Use o espelho de retorno"
+        },
+        {
+          "type": "entity_state",
+          "entityId": "cofre",
+          "state": "open",
+          "label": "Abra o cofre central"
+        },
+        {
+          "type": "budget",
+          "label": "Respeite o orçamento de instruções"
+        },
+        {
+          "type": "reach_exit",
+          "label": "Alcance o cristal após liberar a passagem"
+        }
+      ],
+      "notes": [
+        {
+          "id": "a",
+          "title": "Fragmento da aurora",
+          "text": "Uma sentinela permaneceu no posto até a aurora. Sua marca representa a unidade. O ferreiro pediu que levassem esse valor à próxima oficina, em vez de tentar adivinhar o selo do cofre."
+        },
+        {
+          "id": "b",
+          "title": "Fragmento da forja",
+          "text": "Um par de martelos trabalhava na forja. O mestre multiplicava a marca da aurora por esse par para preparar os apoios da ponte. A alavanca só devia mover o material depois da leitura dos dois registros."
+        },
+        {
+          "id": "c",
+          "title": "Fragmento da memória",
+          "text": "Três vigias protegeram o arquivo durante o incêndio. Seus nomes se perderam, mas a conta ficou: somar os vigias ao produto da forja. O espelho preserva esse tributo antes do cofre."
+        }
+      ],
+      "falsePlates": []
+    },
+    {
+      "id": 11,
+      "name": "A Porta do Guardião",
+      "description": "A chave está fora da rota principal. Explore a ala escura e use uma condição para liberar os bloqueios.",
+      "budget": 24,
+      "objectives": [
+        {
+          "type": "has_key",
+          "label": "Busque a chave na ala remota"
+        },
+        {
+          "type": "command_context",
+          "command": "abrir_porta",
+          "condition": true,
+          "label": "Abra uma passagem dentro de uma condição"
+        },
+        {
+          "type": "entity_state",
+          "entityId": "door",
+          "state": "open",
+          "label": "Abra a porta com a chave"
+        },
+        {
+          "type": "entity_state",
+          "entityId": "guardian",
+          "state": "defeated",
+          "label": "Libere o Guardião"
+        },
+        {
+          "type": "reach_exit",
+          "label": "Alcance o cristal após liberar a passagem"
+        },
+        {
+          "type": "budget",
+          "label": "Respeite o orçamento de instruções"
+        }
+      ],
+      "notes": [],
+      "falsePlates": []
+    },
+    {
+      "id": 12,
+      "name": "Os Dois Caminhos",
+      "description": "Um interruptor discreto governa a bifurcação. Ilumine as galerias, procure o mecanismo no vestíbulo e consulte seu estado no código para escolher a passagem segura.",
+      "budget": 35,
+      "objectives": [
+        {
+          "type": "flag",
+          "flag": "routeSwitch",
+          "label": "Acione intencionalmente o interruptor da bifurcação"
+        },
+        {
+          "type": "used_concept",
+          "concept": "if",
+          "label": "Avalie a condição com if"
+        },
+        {
+          "type": "used_concept",
+          "concept": "else",
+          "label": "Preveja a alternativa com else"
+        },
+        {
+          "type": "command_context",
+          "command": "andar_frente",
+          "condition": true,
+          "label": "Faça o movimento depender da condição"
+        },
+        {
+          "type": "reach_exit",
+          "label": "Alcance o cristal após liberar a passagem"
+        },
+        {
+          "type": "budget",
+          "label": "Respeite o orçamento de instruções"
+        }
+      ],
+      "notes": [],
+      "falsePlates": []
+    },
+    {
+      "id": 13,
+      "name": "A Câmara das Comparações",
+      "description": "Investigue os dois arquivos. No pedestal, responda separadamente à medida da fonte e ao limiar dos validadores. Compare os valores recebidos para negociar cada passagem.",
+      "budget": 36,
+      "objectives": [
+        {
+          "type": "flag",
+          "flag": "answer_fonte",
+          "label": "Responda corretamente ao Registro da Fonte"
+        },
+        {
+          "type": "flag",
+          "flag": "answer_validadores",
+          "label": "Responda corretamente à Regra dos Validadores"
+        },
+        {
+          "type": "discovered",
+          "id": "energia",
+          "label": "Encontre o registro da fonte"
+        },
+        {
+          "type": "discovered",
+          "id": "limiar",
+          "label": "Encontre a regra dos validadores"
+        },
+        {
+          "type": "used_concept",
+          "concept": "comparison",
+          "label": "Compare os valores encontrados"
+        },
+        {
+          "type": "command_context",
+          "command": "abrir_porta",
+          "condition": true,
+          "label": "Abra as passagens por blocos condicionais"
+        },
+        {
+          "type": "entity_state",
+          "entityId": "guardian_high",
+          "state": "defeated",
+          "label": "Libere o primeiro validador"
+        },
+        {
+          "type": "entity_state",
+          "entityId": "guardian_second",
+          "state": "defeated",
+          "label": "Libere o segundo validador"
+        },
+        {
+          "type": "reach_exit",
+          "label": "Alcance o cristal após liberar a passagem"
+        },
+        {
+          "type": "budget",
+          "label": "Respeite o orçamento de instruções"
+        }
+      ],
+      "notes": [
+        {
+          "id": "energia",
+          "title": "Registro da fonte",
+          "text": "A zeladora contou doze pulsações antes de selar a fonte: uma dúzia de unidades permaneceu guardada. Registrou a medida para que futuros viajantes não confundissem a força disponível com o mínimo exigido pelos validadores."
+        },
+        {
+          "id": "limiar",
+          "title": "Regra dos validadores",
+          "text": "O primeiro validador aceitou nossa passagem quando a reserva atingiu uma dezena. O segundo apenas recusava a ausência total de energia. Anote separadamente o limiar de admissão e a energia medida na fonte: são registros diferentes."
+        }
+      ],
+      "falsePlates": []
+    },
+    {
+      "id": 14,
+      "name": "O Selo das Duas Alavancas",
+      "description": "As duas alas precisam cooperar para abrir o selo final. Antes de seguir ao sul, investigue a manutenção dos espinhos na câmara azul; atravessar o corredor não resolve o mecanismo por você.",
+      "budget": 45,
+      "objectives": [
+        {
+          "type": "entity_state",
+          "entityId": "lever_blue",
+          "state": "on",
+          "label": "Ative a ala azul"
+        },
+        {
+          "type": "entity_state",
+          "entityId": "lever_green",
+          "state": "on",
+          "label": "Ative a ala verde"
+        },
+        {
+          "type": "used_concept",
+          "concept": "and",
+          "label": "Combine condições com and"
+        },
+        {
+          "type": "used_concept",
+          "concept": "or",
+          "label": "Combine condições com or"
+        },
+        {
+          "type": "command_context",
+          "command": "abrir_porta",
+          "condition": true,
+          "label": "Controle a abertura com condições"
+        },
+        {
+          "type": "entity_state",
+          "entityId": "gate_side",
+          "state": "open",
+          "label": "Abra a passagem de OU"
+        },
+        {
+          "type": "entity_state",
+          "entityId": "gate_main",
+          "state": "open",
+          "label": "Abra o selo de E"
+        },
+        {
+          "type": "budget",
+          "label": "Respeite o orçamento de instruções"
+        },
+        {
+          "type": "reach_exit",
+          "label": "Alcance o cristal após liberar a passagem"
+        }
+      ],
+      "notes": [
+        {
+          "id": "manutencao",
+          "title": "Diário de manutenção",
+          "text": "A ala verde feriu dois aprendizes antes de descobrirmos o contrapeso. Na câmara azul, a pedra móvel junto à parede oeste recolhe as pontas do corredor sul. As outras peças são antigas bases sem ligação. Observe o caminho de volta: não pise outra vez no contrapeso."
+        }
+      ],
+      "falsePlates": [
+        {
+          "id": "inert_plate_1",
+          "row": 2,
+          "column": 6
+        },
+        {
+          "id": "inert_plate_2",
+          "row": 3,
+          "column": 8
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "O Julgamento dos Três Portões",
+      "description": "Investigue os três arquivos, reúna os selos e classifique o poder descoberto para escolher o portão do julgamento.",
+      "budget": 65,
+      "objectives": [
+        {
+          "type": "discovered",
+          "id": "sol",
+          "label": "Investigue a lei do Sol"
+        },
+        {
+          "type": "discovered",
+          "id": "lua",
+          "label": "Investigue a lei da Lua"
+        },
+        {
+          "type": "discovered",
+          "id": "sombra",
+          "label": "Descubra o poder e a lei da Sombra"
+        },
+        {
+          "type": "has_key",
+          "label": "Recolha a chave do julgamento"
+        },
+        {
+          "type": "flag",
+          "flag": "leverDone",
+          "label": "Ative o selo da Lua"
+        },
+        {
+          "type": "used_concept",
+          "concept": "if",
+          "label": "Use if na classificação"
+        },
+        {
+          "type": "used_concept",
+          "concept": "elif",
+          "label": "Use elif na classificação"
+        },
+        {
+          "type": "used_concept",
+          "concept": "else",
+          "label": "Use else na classificação"
+        },
+        {
+          "type": "used_concept",
+          "concept": "comparison",
+          "label": "Use comparações na classificação"
+        },
+        {
+          "type": "command_context",
+          "command": "entrar_portao",
+          "condition": true,
+          "label": "Faça o portão depender da classificação"
+        },
+        {
+          "type": "flag",
+          "flag": "correctPortal",
+          "label": "Entre no portão legítimo"
+        },
+        {
+          "type": "entity_state",
+          "entityId": "gate",
+          "state": "open",
+          "label": "Libere a saída do julgamento"
+        },
+        {
+          "type": "budget",
+          "label": "Respeite o orçamento de instruções"
+        },
+        {
+          "type": "reach_exit",
+          "label": "Alcance o cristal após liberar a passagem"
+        }
+      ],
+      "notes": [
+        {
+          "id": "sol",
+          "title": "Lei do Sol",
+          "text": "Ao meio-dia, o sentinela erguia o terceiro portão para poderes de vinte ou mais. A Lei do Sol era consultada primeiro; nenhum viajante forte devia ser enviado ao caminho das sombras."
+        },
+        {
+          "id": "lua",
+          "title": "Lei da Lua",
+          "text": "A vigia da Lua recebia, pelo segundo portão, quem alcançasse dez sem satisfazer a Lei do Sol. Ela lia os dois registros antes de julgar: os intervalos não deviam disputar o mesmo viajante."
+        },
+        {
+          "id": "sombra",
+          "title": "Registro do julgamento",
+          "text": "O escrivão enviava ao primeiro portão quem não alcançasse o limiar lunar. No registro desta visita, anotou 25 unidades de poder. Compare essa medida com as leis das duas salas antes de escolher.",
+          "variants": [
+            "O escrivão enviava ao primeiro portão quem não alcançasse o limiar lunar. No registro desta visita, anotou 25 unidades de poder. Compare essa medida com as leis das duas salas antes de escolher.",
+            "O escrivão enviava ao primeiro portão quem não alcançasse o limiar lunar. No registro desta visita, anotou 15 unidades de poder. Compare essa medida com as leis das duas salas antes de escolher.",
+            "O escrivão enviava ao primeiro portão quem não alcançasse o limiar lunar. No registro desta visita, anotou 5 unidades de poder. Compare essa medida com as leis das duas salas antes de escolher."
+          ]
+        }
+      ],
+      "falsePlates": []
+    },
+    {
+      "id": 16,
+      "name": "A Ponte dos Ecos",
+      "description": "Visite a galeria e transforme o padrão dos totens em uma repetição. Cada ativação constrói uma parte da ponte.",
+      "budget": 20,
+      "objectives": [
+        {
+          "type": "command_context",
+          "command": "ativar_runa",
+          "loop": true,
+          "loopType": "for",
+          "label": "Ative os totens dentro de for"
+        },
+        {
+          "type": "used_concept",
+          "concept": "for",
+          "label": "Repita o padrão com for e range()"
+        },
+        {
+          "type": "entity_state",
+          "entityId": "bridge1",
+          "state": "active",
+          "label": "Construa o segmento 1"
+        },
+        {
+          "type": "entity_state",
+          "entityId": "bridge2",
+          "state": "active",
+          "label": "Construa o segmento 2"
+        },
+        {
+          "type": "entity_state",
+          "entityId": "bridge3",
+          "state": "active",
+          "label": "Construa o segmento 3"
+        },
+        {
+          "type": "entity_state",
+          "entityId": "bridge4",
+          "state": "active",
+          "label": "Construa o segmento 4"
+        },
+        {
+          "type": "entity_state",
+          "entityId": "bridge5",
+          "state": "active",
+          "label": "Construa o segmento 5"
+        },
+        {
+          "type": "reach_exit",
+          "label": "Alcance o cristal após liberar a passagem"
+        },
+        {
+          "type": "budget",
+          "label": "Respeite o orçamento de instruções"
+        }
+      ],
+      "notes": [
+        {
+          "id": "ecos",
+          "title": "Memória da galeria",
+          "text": "O construtor bateu em cada totem uma única vez. Cada resposta trouxe uma pedra à travessia. Repetir o gesto no mesmo totem apenas devolvia o eco; era preciso reconhecer o padrão ao longo da galeria."
+        }
+      ],
+      "falsePlates": []
+    },
+    {
+      "id": 17,
+      "name": "A Câmara dos Rubis",
+      "description": "Percorra os nichos repetidos, recolha os rubis e atualize um acumulador para abrir a porta da contagem.",
+      "budget": 26,
+      "objectives": [
+        {
+          "type": "command_context",
+          "command": "coletar_rubi",
+          "loop": true,
+          "loopType": "for",
+          "label": "Colete o padrão de rubis dentro do laço"
+        },
+        {
+          "type": "accumulator",
+          "value": 5,
+          "label": "Atualize um acumulador até a contagem necessária"
+        },
+        {
+          "type": "entity_state",
+          "entityId": "door",
+          "state": "open",
+          "label": "Abra a porta usando o total"
+        },
+        {
+          "type": "command_context",
+          "command": "abrir_porta",
+          "condition": true,
+          "label": "Use uma condição para conferir a contagem"
+        },
+        {
+          "type": "reach_exit",
+          "label": "Alcance o cristal após liberar a passagem"
+        },
+        {
+          "type": "budget",
+          "label": "Respeite o orçamento de instruções"
+        }
+      ],
+      "notes": [
+        {
+          "id": "lore",
+          "title": "Registro do lapidador",
+          "text": "A lapidadora deixou uma gema em cada nicho. Conferia o trabalho acrescentando uma à contagem anterior, nunca recomeçando do zero. Ao final, o total registrado tinha de concordar com as gemas reunidas."
+        }
+      ],
+      "falsePlates": []
+    },
+    {
+      "id": 18,
+      "name": "O Corredor das Placas",
+      "description": "O comprimento útil varia. Consulte o sensor, ilumine cada trecho e repita a neutralização até o padrão terminar.",
+      "budget": 28,
+      "objectives": [
+        {
+          "type": "used_concept",
+          "concept": "while",
+          "label": "Repita enquanto o sensor detectar continuidade"
+        },
+        {
+          "type": "command_context",
+          "command": "desativar_armadilha",
+          "loop": true,
+          "loopType": "while",
+          "label": "Neutralize os espinhos dentro de while"
+        },
+        {
+          "type": "entity_state",
+          "entityId": "gate",
+          "state": "open",
+          "label": "Complete todos os módulos ativos do cenário"
+        },
+        {
+          "type": "reach_exit",
+          "label": "Alcance o cristal após liberar a passagem"
+        },
+        {
+          "type": "budget",
+          "label": "Respeite o orçamento de instruções"
+        }
+      ],
+      "notes": [],
+      "falsePlates": [
+        {
+          "id": "inert_plate_1",
+          "row": 2,
+          "column": 5
+        },
+        {
+          "id": "inert_plate_2",
+          "row": 5,
+          "column": 8
+        },
+        {
+          "id": "inert_plate_3",
+          "row": 8,
+          "column": 11
+        },
+        {
+          "id": "inert_plate_4",
+          "row": 11,
+          "column": 14
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "A Chave Perdida",
+      "description": "A chave muda de baú. Investigue as criptas com while e interrompa a busca assim que encontrá-la.",
+      "budget": 30,
+      "objectives": [
+        {
+          "type": "command_context",
+          "command": "abrir_bau",
+          "loop": true,
+          "loopType": "while",
+          "label": "Busque os baús dentro de while"
+        },
+        {
+          "type": "used_concept",
+          "concept": "break",
+          "label": "Interrompa o laço com break"
+        },
+        {
+          "type": "search_stop",
+          "label": "Encerre a busca no baú da chave"
+        },
+        {
+          "type": "has_key",
+          "label": "Encontre a chave variável"
+        },
+        {
+          "type": "entity_state",
+          "entityId": "door",
+          "state": "open",
+          "label": "Abra a porta distante"
+        },
+        {
+          "type": "budget",
+          "label": "Respeite o orçamento de instruções"
+        },
+        {
+          "type": "reach_exit",
+          "label": "Alcance o cristal após liberar a passagem"
+        }
+      ],
+      "notes": [],
+      "falsePlates": []
+    },
+    {
+      "id": 20,
+      "name": "O Santuário do Basilisco",
+      "description": "Reúna os selos das alas de runas, espinhos, busca e rubis. Volte ao santuário e formule o julgamento final.",
+      "budget": 72,
+      "objectives": [
+        {
+          "type": "command_context",
+          "command": "ativar_runa",
+          "loop": true,
+          "loopType": "for",
+          "label": "Use for na ala da ponte"
+        },
+        {
+          "type": "command_context",
+          "command": "desativar_armadilha",
+          "loop": true,
+          "loopType": "while",
+          "label": "Use while nos espinhos"
+        },
+        {
+          "type": "command_context",
+          "command": "abrir_bau",
+          "loop": true,
+          "loopType": "while",
+          "label": "Faça a busca com laço"
+        },
+        {
+          "type": "used_concept",
+          "concept": "break",
+          "label": "Pare ao encontrar a chave"
+        },
+        {
+          "type": "search_stop",
+          "label": "Encerre a busca assim que a chave aparecer"
+        },
+        {
+          "type": "command_context",
+          "command": "coletar_rubi",
+          "loop": true,
+          "loopType": "for",
+          "label": "Repita a coleta de rubis"
+        },
+        {
+          "type": "accumulator",
+          "value": 3,
+          "label": "Atualize o acumulador dos rubis"
+        },
+        {
+          "type": "discovered",
+          "id": "lei",
+          "label": "Leia o julgamento no santuário"
+        },
+        {
+          "type": "used_concept",
+          "concept": "and",
+          "label": "Combine as condições finais"
+        },
+        {
+          "type": "entity_state",
+          "entityId": "basilisk",
+          "state": "defeated",
+          "label": "Remova as proteções do Basilisco"
+        },
+        {
+          "type": "budget",
+          "label": "Respeite o orçamento de instruções"
+        },
+        {
+          "type": "reach_exit",
+          "label": "Alcance o cristal após liberar a passagem"
+        }
+      ],
+      "notes": [
+        {
+          "id": "lei",
+          "title": "Inscrição do santuário",
+          "text": "O último vigia não enfrentou o Basilisco com uma espada. Reuniu três ecos, tornou seguros os espinhos, procurou a chave sem violar baús vazios e trouxe três rubis. O selo reconheceu o conjunto desses feitos, não uma promessa."
+        }
+      ],
+      "falsePlates": []
+    }
+  ]
+}

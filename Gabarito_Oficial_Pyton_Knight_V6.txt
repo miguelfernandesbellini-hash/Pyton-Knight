@@ -1,0 +1,617 @@
+GABARITO OFICIAL — PYTON KNIGHT V6
+Derivado do catálogo de produção. V4/V5 preservados em seus arquivos históricos.
+Tutoriais: escreva o programa; uma solução integral pode concluir desde a primeira orientação.
+A6/A13: digite respostas no campo de entrada durante a execução, não como valores literais no editor.
+
+ATIVIDADE 1 — Primeiros Passos
+Explore a câmara lateral e acenda a luz que revela a saída. Guarde distâncias em variáveis.
+
+passos = 4
+andar_frente(passos)
+virar_esquerda()
+andar_frente(passos)
+ativar_interruptor()
+virar_direita()
+virar_direita()
+andar_frente(passos)
+virar_esquerda()
+final = passos + 2
+andar_frente(final)
+
+Entradas padrão: []
+
+ATIVIDADE 2 — O Caminho Mutável
+Uma alavanca distante mantém a passagem final fechada. Encontre-a e reutilize a mesma variável em distâncias diferentes.
+
+passos = 4
+andar_frente(passos)
+virar_esquerda()
+andar_frente(passos)
+ativar_interruptor()
+ativar_alavanca()
+virar_direita()
+virar_direita()
+andar_frente(passos)
+virar_esquerda()
+passos = 8
+andar_frente(passos)
+
+Entradas padrão: []
+
+ATIVIDADE 3 — As Grades da Masmorra
+Investigue os dois arquivos. Use os registros para calcular as distâncias e abrir as grades.
+
+andar_frente(2)
+virar_esquerda()
+andar_frente(3)
+ativar_interruptor()
+andar_frente()
+examinar()
+base = 2
+volta = base * 2
+virar_direita()
+virar_direita()
+andar_frente(volta)
+virar_esquerda()
+andar_frente(volta * 2)
+virar_direita()
+andar_frente(3)
+ativar_interruptor()
+andar_frente()
+examinar()
+virar_direita()
+virar_direita()
+andar_frente(volta)
+virar_direita()
+final = base * 3 + 1
+andar_frente(final)
+
+Entradas padrão: []
+
+ATIVIDADE 4 — O Corredor da Forja
+Ilumine o piso suspeito. Use a oficina para recolher os espinhos ou percorra a passarela de inspeção. A lava fica no fosso.
+
+base = 2
+subida = base * 2
+andar_frente(subida)
+virar_esquerda()
+andar_frente(subida)
+ativar_interruptor()
+virar_direita()
+virar_direita()
+descida = subida + 5
+andar_frente(descida)
+ativar_alavanca()
+virar_direita()
+virar_direita()
+andar_frente(descida - subida)
+virar_direita()
+andar_frente(subida * 3 + 1)
+
+Entradas padrão: []
+
+ATIVIDADE 5 — O Labirinto das Variáveis
+Conquiste os três selos nas alas da orientação, mudança e cálculo. Volte ao salão e libere o cristal.
+
+base = 3
+passos = base * 2 + 1
+andar_frente(passos)
+virar_esquerda()
+passos = base * 2
+andar_frente(passos)
+ativar_interruptor()
+virar_direita()
+virar_direita()
+andar_frente(passos * 2)
+ativar_alavanca()
+virar_direita()
+virar_direita()
+andar_frente(passos)
+virar_esquerda()
+andar_frente(passos - 2)
+virar_esquerda()
+andar_frente(passos)
+virar_direita()
+examinar()
+virar_direita()
+andar_frente(passos)
+virar_direita()
+andar_frente(base * 5)
+
+Entradas padrão: []
+
+ATIVIDADE 6 — O Pedestal da Palavra
+Leia o juramento preservado no arquivo. Diante do pedestal, receba a resposta no campo de entrada e use print para dar voz ao compromisso dos cavaleiros.
+
+andar_frente(4)
+virar_esquerda()
+andar_frente(3)
+ativar_interruptor()
+andar_frente()
+examinar()
+virar_direita()
+virar_direita()
+andar_frente(4)
+virar_esquerda()
+andar_frente(4)
+palavra = input("Juramento: ")
+print(palavra)
+andar_frente(7)
+
+Entradas padrão: ["AURORA"]
+
+ATIVIDADE 7 — O Guardião da Resposta
+Descubra a virtude do antigo juramento na biblioteca e apresente sua resposta ao Guardião.
+
+andar_frente(2)
+virar_esquerda()
+andar_frente(2)
+ativar_interruptor()
+andar_frente(3)
+examinar()
+virar_direita()
+virar_direita()
+andar_frente(5)
+virar_esquerda()
+andar_frente(4)
+resposta = input("Virtude do juramento: ")
+print(resposta)
+andar_frente(3)
+abrir_porta("guardian")
+andar_frente(3)
+abrir_porta("door")
+andar_frente(5)
+
+Entradas padrão: ["CORAGEM"]
+
+ATIVIDADE 8 — A Ponte dos Construtores
+Investigue as duas oficinas, leia suas quantidades e calcule o material que constrói a travessia.
+
+andar_frente(3)
+virar_esquerda()
+andar_frente(4)
+ativar_interruptor()
+andar_frente()
+examinar()
+grupos = int(input("Equipes: "))
+virar_direita()
+virar_direita()
+andar_frente(5)
+virar_esquerda()
+andar_frente(6)
+virar_direita()
+andar_frente(4)
+ativar_interruptor()
+andar_frente()
+examinar()
+segmentos = int(input("Segmentos por equipe: "))
+ativar_alavanca()
+total = grupos * segmentos
+print(total)
+virar_direita()
+virar_direita()
+andar_frente(5)
+virar_direita()
+andar_frente(11)
+
+Entradas padrão: ["2","3"]
+
+ATIVIDADE 9 — O Salão dos Espelhos Rúnicos
+Encontre os fragmentos em duas alas, interprete seus valores e calcule qual espelho leva ao cofre.
+
+andar_frente(3)
+virar_esquerda()
+andar_frente(4)
+ativar_interruptor()
+andar_frente()
+examinar()
+virar_direita()
+virar_direita()
+andar_frente(5)
+virar_esquerda()
+andar_frente(4)
+virar_direita()
+andar_frente(4)
+ativar_interruptor()
+andar_frente()
+examinar()
+virar_direita()
+virar_direita()
+andar_frente(5)
+virar_direita()
+andar_frente()
+a = int(input("Primeiro fragmento: "))
+b = int(input("Segundo fragmento: "))
+portal = a + b
+print(portal)
+andar_frente(portal)
+entrar_espelho(portal)
+andar_frente()
+abrir_porta("cofre")
+andar_frente(3)
+
+Entradas padrão: ["2","3"]
+
+ATIVIDADE 10 — O Cofre das Três Runas
+Investigue as três alas, construa a travessia e processe os fragmentos para abrir o cofre central.
+
+andar_frente(8)
+virar_esquerda()
+andar_frente(7)
+ativar_interruptor()
+examinar()
+a = int(input("Marca da aurora: "))
+virar_direita()
+virar_direita()
+andar_frente(7)
+virar_direita()
+andar_frente(5)
+virar_esquerda()
+andar_frente(7)
+ativar_interruptor()
+examinar()
+b = int(input("Marca da forja: "))
+ativar_alavanca()
+parcial = a * b
+print(parcial)
+virar_direita()
+virar_direita()
+andar_frente(7)
+virar_direita()
+andar_frente(6)
+virar_direita()
+andar_frente(3)
+virar_esquerda()
+andar_frente(4)
+virar_direita()
+andar_frente(4)
+ativar_interruptor()
+examinar()
+c = int(input("Marca da memória: "))
+codigo = parcial + c
+print(codigo)
+virar_esquerda()
+andar_frente(2)
+entrar_espelho(codigo)
+abrir_porta("cofre")
+andar_frente(10)
+
+Entradas padrão: ["1","2","3"]
+
+ATIVIDADE 11 — A Porta do Guardião
+A chave está fora da rota principal. Explore a ala escura e use uma condição para liberar os bloqueios.
+
+andar_frente(5)
+virar_esquerda()
+andar_frente(3)
+ativar_interruptor()
+andar_frente(2)
+virar_direita()
+virar_direita()
+andar_frente(5)
+virar_esquerda()
+andar_frente(3)
+if tem_chave():
+    abrir_porta("door")
+andar_frente(5)
+if tem_chave():
+    abrir_porta("guardian")
+andar_frente(5)
+
+Entradas padrão: []
+
+ATIVIDADE 12 — Os Dois Caminhos
+Um interruptor discreto governa a bifurcação. Ilumine as galerias, procure o mecanismo no vestíbulo e consulte seu estado no código para escolher a passagem segura.
+
+andar_frente(4)
+ativar_interruptor()
+virar_esquerda()
+andar_frente()
+virar_esquerda()
+ativar_interruptor()
+virar_esquerda()
+andar_frente()
+virar_esquerda()
+if interruptor_ativo():
+    virar_esquerda()
+    andar_frente(4)
+    virar_direita()
+    andar_frente(10)
+    virar_direita()
+    andar_frente(4)
+    virar_esquerda()
+else:
+    virar_direita()
+    andar_frente(4)
+    virar_esquerda()
+    andar_frente(10)
+    virar_esquerda()
+    andar_frente(4)
+    virar_direita()
+andar_frente(6)
+
+Entradas padrão: []
+
+ATIVIDADE 13 — A Câmara das Comparações
+Investigue os dois arquivos. No pedestal, responda separadamente à medida da fonte e ao limiar dos validadores. Compare os valores recebidos para negociar cada passagem.
+
+andar_frente(3)
+virar_esquerda()
+andar_frente(4)
+ativar_interruptor()
+andar_frente()
+examinar()
+virar_direita()
+virar_direita()
+andar_frente(5)
+virar_esquerda()
+andar_frente(5)
+virar_direita()
+andar_frente(4)
+ativar_interruptor()
+andar_frente()
+examinar()
+virar_direita()
+virar_direita()
+andar_frente(5)
+virar_direita()
+andar_frente()
+energia = int(input("Registro da Fonte: "))
+limiar = int(input("Regra dos Validadores: "))
+andar_frente(3)
+if energia >= limiar:
+    abrir_porta("guardian_high")
+andar_frente(3)
+if energia != 0:
+    abrir_porta("guardian_second")
+andar_frente(6)
+
+Entradas padrão: ["12","10"]
+
+ATIVIDADE 14 — O Selo das Duas Alavancas
+As duas alas precisam cooperar para abrir o selo final. Antes de seguir ao sul, investigue a manutenção dos espinhos na câmara azul; atravessar o corredor não resolve o mecanismo por você.
+
+andar_frente(5)
+ativar_interruptor()
+virar_esquerda()
+andar_frente(5)
+ativar_alavanca("lever_blue")
+examinar()
+virar_esquerda()
+andar_frente()
+virar_direita()
+virar_direita()
+andar_frente()
+virar_direita()
+andar_frente(5)
+virar_esquerda()
+andar_frente(2)
+if alavanca_azul_ativa() or alavanca_verde_ativa():
+    abrir_porta("gate_side")
+virar_direita()
+virar_direita()
+andar_frente(2)
+virar_esquerda()
+andar_frente(5)
+ativar_alavanca("lever_green")
+virar_direita()
+virar_direita()
+andar_frente(5)
+virar_direita()
+andar_frente(10)
+if alavanca_azul_ativa() and alavanca_verde_ativa():
+    abrir_porta("gate_main")
+andar_frente(8)
+
+Entradas padrão: []
+
+ATIVIDADE 15 — O Julgamento dos Três Portões
+Investigue os três arquivos, reúna os selos e classifique o poder descoberto para escolher o portão do julgamento.
+
+andar_frente(3)
+virar_esquerda()
+andar_frente(8)
+ativar_interruptor()
+examinar()
+virar_direita()
+virar_direita()
+andar_frente(14)
+ativar_interruptor()
+examinar()
+ativar_alavanca()
+virar_direita()
+virar_direita()
+andar_frente(6)
+virar_direita()
+andar_frente(7)
+virar_esquerda()
+andar_frente(8)
+ativar_interruptor()
+examinar()
+virar_direita()
+virar_direita()
+andar_frente(8)
+poder = int(input("Poder do julgamento: "))
+if poder >= 20:
+    virar_esquerda()
+    andar_frente(4)
+    entrar_portao(3)
+    andar_frente(4)
+    virar_direita()
+    andar_frente(8)
+    virar_esquerda()
+    andar_frente()
+elif poder >= 10:
+    virar_direita()
+    virar_direita()
+    andar_frente(3)
+    entrar_portao(2)
+    andar_frente(5)
+else:
+    virar_direita()
+    andar_frente(3)
+    entrar_portao(1)
+    andar_frente(4)
+    virar_esquerda()
+    andar_frente(8)
+    virar_direita()
+    andar_frente()
+abrir_porta("gate")
+andar_frente(3)
+
+Entradas padrão: ["25"]
+Variantes: [{"variant":0,"inputs":["25"],"label":"Sol"},{"variant":1,"inputs":["15"],"label":"Lua"},{"variant":2,"inputs":["5"],"label":"Sombra"}]
+
+ATIVIDADE 16 — A Ponte dos Ecos
+Visite a galeria e transforme o padrão dos totens em uma repetição. Cada ativação constrói uma parte da ponte.
+
+andar_frente(3)
+virar_esquerda()
+andar_frente(2)
+ativar_interruptor()
+andar_frente(4)
+virar_direita()
+for i in range(5):
+    ativar_runa()
+    andar_frente()
+virar_direita()
+andar_frente(6)
+virar_esquerda()
+andar_frente(11)
+
+Entradas padrão: []
+
+ATIVIDADE 17 — A Câmara dos Rubis
+Percorra os nichos repetidos, recolha os rubis e atualize um acumulador para abrir a porta da contagem.
+
+andar_frente(2)
+ativar_interruptor()
+virar_esquerda()
+total = 0
+for i in range(5):
+    andar_frente(4)
+    coletar_rubi()
+    total += 1
+    virar_direita()
+    virar_direita()
+    andar_frente(4)
+    virar_esquerda()
+    andar_frente(4)
+    virar_esquerda()
+if total == 5:
+    abrir_porta("door")
+andar_frente(4)
+
+Entradas padrão: []
+
+ATIVIDADE 18 — O Corredor das Placas
+O comprimento útil varia. Consulte o sensor, ilumine cada trecho e repita a neutralização até o padrão terminar.
+
+etapas = 0
+while corredor_continua():
+    ativar_interruptor()
+    desativar_armadilha()
+    andar_frente(3)
+    virar_direita()
+    andar_frente(3)
+    virar_esquerda()
+    etapas += 1
+andar_frente(20 - etapas * 3)
+virar_direita()
+andar_frente(18 - etapas * 3)
+
+Entradas padrão: []
+Variantes: [{"variant":0,"label":"3 módulos"},{"variant":1,"label":"4 módulos"},{"variant":2,"label":"5 módulos"}]
+
+ATIVIDADE 19 — A Chave Perdida
+A chave muda de baú. Investigue as criptas com while e interrompa a busca assim que encontrá-la.
+
+andar_frente(2)
+virar_esquerda()
+andar_frente(4)
+tentativa = 0
+while tem_bau_a_frente():
+    ativar_interruptor()
+    abrir_bau()
+    if encontrou_chave():
+        break
+    tentativa += 1
+    virar_direita()
+    andar_frente(5)
+    virar_esquerda()
+virar_direita()
+virar_direita()
+andar_frente(4)
+virar_esquerda()
+andar_frente(15 - tentativa * 5)
+abrir_porta("door")
+andar_frente(3)
+
+Entradas padrão: []
+
+ATIVIDADE 20 — O Santuário do Basilisco
+Reúna os selos das alas de runas, espinhos, busca e rubis. Volte ao santuário e formule o julgamento final.
+
+andar_frente(4)
+virar_esquerda()
+andar_frente(6)
+ativar_interruptor()
+andar_frente(3)
+virar_direita()
+for i in range(3):
+    ativar_runa()
+    andar_frente(2)
+virar_direita()
+andar_frente(9)
+virar_direita()
+andar_frente(4)
+virar_esquerda()
+andar_frente(4)
+virar_esquerda()
+while corredor_continua():
+    ativar_interruptor()
+    desativar_armadilha()
+    andar_frente(2)
+    virar_direita()
+    andar_frente(2)
+    virar_esquerda()
+andar_frente(4)
+tentativa = 0
+while tem_bau_a_frente():
+    ativar_interruptor()
+    abrir_bau()
+    if encontrou_chave():
+        break
+    tentativa += 1
+    virar_esquerda()
+    andar_frente(2)
+    virar_direita()
+    andar_frente(3)
+    virar_direita()
+    andar_frente(2)
+    virar_esquerda()
+virar_esquerda()
+andar_frente(4)
+virar_direita()
+andar_frente(11 - tentativa * 3)
+ativar_interruptor()
+virar_esquerda()
+total = 0
+for i in range(3):
+    coletar_rubi()
+    total += 1
+    andar_frente(2)
+virar_direita()
+virar_direita()
+andar_frente(2)
+virar_direita()
+andar_frente(7)
+virar_direita()
+andar_frente()
+examinar()
+if tem_chave() and total == 3:
+    andar_frente()
+    abrir_porta("basilisk")
+    andar_frente(4)
+
+Entradas padrão: []

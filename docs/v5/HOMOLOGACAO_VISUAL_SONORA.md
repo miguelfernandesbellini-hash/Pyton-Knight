@@ -67,3 +67,27 @@ Responsável: ______ · Data: ______ · Commit: ______ · Navegador/versão: ___
 Resultado: **PENDENTE**. Só registrar PK-024 concluído após inspeção humana,
 correção de eventuais problemas e aprovação explícita. Testes automatizados
 não substituem essa aprovação.
+# Rodada manual posterior à V5 — origem da V6 (22/09/2026)
+
+Relato fornecido pelo usuário após nova rodada manual. Atividades e funcionalidades
+não mencionadas abaixo foram consideradas satisfatórias e aprovadas pelo usuário
+no estado atual. Isso não representa uma nova inspeção visual automatizada.
+
+Requisitos derivados: (1) morte definitiva após três vidas e retorno de uma atividade;
+(2) campo de resposta do juramento A6; (3) narrativa das anotações; (4) animação de
+todas as portas; (5) retirar piso da sprite de moeda; (6) harmonizar paredes com piso;
+(7) interruptor discreto em A12; (8) duas respostas obrigatórias em A13;
+(9) reposicionar placa de A14 para impedir atalho dos espinhos; (10) placas falsas
+nas atividades que usam placas de pressão desde a Unidade 2; (11) coerência dos
+textos impactados; (12) tutoriais orientam sem escrever a solução; (13) concluir
+missão completa sem retenção indevida em microetapa; (14) normal/dev e voo isolado;
+(15) encerramento de A20; (16) persistência e estatísticas da jornada.
+
+Na rodada assistida anterior, A1–A6 foram concluídas pelo gabarito V4. A suspeita A6
+era compatível com a regra antiga de print; a V6 muda essa interação por solicitação.
+BUG-V5-AUDIO-01: controles herdavam pointer-events:none; correção CSS aplicada,
+12/12 testes V5 e 281/281 completos + legado aprovados. Reteste por clique foi
+interrompido pela mudança de escopo para V6; não registrar como aprovado visualmente.
+
+A implementação V6 utilizará código/shell/testes. Não usar Computer Use nem
+homologar visualmente as novas alterações sem inspeção humana posterior.

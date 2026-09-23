@@ -56,7 +56,9 @@
         async transition (scene, entity, oldState, newState) {
             if (oldState === newState) return;
             const physical = ['door','gate','guardian','bridge','bridge_segment','chest'].includes(entity.type);
-            entity.transitionTo = newState; entity.state = physical ? 'opening' : newState;
+            const opening=['open','active','defeated'].includes(newState);
+            entity.transitionFrom=oldState;
+            entity.transitionTo = newState; entity.state = physical ? (entity.v6 && !opening ? 'closing' : 'opening') : newState;
             window.MapRenderer?.atualizarEntidades(scene);
             const visual = scene.entitySprites?.get(entity.id);
             if (visual && !scene.testMode) {
@@ -64,14 +66,17 @@
                     if (visual.handle) await this.tween(scene,visual.handle,{angle:newState==='on'?35:-35},180);
                     else {await this.tween(scene,visual.image,{angle:newState==='on'?8:-8},90);await this.tween(scene,visual.image,{angle:0},90);}
                 } else if (['door','gate','guardian'].includes(entity.type)) {
-                    const y = visual.image.y; await this.tween(scene,visual.image,{y:y-14,alpha:.4},260); visual.image.setY(y);
+                    const y = visual.image.y;
+                    if(entity.v6 && !opening){visual.image.setY(y-14);visual.image.setAlpha(.4);await this.tween(scene,visual.image,{y,alpha:1},260);}
+                    else await this.tween(scene,visual.image,{y:y-14,alpha:.4},260);
+                    visual.image.setY(y);if(entity.v6)visual.image.setAlpha(1);
                 } else if (['bridge','bridge_segment'].includes(entity.type)) {
                     visual.image.setAlpha(.15); await this.tween(scene,visual.image,{alpha:1},260);
                 } else if (entity.type === 'chest') {
                     visual.image.setTexture('official_v3_chest_opening'); await this.tween(scene,visual.image,{alpha:1},230);
                 } else if(entity.type==='hazard'){for(let frame=0;frame<7;frame++){visual.image.setTexture('official_spikes_on',newState==='active'?frame:6-frame);await this.tween(scene,visual.image,{alpha:1},40);}} else { visual.image.setAlpha(.4); await this.tween(scene,visual.image,{alpha:1},200); }
             }
-            entity.state = newState; delete entity.transitionTo;
+            entity.state = newState; delete entity.transitionTo; delete entity.transitionFrom;
             window.MapRenderer?.atualizarEntidades(scene);
         },
         async light (scene, rooms) {
