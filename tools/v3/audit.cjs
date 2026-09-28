@@ -2,7 +2,8 @@
 const fs=require('fs'),path=require('path'),assert=require('assert/strict');
 const {setupV3}=require('../../tests/v3-helpers.cjs');
 const v4=process.argv.includes('--v4');
-const setup=v4?require('../../tests/v4-helpers.cjs').setupV4:setupV3;
+const v6=process.argv.includes('--v6');
+const setup=v6?require('../../tests/v6-helpers.cjs').setupV6:v4?require('../../tests/v4-helpers.cjs').setupV4:setupV3;
 const root=path.resolve(__dirname,'../..');
 function scenarios(a){return a.testScenarios||Array.from({length:a.chestKeyVariants?.length||a.variantStates?.length||1},(_,variant)=>({variant}));}
 function reachable(h,s,{allOpen=false,closedId,portals=false,start=s.atividade.startPosition}={}){
@@ -47,6 +48,6 @@ function reachable(h,s,{allOpen=false,closedId,portals=false,start=s.atividade.s
  }
  report.push({activity:a.id,name:a.nome,initialExitReachable:false,doorCuts:cuts,scenarios:runs,omissions,missingRequirements:locks,regions:a.regions.map(r=>({id:r.id,label:r.label,area:r.width*r.height,objects:a.entities.filter(e=>h.context.DiscoverySystem.contains(r,e.row,e.column)).map(e=>e.id),visitedInOfficial:runs.some(x=>x.regions.includes(r.id))}))});
  }
- const output={version:v4?'V4':'V3',generatedAt:new Date().toISOString(),activities:report.length,scenarios:report.reduce((n,a)=>n+a.scenarios.length,0),isolatedMutations:mutations,limits:'Auditoria de geometria e casos adversariais; não é prova formal de todos os programas possíveis e não substitui homologação no navegador.',report};
- const dir=path.join(root,v4?'docs/v4/evidencias':'docs/v3/evidencias');fs.mkdirSync(dir,{recursive:true});fs.writeFileSync(path.join(dir,'auditoria.json'),JSON.stringify(output,null,2));console.log(`PASS: ${output.activities} mapas, ${output.scenarios} cenários, ${mutations} omissões/requisitos isolados.`);
+ const output={version:v6?'V6':v4?'V4':'V3',generatedAt:new Date().toISOString(),activities:report.length,scenarios:report.reduce((n,a)=>n+a.scenarios.length,0),isolatedMutations:mutations,limits:'Auditoria de geometria e casos adversariais; não é prova formal de todos os programas possíveis e não substitui homologação no navegador.',report};
+ const dir=path.join(root,v6?'docs/v6/evidencias':v4?'docs/v4/evidencias':'docs/v3/evidencias');fs.mkdirSync(dir,{recursive:true});fs.writeFileSync(path.join(dir,'auditoria.json'),JSON.stringify(output,null,2));console.log(`PASS: ${output.activities} mapas, ${output.scenarios} cenários, ${mutations} omissões/requisitos isolados.`);
 })().catch(e=>{console.error(e);process.exitCode=1;});

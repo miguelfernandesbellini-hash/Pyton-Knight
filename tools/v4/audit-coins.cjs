@@ -16,12 +16,12 @@ function route(h,s,coin){
   }
  }return null;
 }
-async function auditCoins(){
+async function auditCoins(setup=setupV4){
  const rows=[];
  for(let id=1;id<=20;id++){
-  const base=setupV4().context.ACTIVITIES[id-1];
+  const base=setup().context.ACTIVITIES[id-1];
   for(const options of base.testScenarios||Array.from({length:base.chestKeyVariants?.length||base.variantStates?.length||1},(_,variant)=>({variant}))){
-   const h=setupV4(),a=h.context.ACTIVITIES[id-1],snapshots=[];
+   const h=setup(),a=h.context.ACTIVITIES[id-1],snapshots=[];
    const after=h.context.MechanismSystem.afterMove;h.context.MechanismSystem.afterMove=async function(s,states){await after.call(this,s,states);snapshots.push(snapshot(s));};
    const {scene:s,result}=await h.run(a,options);h.context.MechanismSystem.afterMove=after;assert.equal(result.cause,'SUCCESS');
    const initialProgress=copy(h.context.PersistenceService.load()),coins=a.entities.filter(e=>e.type==='coin'),results=[];

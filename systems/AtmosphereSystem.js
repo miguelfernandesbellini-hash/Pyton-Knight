@@ -102,6 +102,7 @@
         MAX_LIGHTS, MAX_BURSTS,
         attach (scene) { scene.atmosphere?.destroy(); if (!scene.testMode && scene.atividade.v3) scene.atmosphere = new Atmosphere(scene); return scene.atmosphere; },
         changed (scene, entity, previous) {
+            if(entity.discreet || entity.inactivePlate || entity.state==='closing')return;
             if (scene.testMode || previous===null || previous===entity.state || entity.state==='opening' || !window.DiscoverySystem.canSee(scene,entity.row,entity.column)) return;
             const collected=['key','coin','ruby'].includes(entity.type) && entity.state==='collected';
             scene.atmosphere?.burst(entity.row,entity.column,collected?colors.warm:colors.magic);

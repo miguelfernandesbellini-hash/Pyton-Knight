@@ -1,4 +1,11 @@
-# Estado atual — V4, 17/09/2026
+# Estado atual — V6, 23/09/2026
+
+Continuar pela branch `feat/v6-gameplay-polimento`. Implementação atual, resultados,
+limites e próximos passos estão em [v6/ESTADO_ATUAL.md](v6/ESTADO_ATUAL.md).
+Não restaurar a V4 sobre esta branch nem retomar testes interativos V5 nesta etapa.
+A homologação visual das mudanças V6 permanece manual; nenhum merge autorizado.
+
+## Registro histórico V4 — 17/09/2026
 
 Usar esta versão como base. Não restaurar ZIP original, não reconstruir fases V3 e não executar geradores históricos de documentação por engano.
 
