@@ -1,4 +1,4 @@
-"""Original Pyton Knight sound design. Standard library only; no samples.
+"""Original Python Knight sound design. Standard library only; no samples.
 
 All frequencies, note order and envelopes below were composed for V5.
 Circular echoes and periodic drones make the ambient WAV sample-continuous.

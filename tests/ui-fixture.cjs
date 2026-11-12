@@ -22,7 +22,7 @@ function fixture(options={}){
  if(options.v3||options.v4)for(const f of ['activities-v3.js','systems/DiscoverySystem.js','systems/AnimationSystem.js','systems/MechanismSystem.js'])env.load(f);
  if(options.v4)for(const f of ['activities-v4.js','systems/CoinSystem.js','systems/CompletionSystem.js','systems/DecorationSystem.js'])env.load(f);
  env.load('systems/MapRenderer.js');env.load('ui/GameUI.js');env.load('MainMenu.js');env.load('Game.js');
- function game(index){const C=env.context.pytonKnightGame.config.scene[3];const s=new C();s.init({atividadeIndex:index,variantIndex:0});s.testMode=true;s.create();return s;}
+ function game(index){const C=env.context.pythonKnightGame.config.scene[3];const s=new C();s.init({atividadeIndex:index,variantIndex:0});s.testMode=true;s.create();return s;}
  return {...env,host,game};
 }
 module.exports={fixture};

@@ -1,5 +1,6 @@
 (function () {
     'use strict';
+    const legacyStorageKey = 'pyton_knight_progress_v2';
     let memoryState = null;
     let storageFailed = false;
     let devState = null;
@@ -12,7 +13,7 @@
         result.completedActivities = Array.isArray(state.completedActivities) ? [...new Set(state.completedActivities.filter(Number.isInteger))] : [];
         result.unlockedMax = Number.isInteger(state.unlockedMax) ? Math.min(20, Math.max(1, state.unlockedMax)) : 1;
         result.rewardedActivities = state.rewardedActivities && typeof state.rewardedActivities === 'object' ? { ...state.rewardedActivities } : {};
-        // Optional V4 extension: the storage key and V2 progression remain compatible.
+        // Optional V4 extension to the V2 progression format.
         if (state.coinCollection && state.coinCollection.version === 1) {
             const ledger = state.coinCollection;
             const ids = [...new Set((Array.isArray(ledger.ids) ? ledger.ids : []).filter(id => typeof id === 'string' && /^A(?:0[1-9]|1[0-9]|20)_C0[1-5]$/.test(id)))].sort();
@@ -26,9 +27,62 @@
     }
     function storageAvailable () { try { return typeof window.localStorage !== 'undefined' && window.localStorage !== null; } catch (error) { return false; } }
     window.PersistenceService = {
-        load () { if (devProfile()) { devState ||= normalize(null); return JSON.parse(JSON.stringify(devState)); } if (storageFailed || !storageAvailable()) { memoryState = normalize(memoryState); return JSON.parse(JSON.stringify(memoryState)); } try { const raw = window.localStorage.getItem(window.GAME_CONSTANTS.STORAGE_KEY); return normalize(raw ? JSON.parse(raw) : null); } catch (error) { storageFailed = true; return normalize(memoryState); } },
-        save (state) { const value = normalize(state); value.updatedAt = new Date().toISOString(); if (devProfile()) { devState=value; return JSON.parse(JSON.stringify(value)); } memoryState = value; if (!storageFailed && storageAvailable()) { try { window.localStorage.setItem(window.GAME_CONSTANTS.STORAGE_KEY, JSON.stringify(value)); } catch (error) { storageFailed = true; memoryState = value; } } else memoryState = value; return JSON.parse(JSON.stringify(value)); },
+        load () {
+            if (devProfile()) {
+                devState ||= normalize(null);
+                return JSON.parse(JSON.stringify(devState));
+            }
+            if (!storageFailed && storageAvailable()) {
+                try {
+                    const storage = window.localStorage;
+                    const raw = storage.getItem(window.GAME_CONSTANTS.STORAGE_KEY) ?? storage.getItem(legacyStorageKey);
+                    memoryState = normalize(raw ? JSON.parse(raw) : null);
+                    return JSON.parse(JSON.stringify(memoryState));
+                } catch (error) {
+                    storageFailed = true;
+                }
+            }
+            memoryState = normalize(memoryState);
+            return JSON.parse(JSON.stringify(memoryState));
+        },
+        save (state) {
+            const value = normalize(state);
+            value.updatedAt = new Date().toISOString();
+            if (devProfile()) {
+                devState = value;
+                return JSON.parse(JSON.stringify(value));
+            }
+            memoryState = value;
+            if (!storageFailed && storageAvailable()) {
+                try {
+                    window.localStorage.setItem(window.GAME_CONSTANTS.STORAGE_KEY, JSON.stringify(value));
+                } catch (error) {
+                    storageFailed = true;
+                }
+                if (!storageFailed) {
+                    try {
+                        window.localStorage.removeItem(legacyStorageKey);
+                    } catch (error) {
+                        // The canonical save is already stored and takes precedence on load.
+                    }
+                }
+            }
+            return JSON.parse(JSON.stringify(value));
+        },
         resetJourney () { return this.save(defaults()); },
-        resetForTests () { devState = null; memoryState = defaults(); storageFailed = false; if (storageAvailable()) { try { window.localStorage.removeItem(window.GAME_CONSTANTS.STORAGE_KEY); } catch (error) { storageFailed = true; } } return this.load(); }
+        resetForTests () {
+            devState = null;
+            memoryState = defaults();
+            storageFailed = false;
+            if (storageAvailable()) {
+                try {
+                    window.localStorage.removeItem(legacyStorageKey);
+                    window.localStorage.removeItem(window.GAME_CONSTANTS.STORAGE_KEY);
+                } catch (error) {
+                    storageFailed = true;
+                }
+            }
+            return this.load();
+        }
     };
 })();

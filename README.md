@@ -1,14 +1,14 @@
-# Pyton Knight V6 — jornada, gameplay e persistência
+# Python Knight V6.1 — jornada, gameplay e persistência
 
-**V6 IMPLEMENTADA — HOMOLOGAÇÃO VISUAL MANUAL PENDENTE.** Esta é a versão
-carregada por `index.html`. A documentação V3/V4/V5 abaixo é histórica.
+`index.html` carrega a V6.1, que corrige a grafia de Python Knight na interface,
+no código e na documentação. A homologação visual manual segue pendente (PK-024).
 
 A V6 acrescenta morte definitiva com retorno obrigatório à atividade anterior,
 save da jornada, estatísticas e encerramento após A20. Revê A6/A12/A13/A14,
 anotações e tutoriais; uniformiza portas e ajusta a arte de moedas e paredes.
 As 20 geometrias, o parser, as moedas e o polimento audiovisual V5 são preservados.
 
-## Executar a V6
+## Executar a V6.1
 
 Não exige instalação nem build: Phaser, scripts e assets acompanham o projeto.
 Com Python 3, execute na pasta que contém este arquivo:
@@ -34,13 +34,14 @@ Abra **ÁUDIO** para ajustar música e efeitos separadamente ou usar o mudo gera
 As preferências permanecem entre cenas durante a sessão. A música inicia após
 interação com a página e continua **provisória**. PK-024 não está encerrado.
 
-## Referências V6
+## Referências da V6.1
 
-- [Implementação, save, narrativa e decisões](docs/v6/IMPLEMENTACAO.md)
-- [Testes, resultados e regressões](docs/v6/TESTES.md)
-- [Estado atual e continuidade](docs/v6/ESTADO_ATUAL.md)
-- [Checklist manual V6 / PK-024](docs/v6/HOMOLOGACAO_MANUAL.md)
-- [Gabarito V6 das 20 atividades](Gabarito_Oficial_Pyton_Knight_V6.txt)
+- [Alterações e compatibilidade da V6.1](docs/V6.1.md)
+- [Gabarito V6.1 das 20 atividades](Gabarito_Oficial_Python_Knight_V6.1.txt)
+- [Catálogo V6.1](docs/v6/CATALOGO_ATUAL.json)
+- [Implementação, save e decisões da V6](docs/v6/IMPLEMENTACAO.md)
+- [Resultados e regressões da V6](docs/v6/TESTES.md)
+- [Checklist da homologação manual PK-024](docs/v6/HOMOLOGACAO_MANUAL.md)
 
 Com Node.js 24, sem dependências adicionais para os testes:
 
@@ -53,8 +54,9 @@ node tools/v6/audit-coins.cjs
 
 O primeiro comando evita subprocessos bloqueados no ambiente restrito; não altera
 a velocidade do jogo. As suítes usam adaptadores e não homologam aparência ou som.
-Não execute os geradores históricos V3/V4 para atualizar a V6. Para regenerar
-somente gabarito e catálogo V6, use `node tools/v6/document.cjs`.
+Para regenerar o gabarito e o catálogo da V6.1, use `node tools/v6/document.cjs`.
+Execute as duas auditorias em uma cópia de trabalho descartável se precisar
+preservar os arquivos de evidência publicados com a V6.
 
 ## Histórico V5 — polimento audiovisual
 
@@ -125,7 +127,7 @@ A coleção é salva no perfil e endereço do navegador. Reabra o mesmo endereç
 ## Documentação atual
 
 - [Entrega V4 e limitações](docs/v4/ENTREGA_V4.md)
-- [Gabarito oficial V4 das 20 atividades](Gabarito_Oficial_Pyton_Knight_V4.txt)
+- [Gabarito oficial V4 das 20 atividades](Gabarito_Oficial_Python_Knight_V4.txt)
 - [API, orçamento, coleção e migração](docs/v4/API_V4.md)
 - [Matriz V4 por atividade](docs/v4/MATRIZ_V4.md)
 - [Testes e cobertura dos requisitos](docs/v4/RELATORIO_TESTES.md)

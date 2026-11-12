@@ -1,7 +1,7 @@
 (function () {
     'use strict';
     const OPEN = new Set(['open','active','defeated']);
-    const error = (message, line) => new window.DungeonSystem.PytonKnightRuntimeError(window.GAME_CONSTANTS.TERMINOS.SEMANTIC_ERROR,message,line);
+    const error = (message, line) => new window.DungeonSystem.PythonKnightRuntimeError(window.GAME_CONSTANTS.TERMINOS.SEMANTIC_ERROR,message,line);
     window.MechanismSystem = {
         enterSequencePlate (scene, entity) {
             const group=entity.sequenceGroup||'sequence',s=scene.runState;

@@ -22,5 +22,5 @@ window.GAME_CONSTANTS = {
         MULTIPLICADOR_XP_POR_VIDAS: { 3: 1, 2: 0.75, 1: 0.5 },
         VALOR_MOEDA: 1, RECOMPENSA_EM_REPLAY: false
     },
-    STORAGE_KEY: 'pyton_knight_progress_v2'
+    STORAGE_KEY: 'python_knight_progress_v2'
 };

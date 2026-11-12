@@ -150,7 +150,7 @@
             if (concept) { finishBusy(scene); return report(scene, { cause: window.GAME_CONSTANTS.TERMINOS.LOCKED_CONCEPT, message: `${concept} ainda não foi desbloqueado.` }, 'warning'); }
             const allowedCommands = new Set(scene.atividade.allowedCommands || []);
             for (const command of analysis.commands) {
-                if (!window.DungeonSystem.isKnownApi(command)) { finishBusy(scene); return report(scene, { cause: window.GAME_CONSTANTS.TERMINOS.UNKNOWN_COMMAND, message: `O comando ${command}() não existe na API do Pyton Knight.` }, 'warning'); }
+                if (!window.DungeonSystem.isKnownApi(command)) { finishBusy(scene); return report(scene, { cause: window.GAME_CONSTANTS.TERMINOS.UNKNOWN_COMMAND, message: `O comando ${command}() não existe na API do Python Knight.` }, 'warning'); }
                 if (!BUILTINS.has(command) && !allowedCommands.has(command)) { finishBusy(scene); return report(scene, { cause: window.GAME_CONSTANTS.TERMINOS.LOCKED_CONCEPT, message: `${command}() ainda não está disponível nesta atividade.` }, 'warning'); }
             }
             if (!scene.budgetResult.valid && !scene.atividade.v4) { finishBusy(scene); window.MissionObjectiveSystem.avaliar(scene, analysis, {}); return report(scene, { cause: window.GAME_CONSTANTS.TERMINOS.CODE_BUDGET_EXCEEDED, message: `Seu código usa ${scene.budgetResult.used} instruções e o limite é ${scene.budgetResult.limit}.` }, 'warning'); }

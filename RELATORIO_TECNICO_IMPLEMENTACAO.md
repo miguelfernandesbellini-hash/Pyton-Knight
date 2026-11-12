@@ -1,4 +1,4 @@
-# Relatório Técnico de Implementação — Pyton Knight
+# Relatório Técnico de Implementação — Python Knight
 
 Data: 22 de agosto de 2026
 

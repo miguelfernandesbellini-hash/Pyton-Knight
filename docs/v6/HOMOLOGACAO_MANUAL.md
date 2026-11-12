@@ -8,7 +8,7 @@ usuário. Isso não homologa visualmente as alterações novas da V6.
 Nesta implementação não houve Computer Use, cliques de teste ou inspeção do jogo
 no navegador. Testes de DOM, estados de animação e pixels são evidência técnica.
 
-Usar o [gabarito V6](../../Gabarito_Oficial_Pyton_Knight_V6.txt) à velocidade normal.
+Usar o [gabarito V6.1](../../Gabarito_Oficial_Python_Knight_V6.1.txt) à velocidade normal.
 Para testar mecanismos com código, encerrar o voo dev antes da execução. Testar
 persistência e morte no modo normal; dev não grava a jornada normal.
 

@@ -34,7 +34,7 @@ As imagens em `evidencias/visual` são geradas em canvas com os mesmos assets e 
 3. Na A7, executar uma visita parcial, conferir Diário e luz, executar novamente e depois REINICIAR.
 4. Na A4, observar furos e disparo, testar oficina e passarela. Na A14, observar placa/espinhos e as duas portas.
 5. Na A16, observar cada segmento aparecer após sua iteração. Na A19/20, a busca deve parar visualmente no baú da chave.
-6. Na A15, testar os três cenários; confirmar ausência de teleporte/recompensa no ramo incorreto. Variantes podem ser abertas pelo console de desenvolvimento do jogo com `pytonKnightGame.scene.start('Game', {atividadeIndex: 14, variantIndex: 0})`, alterando o índice para 1 e 2. A19/A20 usam índices de atividade 18/19.
+6. Na A15, testar os três cenários; confirmar ausência de teleporte/recompensa no ramo incorreto. Variantes podem ser abertas pelo console de desenvolvimento do jogo com `pythonKnightGame.scene.start('Game', {atividadeIndex: 14, variantIndex: 0})`, alterando o índice para 1 e 2. A19/A20 usam índices de atividade 18/19.
 7. Na A18 e A20, comparar cômodo escuro/iluminado; testar aviso de medo antes de uma perda de vida.
 8. Registrar capturas reais, dimensão, navegador e defeitos reproduzíveis. Atualizar PK-024 somente depois disso.
 

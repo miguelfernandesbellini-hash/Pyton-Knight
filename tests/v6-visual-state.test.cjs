@@ -37,12 +37,12 @@ test('V6 save retomado: Diário, vidas, variante e rascunho; estado físico semp
 test('V6 game over reaparece após recarregar e não oferece botão de continuar a mesma missão',async()=>{
     const h=fixtureV6('?dev=1'),s=h.game(13);h.context.JourneySystem.die(s);h.context.JourneySystem.die(s);h.context.JourneySystem.die(s);h.context.JourneySystem.result(s,{cause:'HAZARD_DEATH'});
     assert.equal(h.host.querySelector('#journey-title').textContent,'GUTO MORREU');assert.equal(h.host.querySelector('.journey-actions').querySelectorAll('button').length,1);assert.match(h.host.querySelector('.journey-actions').textContent,/ATIVIDADE 13/);
-    const Menu=h.context.pytonKnightGame.config.scene[2],menu=new Menu();menu.create();assert.equal(h.host.querySelector('#journey-title').textContent,'GUTO MORREU');await h.host.querySelector('.journey-actions').querySelector('button').emit('click');assert.equal(menu.transition.data.atividadeIndex,12);
+    const Menu=h.context.pythonKnightGame.config.scene[2],menu=new Menu();menu.create();assert.equal(h.host.querySelector('#journey-title').textContent,'GUTO MORREU');await h.host.querySelector('.journey-actions').querySelector('button').emit('click');assert.equal(menu.transition.data.atividadeIndex,12);
     assert.equal(h.context.PersistenceService.load().journey.pendingReturn,null);
     const resumed=h.game(12);assert.equal(resumed.gameOverPending,false);assert.equal(resumed.livesRemaining,3);
 });
 test('V6 fim da jornada persiste no menu e reset não regrava checkpoint antigo',async()=>{
     const h=fixtureV6('?dev=1'),s=h.game(19);s.editorTexto.value=s.atividade.officialSolution;s.testInputQueue=[...s.atividade.testInputs];await h.context.CommandInterpreter.executar(s);
-    const Menu=h.context.pytonKnightGame.config.scene[2],menu=new Menu();menu.create();assert.equal(h.host.querySelector('#journey-title').textContent,'JORNADA CONCLUÍDA');
+    const Menu=h.context.pythonKnightGame.config.scene[2],menu=new Menu();menu.create();assert.equal(h.host.querySelector('#journey-title').textContent,'JORNADA CONCLUÍDA');
     await h.host.querySelector('.journey-actions').querySelector('button').emit('click');h.context.JourneySystem.checkpoint(menu);assert.equal(h.context.PersistenceService.load().journey.currentActivity,1);assert.equal(h.context.PersistenceService.load().journey.completed,false);
 });

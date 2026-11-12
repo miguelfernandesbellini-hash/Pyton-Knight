@@ -1,5 +1,7 @@
 # V6 — estado para continuidade
 
+Este é o registro da V6 em 23/09/2026. Consulte as [alterações da V6.1](../V6.1.md).
+
 Implementação concluída e testes automatizados aprovados em 23/09/2026.
 **V6 IMPLEMENTADA — AGUARDANDO HOMOLOGAÇÃO VISUAL MANUAL.** PK-024 aberto.
 

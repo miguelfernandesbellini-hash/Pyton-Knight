@@ -1,4 +1,4 @@
-# Relatório de Testes — Pyton Knight
+# Relatório de Testes — Python Knight
 
 Data: 24 de agosto de 2026  
 Resultado lógico automatizado: **PASS**

@@ -2,6 +2,7 @@ const test=require('node:test'),assert=require('node:assert/strict');
 const {setupV6,fixtureV6,localStorageFixture}=require('./v6-helpers.cjs');
 const {setupV4}=require('./v4-helpers.cjs');
 const plain=x=>JSON.parse(JSON.stringify(x));
+const legacyProgressKey = 'pyton_knight_progress_v2';
 for(let id=1;id<=20;id++)test(`V6 A${id}: solução e variantes oficiais, mapas e moedas preservados`,async()=>{
     const h=setupV6(),a=h.context.ACTIVITIES[id-1],old=setupV4().context.ACTIVITIES[id-1];
     assert.deepEqual(plain(a.mapa),plain(old.mapa));assert.deepEqual(plain(a.barreiras),plain(old.barreiras));
@@ -63,6 +64,65 @@ test('V6 save: migra V5 sem inventar métricas; conserva XP, moedas e recompensa
     s.editorTexto.value='resposta = input("teste")';s.livesRemaining=2;h.context.JourneySystem.checkpoint(s);
     const next=setupV6({localStorage:storage}),resumed=next.scene(next.context.ACTIVITIES[6]);resumed.requestedVariant=null;next.context.JourneySystem.enter(resumed);assert.equal(resumed.livesRemaining,2);assert.equal(resumed.resumeCode,s.editorTexto.value);
 });
+test('V6.1 save: migra jornada, rascunho, vidas e moedas da chave anterior', () => {
+    const storage = localStorageFixture();
+    const draft = 'resposta = input("teste")';
+    storage.setItem(legacyProgressKey, JSON.stringify({
+        schemaVersion: 3, totalXp: 123, unlockedMax: 7, completedActivities: [1, 2, 3, 4, 5, 6],
+        coinCollection: { version: 1, ids: ['A06_C01'], legacyCredit: 2, spent: 0 },
+        journey: { version: 1, currentActivity: 7, checkpoints: { 7: { code: draft, lives: 2, variant: 0 } } }
+    }));
+    const { context } = setupV6({ localStorage: storage });
+    const key = context.GAME_CONSTANTS.STORAGE_KEY;
+    assert.equal(key, 'python_knight_progress_v2');
+    const progress = context.JourneySystem.ensure();
+    assert.equal(progress.journey.currentActivity, 7);
+    assert.equal(progress.journey.checkpoints[7].code, draft);
+    assert.equal(progress.journey.checkpoints[7].lives, 2);
+    assert.equal(progress.totalXp, 123);
+    assert.equal(progress.walletCoins, 3);
+    assert.equal(storage.getItem(key), null);
+
+    const saved = context.PersistenceService.save(progress);
+    assert.equal(storage.getItem(legacyProgressKey), null);
+    assert.deepEqual(JSON.parse(storage.getItem(key)), plain(saved));
+    const { context: reloaded } = setupV6({ localStorage: storage });
+    assert.deepEqual(plain(reloaded.PersistenceService.load()), plain(saved));
+});
+test('V6.1 save: falha de gravação preserva a chave anterior e o progresso em memória', () => {
+    const storage = localStorageFixture();
+    const legacy = JSON.stringify({ totalXp: 123 });
+    storage.setItem(legacyProgressKey, legacy);
+    storage.setItem = () => { throw new Error('quota'); };
+
+    const { context } = setupV6({ localStorage: storage });
+    const progress = context.PersistenceService.load();
+    assert.equal(progress.totalXp, 123);
+    progress.totalXp += 100;
+    context.PersistenceService.save(progress);
+    assert.equal(context.PersistenceService.load().totalXp, 223);
+    assert.equal(storage.getItem(context.GAME_CONSTANTS.STORAGE_KEY), null);
+    assert.equal(storage.getItem(legacyProgressKey), legacy);
+});
+test('V6.1 save: reinício prevalece mesmo se a chave anterior não puder ser removida', () => {
+    const storage = localStorageFixture();
+    storage.setItem(legacyProgressKey, JSON.stringify({ totalXp: 123, unlockedMax: 7 }));
+    storage.removeItem = () => { throw new Error('storage'); };
+
+    const { context } = setupV6({ localStorage: storage });
+    const progress = context.PersistenceService.load();
+    assert.equal(progress.totalXp, 123);
+    context.PersistenceService.resetJourney();
+    assert.ok(storage.getItem(legacyProgressKey));
+    const { context: reloaded } = setupV6({ localStorage: storage });
+    const saved = reloaded.PersistenceService.load();
+    assert.equal(saved.totalXp, 0);
+    assert.equal(saved.journey.currentActivity, 1);
+
+    saved.totalXp = 100;
+    context.PersistenceService.save(saved);
+    assert.equal(reloaded.PersistenceService.load().totalXp, 100);
+});
 test('V6 recuperação: não permite voltar imediatamente à missão da morte pelo botão próxima',async()=>{
     const h=setupV6(),s=h.scene(h.context.ACTIVITIES[13]);s.scene={start(){}};
     const p=h.context.PersistenceService.load();p.unlockedMax=14;h.context.PersistenceService.save(p);
@@ -80,10 +140,14 @@ test('V6 estatísticas: instruções de laço efetivamente executadas, erros e r
 });
 test('V6 dev: voo não atravessa limites nem dispara coleta; save normal intacto',async()=>{
     const storage=localStorageFixture(),normal=setupV6({localStorage:storage});await normal.run(normal.context.ACTIVITIES[0]);const before=storage.getItem(normal.context.GAME_CONSTANTS.STORAGE_KEY);
+    const legacy = JSON.stringify({ totalXp: 123 });
+    storage.setItem(legacyProgressKey, legacy);
     const dev=setupV6({localStorage:storage,location:{search:'?dev=1'}}),s=dev.scene(dev.context.ACTIVITIES[0]);s.devMode=true;s.devFlying=true;
+    assert.equal(dev.context.PersistenceService.load().totalXp, 0);
     const coins=dev.context.CoinSystem.stats(s).total;assert.ok(dev.context.DevToolsSystem.move(s,'ArrowRight'));assert.equal(dev.context.CoinSystem.stats(s).total,coins);
     s.gutoPosition={linha:0,coluna:0};assert.equal(dev.context.DevToolsSystem.move(s,'ArrowUp'),false);
     assert.equal((await dev.context.CommandInterpreter.executar(s)).cause,'EXECUTION_BLOCKED');s.devFlying=false;await dev.run(dev.context.ACTIVITIES[19]);assert.equal(storage.getItem(normal.context.GAME_CONSTANTS.STORAGE_KEY),before);
+    assert.equal(storage.getItem(legacyProgressKey), legacy);
 });
 test('V6 interface: game over não oferece continuar; conclusão A20, estatísticas e reset persistente',async()=>{
     const h=fixtureV6('?dev=1'),s=h.game(19);s.editorTexto.value=s.atividade.officialSolution;s.testInputQueue=[...s.atividade.testInputs];

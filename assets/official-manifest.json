@@ -258,35 +258,35 @@
   },
   "custom_guardian": {
     "path": "assets/custom/guardian.png",
-    "origin": "Sprite original gerada para Pyton Knight — rodada 2",
+    "origin": "Sprite original gerada para Python Knight — rodada 2",
     "description": "guardian; fundo transparente; imagem gerada com image_gen, sem substituir arquitetura Castle.",
     "sourceWidth": 1254,
     "sourceHeight": 1254
   },
   "custom_basilisk": {
     "path": "assets/custom/basilisk.png",
-    "origin": "Sprite original gerada para Pyton Knight — rodada 2",
+    "origin": "Sprite original gerada para Python Knight — rodada 2",
     "description": "basilisk; fundo transparente; imagem gerada com image_gen, sem substituir arquitetura Castle.",
     "sourceWidth": 1254,
     "sourceHeight": 1254
   },
   "custom_pedestal": {
     "path": "assets/custom/pedestal.png",
-    "origin": "Sprite original gerada para Pyton Knight — rodada 2",
+    "origin": "Sprite original gerada para Python Knight — rodada 2",
     "description": "pedestal; fundo transparente; imagem gerada com image_gen, sem substituir arquitetura Castle.",
     "sourceWidth": 1254,
     "sourceHeight": 1254
   },
   "custom_rune": {
     "path": "assets/custom/rune.png",
-    "origin": "Sprite original gerada para Pyton Knight — rodada 2",
+    "origin": "Sprite original gerada para Python Knight — rodada 2",
     "description": "rune; fundo transparente; imagem gerada com image_gen, sem substituir arquitetura Castle.",
     "sourceWidth": 1330,
     "sourceHeight": 1182
   },
   "custom_totem": {
     "path": "assets/custom/totem.png",
-    "origin": "Sprite original gerada para Pyton Knight — rodada 2",
+    "origin": "Sprite original gerada para Python Knight — rodada 2",
     "description": "totem; fundo transparente; imagem gerada com image_gen, sem substituir arquitetura Castle.",
     "sourceWidth": 1199,
     "sourceHeight": 1312

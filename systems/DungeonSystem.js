@@ -1,6 +1,6 @@
 (function () {
     'use strict';
-    class PytonKnightRuntimeError extends Error { constructor (cause, message, lineNumber) { super(message); this.name = 'PytonKnightRuntimeError'; this.cause = cause; this.lineNumber = lineNumber || null; } }
+    class PythonKnightRuntimeError extends Error { constructor (cause, message, lineNumber) { super(message); this.name = 'PythonKnightRuntimeError'; this.cause = cause; this.lineNumber = lineNumber || null; } }
     const API = new Set([
         'andar_frente', 'virar_direita', 'virar_esquerda', 'print', 'input', 'int', 'range',
         'ativar_alavanca', 'abrir_porta', 'entrar_espelho', 'entrar_portao', 'ativar_runa',
@@ -38,7 +38,7 @@
     function requireEntity (scene, types, requested, excluded, allowedPositions, action, line) {
         const entity = contextualEntity(scene, types, requested, excluded, allowedPositions);
         if (entity) return entity;
-        throw new PytonKnightRuntimeError(window.GAME_CONSTANTS.TERMINOS.SEMANTIC_ERROR, `${action} exige que Guto esteja na posição correta da entidade.`, line);
+        throw new PythonKnightRuntimeError(window.GAME_CONSTANTS.TERMINOS.SEMANTIC_ERROR, `${action} exige que Guto esteja na posição correta da entidade.`, line);
     }
     function applyConnections (scene, entity, active) {
         (entity.connections || []).forEach((connection) => {
@@ -57,7 +57,7 @@
     function refresh (scene) { if (window.MapRenderer) window.MapRenderer.atualizarEntidades(scene); if (scene.runState.analysis && window.MissionObjectiveSystem) window.MissionObjectiveSystem.avaliar(scene, scene.runState.analysis, scene.runState.environment); if (window.GameUI) { window.GameUI.atualizarObjetivos(scene); window.GameUI.atualizarMoedasDaExecucao(scene); } }
     function pythonText (value) { return value === true ? 'True' : value === false ? 'False' : value === null ? 'None' : String(value); }
     window.DungeonSystem = {
-        PytonKnightRuntimeError,
+        PythonKnightRuntimeError,
         isKnownApi (name) { return API.has(name); },
         outputMatches (scene, value, expected) {
             // Only the two inscription puzzles normalize outer whitespace.
@@ -125,7 +125,7 @@
         async _callApi (scene, name, args, metadata) {
             const line = metadata && metadata.lineNumber;
             const noArguments = ['virar_direita', 'virar_esquerda', 'tem_chave', 'porta_aberta', 'porta_final_bloqueada', 'armadilha_ativa', 'tem_armadilha_a_frente', 'tem_placa_a_frente', 'placa_ativa', 'alavanca_ativa', 'alavanca_azul_ativa', 'alavanca_verde_ativa', 'ponte_ativa', 'tem_bau_a_frente', 'encontrou_chave', 'caminho_livre', 'moedas_coletadas', 'rubis_coletados', 'corredor_continua', 'examinar', 'ativar_interruptor', 'sala_iluminada', 'tem_inscricao_a_frente'];
-            if ((noArguments.includes(name) && args.length) || (!['print', 'range'].includes(name) && args.length > 1)) throw new PytonKnightRuntimeError(window.GAME_CONSTANTS.TERMINOS.SEMANTIC_ERROR, `${name}() recebeu argumentos demais.`, line);
+            if ((noArguments.includes(name) && args.length) || (!['print', 'range'].includes(name) && args.length > 1)) throw new PythonKnightRuntimeError(window.GAME_CONSTANTS.TERMINOS.SEMANTIC_ERROR, `${name}() recebeu argumentos demais.`, line);
             if (name === 'andar_frente') return window.PlayerController.andarFrente(scene, args.length ? args[0] : 1, line);
             if (name === 'virar_direita') { window.PlayerController.virar(scene, 1); return true; }
             if (name === 'virar_esquerda') { window.PlayerController.virar(scene, -1); return true; }
@@ -153,20 +153,20 @@
                 if (typeof source === 'number' && Number.isFinite(source)) value = Math.trunc(source);
                 else if (typeof source === 'boolean') value = Number(source);
                 else if (typeof source === 'string' && /^[+-]?\d(?:_?\d)*$/.test(source.trim())) value = Number(source.trim().replace(/_/g, ''));
-                if (!Number.isSafeInteger(value)) throw new PytonKnightRuntimeError(window.GAME_CONSTANTS.TERMINOS.SEMANTIC_ERROR, 'int() precisa de um texto inteiro válido ou de um número dentro do limite desta versão.', line);
+                if (!Number.isSafeInteger(value)) throw new PythonKnightRuntimeError(window.GAME_CONSTANTS.TERMINOS.SEMANTIC_ERROR, 'int() precisa de um texto inteiro válido ou de um número dentro do limite desta versão.', line);
                 return value;
             }
             if (name === 'range') {
                 let start = 0; let stop; let step = 1;
-                if (args.length < 1 || args.length > 3 || !args.every((value) => Number.isInteger(value) || typeof value === 'boolean')) throw new PytonKnightRuntimeError(window.GAME_CONSTANTS.TERMINOS.SEMANTIC_ERROR, 'range() aceita de um a três números inteiros. Converta textos com int().', line);
+                if (args.length < 1 || args.length > 3 || !args.every((value) => Number.isInteger(value) || typeof value === 'boolean')) throw new PythonKnightRuntimeError(window.GAME_CONSTANTS.TERMINOS.SEMANTIC_ERROR, 'range() aceita de um a três números inteiros. Converta textos com int().', line);
                 if (args.length === 1) stop = Number(args[0]); else { start = Number(args[0]); stop = Number(args[1]); if (args.length === 3) step = Number(args[2]); }
-                if (![start, stop, step].every(Number.isInteger) || step === 0) throw new PytonKnightRuntimeError(window.GAME_CONSTANTS.TERMINOS.SEMANTIC_ERROR, 'range() precisa de inteiros e passo diferente de zero.', line);
-                const values = []; for (let value = start; step > 0 ? value < stop : value > stop; value += step) { values.push(value); if (values.length > 100) throw new PytonKnightRuntimeError(window.GAME_CONSTANTS.TERMINOS.LOOP_GUARD_STOP, 'range() excedeu o limite seguro.', line); } return values;
+                if (![start, stop, step].every(Number.isInteger) || step === 0) throw new PythonKnightRuntimeError(window.GAME_CONSTANTS.TERMINOS.SEMANTIC_ERROR, 'range() precisa de inteiros e passo diferente de zero.', line);
+                const values = []; for (let value = start; step > 0 ? value < stop : value > stop; value += step) { values.push(value); if (values.length > 100) throw new PythonKnightRuntimeError(window.GAME_CONSTANTS.TERMINOS.LOOP_GUARD_STOP, 'range() excedeu o limite seguro.', line); } return values;
             }
             if (name === 'ativar_alavanca') { const entity = requireEntity(scene, 'lever', args[0], [], ['same', 'ahead', 'adjacent'], 'ativar_alavanca()', line); const active = entity.state !== 'on'; entity.state = active ? 'on' : 'off'; scene.runState.flags[entity.flag || entity.id] = active; applyConnections(scene, entity, active); refresh(scene); return active; }
             if (name === 'abrir_porta') { const entity = requireEntity(scene, ['door', 'gate', 'guardian'], args[0], ['open', 'defeated'], ['same', 'ahead', 'adjacent'], 'abrir_porta()', line); if (!requirementsMet(scene, entity)) return false; entity.state = entity.type === 'guardian' ? 'defeated' : 'open'; scene.runState.flags[entity.flag || `${entity.id}Open`] = true; applyConnections(scene, entity, true); refresh(scene); return true; }
             if (name === 'entrar_espelho' || name === 'entrar_portao') { const entity = requireEntity(scene, name === 'entrar_espelho' ? 'mirror' : 'portal', args[0], [], ['same'], `${name}()`, line); if (!requirementsMet(scene, entity)) return false;
-                if (entity.correct === false) throw new PytonKnightRuntimeError(window.GAME_CONSTANTS.TERMINOS.SEMANTIC_ERROR, 'Este espelho não corresponde ao cálculo. A passagem não foi ativada.', line);
+                if (entity.correct === false) throw new PythonKnightRuntimeError(window.GAME_CONSTANTS.TERMINOS.SEMANTIC_ERROR, 'Este espelho não corresponde ao cálculo. A passagem não foi ativada.', line);
                 if (name === 'entrar_portao' && scene.atividade.id === 15) {
                     const raw = scene.runState.inputs[scene.runState.inputs.length - 1];
                     const power = typeof raw === 'string' && /^[+-]?\d(?:_?\d)*$/.test(raw.trim()) ? Number(raw.trim().replace(/_/g, '')) : NaN;
@@ -174,7 +174,7 @@
                     if (entity.value !== expected) {
                         scene.runState.flags.correctPortal = false;
                         const explanation = expected === 3 ? 'poder >= 20: escolha Sol (3).' : expected === 2 ? '10 <= poder < 20: escolha Lua (2).' : expected === 1 ? 'poder < 10: escolha Sombra (1).' : 'Leia um poder inteiro no pedestal antes de escolher.';
-                        throw new PytonKnightRuntimeError(window.GAME_CONSTANTS.TERMINOS.SEMANTIC_ERROR, `Portão incorreto. ${explanation}`, line);
+                        throw new PythonKnightRuntimeError(window.GAME_CONSTANTS.TERMINOS.SEMANTIC_ERROR, `Portão incorreto. ${explanation}`, line);
                     }
                 }
                 const previous=entity.state; entity.state = 'active'; scene.runState.flags[entity.flag || `${entity.id}Used`] = true; if(scene.atividade.v3) await window.AnimationSystem.transition(scene,entity,previous,'active'); if (entity.target) { if (scene.atividade.v3) await window.AnimationSystem.teleport(scene,()=>window.PlayerController.teletransportar(scene, entity.target)); else window.PlayerController.teletransportar(scene, entity.target); } refresh(scene); return true; }
@@ -199,7 +199,7 @@
             if (name === 'rubis_coletados' && scene.atividade.v3) return scene.runState.flags.rubiesCollected || 0;
             if (name === 'moedas_coletadas' && scene.atividade.v4) return window.CoinSystem.stats(scene).collected;
             if (name === 'moedas_coletadas' || name === 'rubis_coletados') return scene.runState.coinsPending;
-            throw new PytonKnightRuntimeError(window.GAME_CONSTANTS.TERMINOS.UNKNOWN_COMMAND, `O comando ${name}() não existe.`, line);
+            throw new PythonKnightRuntimeError(window.GAME_CONSTANTS.TERMINOS.UNKNOWN_COMMAND, `O comando ${name}() não existe.`, line);
         }
     };
 })();

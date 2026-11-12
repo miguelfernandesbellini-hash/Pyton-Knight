@@ -1,4 +1,4 @@
-# Entrega técnica — Pyton Knight V3
+# Entrega técnica — Python Knight V3
 
 A continuação preservou a versão funcional atual e o trabalho já concluído. O projeto inclui as 20 atividades redesenhadas, novo gabarito, sistemas reutilizáveis de descoberta/mecanismos/animação e as correções finais de auditoria.
 
@@ -10,8 +10,8 @@ A continuação preservou a versão funcional atual e o trabalho já concluído.
 |---|---|
 | Projeto executável | `index.html`, Phaser local, código e assets na raiz |
 | Catálogo ativo das 20 atividades | `activities-v3.js` |
-| Soluções oficiais | `Gabarito_Oficial_Pyton_Knight_V3.txt` |
-| Gabarito no caminho compatível anterior | `Gabarito_Final_Pyton_Knight_20_Atividades.txt`, mesmo conteúdo V3 |
+| Soluções oficiais | `Gabarito_Oficial_Python_Knight_V3.txt` |
+| Gabarito no caminho compatível anterior | `Gabarito_Final_Python_Knight_20_Atividades.txt`, mesmo conteúdo V3 |
 | API nova/alterada | `docs/v3/API_V3.md` |
 | Objetivos, conceitos, mapas, regiões, pistas, dependências, variantes e tentativas | `docs/v3/MATRIZ_ATIVIDADES.md` |
 | Catálogo estruturado para auditoria | `docs/v3/CATALOGO_ATIVIDADES.json` |

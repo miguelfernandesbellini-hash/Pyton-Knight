@@ -10,7 +10,7 @@ from docx.oxml.ns import qn
 from docx.shared import Inches, Pt, RGBColor
 
 ROOT = Path(__file__).resolve().parent.parent
-OUT = ROOT / 'Documentacao_Evolucao_Pyton_Knight_COMPLETA_ATUALIZADA.docx'
+OUT = ROOT / 'Documentacao_Evolucao_Python_Knight_COMPLETA_ATUALIZADA.docx'
 ACTIVITIES = json.loads((ROOT / 'build/activity_catalog.json').read_text(encoding='utf-8'))
 RESULTS = json.loads((ROOT / 'build/test_results.json').read_text(encoding='utf-8'))
 
@@ -137,7 +137,7 @@ def setup(doc):
         s._element.rPr.rFonts.set(qn('w:ascii'),'Calibri'); s._element.rPr.rFonts.set(qn('w:hAnsi'),'Calibri')
         s.paragraph_format.space_before=Pt(before); s.paragraph_format.space_after=Pt(after); s.paragraph_format.keep_with_next=True; s.paragraph_format.page_break_before=page
     h=sec.header.paragraphs[0]; h.paragraph_format.tab_stops.add_tab_stop(Inches(6.5),WD_TAB_ALIGNMENT.RIGHT)
-    font(h.add_run('PYTON KNIGHT · DOCUMENTAÇÃO DE EVOLUÇÃO'),8.5,MUTED,True); font(h.add_run('\t20 ATIVIDADES'),8.5,MUTED)
+    font(h.add_run('PYTHON KNIGHT · DOCUMENTAÇÃO DE EVOLUÇÃO'),8.5,MUTED,True); font(h.add_run('\t20 ATIVIDADES'),8.5,MUTED)
     sec.first_page_header.paragraphs[0].text=''
     f=sec.footer.paragraphs[0]; f.alignment=WD_ALIGN_PARAGRAPH.RIGHT; font(f.add_run('Página '),8.5,MUTED)
     run=f.add_run(); begin=OxmlElement('w:fldChar'); begin.set(qn('w:fldCharType'),'begin'); instr=OxmlElement('w:instrText'); instr.set(qn('xml:space'),'preserve'); instr.text='PAGE'; end=OxmlElement('w:fldChar'); end.set(qn('w:fldCharType'),'end'); run._r.extend([begin,instr,end]); font(run,8.5,MUTED)
@@ -155,7 +155,7 @@ def bullet(doc, text, nid):
 def cover(doc):
     p=doc.add_paragraph(); p.paragraph_format.space_after=Pt(58)
     p=doc.add_paragraph(); p.alignment=WD_ALIGN_PARAGRAPH.CENTER; p.paragraph_format.space_after=Pt(14); font(p.add_run('DOCUMENTAÇÃO TÉCNICA E PEDAGÓGICA'),10,BLUE,True)
-    p=doc.add_paragraph(); p.alignment=WD_ALIGN_PARAGRAPH.CENTER; p.paragraph_format.space_after=Pt(9); font(p.add_run('Evolução do Pyton Knight'),27,DARK_BLUE,True)
+    p=doc.add_paragraph(); p.alignment=WD_ALIGN_PARAGRAPH.CENTER; p.paragraph_format.space_after=Pt(9); font(p.add_run('Evolução do Python Knight'),27,DARK_BLUE,True)
     p=doc.add_paragraph(); p.alignment=WD_ALIGN_PARAGRAPH.CENTER; p.paragraph_format.space_after=Pt(20); font(p.add_run('Da Unidade 1 à edição completa de 20 atividades'),15,BLUE)
     p=doc.add_paragraph(); p.alignment=WD_ALIGN_PARAGRAPH.CENTER; p.paragraph_format.left_indent=Inches(.55); p.paragraph_format.right_indent=Inches(.55); p.paragraph_format.space_after=Pt(80)
     font(p.add_run('Histórico preservado, arquitetura modular, Livro Mágico, Python controlado, mecânicas M01–M37 utilizadas e evidências de teste.'),11)
@@ -165,7 +165,7 @@ def cover(doc):
 def build():
     doc=Document(); setup(doc); hn=add_numbering(doc,'heading'); bn=add_numbering(doc,'bullet'); cover(doc)
     heading(doc,'Resumo executivo',1,hn)
-    body(doc,'Esta edição consolida o Pyton Knight como jogo educacional de quatro unidades e 20 atividades. A implementação preserva a base Phaser e a Unidade 1, migra o movimento para orientação relativa e acrescenta interpretador seguro, Livro Mágico permanente, objetivos declarativos, vidas, orçamento, XP, moedas e persistência.')
+    body(doc,'Esta edição consolida o Python Knight como jogo educacional de quatro unidades e 20 atividades. A implementação preserva a base Phaser e a Unidade 1, migra o movimento para orientação relativa e acrescenta interpretador seguro, Livro Mágico permanente, objetivos declarativos, vidas, orçamento, XP, moedas e persistência.')
     body(doc,'O aceite lógico registrou 25 cenários oficiais/variantes, 300 verificações obrigatórias no total (15 por atividade), 25 reexecuções após reset e 19 regressões globais, todos com PASS. A homologação visual em navegador real permanece registrada como pendência real.')
     add_table(doc,['Indicador','Resultado','Evidência'],[
         ('Unidades','4','Progressão 1–5, 6–10, 11–15 e 16–20'),('Atividades','20','Catálogo declarativo em activities.js'),('Cenários oficiais','25 PASS','Inclui variantes de 12, 19 e 20'),('Matriz obrigatória','300 PASS','15 verificações em cada atividade'),('Reexecuções','25 PASS','Código preservado e recompensa estável'),('Regressões','19 PASS','Parser, runtime, vidas e persistência'),('Mecânicas','27 códigos','Necessárias + M31–M37')],[2300,1700,5360])
@@ -273,9 +273,9 @@ def build():
     add_table(doc,['Grupo','Arquivos'],[('Núcleo','Game.js, MainMenu.js, index.html, activities.js'),('Interpretação','PythonSubsetParser, CommandInterpreter, CodeBudgetValidator'),('Mundo','DungeonSystem, PlayerController, BarrierSystem, MapRenderer'),('Missão','MissionObjectiveSystem, TutorialSystem'),('Progresso','PersistenceService, ProgressionSystem, GameConstants'),('Interface','ui/GameUI.js'),('Testes','tests/run-tests.cjs'),('Documentos','README, gabarito e relatórios')],[2200,7160])
 
     heading(doc,'Conclusão',1,hn)
-    body(doc,'A evolução mantém a identidade e a base funcional do Pyton Knight, aplica as decisões oficiais e amplia o projeto para 20 atividades coerentes. O runtime modular valida resultado e estado, protege o navegador contra loops e diferencia falhas pedagógicas de perigos letais.')
+    body(doc,'A evolução mantém a identidade e a base funcional do Python Knight, aplica as decisões oficiais e amplia o projeto para 20 atividades coerentes. O runtime modular valida resultado e estado, protege o navegador contra loops e diferencia falhas pedagógicas de perigos letais.')
     body(doc,'Os 25 cenários oficiais, as 300 verificações da matriz funcional (15 por atividade) e as regressões estão aprovados. A pendência de homologação é visual, acompanhada de futuros playtests para arte e balanceamento. Código, gabarito, README e relatórios permanecem alinhados ao mesmo catálogo e às mesmas evidências.')
-    doc.core_properties.title='Documentação de Evolução do Pyton Knight — Completa e Atualizada'; doc.core_properties.author='Equipe Pyton Knight'; doc.core_properties.subject='Arquitetura, pedagogia, atividades e testes'
+    doc.core_properties.title='Documentação de Evolução do Python Knight — Completa e Atualizada'; doc.core_properties.author='Equipe Python Knight'; doc.core_properties.subject='Arquitetura, pedagogia, atividades e testes'
     doc.save(OUT); return doc
 
 def audit(doc):

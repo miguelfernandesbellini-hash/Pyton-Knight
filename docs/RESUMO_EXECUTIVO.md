@@ -1,4 +1,4 @@
-# Pyton Knight — rodada final de correções
+# Python Knight — rodada final de correções
 
 15/09/2026. Continuação da entrega anterior, sem reiniciar o projeto ou restaurar backup.
 

@@ -22,6 +22,6 @@ const document={createElement:()=>createCanvas(1,1)};
  ctx.drawImage(guto,0,64,64,64,a.startPosition.coluna*tile,a.startPosition.linha*tile,tile,tile);
  fs.writeFileSync(path.join(out,`atividade-${String(a.id).padStart(2,'0')}.png`),canvas.toBuffer('image/png'));maps.push(canvas);
  }
- for(let unit=0;unit<4;unit++){const page=createCanvas(1500,1220),ctx=page.getContext('2d');ctx.fillStyle='#0c121d';ctx.fillRect(0,0,1500,1220);ctx.fillStyle='#ebd29d';ctx.font='26px sans-serif';ctx.fillText(`Pyton Knight · Unidade ${unit+1} · revisão estática dos mapas`,24,38);for(let i=0;i<5;i++){const map=maps[unit*5+i];const scale=Math.min(715/map.width,365/map.height);const x=20+(i%2)*750,y=62+Math.floor(i/2)*385;ctx.drawImage(map,x,y,map.width*scale,map.height*scale);}fs.writeFileSync(path.join(out,`unidade-${unit+1}.png`),page.toBuffer('image/png'));}
+ for(let unit=0;unit<4;unit++){const page=createCanvas(1500,1220),ctx=page.getContext('2d');ctx.fillStyle='#0c121d';ctx.fillRect(0,0,1500,1220);ctx.fillStyle='#ebd29d';ctx.font='26px sans-serif';ctx.fillText(`Python Knight · Unidade ${unit+1} · revisão estática dos mapas`,24,38);for(let i=0;i<5;i++){const map=maps[unit*5+i];const scale=Math.min(715/map.width,365/map.height);const x=20+(i%2)*750,y=62+Math.floor(i/2)*385;ctx.drawImage(map,x,y,map.width*scale,map.height*scale);}fs.writeFileSync(path.join(out,`unidade-${unit+1}.png`),page.toBuffer('image/png'));}
  console.log('20 plantas + 4 pranchas + 2 atlas para revisão estática.');
 })();

@@ -1,4 +1,4 @@
-GABARITO OFICIAL — PYTON KNIGHT V6
+GABARITO OFICIAL — PYTHON KNIGHT V6.1
 Derivado do catálogo de produção. V4/V5 preservados em seus arquivos históricos.
 Tutoriais: escreva o programa; uma solução integral pode concluir desde a primeira orientação.
 A6/A13: digite respostas no campo de entrada durante a execução, não como valores literais no editor.

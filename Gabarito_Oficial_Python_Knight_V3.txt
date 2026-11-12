@@ -1,4 +1,4 @@
-PYTON KNIGHT — GABARITO OFICIAL V3
+PYTHON KNIGHT — GABARITO OFICIAL V3
 16/09/2026
 
 Uso do avaliador: este arquivo contém soluções e respostas; não faz parte das pistas iniciais do jogo.

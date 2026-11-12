@@ -32,4 +32,4 @@ const config = {
     type: Phaser.AUTO, width: window.innerWidth, height: window.innerHeight, parent:'game-container', backgroundColor:'#0c0f15',
     pixelArt:true, roundPixels:true, scale:{ mode:Phaser.Scale.RESIZE }, scene:[Boot, Preloader, MainMenu, Game]
 };
-window.pytonKnightGame = new Phaser.Game(config);
+window.pythonKnightGame = new Phaser.Game(config);

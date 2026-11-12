@@ -1,4 +1,4 @@
-# Pyton Knight V4 — entrega técnica
+# Python Knight V4 — entrega técnica
 
 17/09/2026. Continuação da V3 final, sem reconstrução das fases. **269 testes aprovados: 221 anteriores + 48 novos.** Suíte legada aprovada. Homologação visual interativa permanece **PENDENTE — PK-024**, devido a `net::ERR_BLOCKED_BY_CLIENT`.
 
@@ -24,7 +24,7 @@ O Plano_e_Fluxo_de_Testes acadêmico foi preservado byte a byte. Os relatórios 
 
 | Item | Arquivo |
 |---|---|
-| Soluções das 20 atividades | [Gabarito oficial V4](../../Gabarito_Oficial_Pyton_Knight_V4.txt) |
+| Soluções das 20 atividades | [Gabarito oficial V4](../../Gabarito_Oficial_Python_Knight_V4.txt) |
 | APIs, estado, orçamento e migração | [API_V4.md](API_V4.md) |
 | Limites, moedas, decoração por fase | [MATRIZ_V4.md](MATRIZ_V4.md) |
 | Testes e cobertura dos requisitos | [RELATORIO_TESTES.md](RELATORIO_TESTES.md) |

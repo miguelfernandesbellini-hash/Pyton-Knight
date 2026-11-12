@@ -154,7 +154,7 @@ test('V5 controles DOM funcionam no jogo e menu; troca de cena remove assinatura
     assert.equal(audio.musicVolume,.27);assert.equal(h.host.querySelector('.music-value').textContent,'27%');
     await h.host.querySelector('.audio-mute').emit('click');assert.equal(audio.muted,true);assert.equal(h.host.querySelector('.audio-mute').attributes['aria-pressed'],'true');
     s.events.emit('shutdown');assert.equal(audio.listeners.size,0);assert.equal(first.listeners.keydown.length,0);
-    const Menu=h.context.pytonKnightGame.config.scene[2],menu=new Menu();menu.game=a.game;menu.events=new EventEmitter();menu.create();
+    const Menu=h.context.pythonKnightGame.config.scene[2],menu=new Menu();menu.game=a.game;menu.events=new EventEmitter();menu.create();
     assert.equal(h.host.querySelector('.music-volume').value,'27');assert.equal(h.host.querySelector('.audio-mute').textContent,'Ativar áudio');
     assert.equal(audio.listeners.size,1);assert.equal(audio.music.plays,1);
     const panel=h.host.querySelector('.audio-controls');panel.open=true;await panel.emit('keydown',{key:'Escape'});assert.equal(panel.open,false);
